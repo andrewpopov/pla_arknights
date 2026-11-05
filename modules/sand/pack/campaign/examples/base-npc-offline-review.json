@@ -1,0 +1,13 @@
+{
+    "day": 3,
+    "acts_used": 2,
+    "hq": 2,
+    "campaign_id": "example-not-live",
+    "observation_id": "example-not-current",
+    "snapshot_current": false,
+    "settled": false,
+    "threat": "unknown",
+    "first_base_npc_pending": false,
+    "npc_operation": "dialogue",
+    "example_only": true
+}

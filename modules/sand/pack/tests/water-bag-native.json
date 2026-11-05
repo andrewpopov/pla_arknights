@@ -1,0 +1,89 @@
+{
+    "native": {
+        "matches": [
+            {
+                "image": "I:\\MAA-data\\sand-player\\water-offline-20261028\\guide-bag.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [340, 137, 38, 37],
+                        "score": 1.0,
+                        "task": "SandAuto@BagHeader",
+                        "templ": "SandBagHeader.png"
+                    },
+                    {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [614, 332, 43, 46],
+                        "score": 1.0,
+                        "task": "SandAuto@BagWater",
+                        "templ": "SandBagWater.png"
+                    }
+                ]
+            },
+            {
+                "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\gather-settled.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "hit": false,
+                        "task": "SandAuto@BagHeader"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@BagWater"
+                    }
+                ]
+            },
+            {
+                "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "hit": false,
+                        "task": "SandAuto@BagHeader"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@BagWater"
+                    }
+                ]
+            },
+            {
+                "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-55.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "hit": false,
+                        "task": "SandAuto@BagHeader"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@BagWater"
+                    }
+                ]
+            }
+        ],
+        "water_quantity": [
+            {
+                "image": "I:\\MAA-data\\sand-player\\water-offline-20261028\\guide-bag.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [642, 379, 35, 26],
+                        "score": 0.998791,
+                        "text": "+20"
+                    }
+                ]
+            }
+        ]
+    },
+    "independent_screen_count": 98,
+    "independent_bag_positives": 0,
+    "source_report": "I:\\MAA-data\\sand-player\\water-offline-20261028\\native\\report.json",
+    "source_sha256": "c8872ceb304228b8dbce9b40e3759c752b1bed0682da0a5626fa086cf603f7ef",
+    "template_source_self_match_only": true,
+    "actual_english_positive": false
+}

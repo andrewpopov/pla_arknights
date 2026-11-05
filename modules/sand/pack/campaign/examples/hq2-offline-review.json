@@ -1,0 +1,13 @@
+{
+    "_example": "Offline planning shape only; guide values are not live inventory. Replace all observations before execution.",
+    "campaign_id": "offline-example",
+    "observation_id": "not-a-live-capture",
+    "day": 3,
+    "acts_used": 2,
+    "hq": 1,
+    "wood": 77,
+    "water": 10,
+    "snapshot_current": false,
+    "settled": false,
+    "threat": "unknown"
+}

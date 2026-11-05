@@ -20,10 +20,12 @@ asst::BattleQuickFormation::BattleQuickFormation(
 {
 }
 
-std::pair<int, int> asst::BattleQuickFormation::analyze_oper_level(const cv::Mat& image, asst::Rect flag)
+std::pair<int, int>
+    asst::BattleQuickFormation::analyze_oper_level(const cv::Mat& image, asst::Rect flag, std::string_view task_prefix)
 {
-    const auto& level_task = Task.get<OcrTaskInfo>("BattleQuickFormation-Level");
-    const auto& elite_task = Task.get<MatchTaskInfo>("BattleQuickFormation-Elite");
+    const std::string prefix(task_prefix);
+    const auto& level_task = Task.get<OcrTaskInfo>(prefix + "BattleQuickFormation-Level");
+    const auto& elite_task = Task.get<MatchTaskInfo>(prefix + "BattleQuickFormation-Elite");
 
     int _elite = -1;
     int _level = -1;

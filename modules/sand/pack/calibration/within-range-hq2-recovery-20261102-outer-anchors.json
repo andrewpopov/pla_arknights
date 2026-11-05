@@ -1,0 +1,13 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_40",
+    "location": "I:\\MAA-data\\sand-player\\within-range-hq2-recovery-20261102-outer",
+    "sha256": {
+        "idle.png": "d03a2cf6cf140c698168a910a24c6bb510440ce2d2e751aaa9ca3fbe7c35b941",
+        "side.png": "2b12c8d0a87e05029ee61661bc42f5133ce5e5e135bd2f539bdcd5640cc4b128"
+    },
+    "provenance": {
+        "idle": "I:\\MAA-data\\sand-player\\live-control-v19-20261102\\runtime\\00237-supervised-paused-021-cut-central-trees.png",
+        "side": "I:\\MAA-data\\sand-player\\live-control-v19-20261102\\runtime\\00242-selected-hand.png"
+    }
+}

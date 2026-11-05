@@ -9,49 +9,25 @@
     "blacklist_location": [],
     "deploy_plan": [
         {
+            "groups": ["奶盾", "重装", "地面阻挡"],
+            "location": [6, 1],
+            "direction": "up",
+            "condition": [0, 0]
+        },
+        {
+            "groups": ["稳定治疗"],
+            "location": [4, 2],
+            "direction": "right"
+        },
+        {
             "groups": ["益达"],
             "location": [4, 3],
             "direction": "right"
         },
         {
-            "groups": ["召唤"],
+            "groups": ["电弧", "召唤"],
             "location": [4, 5],
             "direction": "left"
-        },
-        {
-            "groups": ["辅助"],
-            "location": [10, 6],
-            "direction": "up"
-        },
-        {
-            "groups": ["重装", "地面阻挡"],
-            "location": [6, 1],
-            "direction": "up"
-        },
-        {
-            "groups": ["地面远程", "地面阻挡"],
-            "location": [3, 5],
-            "direction": "left"
-        },
-        {
-            "groups": ["处决者"],
-            "location": [5, 1],
-            "direction": "right"
-        },
-        {
-            "groups": ["玛恩纳", "地面远程", "重装", "地面阻挡", "回费", "处决者", "其他地面"],
-            "location": [6, 3],
-            "direction": "up"
-        },
-        {
-            "groups": ["奶"],
-            "location": [4, 6],
-            "direction": "Left"
-        },
-        {
-            "groups": ["高台输出"],
-            "location": [11, 6],
-            "direction": "up"
         },
         {
             "groups": ["鱼"],
@@ -62,6 +38,33 @@
             "groups": ["鱼"],
             "location": [2, 6],
             "direction": "up"
+        },
+        {
+            "groups": ["辅助"],
+            "location": [10, 6],
+            "direction": "up"
+        },
+        {
+            "groups": ["地面远程", "地面阻挡"],
+            "location": [3, 5],
+            "direction": "left"
+        },
+        {
+            "groups": ["处决者"],
+            "location": [5, 1],
+            "direction": "right",
+            "condition": [0, 0]
+        },
+        {
+            "groups": ["玛恩纳", "地面远程", "重装", "地面阻挡", "回费", "处决者", "其他地面"],
+            "location": [6, 3],
+            "direction": "up"
+        },
+        {
+            "groups": ["高台输出"],
+            "location": [11, 6],
+            "direction": "up"
         }
-    ]
+    ],
+    "Doc": "Opening interception remains kill-window limited. Healing defender takes priority over other tanks. Reserve stable medic4,2right before original W4,3right; medic covers W and opening hold6,1. W already reaches6,1 with expanded range. Original Raidian/Cycle lanes retained; boss-specific S1 and phase-aware summon control remain unvalidated. Raidian4,5 is not covered by this medic."
 }

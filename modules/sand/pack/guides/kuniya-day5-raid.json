@@ -1,0 +1,193 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "source": "https://note.com/kuniya_ark/n/n19803f0f953f",
+    "images": [
+        {
+            "image": 25,
+            "url": "https://assets.st-note.com/img/1730462760-f9XaEOBsvok4YMCxpb0utRNg.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-25.png",
+            "sha256": "f92416ee48f59212d64c2e2cd176ee6d92a130fe9e7b184b7efa30ae727ad780",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 26,
+            "url": "https://assets.st-note.com/img/1730462760-Sn7i1bVPD2f4hQgCkJy580mN.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-26.png",
+            "sha256": "8d42a068c41a0b0940f9b5438e254d8988a7d4fa70a4d932242e56d78e74f9f1",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 27,
+            "url": "https://assets.st-note.com/img/1730462760-Wn31UcRfkQGlBzLphXDdqJEt.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-27.png",
+            "sha256": "e293639321fde9c81bb0aef82d19b48452eddd7a55eb192667b4c7384f32dea2",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 28,
+            "url": "https://assets.st-note.com/img/1730462760-P2Fl3UzTWLv9RAiMIosEbc6N.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-28.png",
+            "sha256": "aa80c78bec6bbe6b52513f3d526b5493a16e3f7b36cf2bdf1d8c4dde2fe0f48c",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 29,
+            "url": "https://assets.st-note.com/img/1730462799-doiUecIGlmW37aVvrwyBJbMg.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-29.png",
+            "sha256": "d237c9ed65ecb7a762950b1e98913f8c7f6d7020a8b226c09ffec41288dec2f0",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 30,
+            "url": "https://assets.st-note.com/img/1730462799-AsTIP12v3pFqEMrgJ5c6ofSw.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-30.png",
+            "sha256": "6713e0698d8e824487e94631df0dd2c236a015fe8a3d6e62f4c25e3e440ca326",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 31,
+            "url": "https://assets.st-note.com/img/1730462879-lVuWwib1ZgkcvX87SYh9ErHO.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-31.png",
+            "sha256": "c31fa06e405b19c9b335b63c397a96ddc2542ccadfbae944f1a5f232a9c2dea8",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 32,
+            "url": "https://assets.st-note.com/img/1730462879-EpFuQxVGDfgUJiZ7X3ryBS6w.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-32.png",
+            "sha256": "9c7f1b91ede69c14126833d62f8c152a6900cbe44859c691b659f418e635210e",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 33,
+            "url": "https://assets.st-note.com/img/1730462879-i6oSx2XG1hsdeDUaKPEfVzYv.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-33.png",
+            "sha256": "b0e3f58861fc23106c831441009c7080a7ddbbcc15d0648239d814fb73d60e2b",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 34,
+            "url": "https://assets.st-note.com/img/1730462879-zV4Q69JcowhjaZ3eqYLgGWCx.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-34.png",
+            "sha256": "d883e4ed7529b580c52f603a206a9990ed40ffe23d68313f79897220e7a33097",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 35,
+            "url": "https://assets.st-note.com/img/1730462879-9IhD30aZH85cbQr2iBgqjGxF.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-35.png",
+            "sha256": "1d9cba0646dc331a4486b1347f2039e8e513cf5d875f66f9a438d62f4000ed2e",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 36,
+            "url": "https://assets.st-note.com/img/1730462880-FUVTPzZW8yf76d0xDlMkoaB2.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-36.png",
+            "sha256": "3657d3e2f93e45746e24a2e063340b51b3d1e50d99d73b547eb54343b4c1b617",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 37,
+            "url": "https://assets.st-note.com/img/1730462880-uP2eLKYS8I0oigNnEQ1hOlVt.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-37.png",
+            "sha256": "268a7b3a6e0415f3f9ecd09ae0eaa730af38535e7544fd2618bc9daf03bcd177",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 38,
+            "url": "https://assets.st-note.com/img/1730462880-kAxgHNRsmhqTO3WbQnDwSVlc.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-38.png",
+            "sha256": "d1d0a1481fcd8d97866a376b7dbcbad51a790c375fc134fb21d53d89d4edb27f",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 39,
+            "url": "https://assets.st-note.com/img/1730462880-cUhZikN7F8daHPxrp9jJLogV.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-39.png",
+            "sha256": "ee6d574edfaa47a7ab0812d3bb9ce5eea4ed67b0baf7534018cc0942da4778c7",
+            "size": [2532, 1170]
+        }
+    ],
+    "reference_stage_id": "sandbox_1_38",
+    "reference_stage": "Jagged Jungle",
+    "source_squad": ["Fang", "Midnight", "Popukar", "Beagle", "Ansel", "Lava"],
+    "observations": [
+        {
+            "image": 30,
+            "fact": "Six E1 level55 operators, skill rank7, no tools."
+        },
+        {
+            "image": 31,
+            "kills": "0/42",
+            "fact": "Raid field, right goal; upper adjacent red cube is an enemy entrance, not the lower-left path."
+        },
+        {
+            "image": 32,
+            "kills": "0/42",
+            "fact": "Fang is placed on ground left of the blue goal."
+        },
+        {
+            "image": 33,
+            "kills": "0/42",
+            "fact": "Midnight added left of Fang."
+        },
+        {
+            "image": 34,
+            "kills": "2/42",
+            "fact": "Popukar added above-left of the front line."
+        },
+        {
+            "image": 35,
+            "kills": "5/42",
+            "fact": "Ansel added on the raised tile above Fang."
+        },
+        {
+            "image": 36,
+            "kills": "16/42",
+            "fact": "Lava is on the raised tile left of Ansel; Fang remains on the ground tile below Lava. Beagle is the only unplayed hand card, cost16 with DP15."
+        },
+        {
+            "image": 37,
+            "kills": "20/42",
+            "fact": "Beagle occupies Fang's prior ground tile below Lava. Fang appears in hand on cooldown57.4. His departure mechanism is not shown."
+        },
+        {
+            "image": 39,
+            "fact": "Source result screen after the raid."
+        },
+        {
+            "image": 38,
+            "kills": "41/42",
+            "fact": "Beagle remains in Fang's former lane position; Lava and Ansel remain above. Fang cooldown0.3 confirms the same retired/departed actor is still in hand."
+        }
+    ],
+    "pending": [
+        "calibrated map/tiles/facing",
+        "reachability and wave route verification",
+        "English HUD fixtures and live pause verification; numeric source HUD replay passes",
+        "verified English raid result handling"
+    ],
+    "warning": "The guide says the example wave travels lower-left to upper-right. Actual entrances and wave paths require observation; do not generalize from a source date.",
+    "source_deployment_order": ["Fang", "Midnight", "Popukar", "Ansel", "Lava", "Beagle"],
+    "source_replacement": {
+        "old_actor": "Fang",
+        "new_actor": "Beagle",
+        "same_tile": true,
+        "evidence_images": [35, 36, 37, 38],
+        "identity_basis": "Visible Lava and Beagle sprites, remaining hand, and Fang cooling portrait; not selected-panel OCR",
+        "departure_mechanism_verified": false,
+        "departure_cause": "Unknown: images do not distinguish voluntary retreat from defeat",
+        "source_kills_are_triggers": false
+    },
+    "automation_replacement_policy": {
+        "mode": "retreat_when_funded",
+        "status": "Proposed automation policy, not an observed source input",
+        "preconditions": [
+            "Independently calibrated shared Fang/Beagle tile",
+            "Actual Beagle DP cost available before retiring Fang",
+            "Exact owned Fang deployment and confirmed cooling transition"
+        ],
+        "live_verified": false
+    }
+}

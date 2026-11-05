@@ -1392,6 +1392,11 @@ DEBUG 目录下保存的图片有数量限制，超出后会自动清理旧图�
     <system:String x:Key="Infrast.UsePinusSylvestris.Tip" xml:space="preserve">必要干员：焰尾(精二)、薇薇安娜(精二)、野鬃(精二)/灰毫(精二)/远牙(精二)至少一个&#10;参与计算干员：砾</system:String>
     <system:String x:Key="Infrast.UseWorldlyPlight">使用人间烟火跨设施组合</system:String>
     <system:String x:Key="Infrast.UseWorldlyPlight.Tip" xml:space="preserve">必要干员：桑葚(精二)、乌有(精二)&#10;参与计算干员：重岳、令、夕</system:String>
+    <system:String x:Key="LocalSuiCandleguest">自动选择伺烛客</system:String>
+    <system:String x:Key="LocalSuiConserve">保留多余招募券</system:String>
+    <system:String x:Key="LocalSuiRouting">阵容不足时优先安全路线</system:String>
+    <system:String x:Key="LocalSuiStrategy">本地界园策略</system:String>
+    <system:String x:Key="LocalSuiTongbao">按阵容管理通宝</system:String>
     <system:String x:Key="Logging.LogItemDateFormatString">日期格式字符串</system:String>
     <system:String x:Key="Logging.MaxNumberOfLogThumbnails">日志缩略图最大数量</system:String>
     <system:String x:Key="Logging.Overlay.Tip" xml:space="preserve">左键：开/关日志悬浮窗
@@ -1925,6 +1930,7 @@ DEBUG 目录下保存的图片有数量限制，超出后会自动清理旧图�
     <system:String x:Key="Settings.Update.GitHub.Token.Tip" xml:space="preserve">GitHub API 匿名访问有速率限制；不填写时更新检测由 MAA Team 提供。
 填写并验证自己的 {key=Settings.Update.GitHub.Token} 后使用独立配额，软件和资源的更新检查与下载均由 GitHub 提供。
 建议使用只读 Token，无需授予其他权限。</system:String>
+    <system:String x:Key="Settings.Update.LocalBuild.Tip">本地构建：远程资源更新已启用，并保留自定义策略覆盖。退出 MAA 后运行 Build-Local-MAA.cmd --install 更新程序。</system:String>
     <system:String x:Key="Settings.Update.LocalResourcePackageTooOld">资源包版本（{0}）小于等于当前版本（{1}），已跳过导入。</system:String>
     <system:String x:Key="Settings.Update.MaaVersion">软件版本</system:String>
     <system:String x:Key="Settings.Update.MirrorChyan.Cdk">{key=Settings.Update.Source.MirrorChyan} CDK</system:String>
@@ -2168,6 +2174,11 @@ DEBUG 目录下保存的图片有数量限制，超出后会自动清理旧图�
     <system:String x:Key="TaskQueue.PostAction.SkippedDueToError">任务出错，已跳过完成后动作</system:String>
     <system:String x:Key="TaskQueue.PostAction.Sleep">睡眠</system:String>
     <system:String x:Key="TaskQueue.PostAction.Sleep.Prompt">已刷完，即将睡眠</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.EnglishOnly">沙洲准备模式目前仅支持英文服。</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ModuleMissing">缺少沙洲模块，请安装完整的本地 MAA 构建。</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.Prosperity.Tip">在现有存档中制造道具获取生息点数，会消耗制造材料。保留存档，不开启新存档。</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ResumeSand">继续沙洲存档（停在大地图）</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ResumeSand.Tip">继续英文服沙洲存档并停在大地图，不消耗行动次数。第1至6天的战斗仍需地图校准。请从主界面、终端、主题菜单或沙洲大地图开始。</system:String>
     <system:String x:Key="TaskQueue.Rename">重命名</system:String>
     <system:String x:Key="TaskQueue.RenameTask">重命名任务</system:String>
     <system:String x:Key="TaskQueue.RenameTaskPrompt">请输入新的任务名称：</system:String>

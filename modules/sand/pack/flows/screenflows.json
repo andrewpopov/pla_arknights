@@ -1,0 +1,342 @@
+{
+    "schema_version": 1,
+    "kind": "native-screenflows",
+    "client": "YoStarEN",
+    "flows": {
+        "resume_home": {
+            "task": "SandFlow@ResumeOwnedFromHome",
+            "entry": ["SandFlow@HomeReady"],
+            "destination": ["SandFlow@WorldReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": [
+                "home",
+                "terminal",
+                "terminal",
+                "ra-overview",
+                "ra-overview",
+                "theme-list",
+                "theme-list",
+                "tales-selected",
+                "tales-selected",
+                "owned-resume",
+                "owned-resume",
+                "world"
+            ],
+            "action_count": 6
+        },
+        "resume_terminal": {
+            "task": "SandFlow@ResumeOwnedFromTerminal",
+            "entry": ["SandFlow@TerminalReady"],
+            "destination": ["SandFlow@WorldReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": [
+                "terminal",
+                "ra-overview",
+                "ra-overview",
+                "theme-list",
+                "theme-list",
+                "tales-selected",
+                "tales-selected",
+                "owned-resume",
+                "owned-resume",
+                "world"
+            ],
+            "action_count": 5
+        },
+        "resume_themes": {
+            "task": "SandFlow@ResumeOwnedFromThemes",
+            "entry": ["SandFlow@ThemesReady"],
+            "destination": ["SandFlow@WorldReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": ["theme-list", "tales-selected", "tales-selected", "owned-resume", "owned-resume", "world"],
+            "action_count": 3
+        },
+        "within_range_formation": {
+            "task": "SandFlow@OpenWithinRangeFormation",
+            "entry": ["SandFlow@WorldReady"],
+            "destination": ["SandFlow@SquadReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": [
+                "world-after-resume",
+                "world-after-resume",
+                "world-within-node",
+                "resource-details",
+                "resource-details",
+                "filled-formation"
+            ],
+            "action_count": 2,
+            "camera_pan_limit": 1
+        },
+        "desolate_formation": {
+            "task": "SandFlow@OpenDesolateFormation",
+            "entry": ["SandFlow@WorldReady"],
+            "destination": ["SandFlow@SquadReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": [
+                "world-raid-clipped",
+                "world-raid-clipped",
+                "world-raid-visible",
+                "raid-outpost-details",
+                "raid-outpost-details",
+                "filled-formation"
+            ],
+            "action_count": 2,
+            "camera_pan_limit": 2
+        },
+        "hq2_price": {
+            "task": "SandFlow@OpenHQ2Price",
+            "entry": ["SandFlow@WorldReady"],
+            "destination": ["SandFlow@HQ2PriceReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": ["world", "hq1-details", "hq1-details", "hq2-price"],
+            "action_count": 2
+        },
+        "raid_preset": {
+            "task": "SandFlow@SelectRaidPreset",
+            "entry": ["SandFlow@SquadReady"],
+            "destination": ["SandFlow@RaidPresetReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": ["filled-formation", "empty-formation"],
+            "action_count": 1
+        },
+        "open_cooking": {
+            "task": "SandFlow@OpenEnergyCooking",
+            "entry": ["SandFlow@SquadReady"],
+            "destination": ["SandFlow@CookingReady"],
+            "spends_act": false,
+            "spends_materials": false,
+            "live_complete_flow_verified": false,
+            "replay_cases": ["filled-formation", "cooking"],
+            "action_count": 1
+        }
+    },
+    "owned_components": ["SandFlow@ClearSquadToConfirmation", "SandFlow@ConfirmOwnedSquadClear"],
+    "guards": [
+        "SandFlow@ClearConfirmReady",
+        "SandFlow@CookingReady",
+        "SandFlow@DesolateDetailsReady",
+        "SandFlow@DesolateNodeReady",
+        "SandFlow@Empty1",
+        "SandFlow@Empty2",
+        "SandFlow@Empty3",
+        "SandFlow@Empty4",
+        "SandFlow@Empty5",
+        "SandFlow@Empty6",
+        "SandFlow@Empty7",
+        "SandFlow@HQ2PriceReady",
+        "SandFlow@HQDetailsReady",
+        "SandFlow@HomeReady",
+        "SandFlow@RAOverviewReady",
+        "SandFlow@RaidPresetReady",
+        "SandFlow@ResumeReady",
+        "SandFlow@RosterClearReady",
+        "SandFlow@RosterConfirmReady",
+        "SandFlow@SquadReady",
+        "SandFlow@TalesSelectedReady",
+        "SandFlow@TerminalReady",
+        "SandFlow@ThemesReady",
+        "SandFlow@WithinRangeDetailsReady",
+        "SandFlow@WithinRangeNodeReady",
+        "SandFlow@WorldReady"
+    ],
+    "cases": [
+        {
+            "id": "home",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v24-20261102\\runtime\\00012-supervised-009-check-loading-progress.png",
+            "sha256": "64def8e5b047f3d0c27c715694acce26cc6de48d3cd7a6f69e61c4cff61680de",
+            "positive": ["SandFlow@HomeReady"],
+            "negative": ["SandFlow@WorldReady", "SandFlow@SquadReady", "SandFlow@CookingReady"]
+        },
+        {
+            "id": "terminal",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v24-20261102\\runtime\\00013-supervised-010-open-terminal-native.png",
+            "sha256": "a40de5c6b5d0fb4ed2cb34eff278276a262b94be5a6a77189b7b12068589127e",
+            "positive": ["SandFlow@TerminalReady"],
+            "negative": ["SandFlow@HomeReady", "SandFlow@SquadReady"]
+        },
+        {
+            "id": "ra-overview",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v22-20261102\\runtime\\00002-supervised-001-open-long-term-once.png",
+            "sha256": "b252e70b035a87797bb3073ad4b7b65ae1efdf22cbe590172d966f49376ccf23",
+            "positive": ["SandFlow@RAOverviewReady"],
+            "negative": ["SandFlow@TerminalReady", "SandFlow@WorldReady"]
+        },
+        {
+            "id": "theme-list",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v24-20261102\\runtime\\00014-supervised-error-011-resume-owned-sand-graph.png",
+            "sha256": "5c8d6c03cf571d383c32823abb2e238d75772336b9b0799bc010fcc549d308ef",
+            "positive": ["SandFlow@ThemesReady"],
+            "negative": ["SandFlow@TalesSelectedReady", "SandFlow@ResumeReady", "SandFlow@WorldReady"]
+        },
+        {
+            "id": "tales-selected",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v24-20261102\\runtime\\00015-supervised-012-select-owned-tales-card.png",
+            "sha256": "987ce8cfc79b1fcaaf2df95e6a9c5e82ada935c6e949699d03b5cfd6086f14e4",
+            "positive": ["SandFlow@ThemesReady", "SandFlow@TalesSelectedReady"],
+            "negative": ["SandFlow@WorldReady", "SandFlow@ResumeReady"]
+        },
+        {
+            "id": "owned-resume",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v22-20261102\\runtime\\00006-supervised-005-enter-confirmed-sand-theme.png",
+            "sha256": "6d046431aae36ae7291dab133ee15cf06626d356633291d3df37d90490666cab",
+            "positive": ["SandFlow@ResumeReady"],
+            "negative": ["SandFlow@WorldReady", "SandFlow@SquadReady"]
+        },
+        {
+            "id": "world",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00554-supervised-044-return-to-world-after-hq2.png",
+            "sha256": "a0efa1466de804537e3cf38a72c01d54416ecbbdb9e483a5f7399bc6ad6ed065",
+            "positive": ["SandFlow@WorldReady"],
+            "negative": [
+                "SandFlow@SquadReady",
+                "SandFlow@HQDetailsReady",
+                "SandFlow@HQ2PriceReady",
+                "SandFlow@CookingReady"
+            ]
+        },
+        {
+            "id": "resource-details",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v22-20261102\\runtime\\00034-campaign-node-details.png",
+            "sha256": "85171f85903f8125f91a8aa8a16402d47912862321cb893544d42a2124fe4fa7",
+            "positive": ["SandFlow@WithinRangeDetailsReady"],
+            "negative": ["SandFlow@DesolateDetailsReady", "SandFlow@SquadReady"]
+        },
+        {
+            "id": "raid-outpost-details",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00558-supervised-error-045-open-desolate-raid-formation.png",
+            "sha256": "3553eb87ca2ca4557c15388425fac70a6e7d55c695618f8071a1f02651842ebb",
+            "positive": ["SandFlow@DesolateDetailsReady"],
+            "negative": ["SandFlow@WithinRangeDetailsReady", "SandFlow@SquadReady"]
+        },
+        {
+            "id": "filled-formation",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00009-supervised-error-004-verify-saved-team.png",
+            "sha256": "cb595f9e0cce8ca1434c57db304f59749612b21c0ba0ea3b37ba125729dd3079",
+            "positive": ["SandFlow@SquadReady"],
+            "negative": [
+                "SandFlow@ClearConfirmReady",
+                "SandFlow@CookingReady",
+                "SandFlow@RosterConfirmReady",
+                "SandFlow@Empty1",
+                "SandFlow@Empty6"
+            ]
+        },
+        {
+            "id": "clear-dialog",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v23-20261102\\runtime\\00005-supervised-error-001-prepare-collection-team.png",
+            "sha256": "fce719afaf1550401eaaab2ab9b487703cfeed19dd7dc3b49310a1f983a57b0b",
+            "positive": ["SandFlow@ClearConfirmReady"],
+            "negative": ["SandFlow@WorldReady", "SandFlow@RosterConfirmReady"]
+        },
+        {
+            "id": "empty-formation",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00561-supervised-048-inspect-saved-squad-three.png",
+            "sha256": "9da4fe28b73d060ae391d79712d445b7f3404725329242fc423cf183074c4b01",
+            "positive": [
+                "SandFlow@SquadReady",
+                "SandFlow@RaidPresetReady",
+                "SandFlow@Empty1",
+                "SandFlow@Empty2",
+                "SandFlow@Empty3",
+                "SandFlow@Empty4",
+                "SandFlow@Empty5",
+                "SandFlow@Empty6",
+                "SandFlow@Empty7"
+            ],
+            "negative": ["SandFlow@CookingReady", "SandFlow@ClearConfirmReady"]
+        },
+        {
+            "id": "wrong-preset",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00563-supervised-050-fresh-saved-squad-state.png",
+            "sha256": "00a28771741f08b65da79ad6457b1ca722479e4cabcf620ef64d2e27e152e23c",
+            "positive": ["SandFlow@SquadReady"],
+            "negative": ["SandFlow@RaidPresetReady"]
+        },
+        {
+            "id": "roster",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v23-20261102\\runtime\\00018-roster-page-search.png",
+            "sha256": "4a38dfa406f1b0837d56112eaf59498eb8b08bd6b848791ec9b07a820e258a72",
+            "positive": ["SandFlow@RosterClearReady", "SandFlow@RosterConfirmReady"],
+            "negative": ["SandFlow@SquadReady", "SandFlow@WorldReady", "SandFlow@CookingReady"]
+        },
+        {
+            "id": "cooking",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v19-20261102\\runtime\\00013-recovery-cooking.png",
+            "sha256": "93651c83093cba5c41c8f09322a078b97f933004bf5161ca3acfa8b0367845c0",
+            "positive": ["SandFlow@CookingReady"],
+            "negative": ["SandFlow@SquadReady", "SandFlow@RosterConfirmReady"]
+        },
+        {
+            "id": "hq1-details",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00549-supervised-039-open-hq2-price.png",
+            "sha256": "67dbd1151f83a631af37d33ff0c5eaf7fa6b048a721ce0575b6cad6f40388055",
+            "positive": ["SandFlow@HQDetailsReady"],
+            "negative": ["SandFlow@HQ2PriceReady", "SandFlow@SquadReady"]
+        },
+        {
+            "id": "hq2-price",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00550-supervised-040-open-observed-upgrade-control.png",
+            "sha256": "6406e6be8251e5718c88705205e512a285c92d44fe5242db24c376cf63c7e331",
+            "positive": ["SandFlow@HQ2PriceReady"],
+            "negative": ["SandFlow@SquadReady", "SandFlow@WorldReady"]
+        },
+        {
+            "id": "wrong-hq3-price",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00552-supervised-042-acknowledge-owned-hq2-success.png",
+            "sha256": "2a10f6e5324c7bb11821c37de246eea74b529b3567afdf8e552c5ccddeef3973",
+            "positive": [],
+            "negative": ["SandFlow@HQ2PriceReady", "SandFlow@SquadReady", "SandFlow@WorldReady"]
+        },
+        {
+            "id": "hq2-details",
+            "image": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00553-supervised-043-return-after-hq-upgrade.png",
+            "sha256": "89d10a687f8a213b94b3c220bc86299a7442867104bf9f7c09be65d16110ff62",
+            "positive": ["SandFlow@HQDetailsReady"],
+            "negative": ["SandFlow@HQ2PriceReady", "SandFlow@SquadReady"]
+        },
+        {
+            "id": "world-within-node",
+            "image": "I:/MAA-data/sand-player/live-control-v24-20261102/runtime/00023-supervised-020-pan-to-southwest-resource.png",
+            "sha256": "1e8ef5a28985e7a252bd5dd70ac93c2189865a2be9fa4d6feddc2e8a1a9b60aa",
+            "positive": ["SandFlow@WorldReady", "SandFlow@WithinRangeNodeReady"],
+            "negative": ["SandFlow@DesolateDetailsReady", "SandFlow@SquadReady"]
+        },
+        {
+            "id": "world-after-resume",
+            "image": "I:/MAA-data/sand-player/live-control-v24-20261102/runtime/00021-supervised-018-verify-resumed-world.png",
+            "sha256": "6dd8123f87e4f89e9ce12fc71c168e8fff366085d969d22f54834c7597a8c89a",
+            "positive": ["SandFlow@WorldReady"],
+            "negative": ["SandFlow@WithinRangeNodeReady"]
+        },
+        {
+            "id": "world-raid-clipped",
+            "image": "I:/MAA-data/sand-player/live-control-v25-20261102/runtime/00555-campaign-navigation-entry.png",
+            "sha256": "55aeb32172a9349e8869437f42273558a7d275597908cf2611ff8231d1bc3563",
+            "positive": ["SandFlow@WorldReady"],
+            "negative": ["SandFlow@DesolateNodeReady"]
+        },
+        {
+            "id": "world-raid-visible",
+            "image": "I:/MAA-data/sand-player/live-control-v25-20261102/runtime/00556-campaign-node-search.png",
+            "sha256": "91d711648944776acab4dcf567c1ea55e9516aa8fc7eea83dbfeed74effcfaa3",
+            "positive": ["SandFlow@WorldReady", "SandFlow@DesolateNodeReady"],
+            "negative": ["SandFlow@DesolateDetailsReady"]
+        }
+    ],
+    "offline_only_default": true,
+    "battle_execution_included": false
+}

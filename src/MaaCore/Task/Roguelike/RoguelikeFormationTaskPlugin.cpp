@@ -47,7 +47,9 @@ bool asst::RoguelikeFormationTaskPlugin::_run()
             ++pre_selected;
             continue;
         }
-        ctrler()->click(oper.rect);
+        // Card bounding boxes include slanted edges and interactive skill icons.
+        // The portrait center is inside the operator-selection area.
+        ctrler()->click(Point(oper.rect.x + oper.rect.width * 2 / 5, oper.rect.y + oper.rect.height / 2));
         ++select_count;
     }
     Log.info(__FUNCTION__, "pre_selected: ", pre_selected, " select: ", select_count);
@@ -116,17 +118,26 @@ void asst::RoguelikeFormationTaskPlugin::clear_and_reselect()
     for (const auto& condition : team_complete_condition) { // 优先选择阵容核心干员
         int count = 0;
         const int require = condition.threshold;
+        if (require <= 0) {
+            continue;
+        }
+        std::unordered_set<std::string> condition_opers;
         for (const std::string& group_name : condition.groups) {
             auto group_filter = std::views::filter([&](const auto& oper) {
                 const auto& group_ids = RoguelikeRecruit.get_group_ids_of_oper(m_config->get_theme(), oper.name);
                 return std::ranges::any_of(group_ids, [&](int id) { return group_list[id] == group_name; });
             });
-            for (const auto& oper : oper_list | group_filter | std::views::take(require - count)) {
+            for (const auto& oper : oper_list | group_filter) {
+                if (!condition_opers.emplace(oper.name).second) {
+                    continue;
+                }
                 if (!oper_to_select.contains(oper.name)) {
                     sorted_oper_list.emplace_back(oper);
                     oper_to_select.emplace(oper.name);
                 }
-                count++;
+                if (++count == require) {
+                    break;
+                }
             }
             if (count == require) {
                 break;
@@ -135,11 +146,19 @@ void asst::RoguelikeFormationTaskPlugin::clear_and_reselect()
     }
 
     std::erase_if(oper_list, [&](const auto& oper) { return oper_to_select.contains(oper.name); });
-    std::ranges::stable_partition(oper_list, [](const auto& oper) { return !oper.name.starts_with("预备干员"); });
+    // Retain basic healing before reserve damage fillers; stable-healer recruitment stays separate.
+    std::ranges::stable_partition(oper_list, [sui = m_config->get_theme() == "JieGarden"](const auto& oper) {
+        return !oper.name.starts_with("预备干员") || (sui && oper.name == "预备干员-后勤");
+    });
     std::ranges::move(oper_list | std::views::take(13 - sorted_oper_list.size()), std::back_inserter(sorted_oper_list));
 
     for (const auto& oper : sorted_oper_list) {
-        select(oper);
+        if (!select(oper) && oper_to_select.contains(oper.name)) {
+            LogWarn << "Required formation selection not confirmed: " << oper.name;
+            // Do not start combat with a silently missing carry, healer, or lane holder.
+            m_task_ptr->set_enable(false);
+            return;
+        }
     }
 }
 
@@ -196,9 +215,64 @@ bool asst::RoguelikeFormationTaskPlugin::select(RoguelikeFormationImageAnalyzer:
             cur_page++;
         }
     }
-    Log.info(__FUNCTION__, "select oper", oper.name, "on page", cur_page);
-    ctrler()->click(oper.rect);
-    return true;
+    // Swipes can stop between nominal pages. Never click a rectangle from an earlier scan.
+    RoguelikeFormationImageAnalyzer analyzer(ctrler()->get_image());
+    if (!analyzer.analyze()) {
+        return false;
+    }
+    const auto find_oper = [&]() {
+        return std::ranges::find_if(analyzer.get_result(), [&](const auto& current) {
+            return current.name == oper.name;
+        });
+    };
+    auto current = find_oper();
+    if (current == analyzer.get_result().end()) {
+        // Page numbers are hints: inertial scrolling can outlive the previous scan.
+        // Re-seek from the left edge and bind every candidate to a fresh observed card.
+        LogWarn << "Formation page drift; re-seeking observed operator " << oper.name;
+        cur_page = std::max(cur_page, max_page) + 1;
+        swipe_to_first_page();
+        for (int page = 0; page < max_page + 2; ++page) {
+            if (!sleep(Task.get("RoguelikeQuickFormationDelay")->post_delay)) {
+                return false;
+            }
+            analyzer.set_image(ctrler()->get_image());
+            if (analyzer.analyze()) {
+                current = find_oper();
+                if (current != analyzer.get_result().end()) {
+                    break;
+                }
+            }
+            else {
+                current = analyzer.get_result().end();
+            }
+            if (page + 1 < max_page + 2) {
+                ProcessTask(*this, { "RoguelikeRecruitOperListSlowlySwipeToTheRight" }).run();
+                ++cur_page;
+            }
+        }
+        if (current == analyzer.get_result().end()) {
+            LogWarn << "Formation operator absent after bounded re-seek: " << oper.name;
+            return false;
+        }
+    }
+    if (current->selected) {
+        return true;
+    }
+    LogInfo << "Selecting observed formation operator " << oper.name << " page " << cur_page;
+    // Do not randomize across the full bounding box: top edges and skills are not selection targets.
+    ctrler()->click(Point(current->rect.x + current->rect.width * 2 / 5, current->rect.y + current->rect.height / 2));
+    if (!sleep(Task.get("RoguelikeQuickFormationDelay")->post_delay)) {
+        return false;
+    }
+    analyzer.set_image(ctrler()->get_image());
+    if (!analyzer.analyze()) {
+        return false;
+    }
+    current = find_oper();
+    const bool confirmed = current != analyzer.get_result().end() && current->selected;
+    LogInfo << "Formation selection confirmation " << oper.name << " selected " << confirmed;
+    return confirmed;
 }
 
 void asst::RoguelikeFormationTaskPlugin::swipe_to_first_page()
@@ -214,10 +288,15 @@ void asst::RoguelikeFormationTaskPlugin::scan_oper()
 {
     m_last_detected_oper_names.clear();
     oper_list.clear();
-    cur_page = 1;
+    // A previous formation may have left the list between nominal pages.
+    cur_page = std::max(cur_page, max_page) + 1;
+    swipe_to_first_page();
 
     while (analyze()) { // 返回true说明新增了干员，可能还有下一页
         ProcessTask(*this, { "RoguelikeRecruitOperListSlowlySwipeToTheRight" }).run();
+        if (!sleep(Task.get("RoguelikeQuickFormationDelay")->post_delay)) {
+            return;
+        }
         cur_page++;
     }
 

@@ -1,0 +1,19 @@
+{
+    "_example": "Shape only; values from the guide are not current inventory. Replace observations before execution.",
+    "campaign_id": "offline-example",
+    "observation_id": "not-a-live-capture",
+    "day": 4,
+    "acts_used": 1,
+    "hq": 2,
+    "wood": 49,
+    "water": 15,
+    "planter_stock": 0,
+    "planter_placed": 1,
+    "construction_reserves": {
+        "wood": 14,
+        "water": 0
+    },
+    "snapshot_current": false,
+    "settled": false,
+    "threat": "unknown"
+}

@@ -8,6 +8,16 @@
     ],
     "deploy_plan": [
         {
+            "groups": ["益达"],
+            "location": [3, 2],
+            "direction": "left"
+        },
+        {
+            "groups": ["卡达"],
+            "location": [3, 3],
+            "direction": "down"
+        },
+        {
             "groups": ["召唤", "益达", "提丰", "焰苇", "高台输出"],
             "location": [5, 3],
             "direction": "down"

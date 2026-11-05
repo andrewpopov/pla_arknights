@@ -1,4 +1,6 @@
 #include "RoguelikeCoppersTaskPlugin.h"
+#include "JieGardenStrategy.h"
+#include <algorithm>
 
 #include "Common/AsstTypes.h"
 #include "Config/Roguelike/JieGarden/RoguelikeCoppersConfig.h"
@@ -9,6 +11,7 @@
 #include "Utils/DebugImageHelper.hpp"
 #include "Utils/Logger.hpp"
 #include "Vision/Matcher.h"
+#include "Vision/Miscellaneous/PipelineAnalyzer.h"
 #include "Vision/Roguelike/JieGarden/RoguelikeCoppersAnalyzer.h"
 
 bool asst::RoguelikeCoppersTaskPlugin::load_params([[maybe_unused]] const json::value& params)
@@ -261,10 +264,16 @@ asst::CopperTaskResult asst::RoguelikeCoppersTaskPlugin::handle_exchange_mode()
     // 总不可能超过20列(60个)通宝吧
     for (int col = 1; col <= 20; ++col) {
         // 检查是否是最后一列：尝试识别右侧通宝是否滑动到中间位置
-        bool is_last_col =
-            col == 1
-                ? false
-                : !ProcessTask(*this, { "JieGarden@Roguelike@CoppersAnalyzer-TypeSelected" }).set_retry_times(2).run();
+        if (col != 1) {
+            sleep(500); // Let the selected marker settle after the preceding swipe.
+        }
+        // Absence of the selected marker means the list ended; it is not a task failure.
+        PipelineAnalyzer selected(ctrler()->get_image());
+        selected.set_tasks(
+            { "JieGarden@Roguelike@CoppersTypeLiSelected",
+              "JieGarden@Roguelike@CoppersTypeHengSelected",
+              "JieGarden@Roguelike@CoppersTypeHuaSelected" });
+        const bool is_last_col = col != 1 && !selected.analyze();
 
         // 如果不是最后一列，点击右侧上方的通宝作为滑动成功的标志
         if (!is_last_col) {
@@ -539,6 +548,17 @@ std::optional<asst::RoguelikeCopper> asst::RoguelikeCoppersTaskPlugin::create_co
     // 从配置中查找通宝信息
     if (auto found_copper = RoguelikeCoppers.find_copper(m_config->get_theme(), name)) {
         auto copper = *found_copper;
+        if (m_config->jiegarden_strategy().manage_coppers && unsafe_jiegarden_copper(name, jiegarden_team(*m_config))) {
+            copper.pickup_priority = 0;
+            copper.discard_priority = std::max(copper.discard_priority, 2100);
+            copper.cast_discard_priority = std::max(copper.cast_discard_priority, 2200);
+            LogInfo << "Tongbao incompatible with current roster or authored tactics: " << name;
+        }
+        if (m_config->jiegarden_strategy().manage_coppers && m_config->status().floor <= 3 && name == "花-界园行") {
+            copper.pickup_priority = std::max(copper.pickup_priority, 1600);
+            copper.discard_priority = 10;
+            LogInfo << "Preserving early scouting coupon economy: " << name;
+        }
         copper.col = col;
         copper.row = row;
         copper.is_cast = is_cast;

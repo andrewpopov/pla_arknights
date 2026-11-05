@@ -1,0 +1,64 @@
+{
+    "schema_version": 1,
+    "status": "offline opening projection only; not an executable route",
+    "autoplay_enabled": false,
+    "stage": "Shrubbery Galore",
+    "coordinate_system": "registered-1280x720",
+    "default_side_anchor_compatible": false,
+    "images": {
+        "source_idle": {
+            "path": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00150.jpg",
+            "sha256": "027d4d71786d8c6710d5f2eeb4f036d1516a3a225adbf68e2c0ac71fd7215284"
+        },
+        "source_selected": {
+            "path": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00160.jpg",
+            "sha256": "b8fa34cd6063f961c2c77c692a93d54ba29da8d6e655146fb0a1ced8af5b7583"
+        },
+        "emulator_idle": {
+            "path": "I:\\MAA-data\\sand-player\\calibration-candidates\\shrubbery-video-opening\\idle.png",
+            "sha256": "bed44edf1c2f4cfa3a01cf3079b4b8d7c978b0005594778d02f0616fc3e5739b"
+        },
+        "emulator_selected": {
+            "path": "I:\\MAA-data\\sand-player\\calibration-candidates\\shrubbery-video-opening\\selected.png",
+            "sha256": "a841b2047b34aef829be611bf43e08f26f304d4e6d6e583b35d433cd403d2b11"
+        }
+    },
+    "report": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\four-pose-replay-no-ui.json",
+    "pause_ui_exclusion": [490, 300, 320, 155],
+    "slots": {
+        "main-chopper": {
+            "name": "Młynar",
+            "facing": "Right",
+            "source_point_normalized": [760, 286.6666666666667],
+            "normal": [761, 288],
+            "selected": [823, 282],
+            "max_path_disagreement_pixels": 1.4691608962587883,
+            "selected_fixture_green_fraction": 0.9926953981008035
+        },
+        "attack-recovery-chopper": {
+            "name": "Executor the Ex Foedere",
+            "facing": "Left",
+            "source_point_normalized": [673.3333333333334, 366.6666666666667],
+            "normal": [675, 367],
+            "selected": [745, 365],
+            "max_path_disagreement_pixels": 3.587813400040718,
+            "selected_fixture_green_fraction": 0.0
+        },
+        "dp-opener": {
+            "name": "Saileach",
+            "facing": "Right",
+            "source_point_normalized": [773.3333333333334, 440],
+            "normal": [774, 440],
+            "selected": [839, 424],
+            "max_path_disagreement_pixels": 1.6110049969900821,
+            "selected_fixture_green_fraction": 1.0
+        }
+    },
+    "limits": [
+        "Source tile annotations have about10 normalized pixels of manual uncertainty.",
+        "Path agreement proves registration consistency, not tile legality or live facing.",
+        "Selected reference is an earlier populated field; collector/chopper occupancy must be verified on a fresh operation.",
+        "Do not use these selected coordinates with the default side.png anchor.",
+        "Ownership, skill titles, DP, summon/collector tiles and live action validation remain pending."
+    ]
+}

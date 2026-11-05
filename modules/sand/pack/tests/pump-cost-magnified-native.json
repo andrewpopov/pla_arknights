@@ -1,0 +1,42 @@
+{
+    "schema_version": 1,
+    "row": {
+        "time": "2026-10-31T19:07:09.952941+00:00",
+        "what": "pump_cost_saved_frame_replay",
+        "image": "I:\\MAA-data\\sand-player\\day1-pump-20261031T190500Z\\live\\00003-pump-recipe-opened.png",
+        "native": {
+            "SandAuto@ToolCost0": {
+                "algorithm": "OcrDetect",
+                "hit": true,
+                "rect": [228, 543, 55, 28],
+                "score": 0.840983,
+                "task": "SandAuto@ToolCost0",
+                "text": "12/10"
+            },
+            "SandAuto@ToolRecipeStock": {
+                "algorithm": "OcrDetect",
+                "hit": true,
+                "rect": [1057, 158, 21, 24],
+                "score": 0.997291,
+                "task": "SandAuto@ToolRecipeStock",
+                "text": "0"
+            },
+            "SandAuto@ToolCraftQuantity": {
+                "algorithm": "OcrDetect",
+                "hit": true,
+                "rect": [803, 514, 11, 25],
+                "score": 0.998497,
+                "task": "SandAuto@ToolCraftQuantity",
+                "text": "1"
+            }
+        },
+        "prepared": "I:\\MAA-data\\sand-player\\day1-pump-20261031T190500Z\\live\\00003-pump-recipe-opened-reward-count-228.png",
+        "enlarged": [
+            {
+                "rect": [36, 40, 139, 63],
+                "score": 0.998851,
+                "text": "12/10"
+            }
+        ]
+    }
+}

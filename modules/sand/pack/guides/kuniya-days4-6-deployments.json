@@ -1,0 +1,331 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "source": "https://note.com/kuniya_ark/n/n19803f0f953f",
+    "image_coordinate_system": "source-image-only; no registered live coordinates",
+    "images": [
+        {
+            "image": 7,
+            "url": "https://assets.st-note.com/img/1730461995-FD7q2w9vXLcGbWK1ATkju8oP.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-07.png",
+            "sha256": "f5981daaad090a37965124d76bc0214a24f7e40f3d99a1ad8c79d696d73a0b5b",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 8,
+            "url": "https://assets.st-note.com/img/1730461995-JAfToDiGxO23H1Nybjc7arkX.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-08.png",
+            "sha256": "54942c8be1ef96bfa7aae8daae2fc32decd8d17500cc15f94f707a61f845a1f4",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 9,
+            "url": "https://assets.st-note.com/img/1730461995-t2RVfzeAZhSuPsl8WrqoxEaC.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-09.png",
+            "sha256": "bee19ba6538e5010b1512d4b5c3047a2cc8057590616c5a8a0e354bb7ef2414f",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 10,
+            "url": "https://assets.st-note.com/img/1730461995-mK6yx9Ow2LiahQRJW7X0dYsN.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-10.png",
+            "sha256": "00de2834adc7841eebb10f63c0742cac7ef98ac92691086d63720cdb7894ef3c",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 11,
+            "url": "https://assets.st-note.com/img/1730461996-O9yzPVjGKDqbCXEF2hiHRvxd.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-11.png",
+            "sha256": "61b7e728326d85e251e803c0648a8183f3f3c2f517042bdc87ad7872af729f88",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 12,
+            "url": "https://assets.st-note.com/img/1730461996-kOZ3w4H8bX2nyYfELdMRTPNq.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-12.png",
+            "sha256": "2cdbe1d6ae3e380e4958a68c7131b2ff7cca1baaee47e3a8a3f6832289df4b8e",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 43,
+            "url": "https://assets.st-note.com/img/1730463325-0UDQTM2R8mAxJghc9B5NwSPH.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-43.png",
+            "sha256": "17eee8b9f3c0ca04689e32295459337b052afbe5e1bce412e5d6dbe91f161a6e",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 44,
+            "url": "https://assets.st-note.com/img/1730463325-g0XMbDx2faU7ZtzLKsB8rCQW.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-44.png",
+            "sha256": "26616af1a37de58a9107d2b5e7893b278c6e4966a8ec799c5c989e670e4cede7",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 45,
+            "url": "https://assets.st-note.com/img/1730463482-ns9a0CKkBO6irbVzTWw1R2Eq.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-45.png",
+            "sha256": "2935f84cba6ee52f32d127d589297207a0edd5cf6f8ed01389d74692912faa94",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 46,
+            "url": "https://assets.st-note.com/img/1730463482-CX6870SpkdRvauBoAW1rhiMD.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-46.png",
+            "sha256": "efefc10c2758bae8cb7e5bee75528293171285b9c01768b835f3439d96c5a50c",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 47,
+            "url": "https://assets.st-note.com/img/1730463482-vZ8ROgrnJf3zxDTKQcyjtF26.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-47.png",
+            "sha256": "f108c7a68e1e217ccb37a63be4695bf87d14cc19358a83daef44465c8d3a3b04",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 48,
+            "url": "https://assets.st-note.com/img/1730463483-j1fYdkKNZqsnQHmwuEa37PSe.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-48.png",
+            "sha256": "b8d91a18a05f821d74d2d4965f7f1a4e3b582b8b63c83d79dd386af22bccb89f",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 49,
+            "url": "https://assets.st-note.com/img/1730463483-gN7UrIE8Zh9iLyDtTwPB4bMS.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-49.png",
+            "sha256": "345033df50b70252e46d60ec63210a8372bf050f8c1e82ed04267eba504b9afa",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 50,
+            "url": "https://assets.st-note.com/img/1730463483-I3DT1A8nvUZJMtuj4kHmzeWx.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-50.png",
+            "sha256": "7b4cfd66b3e10e311f4f42e62296751c04744aa72df885d2fd8416f6d8372826",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 53,
+            "url": "https://assets.st-note.com/img/1730463746-j7PmGQYRuezwt8JbTrqKDC0p.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-53.png",
+            "sha256": "d147f0a4a6a398a96befa30c8a02b6c1b9a3833e33c23f5f86351bb04d577338",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 54,
+            "url": "https://assets.st-note.com/img/1730463746-RxiZvC9G0fSBeQFPUoadyrDL.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-54.png",
+            "sha256": "c9e912ef30a6db67e5aaf47971392354bddd0bad125aae6940467768d3f09957",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 55,
+            "url": "https://assets.st-note.com/img/1730463777-a0hVdTEecpnzoH5rLq92NQIs.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-55.png",
+            "sha256": "468ac509acc9045de1a0ba8ea25456068d15d2c79448662a20ca1e5f7a87dcc4",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 56,
+            "url": "https://assets.st-note.com/img/1730463777-oQay7BJkF3SqjI0C8KeDHm9U.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-56.png",
+            "sha256": "98aaab14970ccb1c949475b8c97dffefe8ec09232e5babe11fe9975055d8f7c2",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 57,
+            "url": "https://assets.st-note.com/img/1730463778-sPGKjdDF7XCBabzmirg0ch3I.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-57.png",
+            "sha256": "6349673910a3671866b03cd080e3d96829f3f9f50aaa7b112874f3e96d791c1a",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 58,
+            "url": "https://assets.st-note.com/img/1730463778-kCqi06KLUMTg4RsQftEmpYSP.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-58.png",
+            "sha256": "03f075eca361eec2d2a230685ccffd0bf3d360ae237e57fd651dc43673651240",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 59,
+            "url": "https://assets.st-note.com/img/1730463778-LCRJS9HP5eBkbhKvjAfD1wqx.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-59.png",
+            "sha256": "ca412b55a43b25d72c97c8e1b85433fa84ec12a15750cd777404f89b64530f02",
+            "size": [2532, 1170]
+        }
+    ],
+    "routes": [
+        {
+            "day": 4,
+            "act": 1,
+            "source_stage": "射程内",
+            "required_tools": {
+                "Crabbie Pumpie": 1,
+                "Sawing Harvester Hub": 1
+            },
+            "observations": [
+                {
+                    "image": 7,
+                    "remaining": "03:52",
+                    "observation": "Pump is already deployed in the lower-left pool."
+                },
+                {
+                    "image": 8,
+                    "remaining": "03:46",
+                    "observation": "Hub is already placed at the upper edge of the central tree cluster. Facing Down is stated in article; placement click not shown."
+                },
+                {
+                    "image": 9,
+                    "remaining": "03:35",
+                    "observation": "Młynar is deployed below the hub."
+                },
+                {
+                    "image": 10,
+                    "remaining": "03:13",
+                    "observation": "Spot is deployed left of the hub. His sprite and remaining carrier hand support identity; frame does not establish a precise facing or prove live healing."
+                },
+                {
+                    "image": 12,
+                    "observation": "Settlement shows wood49, water10, gold3. Source result only; never credited to our state."
+                }
+            ],
+            "pending": [
+                "operator tile/facing calibration",
+                "hub tool identity detection",
+                "pump water-tile validation"
+            ],
+            "source_defender": "Spot",
+            "source_defender_evidence": "Image10: Spot panda sprite left of the hub; the remaining hand shows Yato, Noir Corne, Cardigan and Beagle, supporting Spot identity. Source identity is not live owned-skill verification."
+        },
+        {
+            "day": 6,
+            "act": 1,
+            "source_stage": "不揃いな木々",
+            "required_tools": {
+                "Sawing Harvester Hub": 2
+            },
+            "source_squad": ["Beagle", "Spot", "Hibiscus", "Ansel"],
+            "observations": [
+                {
+                    "image": 44,
+                    "observation": "Four named operators and two hubs are equipped."
+                },
+                {
+                    "image": 45,
+                    "remaining": "03:50",
+                    "observation": "First hub is deployed near the lower tree cluster."
+                },
+                {
+                    "image": 46,
+                    "remaining": "03:16",
+                    "observation": "Second hub is deployed by the upper-right trees; Spot and Ansel are at the lower hub."
+                },
+                {
+                    "image": 47,
+                    "remaining": "03:00",
+                    "observation": "Beagle is below the upper hub."
+                },
+                {
+                    "image": 48,
+                    "remaining": "02:45",
+                    "observation": "Hibiscus is now supporting the upper hub."
+                },
+                {
+                    "image": 50,
+                    "observation": "Source settlement shows wood43, one additional item and gold2; middle item identity not verified."
+                }
+            ],
+            "pending": [
+                "all source tiles and facing calibration",
+                "hub health and healer-range verification",
+                "early DP timing under our mode"
+            ],
+            "healer_pairings": [
+                {
+                    "healer": "Ansel",
+                    "defender": "Spot",
+                    "group": "lower"
+                },
+                {
+                    "healer": "Hibiscus",
+                    "defender": "Beagle",
+                    "group": "upper"
+                }
+            ],
+            "healing_calibration_requirement": "Supply logical map tiles and explicit facings; compiler checks ordinary E1 ranges from existing MAA battle_data plus native buildable terrain. This does not prove active healing, owned promotion, hub health or current camera registration.",
+            "source_squad_details": [
+                {
+                    "name": "Beagle",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1,
+                    "skill_rank": 7
+                },
+                {
+                    "name": "Spot",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1,
+                    "skill_rank": 7
+                },
+                {
+                    "name": "Hibiscus",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1,
+                    "skill_rank": 7
+                },
+                {
+                    "name": "Ansel",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1,
+                    "skill_rank": 7
+                }
+            ],
+            "source_squad_details_evidence": "Image44: all four named three-star operators show level55, E1 badges, selected S1 and skill rank7. Source requirements are not owned-account verification."
+        },
+        {
+            "day": 6,
+            "act": 2,
+            "source_stage": "深淵へ身を投ず",
+            "required_tools": {
+                "Crabbie Pumpie": 2
+            },
+            "source_squad": [],
+            "observations": [
+                {
+                    "image": 53,
+                    "observation": "No operators equipped; two pumps equipped."
+                },
+                {
+                    "image": 54,
+                    "observation": "Warning explicitly says Energy Drinks are consumed normally without operators."
+                },
+                {
+                    "image": 55,
+                    "remaining": "03:36",
+                    "observation": "Two pumps are deployed vertically adjacent in the right channel beside the central island."
+                },
+                {
+                    "image": 57,
+                    "remaining": "02:13",
+                    "observation": "Backpack shows water20."
+                },
+                {
+                    "image": 58,
+                    "observation": "Exit confirmation saves current operation progress; not a timer-expiry strategy."
+                },
+                {
+                    "image": 59,
+                    "observation": "Source settlement shows water20, one additional item and gold2; middle item identity not verified."
+                }
+            ],
+            "pending": [
+                "exact water tiles and pump hand identity",
+                "English empty-squad warning task",
+                "English exit/save confirmation",
+                "dialogue evidence: these images do not show a conversation"
+            ]
+        }
+    ],
+    "execution": "Reference evidence only. Do not scale source pixels into taps or load as a Sand route."
+}

@@ -1,0 +1,76 @@
+{
+    "stage_name": "破岁阵祀_raidian_s1",
+    "replacement_home": [
+        {
+            "location": [3, 5],
+            "direction": "Left"
+        }
+    ],
+    "blacklist_location": [],
+    "deploy_plan": [
+        {
+            "groups": ["电弧", "召唤"],
+            "location": [4, 5],
+            "direction": "left"
+        },
+        {
+            "groups": ["电弧一技能召唤"],
+            "location": [6, 1],
+            "direction": "up",
+            "condition": [0, 0]
+        },
+        {
+            "groups": ["稳定治疗"],
+            "location": [4, 4],
+            "direction": "right"
+        },
+        {
+            "groups": ["益达"],
+            "location": [4, 3],
+            "direction": "right"
+        },
+        {
+            "groups": ["奶盾"],
+            "location": [6, 1],
+            "direction": "up",
+            "condition": [0, 0]
+        },
+        {
+            "groups": ["奶盾", "地面远程", "地面阻挡"],
+            "location": [3, 5],
+            "direction": "left"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [1, 6],
+            "direction": "up"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [2, 6],
+            "direction": "up"
+        },
+        {
+            "groups": ["辅助"],
+            "location": [10, 6],
+            "direction": "up"
+        },
+        {
+            "groups": ["处决者"],
+            "location": [5, 1],
+            "direction": "right",
+            "condition": [0, 0]
+        },
+        {
+            "groups": ["玛恩纳", "地面远程", "重装", "地面阻挡", "回费", "处决者", "其他地面"],
+            "location": [6, 3],
+            "direction": "up"
+        },
+        {
+            "groups": ["高台输出"],
+            "location": [11, 6],
+            "direction": "up"
+        }
+    ],
+    "Doc": "Confirmed E2 Raidian + explicitly selected S1 only. Preserve owner4,5left to cover the left goal; Dive6,1 intercepts before first kill, then stable medic4,4right and W4,3right. Medic protects Raidian/W and secondary hold6,3. Dive cannot receive direct healing; the top fallback is self-healing. Keep owner and medic below the upper-row beam paths. Original S2 resource unchanged. First-kill windows do not prove boss position; ongoing phase-aware replacement remains pending live evidence."
+}

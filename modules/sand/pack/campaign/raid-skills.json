@@ -1,0 +1,122 @@
+{
+    "schema_version": 1,
+    "source_commit": "409bce70516f2420af61b1fc5680da60e448ab99",
+    "tables": {
+        "character_table.json": {
+            "file": "I:\\MAA-data\\sand-guides\\20261029\\game-data\\409bce70516f\\character_table.json",
+            "sha256": "ca0663517ec917aec88a11a41d1b38611eac29a5b5353dabc459b0102591d9e4"
+        },
+        "skill_table.json": {
+            "file": "I:\\MAA-data\\sand-guides\\20261029\\game-data\\409bce70516f\\skill_table.json",
+            "sha256": "1f4b1ba220a2abb11a06fda66b715695ebe1b56f4c6c1583e33a4e20c4b81f0a"
+        }
+    },
+    "operators": {
+        "Fang": {
+            "skill_id": "skcom_charge_cost[1]",
+            "skill": 1,
+            "rank": 7,
+            "title": "Charge \u03b1",
+            "activation": "AUTO",
+            "sp_cost": 25,
+            "actual_owned_skill_verified": false
+        },
+        "Vanilla": {
+            "skill_id": "skchr_wyvern_1",
+            "skill": 1,
+            "rank": 7,
+            "title": "Command - Reinforcement",
+            "activation": "MANUAL",
+            "sp_cost": 20,
+            "actual_owned_skill_verified": false
+        },
+        "Popukar": {
+            "skill_id": "skcom_atk_up[1]",
+            "skill": 1,
+            "rank": 7,
+            "title": "ATK Up \u03b1",
+            "activation": "MANUAL",
+            "sp_cost": 40,
+            "actual_owned_skill_verified": false
+        },
+        "Beagle": {
+            "skill_id": "skcom_def_up[1]",
+            "skill": 1,
+            "rank": 7,
+            "title": "DEF Up \u03b1",
+            "activation": "MANUAL",
+            "sp_cost": 40,
+            "actual_owned_skill_verified": false
+        },
+        "Kroos": {
+            "skill_id": "skchr_kroos_1",
+            "skill": 1,
+            "rank": 7,
+            "title": "Double Tap - Auto",
+            "activation": "AUTO",
+            "sp_cost": 4,
+            "actual_owned_skill_verified": false
+        },
+        "Lava": {
+            "skill_id": "skcom_magic_rage[1]",
+            "skill": 1,
+            "rank": 7,
+            "title": "Tactical Chant \u03b1",
+            "activation": "MANUAL",
+            "sp_cost": 40,
+            "actual_owned_skill_verified": false
+        },
+        "Ansel": {
+            "skill_id": "skcom_range_extend",
+            "skill": 1,
+            "rank": 7,
+            "title": "Healing Range Up",
+            "activation": "MANUAL",
+            "sp_cost": 35,
+            "actual_owned_skill_verified": false
+        },
+        "Midnight": {
+            "skill_id": "skchr_midn_1",
+            "skill": 1,
+            "rank": 7,
+            "title": "Enchant Weapon \u03b1",
+            "activation": "MANUAL",
+            "sp_cost": 70,
+            "actual_owned_skill_verified": false
+        },
+        "Blaze": {
+            "skill_id": "skchr_huang_2",
+            "skill": 2,
+            "rank": 7,
+            "title": "Chainsaw Extension Module",
+            "activation": "AUTO",
+            "sp_cost": 80,
+            "activation_policy": "automatic",
+            "actual_owned_skill_verified": false,
+            "source_range_id": "2-2"
+        },
+        "Mountain": {
+            "skill_id": "skchr_f12yin_2",
+            "skill": 2,
+            "rank": 7,
+            "title": "Sweeping Stance",
+            "activation": "MANUAL",
+            "sp_cost": 8,
+            "activation_policy": "once_per_deployment",
+            "actual_owned_skill_verified": false,
+            "source_range_id": "0-1"
+        },
+        "Saria": {
+            "skill_id": "skchr_demkni_2",
+            "skill": 2,
+            "rank": 7,
+            "title": "Medicine Dispensing",
+            "activation": "AUTO",
+            "sp_cost": 8,
+            "activation_policy": "automatic",
+            "actual_owned_skill_verified": false,
+            "source_range_id": "x-2"
+        }
+    },
+    "game_connected": false
+}

@@ -1,0 +1,41 @@
+{
+    "schema_version": 1,
+    "native_configuration": "Debug",
+    "native_report": "I:\\MAA-data\\sand-player\\raid-hud-outpost-fix-20261031\\report.json",
+    "case_manifest": "tests/raid-hud-cases.json",
+    "cases": 8,
+    "all_native_verdicts_passed": true,
+    "actual_english_outpost_positive": true,
+    "roi": {
+        "SandAuto@RaidKills": [535, 5, 100, 42],
+        "SandAuto@RaidLives": [720, 5, 90, 42]
+    },
+    "regression": "The old 560px crop clipped the leading zero in the actual English 0/44 outpost counter. Numeric HUD misses must never leave a launched battle running.",
+    "fallback": {
+        "observer": "BattleOfficiallyBegin",
+        "actual_english_score": 0.93636,
+        "policy": "Unidentified battle controls cause one pause, verify Paused, and stop. No stage identity, deployment or win is inferred.",
+        "unit_tests_passed": 5,
+        "live_unknown_hud_pause_validated": true,
+        "live_scope": "Controlled identity-withholding test in the free camp; no outpost combat retry.",
+        "live_proof": "I:\\MAA-data\\sand-player\\raid-hud-outpost-fix-20261031\\live-pause-guard-retry.json"
+    },
+    "failed_live_test": {
+        "day": 5,
+        "stage_id": "sandbox_1_26",
+        "stage": "Desolate Interception Point",
+        "enemy_total": 44,
+        "initial_lives": 3,
+        "deployed_operators": 0,
+        "outcome": "Raid ended before pause was secured; no victory claim. One Act and two drinks consumed.",
+        "after_image": "I:\\MAA-data\\sand-player\\daily-sand-test-20261031T033300Z\\after-raid-current.png"
+    },
+    "scope": "Saved-image recognition and stop guard; not a calibrated or successful outpost combat strategy.",
+    "camp_navigation": {
+        "task": "SandPilot@GoBase",
+        "roi": [0, 70, 1280, 560],
+        "reason": "World recentering placed Gathering Grounds outside the previous crop.",
+        "actual_native_callback": null,
+        "free_camp_entry_pause_exit_verified": true
+    }
+}

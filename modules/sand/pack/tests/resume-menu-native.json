@@ -1,0 +1,41 @@
+{
+    "scope": "Saved English Sand main-menu Resume recognition; no live action inferred",
+    "reports": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\live-control-20261101\\runtime\\00002-supervised-002-inspect.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1104, 633, 89, 25],
+                    "score": 0.999882,
+                    "task": "SandPilot@Commence",
+                    "text": "Resume"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\live-control-20261101\\runtime\\00004-supervised-005-world.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandPilot@Commence"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\live-control-v2-20261101\\runtime\\00006-supervised-001-water-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandPilot@Commence"
+                }
+            ]
+        }
+    ],
+    "game_connected": false,
+    "task": "SandPilot@Commence"
+}

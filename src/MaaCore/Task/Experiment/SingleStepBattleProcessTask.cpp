@@ -33,8 +33,11 @@ bool asst::SingleStepBattleProcessTask::_run()
     size_t action_size = m_actions.size();
     for (size_t i = 0; i < action_size && !need_exit(); ++i) {
         const auto& action = m_actions.at(i);
-        do_action(action, i);
+        if (!do_action(action, i)) {
+            LogError << __FUNCTION__ << "Action failed at index" << i;
+            return false;
+        }
     }
 
-    return true;
+    return !need_exit();
 }

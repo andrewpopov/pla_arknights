@@ -62,6 +62,7 @@ private:
     static SelectionPlan plan_from_rule(const blackflow::EncounterRule& rule);
 
     bool update_option_list();
+    void handle_jiegarden_tavern(const Config::RoguelikeEvent& event);
     std::optional<std::string> select_blackflow_option(const Config::RoguelikeEvent& event, size_t choose_option);
     std::optional<SelectedOption> select_event_option(const SelectionPlan& plan, std::string_view event_name);
     bool select_analyzed_option(size_t index);

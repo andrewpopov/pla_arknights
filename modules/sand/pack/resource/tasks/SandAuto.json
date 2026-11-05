@@ -1,0 +1,1331 @@
+{
+    "SandAuto@World": {
+        "baseTask": "Tales@RA@ClickHeadquartersButton",
+        "template": "Tales@RA@HeadquartersButton.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@Result": {
+        "algorithm": "OcrDetect",
+        "text": ["Itemsreceived"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [115, 465, 240, 60],
+        "fullMatch": false,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@Squad": {
+        "algorithm": "OcrDetect",
+        "text": ["QuickSelect"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [790, 10, 140, 60],
+        "fullMatch": false,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@Battle": {
+        "algorithm": "OcrDetect",
+        "text": ["##:##"],
+        "ocrReplace": [
+            ["\\s+", ""],
+            ["[Oo]", "0"],
+            ["\\d", "#"]
+        ],
+        "roi": [560, 8, 175, 50],
+        "fullMatch": true,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@Paused": {
+        "algorithm": "MatchTemplate",
+        "template": "SandPausedPlay.png",
+        "templThreshold": 0.95,
+        "roi": [1165, 20, 75, 65],
+        "action": "DoNothing",
+        "next": [],
+        "template_Doc": "Positive play-button shape identifies pause even when operator range lines obscure PAUSE text. Callers separately require a recognized battle."
+    },
+    "SandAuto@CancelFacing": {
+        "algorithm": "OcrDetect",
+        "text": ["Cancel"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [350, 60, 550, 350],
+        "fullMatch": false,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EndConfirm": {
+        "algorithm": "OcrDetect",
+        "text": ["leave"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [400, 240, 500, 220],
+        "fullMatch": false,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@NoEnergy": {
+        "algorithm": "OcrDetect",
+        "text": ["Insufficientenergydrinks", "InsufficientEnergy", "Notenoughenergy", "notenoughenergy"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [350, 200, 650, 360],
+        "fullMatch": false,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SelectWood": {
+        "algorithm": "OcrDetect",
+        "text": ["ShrubberyGalore"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [0, 100, 1150, 500],
+        "fullMatch": false,
+        "action": "ClickSelf",
+        "next": ["Stop"],
+        "postDelay": 800
+    },
+    "SandAuto@Headquarters": {
+        "algorithm": "OcrDetect",
+        "text": ["HeadquartersConstructStatus"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [30, 135, 380, 80],
+        "fullMatch": true,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName1": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [300, 96, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName2": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [300, 236, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName3": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [300, 376, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName4": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [300, 516, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName5": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [810, 96, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName6": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [810, 236, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName7": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [810, 376, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SquadName8": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read raw card title; player verifies exact required operator names and confidence.",
+        "withoutDet": true,
+        "roi": [810, 516, 150, 21],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EnergyStock": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw numeric counter; require confidence and strict count parsing before preparation.",
+        "withoutDet": true,
+        "roi": [670, 100, 35, 30],
+        "action": "DoNothing",
+        "next": [],
+        "isAscii": true
+    },
+    "SandAuto@EnergyReady": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw numeric counter; require confidence and strict count parsing before preparation.",
+        "withoutDet": true,
+        "roi": [418, 558, 28, 30],
+        "action": "DoNothing",
+        "next": [],
+        "isAscii": true
+    },
+    "SandAuto@EnergyScreen": {
+        "algorithm": "OcrDetect",
+        "text": ["EnergyDrink"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [250, 80, 470, 100],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@CookingBack": {
+        "baseTask": "SandAuto@EnergyScreen",
+        "action": "ClickRect",
+        "specificRect": [17, 20, 25, 35],
+        "postDelay": 700,
+        "next": ["Stop"]
+    },
+    "SandAuto@EnergyIngredients": {
+        "algorithm": "OcrDetect",
+        "text": ["Ingredient"],
+        "fullMatch": true,
+        "roi": [1140, 95, 135, 45],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EnergyProvisions": {
+        "algorithm": "OcrDetect",
+        "text": ["Provisions"],
+        "fullMatch": true,
+        "roi": [1140, 95, 135, 45],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@FinishCalculation": {
+        "baseTask": "Tales@RA@FinishCalc",
+        "next": ["Stop"],
+        "postDelay": 700
+    },
+    "SandAuto@WorldHint": {
+        "algorithm": "OcrDetect",
+        "text": ["speedupconstructionwork", "recordedwhatwesawintheDiscoveryCasket"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [210, 45, 1040, 130],
+        "action": "ClickRect",
+        "specificRect": [600, 75, 100, 40],
+        "postDelay": 600,
+        "next": ["Stop"]
+    },
+    "SandAuto@SettlementWood": {
+        "algorithm": "MatchTemplate",
+        "template": "SandSettlementWood.png",
+        "templThreshold": 0.9,
+        "roi": [45, 530, 650, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementWater": {
+        "algorithm": "MatchTemplate",
+        "template": "SandSettlementWater.png",
+        "templThreshold": 0.9,
+        "roi": [45, 530, 650, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementGold": {
+        "algorithm": "MatchTemplate",
+        "template": "SandSettlementGold.png",
+        "templThreshold": 0.9,
+        "roi": [45, 530, 650, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementWing": {
+        "algorithm": "MatchTemplate",
+        "template": "SandSettlementWing.png",
+        "templThreshold": 0.9,
+        "roi": [45, 530, 650, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementWildPlant": {
+        "algorithm": "MatchTemplate",
+        "template": "SandSettlementWildPlant.png",
+        "templThreshold": 0.9,
+        "roi": [45, 530, 650, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCount0": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw +N reward counter bound to a matched item slot; strict parser and confidence required.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [128, 608, 32, 26],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCount1": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw +N reward counter bound to a matched item slot; strict parser and confidence required.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [232, 608, 32, 26],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCount2": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw +N reward counter bound to a matched item slot; strict parser and confidence required.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [336, 608, 32, 26],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCount3": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw +N reward counter bound to a matched item slot; strict parser and confidence required.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [440, 608, 32, 26],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCount4": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw +N reward counter bound to a matched item slot; strict parser and confidence required.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [544, 608, 32, 26],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCount5": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw +N reward counter bound to a matched item slot; strict parser and confidence required.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [648, 608, 32, 26],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@StageShrubberyGalore": {
+        "algorithm": "OcrDetect",
+        "text": ["ShrubberyGalore"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 1100, 525],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@StageJaggedJungle": {
+        "algorithm": "OcrDetect",
+        "text": ["JaggedJungle"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 1100, 525],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@StageWithinRange": {
+        "algorithm": "OcrDetect",
+        "text": ["WithinRange"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 1100, 525],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@StageDrinkwaterasBait": {
+        "algorithm": "OcrDetect",
+        "text": ["DrinkwaterasBait"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 1100, 525],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@StageStraightIntotheAbyss": {
+        "algorithm": "OcrDetect",
+        "text": ["StraightIntotheAbyss"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 1100, 525],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@RaidKills": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw raid HUD counter; strict numeric grammar and confidence must be checked by the runner. Not proof of stage identity.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [535, 5, 100, 42],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@RaidLives": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw raid HUD counter; strict numeric grammar and confidence must be checked by the runner. Not proof of stage identity.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [720, 5, 90, 42],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@ToolRecipeStock": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw tool crafting counter; validate identity, confidence and exact grammar before inputs.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [1055, 155, 27, 29],
+        "action": "DoNothing",
+        "next": [],
+        "binThreshold": [200, 255]
+    },
+    "SandAuto@ToolCraftQuantity": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw tool crafting counter; validate identity, confidence and exact grammar before inputs.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [793, 507, 34, 42],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@ToolCost0": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw tool crafting counter; validate identity, confidence and exact grammar before inputs.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [228, 543, 55, 28],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorkbenchPumpStock": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw tool crafting counter; validate identity, confidence and exact grammar before inputs.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [378, 258, 28, 28],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@PumpRecipeScreen": {
+        "algorithm": "OcrDetect",
+        "text": ["CrabbiePumpie"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [505, 178, 380, 36],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorkbenchScreen": {
+        "algorithm": "OcrDetect",
+        "text": ["Workbench"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [100, 10, 220, 45],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorkbenchPumpName": {
+        "algorithm": "OcrDetect",
+        "text": ["CrabbiePumpie"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [410, 120, 330, 42],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldActs1": {
+        "baseTask": "Tales@RA@NonZeroActsLeft",
+        "template": "Tales@RA@ActsLeft1.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldActs2": {
+        "baseTask": "Tales@RA@NonZeroActsLeft",
+        "template": "Tales@RA@ActsLeft2.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldActs0": {
+        "baseTask": "Tales@RA@NextDay",
+        "template": "Tales@RA@NextDay.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldGold": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw world HUD field; identity/grammar/confidence required, missing values remain unknown.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [195, 35, 48, 27],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldWater": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw world HUD field; identity/grammar/confidence required, missing values remain unknown.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [430, 35, 42, 27],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldWood": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw world HUD field; identity/grammar/confidence required, missing values remain unknown.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [491, 35, 28, 27],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Crop between the wood icon and the next resource icon; verified against fresh Day1 zero and historical world screens."
+    },
+    "SandAuto@WorldStone": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw world HUD field; identity/grammar/confidence required, missing values remain unknown.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [540, 35, 42, 27],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Deprecated misidentified food counter/icon. Not stone inventory; excluded by maa_sand_world HUD_RESOURCES."
+    },
+    "SandAuto@WorldRice": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw world HUD field; identity/grammar/confidence required, missing values remain unknown.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [595, 35, 42, 27],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldDayNumber": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw world HUD field; identity/grammar/confidence required, missing values remain unknown.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [1155, 72, 43, 42],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldHQLevel": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw world HUD field; identity/grammar/confidence required, missing values remain unknown.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [45, 689, 55, 28],
+        "action": "DoNothing",
+        "next": [],
+        "binThreshold": [0, 140]
+    },
+    "SandAuto@WorldDaysLabel": {
+        "algorithm": "OcrDetect",
+        "text": ["Days"],
+        "fullMatch": true,
+        "roi": [1140, 50, 85, 31],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldIconGold": {
+        "algorithm": "MatchTemplate",
+        "template": "SandWorldGold.png",
+        "templThreshold": 0.9,
+        "roi": [144, 7, 50, 45],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldIconWater": {
+        "algorithm": "MatchTemplate",
+        "template": "SandWorldWater.png",
+        "templThreshold": 0.9,
+        "roi": [411, 12, 26, 38],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldIconWood": {
+        "algorithm": "MatchTemplate",
+        "template": "SandWorldWood.png",
+        "templThreshold": 0.9,
+        "roi": [462, 12, 31, 38],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorldIconStone": {
+        "algorithm": "MatchTemplate",
+        "template": "SandWorldStone.png",
+        "templThreshold": 0.9,
+        "roi": [517, 13, 31, 37],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Deprecated misidentified food counter/icon. Not stone inventory; excluded by maa_sand_world HUD_RESOURCES."
+    },
+    "SandAuto@WorldIconRice": {
+        "algorithm": "MatchTemplate",
+        "template": "SandWorldRice.png",
+        "templThreshold": 0.9,
+        "roi": [574, 9, 28, 44],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@DialogueLog": {
+        "baseTask": "Tales@RA@PNS-OpeningDialogue",
+        "template": "DialogueLog.png",
+        "action": "DoNothing",
+        "sub": [],
+        "next": []
+    },
+    "SandAuto@BagHeader": {
+        "algorithm": "MatchTemplate",
+        "template": "SandBagHeader.png",
+        "templThreshold": 0.9,
+        "roi": [300, 100, 130, 100],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@BagWater": {
+        "algorithm": "MatchTemplate",
+        "template": "SandBagWater.png",
+        "templThreshold": 0.9,
+        "roi": [340, 230, 620, 250],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HubRecipeScreen": {
+        "algorithm": "OcrDetect",
+        "text": ["SawingHarvesterHub"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [505, 175, 550, 60],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@ToolRecipeClosable": {
+        "baseTask": "Tales@RA@CancelCraft",
+        "templThreshold": 0.85,
+        "action": "DoNothing",
+        "next": [],
+        "template": "Tales@RA@Craft.png"
+    },
+    "SandAuto@DetailsShrubberyGalore": {
+        "algorithm": "OcrDetect",
+        "text": ["ShrubberyGalore"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [895, 110, 360, 70],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@DetailsJaggedJungle": {
+        "algorithm": "OcrDetect",
+        "text": ["JaggedJungle"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [895, 110, 360, 70],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@DetailsWithinRange": {
+        "algorithm": "OcrDetect",
+        "text": ["WithinRange"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [895, 110, 360, 70],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@DetailsDrinkwaterasBait": {
+        "algorithm": "OcrDetect",
+        "text": ["DrinkwaterasBait"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [895, 110, 360, 70],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@DetailsStraightIntotheAbyss": {
+        "algorithm": "OcrDetect",
+        "text": ["StraightIntotheAbyss"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [895, 110, 360, 70],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventSlightestEffort": {
+        "algorithm": "OcrDetect",
+        "text": ["SlightestEffort"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [240, 300, 600, 60],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventANote": {
+        "algorithm": "OcrDetect",
+        "text": ["ANote"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [240, 300, 600, 60],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventNoteThanks": {
+        "algorithm": "OcrDetect",
+        "text": ["Thanks"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [820, 270, 450, 270],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventAlright": {
+        "algorithm": "OcrDetect",
+        "text": ["Alright"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [820, 270, 450, 270],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventCheapFood": {
+        "algorithm": "OcrDetect",
+        "text": ["Offersomecheapfood"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [820, 270, 450, 270],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventHighGradeFood": {
+        "algorithm": "OcrDetect",
+        "text": ["Offersomehighgradestuff"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [820, 270, 450, 270],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventFreeRide": {
+        "algorithm": "OcrDetect",
+        "text": ["Givethemafreeride"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [820, 270, 450, 270],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventExchangeTroubles": {
+        "algorithm": "OcrDetect",
+        "text": ["ExchangeTroubles"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [240, 300, 600, 60],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventSeeHappening": {
+        "algorithm": "OcrDetect",
+        "text": ["Goandseewhatshappening"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [820, 270, 450, 270],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EventEverydayOccurrence": {
+        "algorithm": "OcrDetect",
+        "text": ["Seemslikeaneverydayoccurrencehere"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [820, 270, 450, 270],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EmptySquadSlot1": {
+        "algorithm": "OcrDetect",
+        "text": ["AddSquadMembers"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [240, 120, 350, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EmptySquadSlot2": {
+        "algorithm": "OcrDetect",
+        "text": ["AddSquadMembers"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [240, 260, 350, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EmptySquadSlot3": {
+        "algorithm": "OcrDetect",
+        "text": ["AddSquadMembers"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [240, 400, 350, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EmptySquadSlot4": {
+        "algorithm": "OcrDetect",
+        "text": ["AddSquadMembers"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [240, 540, 350, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EmptySquadSlot5": {
+        "algorithm": "OcrDetect",
+        "text": ["AddSquadMembers"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [750, 120, 350, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EmptySquadSlot6": {
+        "algorithm": "OcrDetect",
+        "text": ["AddSquadMembers"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [750, 260, 350, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EmptySquadSlot7": {
+        "algorithm": "OcrDetect",
+        "text": ["AddSquadMembers"],
+        "ocrReplace": [["[^\\w]+", ""]],
+        "fullMatch": true,
+        "roi": [750, 400, 350, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@ClearSquad": {
+        "baseTask": "Tales@RA@ClearSquad",
+        "template": "Tales@RA@ClearSquad.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@ClearSquadConfirm": {
+        "baseTask": "Tales@RA@DialogConfirmRed",
+        "template": "Tales@RA@DialogConfirmRed.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@BagButton": {
+        "algorithm": "MatchTemplate",
+        "template": "SandBagButton.png",
+        "roi": [120, 0, 140, 120],
+        "templThreshold": 0.9,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@FormationTripEnergy": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Read the formation trip drink cost/stock badge; parse the entire ratio before launch.",
+        "withoutDet": true,
+        "roi": [930, 668, 77, 22],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@VisitStartConfirm": {
+        "baseTask": "Tales@RA@DialogConfirmRed",
+        "template": "Tales@RA@DialogConfirmRed.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@NoEquippedTools": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEmptyFirstToolSlot.png",
+        "roi": [1170, 70, 110, 150],
+        "templThreshold": 0.95,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementTenderloin": {
+        "algorithm": "MatchTemplate",
+        "template": "SandSettlementTenderloin.png",
+        "templThreshold": 0.9,
+        "roi": [45, 530, 650, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCountWide0": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Bounded wider +N retry when the primary crop clips the plus sign or has weak confidence.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [108, 606, 60, 30],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCountWide1": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Bounded wider +N retry when the primary crop clips the plus sign or has weak confidence.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [212, 606, 60, 30],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCountWide2": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Bounded wider +N retry when the primary crop clips the plus sign or has weak confidence.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [316, 606, 60, 30],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCountWide3": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Bounded wider +N retry when the primary crop clips the plus sign or has weak confidence.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [420, 606, 60, 30],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCountWide4": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Bounded wider +N retry when the primary crop clips the plus sign or has weak confidence.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [524, 606, 60, 30],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@SettlementCountWide5": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Bounded wider +N retry when the primary crop clips the plus sign or has weak confidence.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [628, 606, 60, 30],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@RaidResultBadge": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRaidResultBadge.png",
+        "templThreshold": 0.92,
+        "roi": [45, 310, 160, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@RaidResultRemaining": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Raw remaining/total result counter; caller requires one confident exact fraction and expected battle total.",
+        "withoutDet": false,
+        "isAscii": true,
+        "roi": [270, 335, 70, 23],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@RaidWorldMarker": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRaidWorldMarker.png",
+        "templThreshold": 0.92,
+        "roi": [0, 0, 1280, 620],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@RaidInterceptionStart": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRaidInterceptionStart.png",
+        "templThreshold": 0.92,
+        "roi": [930, 500, 350, 160],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@BagTenderloin": {
+        "algorithm": "MatchTemplate",
+        "template": "SandBagTenderloin.png",
+        "templThreshold": 0.92,
+        "roi": [340, 230, 620, 250],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedPump1": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquippedPump.png",
+        "templThreshold": 0.95,
+        "roi": [920, 80, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedHub1": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquippedHub.png",
+        "templThreshold": 0.95,
+        "roi": [920, 80, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedEmpty1": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquipmentEmptyPlus.png",
+        "templThreshold": 0.95,
+        "roi": [920, 80, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedPump2": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquippedPump.png",
+        "templThreshold": 0.95,
+        "roi": [920, 220, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedHub2": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquippedHub.png",
+        "templThreshold": 0.95,
+        "roi": [920, 220, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedEmpty2": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquipmentEmptyPlus.png",
+        "templThreshold": 0.95,
+        "roi": [920, 220, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedPump3": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquippedPump.png",
+        "templThreshold": 0.95,
+        "roi": [920, 360, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedHub3": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquippedHub.png",
+        "templThreshold": 0.95,
+        "roi": [920, 360, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EquippedEmpty3": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEquipmentEmptyPlus.png",
+        "templThreshold": 0.95,
+        "roi": [920, 360, 360, 130],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQDetails": {
+        "algorithm": "OcrDetect",
+        "text": ["Headquarters"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [550, 419, 190, 40],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQUpgradePanel": {
+        "algorithm": "OcrDetect",
+        "text": ["HeadquartersLevel"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [875, 230, 190, 30],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQUpgradeTarget2": {
+        "algorithm": "OcrDetect",
+        "text": ["2"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [965, 135, 75, 95],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQOpenUpgrade": {
+        "algorithm": "OcrDetect",
+        "text": ["Upgrade"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [550, 520, 185, 60],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQConfirmUpgrade": {
+        "algorithm": "OcrDetect",
+        "text": ["Upgrade"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [865, 630, 205, 60],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQUpgradeReturn": {
+        "algorithm": "OcrDetect",
+        "text": ["Return"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [40, 10, 110, 55],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQUpgradeWood": {
+        "algorithm": "MatchTemplate",
+        "template": ["SandHQUpgradeWood.png", "SandHQUpgradeWoodFunded.png"],
+        "templThreshold": 0.95,
+        "roi": [740, 510, 260, 80],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQUpgradeWater": {
+        "algorithm": "MatchTemplate",
+        "template": ["SandHQUpgradeWater.png", "SandHQUpgradeWaterFunded.png"],
+        "templThreshold": 0.95,
+        "roi": [740, 510, 260, 80],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQSuccessCheck": {
+        "algorithm": "MatchTemplate",
+        "template": "SandHQSuccessCheck.png",
+        "templThreshold": 0.95,
+        "roi": [560, 585, 160, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@PlanterRecipeScreen": {
+        "algorithm": "OcrDetect",
+        "text": ["PlantingBoxGroup"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [505, 175, 550, 60],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@PlanterPlacedFraction": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "text_Doc": "Exact deployed/MAX counter in the identified planter recipe; stock remains a separate field.",
+        "withoutDet": true,
+        "isAscii": true,
+        "roi": [996, 187, 99, 33],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@WorkbenchBack": {
+        "baseTask": "Tales@RA@BackDark",
+        "template": "Tales@RA@BackDark.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQBuildTitle": {
+        "algorithm": "OcrDetect",
+        "text": ["Headquarters"],
+        "fullMatch": false,
+        "roi": [270, 15, 500, 55],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQPlanterName": {
+        "algorithm": "OcrDetect",
+        "text": ["PlantingBoxGroup"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [40, 175, 290, 40],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQBuildSave": {
+        "algorithm": "MatchTemplate",
+        "template": "SandHQBuildSave.png",
+        "templThreshold": 0.95,
+        "roi": [1130, 5, 150, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@HQBuildBack": {
+        "algorithm": "MatchTemplate",
+        "template": "SandHQBuildBack.png",
+        "templThreshold": 0.95,
+        "roi": [25, 5, 100, 110],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@BaseNpcStone": {
+        "algorithm": "MatchTemplate",
+        "template": "SandBaseNpcStone.png",
+        "templThreshold": 0.95,
+        "roi": [535, 290, 215, 140],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@CampExit": {
+        "algorithm": "MatchTemplate",
+        "template": "SandCampExit.png",
+        "templThreshold": 0.95,
+        "roi": [20, 10, 115, 95],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@CampBag": {
+        "algorithm": "MatchTemplate",
+        "template": "SandCampBag.png",
+        "templThreshold": 0.95,
+        "roi": [120, 10, 125, 95],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@CampTent": {
+        "algorithm": "MatchTemplate",
+        "template": "SandCampTent.png",
+        "templThreshold": 0.95,
+        "roi": [55, 445, 235, 205],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@DetailsDesolateInterceptionPoint": {
+        "algorithm": "OcrDetect",
+        "text": ["DesolateInterceptionPoint"],
+        "ocrReplace": [
+            ["\\s+", ""],
+            ["Poini$", "Point"]
+        ],
+        "fullMatch": true,
+        "roi": [480, 405, 320, 55],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@StageDesolateInterceptionPoint": {
+        "baseTask": "SandAuto@DetailsDesolateInterceptionPoint"
+    },
+    "SandAuto@SquadMlynarSelectedS3": {
+        "algorithm": "MatchTemplate",
+        "template": "SandMlynarSelectedS3.png",
+        "templThreshold": 0.95,
+        "roi": [300, 120, 780, 510],
+        "roi_Doc": "Selected S3 including blue check; player also requires the Młynar name in this same formation card.",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@CraftReceiptTitle": {
+        "algorithm": "OcrDetect",
+        "text": ["ResourceGained!", "ResourceGained"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "isAscii": true,
+        "roi": [480, 225, 330, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@CraftReceiptContinue": {
+        "algorithm": "OcrDetect",
+        "text": ["Tapanywheretocontinue"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "isAscii": true,
+        "roi": [480, 435, 320, 65],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@EnergyIdleIngredients": {
+        "algorithm": "MatchTemplate",
+        "template": "SandEnergyIdleButtonStrip.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [170, 170, 170],
+                [220, 220, 220]
+            ]
+        ],
+        "templThreshold": 0.98,
+        "roi": [1040, 590, 160, 8],
+        "roi_Doc": "Color-sensitive disabled Add Ingredients button background. Only meaningful after Energy Drink/raw Ingredient/Ready0 are verified; distinguishes stored partial energy from a pending draft.",
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@PausedText": {
+        "algorithm": "OcrDetect",
+        "text": ["PAUSE", "GamePaused"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [500, 310, 280, 140],
+        "fullMatch": true,
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@StageGatheringOfFeathers": {
+        "algorithm": "OcrDetect",
+        "text": ["GatheringofFeathers"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 1100, 525],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@DetailsGatheringOfFeathers": {
+        "algorithm": "OcrDetect",
+        "text": ["GatheringofFeathers"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [895, 110, 360, 70],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandAuto@BagWing": {
+        "algorithm": "MatchTemplate",
+        "template": "SandBagWing.png",
+        "templThreshold": 0.95,
+        "roi": [340, 230, 620, 260],
+        "action": "DoNothing",
+        "next": []
+    }
+}

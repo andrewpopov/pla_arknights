@@ -1,0 +1,74 @@
+{
+    "stage_name": "御外侮",
+    "force_deploy_direction": [
+        {
+            "location": [9, 5],
+            "direction": "left",
+            "role": ["WARRIOR"]
+        },
+        {
+            "location": [10, 2],
+            "direction": "left",
+            "role": ["WARRIOR"]
+        }
+    ],
+    "force_air_defense_when_deploy_blocking_num": {
+        "melee_num": 0,
+        "air_defense_num": 1,
+        "ban_medic": false
+    },
+    "role_order": ["sniper", "caster", "warrior", "pioneer", "medic", "tank", "support", "special", "drone"],
+    "deploy_plan": [
+        {
+            "groups": ["电弧"],
+            "location": [8, 1],
+            "direction": "left"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [9, 2],
+            "direction": "left"
+        },
+        {
+            "groups": ["益达"],
+            "location": [10, 4],
+            "direction": "left"
+        },
+        {
+            "groups": ["稳定治疗"],
+            "location": [7, 1],
+            "direction": "right"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [9, 5],
+            "direction": "left"
+        },
+        {
+            "groups": ["奶盾", "重装", "挡人先锋"],
+            "location": [9, 3],
+            "direction": "up"
+        },
+        {
+            "groups": ["稳定治疗"],
+            "location": [8, 4],
+            "direction": "right"
+        },
+        {
+            "groups": ["奶盾", "重装", "挡人先锋"],
+            "location": [9, 4],
+            "direction": "down"
+        },
+        {
+            "groups": ["高台输出"],
+            "location": [8, 3],
+            "direction": "left"
+        },
+        {
+            "groups": ["高台输出"],
+            "location": [7, 6],
+            "direction": "up"
+        }
+    ],
+    "Doc": "Protected Raidian opening at [8,1]; explicit Cycle firing lines cover both exits. Wisadel precedes secondary ranged damage. Avoid repeatedly failing [10,2] and reserve healing for the formation. Geometry checked on both variants; combat timing needs live validation."
+}

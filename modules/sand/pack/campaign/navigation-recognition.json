@@ -1,0 +1,15 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_01",
+    "stage": "Shrubbery Galore",
+    "problem": "Free camp return recentered the map; complete stage label began at x0, outside the previous x35 node OCR crop.",
+    "fix_roi": [0, 100, 860, 525],
+    "native_score": 0.966469,
+    "source_image": "I:\\MAA-data\\sand-player\\takeover-20261031T022729Z\\live\\00002-node-fix-before.png",
+    "formation_image": "I:\\MAA-data\\sand-player\\takeover-20261031T022729Z\\live\\00004-campaign-formation.png",
+    "live_named_formation_verified": true,
+    "battle_started": false,
+    "automatic_theme_selection_verified": false,
+    "theme_navigation_note": "Newer Relaunch Anchor was featured. Explicitly selected Tales Within the Sand via View all Themes and Foehn Hotlands identity; did not use a reset.",
+    "virtual_raid_runtime_fix": "MaaRuntime expands RaidBattle to real RaidKills/RaidLives and derives state; never queries an undefined native task."
+}

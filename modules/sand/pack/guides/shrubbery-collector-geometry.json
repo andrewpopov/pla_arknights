@@ -1,0 +1,154 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "stage": "Shrubbery Galore",
+    "scope": "Unverified source collector waypoint; no tile assignment or operator substitution is validated.",
+    "source": {
+        "image": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\sample-0057.jpg",
+        "sha256": "e7748c4f5b3262f149e562409d0781f647e11ed67f648f89e2bc9ce9680db892",
+        "video_seconds": 400,
+        "game_remaining_seconds": 92,
+        "actor": "Waai Fu",
+        "panel_kind": "deployed field inspection with retreat control and carrying1/1",
+        "selected_ground_point": [714, 330],
+        "annotation_uncertainty_pixels": 15,
+        "selected_ground_point_verified": false,
+        "higher_resolution_review": {
+            "image": "I:/MAA-data/sand-player/calibration-candidates/shrubbery-video-opening/collector-source-400s.png",
+            "ground_contact_occluded_by_animation": true,
+            "point_reannotated": false
+        }
+    },
+    "registration": {
+        "accepted_direct_target": "t00150.jpg",
+        "persistent_mlynar_holdout": {
+            "source": [951, 306],
+            "projected": [758.7250366210938, 289.33599853515625],
+            "expected": [760, 286.6666666666667],
+            "error_pixels": 2.958185971450414
+        },
+        "via_source_idle_projections": {
+            "normal": [516.94921875, 303.9880065917969],
+            "alternate-selected": [596.63232421875, 324.7273254394531]
+        },
+        "direct_emulator_registration": "rejected; chained evidence only"
+    },
+    "rejected_coordinate_hypotheses": [
+        "Frames sample-0029/0032/0035 are hand previews; the assumed inspection centre is not a deployment location.",
+        "Nian and right-side Waai Fu field views do not pass current registration guards."
+    ],
+    "pending": [
+        "Disambiguate the actual tile origin from the attack overlay and animated sprite before changing the source waypoint",
+        "Resolve multipath disagreement and initially forbidden nearest nominal cell before assigning a collector tile",
+        "fresh tile/facing and resource availability",
+        "Gravel/Yato substitution and survival; Waai Fu silence utility is not interchangeable",
+        "Nian buffer tile",
+        "wildlife target/loot verification",
+        "actual settlement yield"
+    ],
+    "independent_path_assessment": {
+        "report": "I:\\MAA-data\\sand-player\\calibration-candidates\\shrubbery-video-opening\\collector-independent-paths.json",
+        "report_sha256": "334a3ecb34bd8a201e388e971c93ac328a87ec84f00f4ab3018c2f6824101b98",
+        "accepted_normal_paths": 4,
+        "max_path_disagreement_pixels": 13.135837895469606,
+        "normal_projections": [
+            [515.7684326171875, 293.248046875],
+            [515.3732299804688, 290.9470520019531],
+            [515.2047119140625, 293.8596496582031],
+            [516.94921875, 303.9880065917969]
+        ],
+        "accepted_for_execution": false,
+        "reason": "Local collector extrapolation differs despite consistent persistent Mlynar holdout; do not promote the chained collector point."
+    },
+    "height_hypothesis": {
+        "status": "ruled_out_for_the_disputed_nearest_cell",
+        "native_report": "I:\\MAA-data\\sand-player\\native-tile-floor-plane-20261029\\report.json",
+        "report_sha256": "6d689e78be8757fc0a7c5baf0085c79135c0aebc604ec283b4bd23231e2d6185",
+        "nearest_cell": [4, 11],
+        "initial_height_type": 1,
+        "initial_buildable_type": 0,
+        "raw_and_floor_projections_identical": true,
+        "comparison": [
+            {
+                "initial": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 23.953006040186896,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                },
+                "floor": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 23.953006040186896,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                }
+            },
+            {
+                "initial": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 21.625230357051382,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                },
+                "floor": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 21.625230357051382,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                }
+            },
+            {
+                "initial": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 24.420727014578755,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                },
+                "floor": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 24.420727014578755,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                }
+            },
+            {
+                "initial": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 34.69115497240441,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                },
+                "floor": {
+                    "tile": [4, 11],
+                    "projected": [510, 270],
+                    "distance": 34.69115497240441,
+                    "tile_key": "tile_forbidden",
+                    "initial_buildable_type": 0,
+                    "initial_height_type": 1
+                }
+            }
+        ],
+        "terrain_change_verified": false
+    },
+    "ground_only_probe": {
+        "report": "I:\\MAA-data\\sand-player\\calibration-candidates\\shrubbery-video-opening\\ground-only-probe.json",
+        "sha256": "ea65c404de805fffdc0e0c864da55e7ee2506c8ff5601a78878679ef3bbe1ad8",
+        "result": "insufficient distinct matches",
+        "guards_changed": false,
+        "mask_regions_manually_reviewed": false
+    }
+}

@@ -1,0 +1,716 @@
+{
+    "SandFormation@Slot1Skill1Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [406, 133, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot1Skill1Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [358, 193, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot1Skill2Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [475, 133, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot1Skill2Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [427, 193, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot1Skill3Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [544, 133, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot1Skill3Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [496, 193, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot2Skill1Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [406, 273, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot2Skill1Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [358, 333, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot2Skill2Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [475, 273, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot2Skill2Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [427, 333, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot2Skill3Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [544, 273, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot2Skill3Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [496, 333, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot3Skill1Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [406, 413, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot3Skill1Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [358, 473, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot3Skill2Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [475, 413, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot3Skill2Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [427, 473, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot3Skill3Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [544, 413, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot3Skill3Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [496, 473, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot4Skill1Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [406, 553, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot4Skill1Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [358, 613, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot4Skill2Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [475, 553, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot4Skill2Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [427, 613, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot4Skill3Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [544, 553, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot4Skill3Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [496, 613, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot5Skill1Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [916, 133, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot5Skill1Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [868, 193, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot5Skill2Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [985, 133, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot5Skill2Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [937, 193, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot5Skill3Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [1054, 133, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot5Skill3Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [1006, 193, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot6Skill1Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [916, 273, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot6Skill1Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [868, 333, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot6Skill2Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [985, 273, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot6Skill2Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [937, 333, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot6Skill3Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [1054, 273, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot6Skill3Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [1006, 333, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot7Skill1Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [916, 413, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot7Skill1Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [868, 473, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot7Skill2Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [985, 413, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot7Skill2Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [937, 473, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot7Skill3Corner": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [1054, 413, 11, 12],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    },
+    "SandFormation@Slot7Skill3Bottom": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "action": "DoNothing",
+        "next": [],
+        "roi": [1006, 473, 56, 3],
+        "roi_Doc": "RA formation selected-skill blue border probe; require both corner and bottom on same identified actor card."
+    }
+}

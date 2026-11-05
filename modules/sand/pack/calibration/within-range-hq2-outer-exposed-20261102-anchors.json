@@ -1,0 +1,14 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_40",
+    "location": "I:\\MAA-data\\sand-player\\within-range-hq2-outer-exposed-20261102",
+    "sha256": {
+        "idle.png": "b1d8eaff3496ae4ddd97de469da0c8d26ccb1ef7a7fd92b4f3ceb08761313ee1",
+        "side.png": "2b12c8d0a87e05029ee61661bc42f5133ce5e5e135bd2f539bdcd5640cc4b128"
+    },
+    "provenance": {
+        "idle": "I:\\MAA-data\\sand-player\\live-control-v25-20261102\\runtime\\00212-supervised-error-paused-019-bank-eastern-pile.png",
+        "side": "I:\\MAA-data\\sand-player\\live-control-v19-20261102\\runtime\\00242-selected-hand.png"
+    },
+    "calibration": "Post-S3 exposed piles; physically placed Beagle center and chopper tile retained; western outer slot not exercised in this view."
+}

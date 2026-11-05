@@ -1,0 +1,16 @@
+{
+    "RoguelikeSkillSelectionNamesLeft": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "fullMatch": true,
+        "roi": [260, 50, 140, 620],
+        "Doc": "Formation-name column fallback for Candleguest cards whose normal skill-row marker is replaced."
+    },
+    "RoguelikeSkillSelectionNamesRight": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "fullMatch": true,
+        "roi": [660, 50, 140, 620],
+        "Doc": "Formation-name column fallback for Candleguest cards whose normal skill-row marker is replaced."
+    }
+}

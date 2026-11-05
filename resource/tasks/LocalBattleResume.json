@@ -1,0 +1,44 @@
+{
+    "LocalBattleResume": {
+        "algorithm": "JustReturn",
+        "action": "DoNothing",
+        "next": ["LocalBattleDismissPausedSelection", "LocalBattleUnpause", "LocalBattleResumeDone"]
+    },
+    "LocalBattleDismissPausedSelection": {
+        "algorithm": "OcrDetect",
+        "text": ["PAUSED"],
+        "roi": [430, 250, 420, 190],
+        "fullMatch": true,
+        "cache": false,
+        "action": "ClickRect",
+        "specificRect": [630, 0, 20, 20],
+        "postDelay": 200,
+        "maxTimes": 1,
+        "next": ["LocalBattleUnpause", "LocalBattleResumeDone"],
+        "ocrReplace": [
+            ["\\s+", ""],
+            ["^RAUSEI$", "PAUSED"]
+        ],
+        "Doc": "The actual selected-operator paused screenshot is read as RAUSEI by the native OCR model; keep an exact center-label match."
+    },
+    "LocalBattleUnpause": {
+        "algorithm": "OcrDetect",
+        "text": ["PAUSED"],
+        "roi": [430, 250, 420, 190],
+        "fullMatch": true,
+        "cache": false,
+        "action": "ClickRect",
+        "specificRect": [1180, 25, 50, 45],
+        "postDelay": 300,
+        "maxTimes": 1,
+        "ocrReplace": [
+            ["\\s+", ""],
+            ["^RAUSEI$", "PAUSED"]
+        ],
+        "Doc": "The actual selected-operator paused screenshot is read as RAUSEI by the native OCR model; keep an exact center-label match."
+    },
+    "LocalBattleResumeDone": {
+        "algorithm": "JustReturn",
+        "action": "DoNothing"
+    }
+}

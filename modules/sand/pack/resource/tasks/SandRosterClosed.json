@@ -1,0 +1,11 @@
+{
+    "SandRoster@RoleMenuClosed": {
+        "algorithm": "OcrDetect",
+        "text": ["Vanguard"],
+        "fullMatch": true,
+        "roi": [1140, 5, 135, 60],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Observed English collapsed Vanguard class button. Open Job-menu button reads Job. Other collapsed classes are not yet validated."
+    }
+}

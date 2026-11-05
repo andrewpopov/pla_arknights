@@ -1,0 +1,181 @@
+{
+    "native": {
+        "closed": {
+            "image": "I:/MAA-data/sand-player/live-control-v3-20261101/runtime/00066-supervised-006-close-job-menu.png",
+            "native_report": {
+                "elite_zero_may_be_template_miss": true,
+                "hit": true,
+                "image": "I:\\MAA-data\\sand-player\\live-control-v3-20261101\\runtime\\00066-supervised-006-close-job-menu.png",
+                "inputs_issued": false,
+                "mode": "formation_operators",
+                "operators": [
+                    {
+                        "character_ids": ["char_488_buildr"],
+                        "elite": 0,
+                        "flag_rect": [593, 87, 25, 25],
+                        "flag_score": 0.937066,
+                        "level": 1,
+                        "name": "青枳",
+                        "name_score": 0.998024,
+                        "rect": [750, 94, 58, 16],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": ["char_4147_mitm"],
+                        "elite": 0,
+                        "flag_rect": [593, 231, 25, 25],
+                        "flag_score": 0.939912,
+                        "level": 1,
+                        "name": "渡桥",
+                        "name_score": 0.998442,
+                        "rect": [750, 238, 35, 16],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": ["char_4023_rfalcn"],
+                        "elite": 0,
+                        "flag_rect": [593, 375, 25, 25],
+                        "flag_score": 0.93653,
+                        "level": 1,
+                        "name": "红隼",
+                        "name_score": 0.997255,
+                        "rect": [750, 381, 49, 17],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": ["char_4208_wintim"],
+                        "elite": 0,
+                        "flag_rect": [593, 519, 25, 25],
+                        "flag_score": 0.925149,
+                        "level": 1,
+                        "name": "冬时",
+                        "name_score": 0.998757,
+                        "rect": [750, 525, 87, 18],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": ["char_192_falco"],
+                        "elite": 0,
+                        "flag_rect": [963, 87, 25, 25],
+                        "flag_score": 0.931311,
+                        "level": 1,
+                        "name": "翎羽",
+                        "name_score": 0.99822,
+                        "rect": [1120, 94, 43, 16],
+                        "role": 1,
+                        "selected": false
+                    }
+                ],
+                "task_prefix": "SandRoster@",
+                "closed_role_menu": {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1149, 28, 72, 20],
+                    "score": 0.999034,
+                    "task": "SandRoster@RoleMenuClosed",
+                    "text": "Vanguard"
+                }
+            },
+            "plume": {
+                "character_id": "char_192_falco",
+                "native_name": "翎羽",
+                "selected": false,
+                "flag_rect": [963, 87, 25, 25],
+                "image": "I:/MAA-data/sand-player/live-control-v3-20261101/runtime/00066-supervised-006-close-job-menu.png",
+                "inputs_issued": false,
+                "elite_candidate": 0,
+                "level_candidate": 1,
+                "elite_verified": false,
+                "level_verified": false
+            }
+        },
+        "open": {
+            "image": "I:/MAA-data/sand-player/live-control-v3-20261101/runtime/00065-supervised-error-004-select-hunting-team.png",
+            "native_report": {
+                "elite_zero_may_be_template_miss": true,
+                "hit": true,
+                "image": "I:\\MAA-data\\sand-player\\live-control-v3-20261101\\runtime\\00065-supervised-error-004-select-hunting-team.png",
+                "inputs_issued": false,
+                "mode": "formation_operators",
+                "operators": [
+                    {
+                        "character_ids": ["char_488_buildr"],
+                        "elite": 0,
+                        "flag_rect": [593, 87, 25, 25],
+                        "flag_score": 0.937066,
+                        "level": 1,
+                        "name": "青枳",
+                        "name_score": 0.998024,
+                        "rect": [750, 94, 58, 16],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": ["char_4147_mitm"],
+                        "elite": 0,
+                        "flag_rect": [593, 231, 25, 25],
+                        "flag_score": 0.939912,
+                        "level": 1,
+                        "name": "渡桥",
+                        "name_score": 0.998442,
+                        "rect": [750, 238, 35, 16],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": ["char_4023_rfalcn"],
+                        "elite": 0,
+                        "flag_rect": [593, 375, 25, 25],
+                        "flag_score": 0.93653,
+                        "level": 1,
+                        "name": "红隼",
+                        "name_score": 0.997255,
+                        "rect": [750, 381, 49, 17],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": ["char_4208_wintim"],
+                        "elite": 0,
+                        "flag_rect": [593, 519, 25, 25],
+                        "flag_score": 0.925149,
+                        "level": 1,
+                        "name": "冬时",
+                        "name_score": 0.998757,
+                        "rect": [750, 525, 87, 18],
+                        "role": 1,
+                        "selected": false
+                    },
+                    {
+                        "character_ids": [],
+                        "elite": 0,
+                        "flag_rect": [963, 87, 25, 25],
+                        "flag_score": 0.931311,
+                        "level": 1,
+                        "name": "翎羽All",
+                        "name_score": 0.991444,
+                        "rect": [1120, 82, 132, 29],
+                        "role": 1,
+                        "selected": false
+                    }
+                ],
+                "task_prefix": "SandRoster@",
+                "closed_role_menu": null
+            },
+            "plume": null
+        },
+        "world": {
+            "image": "I:/MAA-data/sand-player/live-control-20261101/runtime/00004-supervised-005-world.png",
+            "error": "Roster page Clear and Added to Squad controls were not both identified"
+        }
+    },
+    "game_connected": false,
+    "selection_submitted": false,
+    "scope": "English collapsed Vanguard menu only; actual saved roster frames",
+    "closed_menu_task_file": "resource/tasks/SandRosterClosed.json",
+    "closed_menu_task_sha256": "6d7cf93341f53e136dcd2d55c6152f7bfa3477b896b12a4a1b0fd6b59322767b"
+}

@@ -15,6 +15,7 @@ on:
       - "include/**"
       - "src/**"
       - "tools/**"
+      - "modules/**"
       - "resource/**/inference.onnx"
       - "resource_android/**"
       - "!**/*.md"
@@ -30,6 +31,7 @@ on:
       - "include/**"
       - "src/**"
       - "tools/**"
+      - "modules/**"
       - "resource/**/inference.onnx"
       - "resource_android/**"
       - "!**/*.md"
@@ -255,6 +257,12 @@ jobs:
 
           cp tools/DependencySetup_依赖库安装.bat install
 
+      - name: Bundle Sand task resources
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path install/modules -Force | Out-Null
+          Copy-Item -Path modules/sand -Destination install/modules -Recurse -Force
+
       - name: Generate file list
         run: pwsh tools/GenerateFileList.ps1 -InstallDir install
 
@@ -316,7 +324,7 @@ jobs:
         with:
           repository: MaaXYZ/MaaFramework
           latest: true
-          fileName: '*linux-${{ matrix.arch }}*.zip'
+          fileName: "*linux-${{ matrix.arch }}*.zip"
           extract: true
           out-file-path: MaaFramework-temp
 
@@ -617,7 +625,6 @@ jobs:
           name: MAA-macos-runtime-universal
           path: runtime/MAA-${{ needs.meta.outputs.tag }}-macos-runtime-universal.zip
           compression-level: 0
-
 
       - name: Build XCFramework
         run: |

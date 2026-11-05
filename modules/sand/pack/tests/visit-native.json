@@ -1,0 +1,188 @@
+{
+    "energy": [
+        {
+            "roi": [931, 668, 55, 22],
+            "native": [
+                {
+                    "image": "I:\\MAA-data\\sand-player\\visit-trip-energy-tight-20261029\\english.png",
+                    "mode": "ocr",
+                    "results": [
+                        {
+                            "rect": [936, 668, 23, 19],
+                            "score": 0.988277,
+                            "text": "2"
+                        },
+                        {
+                            "rect": [958, 672, 15, 14],
+                            "score": 0.963272,
+                            "text": "/4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "roi": [930, 667, 70, 25],
+            "native": [
+                {
+                    "image": "I:\\MAA-data\\sand-player\\visit-trip-energy-tight-20261029\\english.png",
+                    "mode": "ocr",
+                    "results": [
+                        {
+                            "rect": [939, 668, 21, 19],
+                            "score": 0.99594,
+                            "text": "2"
+                        },
+                        {
+                            "rect": [961, 671, 12, 15],
+                            "score": 0.998557,
+                            "text": "4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "roi": [930, 668, 77, 22],
+            "native": [
+                {
+                    "image": "I:\\MAA-data\\sand-player\\visit-trip-energy-tight-20261029\\english.png",
+                    "mode": "ocr",
+                    "results": [
+                        {
+                            "rect": [940, 668, 15, 9],
+                            "score": 0.341311,
+                            "text": "2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "magnified": true,
+            "roi": [0, 0, 308, 88],
+            "native": [
+                {
+                    "image": "I:\\MAA-data\\sand-player\\visit-trip-energy-tight-20261029\\english-reward-count-930.png",
+                    "mode": "ocr",
+                    "results": [
+                        {
+                            "rect": [27, 0, 155, 78],
+                            "score": 0.951646,
+                            "text": "-2/4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "launch": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [936, 668, 20, 22],
+                    "score": 0.980655,
+                    "task": "SandAuto@FormationTripEnergy",
+                    "text": "-2"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@VisitStartConfirm"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@VisitStartConfirm"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [931, 668, 76, 22],
+                    "score": 0.432797,
+                    "task": "SandAuto@FormationTripEnergy",
+                    "text": "NN"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@VisitStartConfirm"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@VisitStartConfirm"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-54.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@FormationTripEnergy"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@VisitStartConfirm"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@VisitStartConfirm"
+                }
+            ]
+        }
+    ],
+    "empty_tools": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1190, 100, 67, 102],
+                    "score": 0.999681,
+                    "task": "SandAuto@NoEquippedTools",
+                    "templ": "SandEmptyFirstToolSlot.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@NoEquippedTools"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-53.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@NoEquippedTools"
+                }
+            ]
+        }
+    ],
+    "hashes": {
+        "I:\\MAA-data\\sand-player\\visit-trip-energy-tight-20261029\\report.json": "df3849fd816e9ca8797f61e6407a69af00da117a3123ec61cefd8dadb94bdf60",
+        "I:\\MAA-data\\sand-player\\visit-launch-replay-20261029\\report.json": "8a309cf5e931687636d3a6b5744e73ceed519c7cf65ee2e2af16187d86d75fd4",
+        "I:\\MAA-data\\sand-player\\visit-empty-tools-replay-20261029\\report.json": "ba161d31112cb93004df550a38d89b61636bbe045ab51831caad64a988abbfe8"
+    },
+    "english_empty_squad_positive": false,
+    "english_warning_positive": false,
+    "live_visit_verified": false,
+    "empty_tool_template_source_self_match_only": true
+}

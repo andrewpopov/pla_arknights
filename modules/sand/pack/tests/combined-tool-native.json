@@ -1,0 +1,41 @@
+{
+    "source_report": "I:\\MAA-data\\sand-player\\combined-tool-offline-20261028-fixed\\report.json",
+    "source_sha256": "d3b76107b7ac73d2276fc5fa090860157a0094fde1b32961461263d5cd011933",
+    "native": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\pump-recipe.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1016, 510, 31, 30],
+                    "score": 0.99065,
+                    "task": "SandAuto@ToolRecipeClosable",
+                    "templ": "Tales@RA@Craft.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\workbench.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@ToolRecipeClosable"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@ToolRecipeClosable"
+                }
+            ]
+        }
+    ],
+    "live_close_transition_verified": false
+}

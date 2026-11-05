@@ -1392,6 +1392,11 @@ DEBUG 디렉토리에 저장된 이미지는 수량 제한이 있으며 초과 �
     <system:String x:Key="Infrast.UsePinusSylvestris.Tip" xml:space="preserve">필수 오퍼레이터: 플레임테일(정예화 2), 비비아나(정예화 2), 와일드메인(정예화 2)/애쉬락(정예화 2)/파투스(정예화 2) 중 1명 이상&#10;계산에 참여하는 오퍼레이터: 그라벨</system:String>
     <system:String x:Key="Infrast.UseWorldlyPlight">속세의 번뇌 연계 사용</system:String>
     <system:String x:Key="Infrast.UseWorldlyPlight.Tip" xml:space="preserve">필수 오퍼레이터: 멀베리(정예화 2), 스테인리스(정예화 2)&#10;계산에 참여하는 오퍼레이터: 중전, 링, 시</system:String>
+    <system:String x:Key="LocalSuiCandleguest">촛불 손님 자동 선택</system:String>
+    <system:String x:Key="LocalSuiConserve">불필요한 모집권 보존</system:String>
+    <system:String x:Key="LocalSuiRouting">전력 부족 시 안전한 경로 우선</system:String>
+    <system:String x:Key="LocalSuiStrategy">로컬 수이 전략</system:String>
+    <system:String x:Key="LocalSuiTongbao">편성에 맞게 통보 관리</system:String>
     <system:String x:Key="Logging.LogItemDateFormatString">시간 형식 문자열</system:String>
     <system:String x:Key="Logging.MaxNumberOfLogThumbnails">로그 썸네일 최대 개수</system:String>
     <system:String x:Key="Logging.Overlay.Tip" xml:space="preserve">왼쪽 클릭: 로그 플로팅 창 전환
@@ -1925,6 +1930,7 @@ MAA는 비설치형 응용 프로그램으로, 삭제 시 레지스트리 항목
     <system:String x:Key="Settings.Update.GitHub.Token.Tip" xml:space="preserve">GitHub API 익명 접근은 속도 제한 대상입니다. 입력하지 않으면 업데이트 확인은 MAA Team이 제공합니다.
 자신의 {key=Settings.Update.GitHub.Token}을(를) 입력하고 유효성 확인에 성공하면 별도 할당량을 사용하며, 소프트웨어와 리소스의 업데이트 확인 및 다운로드를 모두 GitHub에서 제공합니다.
 읽기 전용 Token 사용을 권장하며, 다른 권한은 필요하지 않습니다.</system:String>
+    <system:String x:Key="Settings.Update.LocalBuild.Tip">로컬 빌드에서도 원격 리소스 업데이트를 사용하며 사용자 전략 변경을 유지합니다. 프로그램 업데이트는 MAA 종료 후 Build-Local-MAA.cmd --install을 실행하세요.</system:String>
     <system:String x:Key="Settings.Update.LocalResourcePackageTooOld">리소스 패키지 버전({0})이 현재 버전({1})보다 새롭지 않아 가져오기를 건너뛰었습니다.</system:String>
     <system:String x:Key="Settings.Update.MaaVersion">소프트웨어 버전</system:String>
     <system:String x:Key="Settings.Update.MirrorChyan.Cdk">{key=Settings.Update.Source.MirrorChyan} CDK</system:String>
@@ -2168,6 +2174,11 @@ MAA는 비설치형 응용 프로그램으로, 삭제 시 레지스트리 항목
     <system:String x:Key="TaskQueue.PostAction.SkippedDueToError">작업이 실패하여 후속 작업이 건너뛰어졌습니다.</system:String>
     <system:String x:Key="TaskQueue.PostAction.Sleep">절전 모드</system:String>
     <system:String x:Key="TaskQueue.PostAction.Sleep.Prompt">작업이 완료되었으며, 곧 절전 모드로 전환됩니다</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.EnglishOnly">모래 준비 모드는 현재 영어 클라이언트만 지원합니다.</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ModuleMissing">Sand 모듈이 없습니다. 완전한 로컬 MAA 빌드를 설치하세요.</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.Prosperity.Tip">기존 저장에서 도구를 제작하여 번영 점수를 얻습니다. 제작 재료를 소모합니다. 저장을 유지하며 새 게임을 시작하지 않습니다.</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ResumeSand">모래 저장 재개 (월드 맵에서 정지)</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ResumeSand.Tip">영어 클라이언트의 기존 저장을 재개하고 월드 맵에서 정지합니다. 행동 횟수를 소모하지 않습니다. 1~6일차 전투는 맵 보정이 필요합니다. 홈, 터미널, 테마 메뉴 또는 월드 맵에서 시작하세요.</system:String>
     <system:String x:Key="TaskQueue.Rename">이름 변경</system:String>
     <system:String x:Key="TaskQueue.RenameTask">작업 이름 변경</system:String>
     <system:String x:Key="TaskQueue.RenameTaskPrompt">새 작업 이름을 입력하세요:</system:String>

@@ -39,21 +39,25 @@ bool asst::RoguelikeSettlementTaskPlugin::_run()
     json_msg["details"]["game_pass"] = m_game_pass;
 
     sleep(task->special_params[0]);
-    if (m_game_pass) {
-        save_img(ctrler()->get_image(), utils::path("achievement") / utils::path("roguelike"), "Page1");
-    }
-
-    const auto& rect = Task.get("Roguelike@ClickToStartPoint")->specific_rect;
-    ctrler()->click(rect);
-    sleep(task->pre_delay);
-
-    if (!wait_for_whole_page()) {
-        Log.error(__FUNCTION__, "wait for whole page failed");
-        save_img(ctrler()->get_image(), utils::path("debug") / utils::path("roguelike"), "Page2_Error");
-        return true;
+    auto image = ctrler()->get_image();
+    Matcher score_page(image);
+    score_page.set_task_info(m_config->get_theme() + "@RoguelikeSettlementConfirm");
+    const bool already_on_score_page = static_cast<bool>(score_page.analyze());
+    if (!already_on_score_page) {
+        if (m_game_pass) {
+            save_img(image, utils::path("achievement") / utils::path("roguelike"), "Page1");
+        }
+        const auto& rect = Task.get("Roguelike@ClickToStartPoint")->specific_rect;
+        ctrler()->click(rect);
+        sleep(task->pre_delay);
+        if (!wait_for_whole_page()) {
+            LogWarn << __FUNCTION__ << "settlement score page not recognized";
+            save_img(ctrler()->get_image(), utils::path("debug") / utils::path("roguelike"), "Page2_Error");
+            return true;
+        }
     }
     sleep(task->post_delay);
-    auto image = ctrler()->get_image();
+    image = ctrler()->get_image();
 
     if (m_game_pass) {
         save_img(image, utils::path("achievement") / utils::path("roguelike"), "Page2");

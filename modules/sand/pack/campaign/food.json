@@ -1,0 +1,118 @@
+{
+    "schema_version": 1,
+    "source": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+    "source_sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313",
+    "energy_per_drink": 60,
+    "items": {
+        "sandbox_1_crab": {
+            "id": "sandbox_1_crab",
+            "name": "Crab Claw",
+            "energy": 15
+        },
+        "sandbox_1_wheat": {
+            "id": "sandbox_1_wheat",
+            "name": "Rice",
+            "energy": 20
+        },
+        "sandbox_1_venison": {
+            "id": "sandbox_1_venison",
+            "name": "Puffball Tenderloin",
+            "energy": 40
+        },
+        "sandbox_1_beef": {
+            "id": "sandbox_1_beef",
+            "name": "Leg Meat",
+            "energy": 60
+        },
+        "sandbox_1_poultry": {
+            "id": "sandbox_1_poultry",
+            "name": "Fowlbeast Wing",
+            "energy": 30
+        },
+        "sandbox_1_supermeat": {
+            "id": "sandbox_1_supermeat",
+            "name": "Marrow Fungus",
+            "energy": 100
+        },
+        "sandbox_1_ttlmeat": {
+            "id": "sandbox_1_ttlmeat",
+            "name": "Cartilage Chunk",
+            "energy": 100
+        },
+        "sandbox_1_egg": {
+            "id": "sandbox_1_egg",
+            "name": "Fowlbeast Egg",
+            "energy": 5
+        },
+        "sandbox_1_mushroom": {
+            "id": "sandbox_1_mushroom",
+            "name": "Woodchip Fungus",
+            "energy": 5
+        },
+        "sandbox_1_peper": {
+            "id": "sandbox_1_peper",
+            "name": "Wild Redhorn",
+            "energy": 5
+        },
+        "sandbox_1_sugar": {
+            "id": "sandbox_1_sugar",
+            "name": "Devil's Licorice",
+            "energy": 5
+        },
+        "sandbox_1_horn": {
+            "id": "sandbox_1_horn",
+            "name": "Mastic Gland",
+            "energy": 10
+        },
+        "sandbox_1_condiment": {
+            "id": "sandbox_1_condiment",
+            "name": "Seasoning",
+            "energy": 10
+        },
+        "sandbox_1_preserve": {
+            "id": "sandbox_1_preserve",
+            "name": "Rotproof Rockgrain",
+            "energy": 5
+        },
+        "sandbox_1_alcohol": {
+            "id": "sandbox_1_alcohol",
+            "name": "Fine Brew",
+            "energy": 10
+        },
+        "sandbox_1_wings": {
+            "id": "sandbox_1_wings",
+            "name": "Feather Dust",
+            "energy": 5
+        },
+        "sandbox_1_puree": {
+            "id": "sandbox_1_puree",
+            "name": "Cold Puree",
+            "energy": 10
+        },
+        "sandbox_1_mud": {
+            "id": "sandbox_1_mud",
+            "name": "Flower Paste",
+            "energy": 5
+        },
+        "sandbox_1_flower": {
+            "id": "sandbox_1_flower",
+            "name": "Thale Roll",
+            "energy": 70
+        },
+        "sandbox_1_dragon": {
+            "id": "sandbox_1_dragon",
+            "name": "Vanilla Stalk",
+            "energy": 120
+        },
+        "sandbox_1_snake": {
+            "id": "sandbox_1_snake",
+            "name": "Quicksand Tail",
+            "energy": 120
+        }
+    },
+    "cooked_food_included": false,
+    "selection_inputs_enabled": false,
+    "energy_per_drink_source": "basicConst.drinkCostOnce=60 in the same exported game data.",
+    "value_basis": "Nominal exported counts; effective conversion requires an explicitly verified multiplier.",
+    "active_game_multiplier_verified": false
+}

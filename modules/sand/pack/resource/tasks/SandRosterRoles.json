@@ -1,0 +1,228 @@
+{
+    "SandRoster@RolePioneer": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRolePioneer.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 133, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedPioneer": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 138, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleWarrior": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleWarrior.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 193, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedWarrior": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 198, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleTank": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleTank.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 253, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedTank": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 258, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleSniper": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleSniper.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 313, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedSniper": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 318, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleCaster": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleCaster.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 373, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedCaster": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 378, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleMedic": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleMedic.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 433, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedMedic": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 438, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleSupport": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleSupport.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 493, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedSupport": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 498, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleSpecial": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleSpecial.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1175, 553, 60, 55],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "RA open Job menu class row; gray icon is positive unselected-class evidence. Source saved English menu."
+    },
+    "SandRoster@RoleSelectedSpecial": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleBlue.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [0, 70, 140],
+                [90, 230, 255]
+            ]
+        ],
+        "templThreshold": 0.99,
+        "roi": [1180, 558, 50, 45],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Blue class indicator in the identified open-menu row. Use only with roster and menu identity; this is not a class-glyph match."
+    },
+    "SandRoster@RoleMenuOpen": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterRoleMenuOpen.png",
+        "method": "Ccoeff",
+        "templThreshold": 0.95,
+        "roi": [1150, 40, 120, 80],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Open Job-menu popover cap and arrow; fixed roster layout, not a generic dark region."
+    }
+}

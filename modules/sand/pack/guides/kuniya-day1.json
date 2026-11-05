@@ -1,0 +1,380 @@
+{
+    "source": {
+        "url": "https://note.com/kuniya_ark/n/n195fca2e6482",
+        "author": "くにや",
+        "published": "2024-11-01",
+        "language": "ja",
+        "recommended_difficulty": "Standard/Normal",
+        "kind": "article with deployment screenshots"
+    },
+    "status": "extracted reference; not an executable battle route",
+    "autoplay_enabled": false,
+    "coordinate_system": {
+        "type": "source-image pixels",
+        "image_size": [1200, 555],
+        "origin": "top-left",
+        "warning": "Camera and viewport differ from our emulator. Never pass these pixels directly to MaaCore or scale them by resolution alone. Match ground-tile landmarks and stage variant first."
+    },
+    "images": {
+        "12": {
+            "index": 12,
+            "url": "https://assets.st-note.com/img/1730443161-gorsbqlwJNBOm3favFdxLKki.png?width=1200",
+            "bytes": 425672,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\12.png",
+            "sha256": "3376e65c596d31dcbb3c87e58677028d92673b305330f6045906e7561aa7a020",
+            "image_size": [1200, 555]
+        },
+        "13": {
+            "index": 13,
+            "url": "https://assets.st-note.com/img/1730443161-HRChiEtPfzLrYxDykoeBvQAl.png?width=1200",
+            "bytes": 419102,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\13.png",
+            "sha256": "83eaf48a5062ede167632ab41aaaedd21c506166dc2d75570f91e1fb08d75477",
+            "image_size": [1200, 555]
+        },
+        "14": {
+            "index": 14,
+            "url": "https://assets.st-note.com/img/1730443161-Sc8Xoxr60dRY7WKPVAiaefC9.png?width=1200",
+            "bytes": 414192,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\14.png",
+            "sha256": "b63c47f4932b8309e8f0f05b31fd62f0df930c5c584261fd70a02e1e025000e1",
+            "image_size": [1200, 555]
+        },
+        "15": {
+            "index": 15,
+            "url": "https://assets.st-note.com/img/1730443162-QgSXx5rHKyTR3vMpt9la7Feo.png?width=1200",
+            "bytes": 296264,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\15.png",
+            "sha256": "4358c9d631a2aca7916caaf00c400e4b7d5f2335569c4a6cd2b87acace9e3547",
+            "image_size": [1200, 555]
+        },
+        "20": {
+            "index": 20,
+            "url": "https://assets.st-note.com/img/1730444060-BqfzZypctP5IES9mYnwoXTJD.png?width=1200",
+            "bytes": 402643,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\20.png",
+            "sha256": "14a4a63a5c5031ff2e13dd7b2a801f6c07229925c72c52437dbb2b55c8717177",
+            "image_size": [1200, 555]
+        },
+        "21": {
+            "index": 21,
+            "url": "https://assets.st-note.com/img/1730444060-rznoVCcDkuNZFfTRm6x509BU.png?width=1200",
+            "bytes": 392074,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\21.png",
+            "sha256": "c2f6645e7748d33c684b36a3846ae323fe8d0712080f62767013087a4f65b8a3",
+            "image_size": [1200, 555]
+        },
+        "10": {
+            "index": 10,
+            "url": "https://assets.st-note.com/img/1730442644-JyD2hQuOk3jNR7iVFasz69f5.png?width=1200",
+            "bytes": 266864,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\10.png",
+            "sha256": "d9808c1bd9a615ef9e9cb8c6929d8b0433994509746a5f567bd01a2a6398f972",
+            "image_size": [1200, 555]
+        },
+        "11": {
+            "index": 11,
+            "url": "https://assets.st-note.com/img/1731065063-vKN4PxC3pZfVibuRtYqSrg6d.png?width=1200",
+            "bytes": 196431,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\11.png",
+            "sha256": "302eb5e21fcf5937449bec82ce2507fe57801797ab7fa6a71f1c8155fadfe0e9",
+            "image_size": [1200, 555]
+        },
+        "18": {
+            "index": 18,
+            "url": "https://assets.st-note.com/img/1730443729-5y8wXRrChWlnZi4eAt01OVgc.png?width=1200",
+            "bytes": 167950,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\18.png",
+            "sha256": "76d9266e725121aca7197329687e8f8d4c3f1b8f6d1c5eee0bea7ff9fe67a1a1",
+            "image_size": [1200, 555]
+        },
+        "19": {
+            "index": 19,
+            "url": "https://assets.st-note.com/img/1730443875-CZQp6BxJwklbREWIygKO0zvc.png?width=1200",
+            "bytes": 212329,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\19.png",
+            "sha256": "d937c1740d79536b63053a803978e62fb0c9b7ca2247fd1a196639ba678f93f1",
+            "image_size": [1200, 555]
+        },
+        "22": {
+            "index": 22,
+            "url": "https://assets.st-note.com/img/1730444060-SzApldEKJDCYOU3giqX2bRou.png?width=1200",
+            "bytes": 386448,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\22.png",
+            "sha256": "00182746e20e663d034c44319304ebe2f1549d4a17595c663e5c90b8d69c3bf0",
+            "image_size": [1200, 555]
+        },
+        "23": {
+            "index": 23,
+            "url": "https://assets.st-note.com/img/1730444060-HD8PogFdKJGzELafyM4U20pb.png?width=1200",
+            "bytes": 363757,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\23.png",
+            "sha256": "5a0f99f4e77e225546880530feaf4d705df997fa096af204e4f428ba89d0b2ea",
+            "image_size": [1200, 555]
+        },
+        "24": {
+            "index": 24,
+            "url": "https://assets.st-note.com/img/1730444060-N9B7JfbMhvRK0A2XCZrS6amu.png?width=1200",
+            "bytes": 371517,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\24.png",
+            "sha256": "e29870885251f8f08f7aca4571313e45d3ce85292d3312f73844c7ba6ab31768",
+            "image_size": [1200, 555]
+        },
+        "25": {
+            "index": 25,
+            "url": "https://assets.st-note.com/img/1730444061-dmwsBup8bV1jtoDS5l0GMJWH.png?width=1200",
+            "bytes": 244581,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\25.png",
+            "sha256": "422363f0512f98e8d0c08366354c05a1c3f210ac9cb22b0707a8362490519d16",
+            "image_size": [1200, 555]
+        },
+        "26": {
+            "index": 26,
+            "url": "https://assets.st-note.com/img/1730444061-RcyABdNDkiv8oZ7OnbemTh1s.png?width=1200",
+            "bytes": 296398,
+            "local_path": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\26.png",
+            "sha256": "867a6b0053287f242e907fd6f440facaea9996906684da047ad00098cef1f6ff",
+            "image_size": [1200, 555]
+        }
+    },
+    "strategies": [
+        {
+            "stage": "Shrubbery Galore",
+            "source_name": "豊かな低木林",
+            "map_reference_image": "10",
+            "variant_status": "central grove layout visually consistent; resource variant not fully identified",
+            "squad": [
+                {
+                    "name": "Młynar",
+                    "elite": 2,
+                    "level": 90,
+                    "skill": 3
+                },
+                {
+                    "name": "Beagle",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                },
+                {
+                    "name": "Spot",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                },
+                {
+                    "name": "Cardigan",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                },
+                {
+                    "name": "Yato",
+                    "elite": 0,
+                    "level": 30
+                },
+                {
+                    "name": "Noir Corne",
+                    "elite": 0,
+                    "level": 30
+                }
+            ],
+            "observations": [
+                {
+                    "operator": "Młynar",
+                    "source_image": "12",
+                    "observed_at_remaining_seconds": 220,
+                    "timing_semantics": "present by this screenshot, not exact deployment time",
+                    "source_tile_center_px": [731, 276],
+                    "landmark": "eastern edge of central grove; two columns east of the collection tile in image 14",
+                    "facing": "Left",
+                    "facing_evidence": "S3 highlighted attack area in image 13 extends into the grove to the left",
+                    "logical_tile": null,
+                    "coordinate_accuracy_px": 15
+                },
+                {
+                    "action": "Młynar S3 active",
+                    "source_image": "13",
+                    "observed_at_remaining_seconds": 193,
+                    "activation_time": null,
+                    "evidence": "golden S3 effect and highlighted multi-target area hit central trees"
+                },
+                {
+                    "operator": "Beagle",
+                    "source_image": "14",
+                    "observed_at_remaining_seconds": 18,
+                    "timing_semantics": "present by this screenshot, not exact deployment time",
+                    "source_tile_center_px": [594, 276],
+                    "landmark": "cleared ground two columns west of Młynar; one intermediate raised tile",
+                    "facing": null,
+                    "facing_evidence": "not determined; carrier facing is not established by these snapshots",
+                    "logical_tile": null,
+                    "coordinate_accuracy_px": 15
+                }
+            ],
+            "collection_policy": "Rotate the five carriers beside chopped piles and retreat with loads. Exact individual positions and retreat timestamps are not shown.",
+            "skill_policy": "Author reports three Młynar skill uses; only one active-skill snapshot is provided.",
+            "verified_source_result": {
+                "source_image": "15",
+                "wood": 24,
+                "winged_meat": 1,
+                "crude_gold": 2
+            },
+            "unresolved": [
+                "precise collector rotation",
+                "second and third skill activation times",
+                "our operator skill/module differences",
+                "live logical coordinates and variant check"
+            ]
+        },
+        {
+            "stage": "Straight Into the Abyss",
+            "source_name": "深淵へ身を投ず",
+            "squad": [
+                {
+                    "name": "Gravel",
+                    "elite": 1,
+                    "level": 40,
+                    "skill": 2
+                },
+                {
+                    "name": "Kroos",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                },
+                {
+                    "name": "Adnachiel",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                },
+                {
+                    "name": "Ansel",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                },
+                {
+                    "name": "Steward",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                },
+                {
+                    "name": "Plume",
+                    "elite": 1,
+                    "level": 55,
+                    "skill": 1
+                }
+            ],
+            "tool": {
+                "name": "Crabbie Pumpie",
+                "quantity": 1,
+                "source_image": "18",
+                "wood_cost_each": 10
+            },
+            "observations": [
+                {
+                    "operator": "Crabbie Pumpie",
+                    "source_image": "20",
+                    "observed_at_remaining_seconds": 232,
+                    "timing_semantics": "present by this screenshot, not exact deployment time",
+                    "source_tile_center_px": [682, 211],
+                    "landmark": "right water channel immediately east of the central island paired crates",
+                    "facing": null,
+                    "facing_evidence": "not determined from screenshot",
+                    "logical_tile": null,
+                    "coordinate_accuracy_px": 15
+                },
+                {
+                    "operator": "Kroos",
+                    "source_image": "21",
+                    "observed_at_remaining_seconds": 223,
+                    "timing_semantics": "present by this screenshot, not exact deployment time",
+                    "source_tile_center_px": [547, 210],
+                    "landmark": "on the left of the paired central-island crate rooftops; same east-west line as the pump",
+                    "facing": "Down",
+                    "facing_evidence": "inferred from sprite; confirm range on deployment",
+                    "logical_tile": null,
+                    "coordinate_accuracy_px": 15
+                },
+                {
+                    "operator": "Adnachiel",
+                    "source_image": "22",
+                    "observed_at_remaining_seconds": 205,
+                    "timing_semantics": "present by this screenshot, not exact deployment time",
+                    "source_tile_center_px": [525, 300],
+                    "landmark": "central island tile immediately north of Kroos",
+                    "facing": "Up",
+                    "facing_evidence": "inferred from sprite and northward hunt; confirm range on deployment",
+                    "logical_tile": null,
+                    "coordinate_accuracy_px": 15
+                },
+                {
+                    "operator": "Gravel",
+                    "source_image": "23",
+                    "observed_at_remaining_seconds": 199,
+                    "timing_semantics": "present by this screenshot, not exact deployment time",
+                    "source_tile_center_px": [541, 204],
+                    "landmark": "far north end of the central island on the column west of its right edge",
+                    "facing": null,
+                    "facing_evidence": "not determined from screenshot",
+                    "logical_tile": null,
+                    "coordinate_accuracy_px": 15
+                },
+                {
+                    "operator": "Steward",
+                    "source_image": "24",
+                    "observed_at_remaining_seconds": 146,
+                    "timing_semantics": "present by this screenshot, not exact deployment time",
+                    "source_tile_center_px": [763, 241],
+                    "landmark": "east-bank raised tile immediately across the channel from the center island",
+                    "facing": "Left",
+                    "facing_evidence": "inferred from sprite and cross-channel coverage; confirm range on deployment",
+                    "logical_tile": null,
+                    "coordinate_accuracy_px": 15
+                },
+                {
+                    "action": "Gravel has been retreated",
+                    "source_image": "24",
+                    "observed_at_remaining_seconds": 146,
+                    "exact_retreat_time": null,
+                    "evidence": "cooldown card visible; no longer at north-island position"
+                },
+                {
+                    "action": "bag checked",
+                    "source_image": "25",
+                    "observed_at_remaining_seconds": 143,
+                    "fresh_water": 10,
+                    "sliced_meat": 2
+                }
+            ],
+            "exit_policy": "Exit after pump collection and useful hunting. Author says about 2:30 remaining; bag screenshot is at 2:23, so do not encode an exact 2:30 exit.",
+            "verified_source_result": {
+                "source_image": "26",
+                "fresh_water": 10,
+                "sliced_meat": 2,
+                "crude_gold": 2,
+                "raw_food": {
+                    "sandbox_1_venison": 2
+                },
+                "food_identity_note": "The earlier sliced_meat label describes Japanese まんまるスライス; exported English name is Puffball Tenderloin, 40 base ingredient energy each. It is not Leg Meat.",
+                "food_identity_reference": "campaign/tenderloin-recognition.json"
+            },
+            "unresolved": [
+                "exact deployment timestamps between screenshots",
+                "facing verification for hunters",
+                "Gravel retreat time",
+                "our live water-map camera and tile mapping",
+                "Challenge-mode survivability"
+            ]
+        }
+    ],
+    "bilibili": {
+        "status": "Full signed-in recording is saved; offline extraction is in bilibili-shrubbery.json. Article source remains a separate route.",
+        "primary_12op": "https://www.bilibili.com/video/BV1G4421A7Ge/",
+        "candidate_6op": "https://www.bilibili.com/video/BV1tCEvz1EXL/",
+        "candidate_water": "https://www.bilibili.com/video/BV1gp421o7f7/"
+    }
+}

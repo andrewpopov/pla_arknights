@@ -1,0 +1,18 @@
+{
+    "source": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-57.png",
+    "source_sha256": "6349673910a3671866b03cd080e3d96829f3f9f50aaa7b112874f3e96d791c1a",
+    "normalized_size": [1280, 720],
+    "actual_english_positive": false,
+    "assets": [
+        {
+            "template": "SandBagHeader.png",
+            "rect": [340, 137, 38, 37],
+            "sha256": "9b46487bb94e6b88a3fdc10c6ef82b4b02921eee5e04f932edce90652c03b6f3"
+        },
+        {
+            "template": "SandBagWater.png",
+            "rect": [614, 332, 43, 46],
+            "sha256": "a8c90b44409d6ff65e363e1d30804c2bc3caf31cf5d5f1169adb7692d32dbe6a"
+        }
+    ]
+}

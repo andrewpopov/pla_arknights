@@ -1,0 +1,9 @@
+{
+    "source": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+    "source_sha256": "bed44edf1c2f4cfa3a01cf3079b4b8d7c978b0005594778d02f0616fc3e5739b",
+    "rect": [153, 37, 58, 39],
+    "template": "SandBagButton.png",
+    "template_sha256": "5bda772bdf4d15bb28ab3791b5e32a0d77c83d08cab1061d939226219eae26bc",
+    "source_is_english": true,
+    "live_toggle_transition_verified": false
+}

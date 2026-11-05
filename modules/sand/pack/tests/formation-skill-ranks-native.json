@@ -1,0 +1,689 @@
+{
+    "game_connected": false,
+    "native": [
+        {
+            "name": "Młynar",
+            "slot": 1,
+            "skill": 3,
+            "roi": [493, 132, 22, 22],
+            "factor": 1.1,
+            "scaled_roi": [542, 145, 24, 24],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [544, 147, 18, 17],
+                        "score": 0.444276,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [546, 147, 18, 17],
+                        "score": 0.625963,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [545, 147, 18, 17],
+                        "score": 0.738995,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": true,
+                        "rect": [546, 146, 18, 18],
+                        "score": 0.904378,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Beagle",
+            "slot": 2,
+            "skill": 1,
+            "roi": [355, 272, 22, 22],
+            "factor": 1.1,
+            "scaled_roi": [391, 299, 24, 24],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [395, 301, 18, 17],
+                        "score": 0.817693,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [395, 301, 18, 17],
+                        "score": 0.571519,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [393, 301, 18, 17],
+                        "score": 0.365932,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [396, 301, 18, 18],
+                        "score": 0.356737,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Spot",
+            "slot": 3,
+            "skill": 1,
+            "roi": [355, 412, 22, 22],
+            "factor": 1.1,
+            "scaled_roi": [391, 453, 24, 24],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [395, 455, 18, 17],
+                        "score": 0.80982,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [395, 455, 18, 17],
+                        "score": 0.557466,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [393, 455, 18, 17],
+                        "score": 0.365316,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [395, 455, 18, 18],
+                        "score": 0.295502,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Cardigan",
+            "slot": 4,
+            "skill": 1,
+            "roi": [355, 552, 22, 22],
+            "factor": 1.1,
+            "scaled_roi": [391, 607, 24, 24],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [395, 609, 18, 17],
+                        "score": 0.815579,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [395, 609, 18, 17],
+                        "score": 0.568566,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [393, 609, 18, 17],
+                        "score": 0.365833,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [396, 609, 18, 18],
+                        "score": 0.337912,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Noir Corne",
+            "slot": 5,
+            "skill": 1,
+            "roi": [865, 132, 22, 22],
+            "factor": 1.1,
+            "scaled_roi": [952, 145, 24, 24],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [952, 149, 18, 17],
+                        "score": 0.253415,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [952, 149, 18, 17],
+                        "score": 0.281373,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [952, 150, 18, 17],
+                        "score": 0.337905,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [952, 148, 18, 18],
+                        "score": 0.425027,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Yato",
+            "slot": 6,
+            "skill": 1,
+            "roi": [865, 272, 22, 22],
+            "factor": 1.1,
+            "scaled_roi": [952, 299, 24, 24],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [952, 303, 18, 17],
+                        "score": 0.253415,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [952, 303, 18, 17],
+                        "score": 0.281373,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [952, 304, 18, 17],
+                        "score": 0.337905,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [952, 302, 18, 18],
+                        "score": 0.425027,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Młynar",
+            "slot": 1,
+            "skill": 3,
+            "roi": [493, 132, 22, 22],
+            "factor": 1.2,
+            "scaled_roi": [592, 158, 26, 26],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [595, 161, 18, 17],
+                        "score": 0.432745,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [596, 161, 18, 17],
+                        "score": 0.638153,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [596, 161, 18, 17],
+                        "score": 0.777697,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": true,
+                        "rect": [596, 160, 18, 18],
+                        "score": 0.953823,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Beagle",
+            "slot": 2,
+            "skill": 1,
+            "roi": [355, 272, 22, 22],
+            "factor": 1.2,
+            "scaled_roi": [426, 326, 26, 26],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [432, 328, 18, 17],
+                        "score": 0.803233,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [432, 329, 18, 17],
+                        "score": 0.556948,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [429, 328, 18, 17],
+                        "score": 0.407898,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [433, 329, 18, 18],
+                        "score": 0.358372,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Spot",
+            "slot": 3,
+            "skill": 1,
+            "roi": [355, 412, 22, 22],
+            "factor": 1.2,
+            "scaled_roi": [426, 494, 26, 26],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [432, 496, 18, 17],
+                        "score": 0.802575,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [432, 497, 18, 17],
+                        "score": 0.554594,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [429, 496, 18, 17],
+                        "score": 0.409182,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [432, 497, 18, 18],
+                        "score": 0.321357,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Cardigan",
+            "slot": 4,
+            "skill": 1,
+            "roi": [355, 552, 22, 22],
+            "factor": 1.2,
+            "scaled_roi": [426, 662, 26, 26],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [432, 664, 18, 17],
+                        "score": 0.803234,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [432, 665, 18, 17],
+                        "score": 0.556467,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [429, 664, 18, 17],
+                        "score": 0.408904,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [433, 665, 18, 18],
+                        "score": 0.346901,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Noir Corne",
+            "slot": 5,
+            "skill": 1,
+            "roi": [865, 132, 22, 22],
+            "factor": 1.2,
+            "scaled_roi": [1038, 158, 26, 26],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [1038, 163, 18, 17],
+                        "score": 0.273948,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1038, 163, 18, 17],
+                        "score": 0.305616,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1038, 164, 18, 17],
+                        "score": 0.37205,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1038, 162, 18, 18],
+                        "score": 0.427062,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Yato",
+            "slot": 6,
+            "skill": 1,
+            "roi": [865, 272, 22, 22],
+            "factor": 1.2,
+            "scaled_roi": [1038, 326, 26, 26],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [1038, 331, 18, 17],
+                        "score": 0.273948,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1038, 331, 18, 17],
+                        "score": 0.305616,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1038, 332, 18, 17],
+                        "score": 0.37205,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1038, 330, 18, 18],
+                        "score": 0.427062,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Młynar",
+            "slot": 1,
+            "skill": 3,
+            "roi": [493, 132, 22, 22],
+            "factor": 1.3,
+            "scaled_roi": [641, 172, 29, 29],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [645, 175, 18, 17],
+                        "score": 0.419383,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [647, 175, 18, 17],
+                        "score": 0.641026,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [647, 176, 18, 17],
+                        "score": 0.770149,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": true,
+                        "rect": [647, 174, 18, 18],
+                        "score": 0.948947,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Beagle",
+            "slot": 2,
+            "skill": 1,
+            "roi": [355, 272, 22, 22],
+            "factor": 1.3,
+            "scaled_roi": [462, 354, 29, 29],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [469, 356, 18, 17],
+                        "score": 0.831785,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [470, 356, 18, 17],
+                        "score": 0.556812,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [466, 355, 18, 17],
+                        "score": 0.442106,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [470, 361, 18, 18],
+                        "score": 0.363337,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Spot",
+            "slot": 3,
+            "skill": 1,
+            "roi": [355, 412, 22, 22],
+            "factor": 1.3,
+            "scaled_roi": [462, 536, 29, 29],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [469, 538, 18, 17],
+                        "score": 0.837919,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [470, 538, 18, 17],
+                        "score": 0.551358,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [466, 537, 18, 17],
+                        "score": 0.449296,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [470, 538, 18, 18],
+                        "score": 0.341524,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Cardigan",
+            "slot": 4,
+            "skill": 1,
+            "roi": [355, 552, 22, 22],
+            "factor": 1.3,
+            "scaled_roi": [462, 718, 29, 29],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [469, 720, 18, 17],
+                        "score": 0.831494,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [470, 720, 18, 17],
+                        "score": 0.555212,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [466, 719, 18, 17],
+                        "score": 0.443245,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [470, 720, 18, 18],
+                        "score": 0.350465,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Noir Corne",
+            "slot": 5,
+            "skill": 1,
+            "roi": [865, 132, 22, 22],
+            "factor": 1.3,
+            "scaled_roi": [1124, 172, 29, 29],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [1124, 176, 18, 17],
+                        "score": 0.2919,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1124, 177, 18, 17],
+                        "score": 0.317047,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1124, 177, 18, 17],
+                        "score": 0.404625,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1125, 175, 18, 18],
+                        "score": 0.423918,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Yato",
+            "slot": 6,
+            "skill": 1,
+            "roi": [865, 272, 22, 22],
+            "factor": 1.3,
+            "scaled_roi": [1124, 354, 29, 29],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [1124, 358, 18, 17],
+                        "score": 0.2919,
+                        "template": "BattleQuickFormationSkillLevel-07.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1124, 359, 18, 17],
+                        "score": 0.317047,
+                        "template": "BattleQuickFormationSkillLevel-08.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1124, 359, 18, 17],
+                        "score": 0.404625,
+                        "template": "BattleQuickFormationSkillLevel-09.png"
+                    },
+                    {
+                        "hit": false,
+                        "rect": [1125, 357, 18, 18],
+                        "score": 0.423918,
+                        "template": "BattleQuickFormationSkillLevel-10.png"
+                    }
+                ]
+            }
+        }
+    ]
+}

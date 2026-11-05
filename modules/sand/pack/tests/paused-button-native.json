@@ -1,0 +1,57 @@
+{
+    "schema_version": 1,
+    "native_version": "v6.0.0-local.78ca631.43cfb749",
+    "passed": true,
+    "rows": [
+        {
+            "expected_paused": true,
+            "image": "I:/MAA-data/sand-player/live-control-v13-20261101/runtime/00017-pause-confirm.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1188, 37, 39, 33],
+                    "score": 1.0,
+                    "task": "SandAuto@Paused",
+                    "templ": "SandPausedPlay.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@PausedText"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [613, 22, 67, 23],
+                    "score": 0.926577,
+                    "task": "SandAuto@Battle",
+                    "text": "##:##"
+                }
+            ]
+        },
+        {
+            "expected_paused": false,
+            "image": "I:/MAA-data/sand-player/live-control-v13-20261101/runtime/00008-pause-confirm.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@Paused"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@PausedText"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [613, 22, 66, 23],
+                    "score": 0.936209,
+                    "task": "SandAuto@Battle",
+                    "text": "##:##"
+                }
+            ]
+        }
+    ]
+}

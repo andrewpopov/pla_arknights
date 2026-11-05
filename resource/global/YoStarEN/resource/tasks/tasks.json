@@ -499,5 +499,8 @@
     },
     "OperProgress@OperBoxSortTabs": {
         "text": ["Level", "Rarity", "Acquisition Date"]
+    },
+    "InfrastTraining": {
+        "templThreshold": 0.92
     }
 }

@@ -1,0 +1,84 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_01",
+    "stage": "Shrubbery Galore",
+    "coordinate_system": "native map [column,row], zero-based",
+    "native_projection_report": "I:\\MAA-data\\sand-player\\native-tile-floor-plane-20261029\\report.json",
+    "native_projection_report_sha256": "6d689e78be8757fc0a7c5baf0085c79135c0aebc604ec283b4bd23231e2d6185",
+    "source": "Existing MAA TilePack::calc, backed by bundled Arknights-Tile-Pos map data",
+    "opening": {
+        "main-chopper": {
+            "actor": "M\u0142ynar",
+            "facing": "Right",
+            "tile": [7, 11],
+            "tile_key": "tile_road",
+            "buildable_type": 1,
+            "nominal_normal": [766, 290],
+            "nominal_selected": [829, 283],
+            "normal_annotation_error": 5.385164807134504,
+            "selected_annotation_error": 6.082762530298219,
+            "live_tile_and_facing_verified": false
+        },
+        "attack-recovery-chopper": {
+            "actor": "Executor the Ex Foedere",
+            "facing": "Left",
+            "tile": [6, 12],
+            "tile_key": "tile_road",
+            "buildable_type": 1,
+            "nominal_normal": [684, 363],
+            "nominal_selected": [754, 358],
+            "normal_annotation_error": 9.848857801796104,
+            "selected_annotation_error": 11.40175425099138,
+            "live_tile_and_facing_verified": false
+        },
+        "dp-opener": {
+            "actor": "Saileach",
+            "facing": "Right",
+            "tile": [7, 13],
+            "tile_key": "tile_road",
+            "buildable_type": 1,
+            "nominal_normal": [778, 442],
+            "nominal_selected": [845, 425],
+            "normal_annotation_error": 4.47213595499958,
+            "selected_annotation_error": 6.082762530298219,
+            "live_tile_and_facing_verified": false
+        }
+    },
+    "collector": {
+        "accepted": false,
+        "candidates": [
+            {
+                "projection": [515.7684326171875, 293.248046875],
+                "nearest_tile": [4, 11],
+                "tile_key": "tile_forbidden",
+                "buildable_type": 0,
+                "distance": 23.953006040186896
+            },
+            {
+                "projection": [515.3732299804688, 290.9470520019531],
+                "nearest_tile": [4, 11],
+                "tile_key": "tile_forbidden",
+                "buildable_type": 0,
+                "distance": 21.625230357051382
+            },
+            {
+                "projection": [515.2047119140625, 293.8596496582031],
+                "nearest_tile": [4, 11],
+                "tile_key": "tile_forbidden",
+                "buildable_type": 0,
+                "distance": 24.420727014578755
+            },
+            {
+                "projection": [516.94921875, 303.9880065917969],
+                "nearest_tile": [4, 11],
+                "tile_key": "tile_forbidden",
+                "buildable_type": 0,
+                "distance": 34.69115497240441
+            }
+        ],
+        "reason": "Closest nominal cell is forbidden in the initial map and errors are22\u201335pixels; clearing/dynamic terrain, annotation or registration must be resolved before assigning a tile.",
+        "height_assessment": "The nearest cell is already floor height; the floor-plane comparison does not resolve the rejected waypoint."
+    },
+    "autoplay_enabled": false,
+    "live_camera_verified": false
+}

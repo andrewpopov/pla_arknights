@@ -1,0 +1,113 @@
+{
+    "schema_version": 1,
+    "source": "I:\\MAA-data\\sand-guides\\20261029\\game-data\\409bce70516f\\character_table.json",
+    "source_sha256": "ca0663517ec917aec88a11a41d1b38611eac29a5b5353dabc459b0102591d9e4",
+    "kind": "Public game-data promotion caps and skill unlock phases; actual owned power is unverified",
+    "operators": {
+        "char_211_adnach": {
+            "name": "Adnachiel",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_212_ansel": {
+            "name": "Ansel",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_122_beagle": {
+            "name": "Beagle",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_017_huang": {
+            "name": "Blaze",
+            "phase_level_caps": [50, 80, 90],
+            "skill_unlock_phases": [0, 1, 2]
+        },
+        "char_209_ardign": {
+            "name": "Cardigan",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_123_fang": {
+            "name": "Fang",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_237_gravel": {
+            "name": "Gravel",
+            "phase_level_caps": [45, 60, 70],
+            "skill_unlock_phases": [0, 1]
+        },
+        "char_120_hibisc": {
+            "name": "Hibiscus",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_124_kroos": {
+            "name": "Kroos",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_121_lava": {
+            "name": "Lava",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_283_midn": {
+            "name": "Midnight",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_264_f12yin": {
+            "name": "Mountain",
+            "phase_level_caps": [50, 80, 90],
+            "skill_unlock_phases": [0, 1, 2]
+        },
+        "char_4064_mlynar": {
+            "name": "Młynar",
+            "phase_level_caps": [50, 80, 90],
+            "skill_unlock_phases": [0, 1, 2]
+        },
+        "char_500_noirc": {
+            "name": "Noir Corne",
+            "phase_level_caps": [30],
+            "skill_unlock_phases": []
+        },
+        "char_192_falco": {
+            "name": "Plume",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_281_popka": {
+            "name": "Popukar",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_202_demkni": {
+            "name": "Saria",
+            "phase_level_caps": [50, 80, 90],
+            "skill_unlock_phases": [0, 1, 2]
+        },
+        "char_284_spot": {
+            "name": "Spot",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_210_stward": {
+            "name": "Steward",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_240_wyvern": {
+            "name": "Vanilla",
+            "phase_level_caps": [40, 55],
+            "skill_unlock_phases": [0]
+        },
+        "char_502_nblade": {
+            "name": "Yato",
+            "phase_level_caps": [30],
+            "skill_unlock_phases": []
+        }
+    }
+}

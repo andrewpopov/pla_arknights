@@ -1,0 +1,63 @@
+{
+    "schema_version": 1,
+    "source": "guides/kuniya-days2-3-deployments.json",
+    "template": "resource/template/SandRaidResultBadge.png",
+    "template_sha256": "9a15bb60ba99b0537ea59c043b0c26309453e29b986936a68a53dd02da9e62d0",
+    "source_panel": "I:/MAA-data/sand-player/food-recognition-20261030/independent-panels/kuniya-days2-3-image-21.png",
+    "crop": [70, 330, 117, 23],
+    "native_badge_report": "I:\\MAA-data\\sand-player\\raid-result-20261030\\native-probe-report.json",
+    "native_counter_report": "I:\\MAA-data\\sand-player\\raid-result-20261030\\native-counter-report.json",
+    "independent_badge_score": 0.999843,
+    "counter_scores": {
+        "0/44": 0.990036,
+        "0/42": 0.993317
+    },
+    "actual_english_raid_result_positive": false,
+    "counter_alone_proves_victory": false,
+    "inventory_credit": false,
+    "game_connected": false,
+    "native_promoted_tasks_report": "I:\\MAA-data\\sand-player\\raid-result-20261030\\native-final-report.json",
+    "native_promoted_tasks_results": [
+        {
+            "image": "positive-44.png",
+            "badge": 1.0,
+            "counter": "0/44",
+            "counter_score": 0.991345
+        },
+        {
+            "image": "positive-42.png",
+            "badge": 0.999843,
+            "counter": "0/42",
+            "counter_score": 0.992456
+        },
+        {
+            "image": "kuniya-days4-6-image-31.png",
+            "badge": null,
+            "counter": null,
+            "counter_score": null
+        },
+        {
+            "image": "gather-settled.png",
+            "badge": null,
+            "counter": "Y",
+            "counter_score": 0.29334
+        },
+        {
+            "image": "second-result.png",
+            "badge": null,
+            "counter": null,
+            "counter_score": null
+        },
+        {
+            "image": "idle.png",
+            "badge": null,
+            "counter": "VX",
+            "counter_score": 0.544057
+        }
+    ],
+    "primary_guide_prose": {
+        "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\source.html",
+        "sha256": "379b51c8322bf85ed03465bab45e61e83121e8a4baf214e9543745da81ccbb70",
+        "learnings": ["Day2/Day3 wood targets approximately30", "Day3 example used no manual operator skills"]
+    }
+}

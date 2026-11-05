@@ -1,0 +1,177 @@
+{
+    "schema_version": 1,
+    "kind": "reviewed exported tool mechanics; advisory only",
+    "game_connected": false,
+    "client_version_verified": false,
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "commit": "409bce70516f2420af61b1fc5680da60e448ab99",
+    "sources": {
+        "sandbox_perm_table.json": {
+            "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsGamedata/409bce70516f2420af61b1fc5680da60e448ab99/en/gamedata/excel/sandbox_perm_table.json",
+            "sha256": "a557ea70bf3b7d64d3684135aada6b0bc3099de84fceec9794b237428a092911"
+        },
+        "character_table.json": {
+            "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsGamedata/409bce70516f2420af61b1fc5680da60e448ab99/en/gamedata/excel/character_table.json",
+            "sha256": "ca0663517ec917aec88a11a41d1b38611eac29a5b5353dabc459b0102591d9e4"
+        },
+        "skill_table.json": {
+            "url": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsGamedata/409bce70516f2420af61b1fc5680da60e448ab99/en/gamedata/excel/skill_table.json",
+            "sha256": "1f4b1ba220a2abb11a06fda66b715695ebe1b56f4c6c1583e33a4e20c4b81f0a"
+        }
+    },
+    "items": {
+        "sandbox_1_tactical_15": {
+            "name": "Crabbie Pumpie",
+            "trap_id": "trap_403_wfactory",
+            "phase": 0,
+            "level": 1,
+            "placement_description": "Can be deployed on <Clear Water> areas",
+            "position_enum": "NONE",
+            "range_id": "0-1",
+            "base_attributes": {
+                "cost": 5,
+                "maxHp": 7000,
+                "def": 500,
+                "magicResistance": 0.0,
+                "blockCnt": 1,
+                "respawnTime": 10,
+                "spRecoveryPerSec": 1.0
+            },
+            "skill": {
+                "id": "sktok_wfactory",
+                "name": "Pump Water",
+                "description": "Allows <Fresh Water> to be gathered from <Clear Water>, lasts for {live_duration}s",
+                "type": "AUTO",
+                "sp": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "levelUpCost": null,
+                    "maxChargeTime": 1,
+                    "spCost": 8,
+                    "initSp": 0,
+                    "increment": 1.0
+                },
+                "blackboard": {
+                    "live_duration": {
+                        "value": 85.0,
+                        "value_str": null
+                    }
+                }
+            },
+            "excluded_from_raid_battles": true,
+            "craft_source_record": {
+                "itemId": "sandbox_1_tactical_15",
+                "type": "TACTICAL",
+                "buildingUnlockDesc": "Unlocked by default",
+                "materialItems": {
+                    "sandbox_1_wood": 10
+                },
+                "upgradeItems": null,
+                "outputRatio": 1,
+                "withdrawRatio": 90,
+                "repairCost": 50,
+                "isHidden": false,
+                "craftGroupId": "sandbox_1_tactical_15",
+                "recipeLevel": 0
+            },
+            "interpretation_limits": [
+                "Base data does not verify the current client or active modifiers",
+                "Lifetime and SP do not prove delivered resource yield",
+                "Position NONE does not prove directionless placement"
+            ]
+        },
+        "sandbox_1_tactical_16": {
+            "name": "Sawing Harvester Hub",
+            "trap_id": "trap_401_xbfato",
+            "phase": 0,
+            "level": 1,
+            "placement_description": "Can be deployed in low areas",
+            "position_enum": "NONE",
+            "range_id": "3-15",
+            "base_attributes": {
+                "cost": 5,
+                "maxHp": 7000,
+                "def": 300,
+                "magicResistance": 0.0,
+                "blockCnt": 1,
+                "respawnTime": 10,
+                "spRecoveryPerSec": 1.0
+            },
+            "skill": {
+                "id": "sktok_xbfato",
+                "name": "Gather",
+                "description": "Produces <Gatherers> to gather from <Thickets>, <Monoliths>, and <Strange Ore Veins>, with a bonus when gathering from <Thickets>. Limit of 3.",
+                "type": "AUTO",
+                "sp": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "levelUpCost": null,
+                    "maxChargeTime": 1,
+                    "spCost": 20,
+                    "initSp": 15,
+                    "increment": 1.0
+                },
+                "blackboard": {
+                    "cost": {
+                        "value": 0.0,
+                        "value_str": null
+                    },
+                    "enemy_key": {
+                        "value": 0.0,
+                        "value_str": "enemy_7008_wrkwrk"
+                    },
+                    "max_cnt": {
+                        "value": 3.0,
+                        "value_str": null
+                    },
+                    "sandbox_res_collector.hp_ratio[wood]": {
+                        "value": 0.06,
+                        "value_str": null
+                    },
+                    "sandbox_res_collector.hp_ratio[stone]": {
+                        "value": 0.015,
+                        "value_str": null
+                    },
+                    "sandbox_res_collector.hp_ratio[iron]": {
+                        "value": 0.008,
+                        "value_str": null
+                    },
+                    "extra_count": {
+                        "value": 0.0,
+                        "value_str": null
+                    },
+                    "live_duration": {
+                        "value": 9999.0,
+                        "value_str": null
+                    }
+                }
+            },
+            "excluded_from_raid_battles": true,
+            "craft_source_record": {
+                "itemId": "sandbox_1_tactical_16",
+                "type": "TACTICAL",
+                "buildingUnlockDesc": "Unlocked when Headquarters reaches Lv.2",
+                "materialItems": {
+                    "sandbox_1_wood": 7,
+                    "sandbox_1_stone": 1
+                },
+                "upgradeItems": null,
+                "outputRatio": 1,
+                "withdrawRatio": 90,
+                "repairCost": 45,
+                "isHidden": false,
+                "craftGroupId": "sandbox_1_tactical_16",
+                "recipeLevel": 0
+            },
+            "interpretation_limits": [
+                "Base data does not verify the current client or active modifiers",
+                "Lifetime and SP do not prove delivered resource yield",
+                "Position NONE does not prove directionless placement"
+            ]
+        }
+    },
+    "capacity_constants": {
+        "toolboxCapacity": 12,
+        "toolCntLimitInSquad": 15
+    },
+    "runtime_placement_verified": false,
+    "automatic_inventory_credit": false
+}

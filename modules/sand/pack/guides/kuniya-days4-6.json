@@ -1,0 +1,20 @@
+{
+    "source": {
+        "url": "https://note.com/kuniya_ark/n/n19803f0f953f",
+        "author": "くにや",
+        "published": "2024-11-01"
+    },
+    "autoplay_enabled": false,
+    "status": "campaign reference; not an executable route",
+    "observations": [
+        "Day 4 starts with cycle calculation and rice-to-drink preparation.",
+        "Gathering Hubs require HQ level 2; do not use this construction plan at HQ1.",
+        "The example Day 4 water/wood trip returns 49 wood and 10 water.",
+        "A further example raid appears on Day 5 (Day 3 also shows a raid); check current threats before further day advancement.",
+        "Day 6 uses Gathering Hubs for wood, then pumps for water."
+    ],
+    "live_reconciliation": {
+        "day4_headquarters_production": "2 rice observed",
+        "evidence": "I:\\MAA-data\\sand-player\\energy-recovery-20261028\\day4-settle\\00005-day-state.png"
+    }
+}

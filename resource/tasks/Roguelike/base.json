@@ -113,7 +113,7 @@
     },
     "RoguelikeQuickFormationDelay": {
         "algorithm": "JustReturn",
-        "postDelay": 100
+        "postDelay": 800
     },
     "RoguelikeRecruit-GiveUp": {
         "doc": "在集成战略模式招募干员界面点击右下角 <放弃> 文字左侧图标位置，放弃招募机会",

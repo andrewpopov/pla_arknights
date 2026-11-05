@@ -1,0 +1,305 @@
+{
+    "kind": "read-only native saved-image final formation replay",
+    "game_connected": false,
+    "native": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [823, 28, 82, 17],
+                    "score": 0.973378,
+                    "task": "SandAuto@Squad",
+                    "text": "QuickSelect"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [493, 132, 65, 65],
+                    "score": 1.0,
+                    "task": "SandAuto@SquadMlynarSelectedS3",
+                    "templ": "SandMlynarSelectedS3.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 96, 150, 21],
+                    "score": 0.858911,
+                    "task": "SandAuto@SquadName1",
+                    "text": "Mtynar"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 236, 150, 21],
+                    "score": 0.99379,
+                    "task": "SandAuto@SquadName2",
+                    "text": "Beagle"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 376, 150, 21],
+                    "score": 0.853705,
+                    "task": "SandAuto@SquadName3",
+                    "text": "Spot"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 516, 150, 21],
+                    "score": 0.959155,
+                    "task": "SandAuto@SquadName4",
+                    "text": "Cardigan"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [810, 96, 150, 21],
+                    "score": 0.979186,
+                    "task": "SandAuto@SquadName5",
+                    "text": "Noir Corne"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [810, 236, 150, 21],
+                    "score": 0.959003,
+                    "task": "SandAuto@SquadName6",
+                    "text": "Yato"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName7"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot1"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot2"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot3"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot4"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot5"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot6"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [814, 404, 141, 19],
+                    "score": 0.975244,
+                    "task": "SandAuto@EmptySquadSlot7",
+                    "text": "AddSquadMembers"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\takeover-20261031T022729Z\\live\\00004-campaign-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [823, 28, 82, 17],
+                    "score": 0.973378,
+                    "task": "SandAuto@Squad",
+                    "text": "QuickSelect"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadMlynarSelectedS3"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 96, 150, 21],
+                    "score": 0.977025,
+                    "task": "SandAuto@SquadName1",
+                    "text": "Blaze"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 236, 150, 21],
+                    "score": 0.974299,
+                    "task": "SandAuto@SquadName2",
+                    "text": "Mountain"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 376, 150, 21],
+                    "score": 0.960844,
+                    "task": "SandAuto@SquadName3",
+                    "text": "Saria"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName4"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [810, 96, 150, 21],
+                    "score": 0.569631,
+                    "task": "SandAuto@SquadName5",
+                    "text": "-"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [810, 236, 150, 21],
+                    "score": 0.577629,
+                    "task": "SandAuto@SquadName6",
+                    "text": "-"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName7"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot1"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot2"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot3"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [305, 556, 141, 18],
+                    "score": 0.957084,
+                    "task": "SandAuto@EmptySquadSlot4",
+                    "text": "AddSquadMembers"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [814, 136, 139, 21],
+                    "score": 0.982752,
+                    "task": "SandAuto@EmptySquadSlot5",
+                    "text": "AddSquadMembers"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [813, 277, 140, 18],
+                    "score": 0.964703,
+                    "task": "SandAuto@EmptySquadSlot6",
+                    "text": "AddSquadMembers"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [814, 404, 141, 19],
+                    "score": 0.975244,
+                    "task": "SandAuto@EmptySquadSlot7",
+                    "text": "AddSquadMembers"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@Squad"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadMlynarSelectedS3"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName1"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName2"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName3"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName4"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadName5"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [810, 236, 99, 21],
+                    "score": 0.246,
+                    "task": "SandAuto@SquadName6",
+                    "text": "C"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [810, 376, 149, 21],
+                    "score": 0.075058,
+                    "task": "SandAuto@SquadName7",
+                    "text": "8"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot1"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot2"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot3"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot4"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot5"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot6"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot7"
+                }
+            ]
+        }
+    ],
+    "images_sha256": {
+        "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png": "0538859b1f3ad79241a1af83cc27183200b3c39bf401144c05812d25f7f370cb",
+        "I:\\MAA-data\\sand-player\\takeover-20261031T022729Z\\live\\00004-campaign-formation.png": "0babe60a4f1089a8fca9c5802ae924431562cacb118c5da3178b2ce8c01a8277",
+        "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png": "0323ca4283f6b90734d45d9d364acd43201c3b78d20885e7be5b37d1b32bda27"
+    }
+}

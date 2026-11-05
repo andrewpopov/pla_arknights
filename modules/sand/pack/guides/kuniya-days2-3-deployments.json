@@ -1,0 +1,405 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "source": "https://note.com/kuniya_ark/n/nddc3dcd1022d",
+    "images": [
+        {
+            "image": 1,
+            "url": "https://assets.st-note.com/img/1730448133-f7t3QhHslMJczFyqGZTxpDPW.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-01.png",
+            "sha256": "cc2bb4e65b2921cbfdc2cc8fd694de44190aab92b0d4f904d82cbb06d463f085",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 2,
+            "url": "https://assets.st-note.com/img/1730448206-anL2wNr3v7TSpeBZxRKO8Y1P.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-02.png",
+            "sha256": "896af58d06fc53ade0b1bba844bd7caa580c76d157fe7a5c9ff2071ff40dbd58",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 3,
+            "url": "https://assets.st-note.com/img/1730448206-RPXJNM9bLz7nw25yiKDEqlhQ.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-03.png",
+            "sha256": "42603eb822957ab66e794164764fade32a29a48c8b0df2a857a44c0b9a0d24fb",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 4,
+            "url": "https://assets.st-note.com/img/1730448301-g6oJA4PkLjT8M3xGpVeqRUvC.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-04.png",
+            "sha256": "133a30d816dffe4ede5c5d3ff6aafd3f400b55cd570546857aec5d79381b72a8",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 5,
+            "url": "https://assets.st-note.com/img/1730448477-r9jxQMpcWLyPh2NAZFXzoisT.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-05.png",
+            "sha256": "26922de4eac3ea288c79e9f645c97c0ef01be2ff574f93a66bb11a44a97dbd43",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 6,
+            "url": "https://assets.st-note.com/img/1730448477-OzUfVgwbl1nWBJI52oQjerZa.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-06.png",
+            "sha256": "10d09511dec17a1f3b7b6b59cb44f49e87464dbc44477e183ad80207c07e74d7",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 7,
+            "url": "https://assets.st-note.com/img/1730448477-Ab0EOr6L3PiGdcjasIFBkMH2.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-07.png",
+            "sha256": "7912df078bce8963d2e5c21495e2aee2ef745221c7463f6aa4f22f694d5bee10",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 8,
+            "url": "https://assets.st-note.com/img/1730448477-hbWI2KAutq0cfMHYdrT19SyQ.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-08.png",
+            "sha256": "ad3b0751eafd3233ac009825e80ed2b75277f997272fedec0e56c010ef4638b7",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 9,
+            "url": "https://assets.st-note.com/img/1730448658-QojNev7sdDfmMlFzyiwT1RCH.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-09.png",
+            "sha256": "f6f48507fd7c30a05d2689f76d9b4367e4c6dcb55c0534d69f029ce1586d3299",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 10,
+            "url": "https://assets.st-note.com/img/1730448757-2Y1lpb8IWDRr4L0ZgPe7m5Ay.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-10.png",
+            "sha256": "3ba4edfa21605f18607b7d172f18a5460afa0813e8de253fa3c08471849bc057",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 11,
+            "url": "https://assets.st-note.com/img/1730448794-4PFNbhMQrwZCqek8sfGW0X6T.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-11.png",
+            "sha256": "f008a2657e7ea9111efb629e02c01bea85c1bfb5b73bc2c743a6daa57d68b5a7",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 12,
+            "url": "https://assets.st-note.com/img/1730448794-adNDCrA7VZw2R5MPG1kg34XS.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-12.png",
+            "sha256": "4f5aee7a31365f6461c69dd38868f475a83b1224a7054930ef3a53e3850483a2",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 13,
+            "url": "https://assets.st-note.com/img/1730448794-NzP67pxSvHM5rTK0DhkitcoR.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-13.png",
+            "sha256": "4ecb28b08905cc340d4eb2ecbab2f5e451efe365c738b44df3036965c3980516",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 14,
+            "url": "https://assets.st-note.com/img/1730448924-V8UQrI0WK7X1NaPM6FO9kliY.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-14.png",
+            "sha256": "086e8fee492a8aecc5acc83c5c179918e06d6f7a66626b7829c65dfdd6a7d854",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 15,
+            "url": "https://assets.st-note.com/img/1730448946-p973VRx1thifOwmrP6baSo0z.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-15.png",
+            "sha256": "4335cf0f876db3449ac63eff426367f7e2ec3180698ea5d89df4768dd795c448",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 16,
+            "url": "https://assets.st-note.com/img/1730449013-dF4XcHNRZElSg7QsGnAmJpUP.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-16.png",
+            "sha256": "71dd920890eb6f36ada82f851a694c3ad1c93636fbcaaffda0c8f5dedcca6063",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 17,
+            "url": "https://assets.st-note.com/img/1730449013-mjOHzKWo4rdy1pf6sEM3SJiR.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-17.png",
+            "sha256": "9a6c6b0772d799682a6ae580e65da0934a7ad4103d4eac8d38d4e8de14b84630",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 18,
+            "url": "https://assets.st-note.com/img/1730449272-RWeiY8ofJjk3ph1BFslwxtZV.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-18.png",
+            "sha256": "ac989e8066698ecc69155d5605a19dc044c92acb64bb0cbb1ab3c7c53cefd94b",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 19,
+            "url": "https://assets.st-note.com/img/1730449272-8TrLFozbJ15GXC4nuBHaZkMI.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-19.png",
+            "sha256": "dad73880879d31d38026f663d78d7c355c9c96559a18c7d77b4ee58411a7d36b",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 20,
+            "url": "https://assets.st-note.com/img/1730449272-XZLzM52vFnubpKjdy03DWVkO.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-20.png",
+            "sha256": "e3a62e988a4f8d1af9df1e3b37bc41ed83bcea7bbad1952a0153729402902216",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 21,
+            "url": "https://assets.st-note.com/img/1730449272-cbYp24UawPl85tTGRMqFIDAC.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-21.png",
+            "sha256": "1e311681c2b92f9fca24a66c046b735084711d9744c9c2c41ad2222ad90fa9b3",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 22,
+            "url": "https://assets.st-note.com/img/1730449380-NIYgme7unKTvfsq0Z6bjtEAk.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-22.png",
+            "sha256": "488efd7879c8ae0defe1462ae6f714b3f8768da61c59f58d297b0e09967f304b",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 23,
+            "url": "https://assets.st-note.com/img/1730450383-9CZ1NU5A6PdTVBetziknDGpO.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-23.png",
+            "sha256": "950c08898bab926d397f5c99513b1f1a08be6c7b2ce46db273ca3c20eba0c5ba",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 24,
+            "url": "https://assets.st-note.com/img/1730450383-xbXyA7UPcDiQrTMRgCz4whaq.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-24.png",
+            "sha256": "60a66e65ed9878623759baaae62ee655f7a8f4379297d6c80ce18d92ba30f165",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 25,
+            "url": "https://assets.st-note.com/img/1730450435-jZcoUp71ghPXEWzMArFxmL2u.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-25.png",
+            "sha256": "a4224d70f5dc7d05fde01f6c8c4c2a6ae5b470320e6a157d10a6f0ebd1c62d33",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 26,
+            "url": "https://assets.st-note.com/img/1730450582-MCA3XzbweTSxLPVJWEus8kDF.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-26.png",
+            "sha256": "d7b7eb48bae97a52d856051a534e47505d3056dfc01bc3f79af5f2a255ed96b2",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 27,
+            "url": "https://assets.st-note.com/img/1730450582-2dja4BFyIQtO3LkW1YhpCRqw.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-27.png",
+            "sha256": "a563c59813e9f55a9913998775680f728fa59f8773e15b6f42156e94f2ab60c0",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 28,
+            "url": "https://assets.st-note.com/img/1730450582-D4eQP7RkO9bdW8ytIoEnfqNc.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-28.png",
+            "sha256": "38af18ef3dd32ddc3f96231cceaa8c3dac0d4e4d01fe2bb89c8361db411e4a48",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 29,
+            "url": "https://assets.st-note.com/img/1730450582-wk8JYyOeGLgoxQqp9B0NhaPH.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-29.png",
+            "sha256": "ed5956c0d24e21b77ead5c9d5b2eb6d0a3790d7318f69232aaaba737aa6c66f6",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 30,
+            "url": "https://assets.st-note.com/img/1730450687-F52QGi9YEoNBIgdAcvOw7bT0.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-30.png",
+            "sha256": "a3cf522ed7f69decfcac34db0d52074fe9b45a3be5a78e288de49e8d605efc3b",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 31,
+            "url": "https://assets.st-note.com/img/1730450687-Y1FRpy9LM0AiPkrHlZ8tbx5j.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-31.png",
+            "sha256": "d9d9aff623449e9fe6f5cc38e516fc3e398fd8c070e0734990cb0f0ab65ec863",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 32,
+            "url": "https://assets.st-note.com/img/1730450687-xYuzBDGAlKMH4eSLWRvwkFUd.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-32.png",
+            "sha256": "0210842274972936e51d16c6d7de2469eeb08e1870f3c174496a0702e544ac2f",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 33,
+            "url": "https://assets.st-note.com/img/1730450687-MWqJRbol5Qdj960x4Y1cXmfg.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-33.png",
+            "sha256": "241ee54c3c8fe62292920dfb6833119538950c376d1ee21a71e76513879e2fea",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 34,
+            "url": "https://assets.st-note.com/img/1730450744-98LXcuf2qICMDib3g6KvpnoH.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-34.png",
+            "sha256": "ad15f745506e32a98cfdf459380aabad873661bbc1bf4aba581bfa890d7e0877",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 35,
+            "url": "https://assets.st-note.com/img/1730450744-1Nfiw7HDkQxOCzh54yFjralX.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-35.png",
+            "sha256": "29d002c2b8f36028bf2e8e330d1fbd6e7c605193383af30ccd37333eaffa7bba",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 36,
+            "url": "https://assets.st-note.com/img/1730450744-nPLAzu5GyXFlR3wkifY7m4c9.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-36.png",
+            "sha256": "1434a29543d63dd245cd8dba79e7e31bc1435af62f67ddd093ec811c2f72f133",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 37,
+            "url": "https://assets.st-note.com/img/1730450819-3CPczasUngJwYkQqRH71I2B0.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-37.png",
+            "sha256": "4ac810560b39b426f13f6d1404969ae9fc2d6e16abbb46949c4d33bca56b7edb",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 38,
+            "url": "https://assets.st-note.com/img/1730450819-OL51wuz3pEonUMNsGRFDtQP0.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-38.png",
+            "sha256": "6967bc02bf0cbfcc639970d930ed7602e0febe764b5c562af6303a03e3e47fb4",
+            "size": [2532, 1170]
+        }
+    ],
+    "coordinate_system": "source screenshots only; no executable map coordinates",
+    "routes": [
+        {
+            "day": 2,
+            "act": 1,
+            "stage_id": "sandbox_1_38",
+            "stage": "Jagged Jungle",
+            "source_squad": ["Młynar", "Beagle", "Spot", "Cardigan", "Yato", "Noir Corne"],
+            "observations": [
+                {
+                    "image": 4,
+                    "fact": "Six-operator harvest squad."
+                },
+                {
+                    "image": 5,
+                    "remaining": "03:56",
+                    "fact": "Initial field before deployment."
+                },
+                {
+                    "image": 6,
+                    "remaining": "03:43",
+                    "fact": "Młynar is deployed at the lower-right tree cluster."
+                },
+                {
+                    "image": 7,
+                    "remaining": "03:23",
+                    "fact": "Młynar skill is active."
+                },
+                {
+                    "image": 8,
+                    "remaining": "01:24",
+                    "fact": "Młynar remains at the lower-right cluster with the ground facing arrow pointing Right. All five carrier cards show cooldowns; the screenshot does not establish their deployment order or exact collection tiles."
+                }
+            ],
+            "pending": [
+                "Live camera calibration and green placement",
+                "Exact carrier collection tiles/facings",
+                "Retreat/recycling sequence and delivered wood30"
+            ],
+            "source_harvest_goal": {
+                "wood": 30
+            },
+            "source_chopper_facing": "Right"
+        },
+        {
+            "day": 2,
+            "act": 2,
+            "stage_id": null,
+            "observations": [
+                {
+                    "image": 12,
+                    "fact": "An encounter choice is shown; its outcome is not universal."
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "act": 1,
+            "reference_stage_id": "sandbox_1_56",
+            "source_squad": ["Fang", "Vanilla", "Kroos", "Ansel", "Midnight", "Popukar"],
+            "observations": [
+                {
+                    "image": 16,
+                    "fact": "Raid arrival indicator must be checked."
+                },
+                {
+                    "image": 18,
+                    "fact": "Six-operator raid squad, all shown E1 level55 with skill rank7."
+                },
+                {
+                    "image": 19,
+                    "fact": "Raid uses the river map and a formation at the right-side goal."
+                },
+                {
+                    "image": 20,
+                    "fact": "Late wave remains at the same defended goal."
+                }
+            ],
+            "pending": [
+                "actual raid identity and reachability",
+                "operator order and facing",
+                "wave recognition; battle uses kills, not gathering countdown"
+            ],
+            "source_manual_skills_used": false,
+            "source_prose_note": "The author says no operator skills were used in this example."
+        },
+        {
+            "day": 3,
+            "act": 2,
+            "stage_id": "sandbox_1_40",
+            "stage": "Within Range",
+            "observations": [
+                {
+                    "image": 25,
+                    "fact": "Same six-operator wood squad."
+                },
+                {
+                    "image": 26,
+                    "remaining": "03:45",
+                    "fact": "Młynar is north of the central tree cluster, between the two upper crates; not below the cluster."
+                },
+                {
+                    "image": 27,
+                    "remaining": "03:23",
+                    "fact": "Skill active."
+                },
+                {
+                    "image": 28,
+                    "remaining": "00:27",
+                    "fact": "Młynar remains north of the cluster, with the ground facing arrow pointing Down. All five carrier cards show cooldowns and wood+3 appears; no alternate carrier deployment tile is established by this frame."
+                },
+                {
+                    "image": 33,
+                    "fact": "HQ level2 upgrade confirmed in source."
+                },
+                {
+                    "image": 35,
+                    "fact": "Base NPC interaction is shown after gathering."
+                }
+            ],
+            "pending": [
+                "Live camera calibration and green placement",
+                "Carrier collection tiles/facings and recycling sequence",
+                "Actual delivered wood30"
+            ],
+            "source_harvest_goal": {
+                "wood": 30
+            },
+            "source_chopper_facing": "Down"
+        }
+    ],
+    "warning": "Raid dates and encounters vary. Source formations are evidence, not a guarantee at current power."
+}

@@ -1,0 +1,13 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_09",
+    "location": "I:\\MAA-data\\sand-player\\feathers-canonical-20261102",
+    "sha256": {
+        "idle.png": "f5cad3918ab8cdf67e6d1708e40075b88df66450ca50c32c369c5ddcdb825b09",
+        "side.png": "c6cef6565cb6e7759f64f1ea0684c0647d32aaaec6cd4f818b87117c007a3066"
+    },
+    "provenance": {
+        "idle.png": "00014-supervised-error-paused-006-launch-feathers-paused.png",
+        "side.png": "00025-selected-hand.png"
+    }
+}

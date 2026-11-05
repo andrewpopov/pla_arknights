@@ -1,0 +1,91 @@
+{
+    "schema_version": 1,
+    "dialogue_id": "dialog_sandbox_1_main1_1_op",
+    "autoplay_enabled": false,
+    "stage_ids": ["sandbox_1_33"],
+    "source": {
+        "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\dialogue\\en_US-dialog_sandbox_1_main1_1_op.txt",
+        "sha256": "c6e846d5b5e66c0c7e0f0d382a193844ec5d9f4bb84d31024e2b540f86453c52",
+        "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData_YoStar/main/en_US/gamedata/story/obt/sandboxperm/sandbox_1/battleavg/dialog_sandbox_1_main1_1_op.txt"
+    },
+    "steps": [
+        {
+            "kind": "line",
+            "speaker": "Eunectes",
+            "digest": "ecb7136f469b08ac1e38f9a804d03e6945351ad340985c73d828468691f7c585"
+        },
+        {
+            "kind": "line",
+            "speaker": "Eunectes",
+            "digest": "cfa345126d8b539e9a001df9bc97143360651b9fff44de0281fdbcfc7f22e33b"
+        },
+        {
+            "kind": "line",
+            "speaker": "Eunectes",
+            "digest": "c0f8fb08ce64d15bdfa0f21ff98f7425248101ef7e0a558a5a4e620798660176"
+        },
+        {
+            "kind": "line",
+            "speaker": "Tuye",
+            "digest": "7c4ff00efcd3285b43a7c7b2e621b3d758f5addbcd89f7ac4d528d6db3b45ad5"
+        },
+        {
+            "kind": "line",
+            "speaker": "Tuye",
+            "digest": "d5e94244898c9287a78e98666d1f2dcc89f78ea6f9d5669cff6c79e8361acf96"
+        },
+        {
+            "kind": "choice",
+            "digest": "714d4eac8c8a9123c60fe0170cd1271485021a58bcf053d8779bbd2edae1e494"
+        },
+        {
+            "kind": "line",
+            "speaker": "Eunectes",
+            "digest": "b6206a9064c886f25207b6f345959b06e38058f9c4ed717cf27b0bd706be3bca"
+        },
+        {
+            "kind": "line",
+            "speaker": "Tuye",
+            "digest": "eeb6585466bb0a0fd650980aaec4230aa76371ac5b39c5be9156587b29dd6da4"
+        },
+        {
+            "kind": "line",
+            "speaker": "Tuye",
+            "digest": "1e31ec03f829885f3ad1c5373b7ee6b242242839060389fb2df71928bb1e8bde"
+        },
+        {
+            "kind": "line",
+            "speaker": "Eunectes",
+            "digest": "bf1f8f744a6dc3474ef62108c93baf90a44ce4817c1467c9518f3d38e59aa76b"
+        },
+        {
+            "kind": "line",
+            "speaker": "Eunectes",
+            "digest": "c70da49b6a58cdbca79cf39b2848d8d5f6031a840a7e15cdabe9b1c156ba5f1d"
+        },
+        {
+            "kind": "choice",
+            "digest": "5781eca80ee166a0ff8c1fc112f61b281de5d2ec624ff75af52ff300a6e37d08"
+        },
+        {
+            "kind": "narration",
+            "digest": "426d0f3ca5a848c893b100a85b9c6f819b14fa55b9a11c9eb69f9e282402a0e5"
+        },
+        {
+            "kind": "choice",
+            "digest": "a51f46743407d96c6996688571390e86246779c2e33af7f2ee6577514e84d058"
+        },
+        {
+            "kind": "choice",
+            "digest": "635937b76967954a93b4aebcb5dbffb7dd71db9e96f8cad851f46137c8352ffd"
+        }
+    ],
+    "script_effects": {
+        "map_item": "sandbox_1_craft_1",
+        "quantity": 1,
+        "has_save": true
+    },
+    "live_validation": false,
+    "quest_save_verified": false,
+    "wood_access_verified": false
+}

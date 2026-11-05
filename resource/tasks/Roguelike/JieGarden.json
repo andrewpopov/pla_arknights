@@ -54,6 +54,7 @@
             "JieGarden@Roguelike@ChooseOperFlag@(JieGarden@Roguelike@CloseCollectionContinue)",
             "JieGarden@Roguelike@ChooseOperFlag@(JieGarden@Roguelike@CloseCollectionClose)",
             "JieGarden@Roguelike@ChooseOperConfirm",
+            "JieGarden@Roguelike@ConserveUnusedVoucher",
             "JieGarden@Roguelike@ChooseOperConfirmToGiveUp",
             "JieGarden@Roguelike@Abandon",
             "JieGarden@Roguelike@ChooseOperConfirm#next"
@@ -134,7 +135,8 @@
             "JieGarden@Roguelike@Stages#next",
             "JieGarden@Roguelike@StageEncounterOptions#next",
             "JieGarden@Roguelike@DropsFlag"
-        ]
+        ],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
     },
     "JieGarden@Roguelike@CloseInterview": {
         "template": "JieGarden@Roguelike@CloseCollectionClose.png"
@@ -499,7 +501,8 @@
     },
     "JieGarden@Roguelike@DropsFlag": {
         "template": "Roguelike@DropsFlag.png",
-        "baseTask": "JieGarden@Roguelike@DropsFlag_default"
+        "baseTask": "JieGarden@Roguelike@DropsFlag_default",
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
     },
     "JieGarden@Roguelike@DropsFlag_default": {
         "template": "Roguelike@DropsFlag.png",
@@ -533,8 +536,11 @@
         "roi": [1040, 240, 240, 179]
     },
     "JieGarden@Roguelike@ExitThenAbandon": {
-        "template": "Roguelike@ExitThenAbandon.png",
-        "next": ["JieGarden@Roguelike@ExitThenAbandon", "JieGarden@Roguelike@Abandon"]
+        "algorithm": "JustReturn",
+        "action": "DoNothing",
+        "next": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "Doc": "Full-clear player: recognition/recovery failures stop in place. Never let inherited debug recovery abandon a live Sui run."
     },
     "JieGarden@Roguelike@ExitThenAbandon_ToHardest": {
         "template": "Roguelike@ExitThenAbandon.png",
@@ -545,7 +551,12 @@
     "JieGarden@Roguelike@GamePassSkip1Confirm": {},
     "JieGarden@Roguelike@GamePassSkip2": {},
     "JieGarden@Roguelike@GamePassTheEndConfirm": {
-        "roi": [580, 550, 120, 90]
+        "roi": [580, 550, 120, 90],
+        "next": [
+            "JieGarden@OrderlyPaction@Roguelike@GamePass",
+            "JieGarden@Roguelike@GamePass",
+            "JieGarden@Roguelike@GamePassTheEndConfirm"
+        ]
     },
     "JieGarden@Roguelike@GetDrop1": {},
     "JieGarden@Roguelike@GetDrop2": {},
@@ -553,7 +564,9 @@
         "specificRect": [600, 600, 25, 25]
     },
     "JieGarden@Roguelike@GetDropLeave": {},
-    "JieGarden@Roguelike@GetDropRecruit": {},
+    "JieGarden@Roguelike@GetDropRecruit": {
+        "reduceOtherTimes": ["JieGarden@Roguelike@ConserveUnusedVoucher"]
+    },
     "JieGarden@Roguelike@GetDropSelect": {
         "next": [
             "JieGarden@Roguelike@GetDropSelect@(JieGarden@Roguelike@CloseCollectionContinue)",
@@ -567,7 +580,9 @@
             "JieGarden@Roguelike@GetDropSelect"
         ]
     },
-    "JieGarden@Roguelike@GetDropSelectRecruit": {},
+    "JieGarden@Roguelike@GetDropSelectRecruit": {
+        "reduceOtherTimes": ["JieGarden@Roguelike@ConserveUnusedVoucher"]
+    },
     "JieGarden@Roguelike@GetDropSelectReward": {},
     "JieGarden@Roguelike@GetDropSwitch": {
         "Doc": "掉落通宝拾取界面 - 交换按钮识别 (本任务注册了插件 RoguelikeCoppersTaskPlugin PICKUP 模式)",
@@ -588,7 +603,8 @@
             "JieGarden@Roguelike@GetDropSelect",
             "JieGarden@Roguelike@GetDropSwitch",
             "JieGarden@Roguelike@GetDropRecruit"
-        ]
+        ],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
     },
     "JieGarden@Roguelike@GiveUpOperation": {
         "algorithm": "OcrDetect",
@@ -651,7 +667,10 @@
         "next": ["JieGarden@StartExplore@Roguelike@RecruitOther"]
     },
     "JieGarden@Roguelike@MissionFailedFlag": {
-        "roi": [437, 242, 403, 192]
+        "roi": [437, 242, 403, 192],
+        "action": "ClickRect",
+        "specificRect": [610, 540, 70, 35],
+        "postDelay": 1500
     },
     "JieGarden@Roguelike@MissionFailedFlag2": {},
     "JieGarden@Roguelike@MonthlySquad": {
@@ -722,7 +741,8 @@
         "template": "JieGarden@Roguelike@Recruit.png"
     },
     "JieGarden@Roguelike@RecruitOther": {
-        "template": "JieGarden@Roguelike@Recruit.png"
+        "template": "JieGarden@Roguelike@Recruit.png",
+        "reduceOtherTimes": ["JieGarden@Roguelike@ConserveUnusedVoucher"]
     },
     "JieGarden@Roguelike@RecruitWithoutButton": {
         "next": [
@@ -1036,11 +1056,13 @@
     },
     "JieGarden@Roguelike@StageEncounterOptions": {
         "next": [
+            "JieGarden@Roguelike@LocalLiuReward",
             "JieGarden@Roguelike@StageEncounterOptionFree",
             "JieGarden@Roguelike@StageSafeHouseReuse",
             "JieGarden@Roguelike@StageEncounterOptionLeave",
             "JieGarden@Roguelike@StageEncounterOptionWonderland",
             "JieGarden@Roguelike@StageEncounterDrawCopperResult",
+            "JieGarden@Roguelike@RecruitOther",
             "JieGarden@Roguelike@ChooseOperFlag",
             "JieGarden@Roguelike@CoppersTakeFlag",
             "JieGarden@Roguelike@StageEmergencyOpsEnter",
@@ -1177,7 +1199,7 @@
     },
     "JieGarden@Roguelike@Stages": {
         "baseTask": "JieGarden@Roguelike@Stages_default",
-        "onErrorNext": ["JieGarden@Roguelike@ExitThenAbandon"]
+        "onErrorNext": []
     },
     "JieGarden@Roguelike@Stages_aggressive": {
         "Doc": "优先紧急作战,1-2层",
@@ -1187,8 +1209,8 @@
             "JieGarden@Roguelike@RandomPickAfterNextLevel",
             "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
             "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
-            "JieGarden@Roguelike@StageBoskyPassage",
             "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
             "JieGarden@Roguelike@StageEmergencyOps",
             "JieGarden@Roguelike@StageCombatOps",
             "JieGarden@Roguelike@StageSafeHouse",
@@ -1223,8 +1245,8 @@
             "JieGarden@Roguelike@RandomPickAfterNextLevel",
             "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
             "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
-            "JieGarden@Roguelike@StageBoskyPassage",
             "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
             "JieGarden@Roguelike@StageTrader",
             "JieGarden@Roguelike@StageSafeHouse",
             "JieGarden@Roguelike@StageBoons",
@@ -1265,8 +1287,8 @@
             "JieGarden@Roguelike@RandomPickAfterNextLevel",
             "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
             "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
-            "JieGarden@Roguelike@StageBoskyPassage",
             "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
             "JieGarden@Roguelike@StageCombatOps",
             "JieGarden@Roguelike@StageSafeHouse",
             "JieGarden@Roguelike@StageBoons",
@@ -1293,12 +1315,12 @@
         "roi": [870, 567, 95, 33]
     },
     "JieGarden@Roguelike@StrategyChange_mode0": {
-        "text": ["_default", "_boskyPassageDefault"],
+        "text": ["_default", "_boskyPassageDefault", "_progressionF1", "_pragmatic"],
         "ocrReplace": [
-            ["洪陆楼", "_default"],
-            ["山水阁", "_default"],
-            ["云(瓦)?(亭|亨)", "_default"],
-            ["汝吾(门)?", "_default"],
+            ["洪陆楼", "_progressionF1"],
+            ["山水阁", "_pragmatic"],
+            ["云(瓦)?(亭|亨)", "_pragmatic"],
+            ["汝吾(门)?", "_pragmatic"],
             ["见字祠", "_default"],
             ["始末陵", "_default"],
             ["是非(境|坍)", "_boskyPassageDefault"]
@@ -1306,7 +1328,8 @@
         "roi": [627, 14, 71, 28],
         "withoutDet": true,
         "binThreshold": [200, 255],
-        "useRaw": false
+        "useRaw": false,
+        "Doc": "Normal combat growth on floors 2-4; preserve Pathfinder/Bosky and known-stage readiness checks. Floors 5-6 retain survival routing."
     },
     "JieGarden@Roguelike@StrategyChange_mode0_NOT_IN_USE": {
         "text": ["_aggressive", "_pragmatic", "_default", "_boskyPassageDefault"],
@@ -1550,5 +1573,474 @@
         ],
         "roi": [891, 648, 58, 58]
     },
-    "JieGarden@RoguelikeSettlementConfirm": {}
+    "JieGarden@RoguelikeSettlementConfirm": {},
+    "JieGarden@Roguelike@Stages_progressionF1": {
+        "Doc": "Prefer normal opening combat rewards; emergency fights follow alternative growth and recovery nodes.",
+        "algorithm": "JustReturn",
+        "next": [
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
+            "JieGarden@Roguelike@StageCombatOps",
+            "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
+            "JieGarden@Roguelike@StageTrader",
+            "JieGarden@Roguelike@StageSafeHouse",
+            "JieGarden@Roguelike@StageBoons",
+            "JieGarden@Roguelike@StageEmergencyTransportation",
+            "JieGarden@Roguelike@StageProphecy",
+            "JieGarden@Roguelike@StageEncounter",
+            "JieGarden@Roguelike@StageWindAndRain",
+            "JieGarden@Roguelike@StageConfrontation",
+            "JieGarden@Roguelike@StageEmergencyOps",
+            "JieGarden@Roguelike@StageDreadfulFoe",
+            "JieGarden@Roguelike@StageDreadfulFoe-5"
+        ],
+        "onErrorNext": ["JieGarden@Roguelike@ExitThenAbandon"]
+    },
+    "JieGarden@Roguelike@ConserveUnusedVoucher": {
+        "baseTask": "JieGarden@Roguelike@ReserveRecruitmentVoucher",
+        "Doc": "After the recruit plugin declines all candidates, conserve instead of discarding. Never used for initial recruitment.",
+        "maxTimes": 1,
+        "next": ["JieGarden@Roguelike@ConserveUnusedVoucherConfirm"],
+        "onErrorNext": ["Stop"],
+        "exceededNext": [
+            "JieGarden@Roguelike@ChooseOperConfirmToGiveUp",
+            "JieGarden@Roguelike@Abandon",
+            "JieGarden@Roguelike@ChooseOperConfirm#next"
+        ],
+        "template": "JieGarden@Roguelike@ReserveRecruitmentVoucher.png"
+    },
+    "JieGarden@Roguelike@ConserveUnusedVoucherConfirm": {
+        "baseTask": "JieGarden@Roguelike@ReserveRecruitmentVoucherConfirm",
+        "postDelay": 650,
+        "next": ["JieGarden@Roguelike@ChooseOperConfirm#next"]
+    },
+    "JieGarden@Roguelike@Begin": {
+        "algorithm": "JustReturn",
+        "next": [
+            "JieGarden@Roguelike@ResumeOpenCoffer",
+            "JieGarden@Roguelike@LocalLiuReward",
+            "JieGarden@Roguelike@LocalCandleguestFlag",
+            "JieGarden@Roguelike@ResumeTimesChange",
+            "JieGarden@Roguelike@ResumeLiuEncounter",
+            "JieGarden@Roguelike@ResumeEncounter",
+            "JieGarden@Roguelike@ChooseOperFlag",
+            "JieGarden@Roguelike@CoppersTakeFlag",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@GetDrop1",
+            "JieGarden@OrderlyPaction@Roguelike@GamePass",
+            "JieGarden@Roguelike@Squad-EnterPoint",
+            "JieGarden@Roguelike@ResumeBattleResult",
+            "JieGarden@Roguelike@QuickFormation",
+            "JieGarden@Roguelike@StageEmergencyOpsEnter",
+            "JieGarden@Roguelike@StageCombatOpsEnter",
+            "JieGarden@Roguelike@ResumeCurrentMap",
+            "JieGarden@Roguelike@ResumeBoskyMap",
+            "JieGarden@Roguelike@MissionFailedFlag",
+            "JieGarden@Roguelike@MissionFailedFlag2",
+            "JieGarden@Roguelike@ChooseDifficulty",
+            "JieGarden@Roguelike@StartExplore",
+            "JieGarden@Roguelike@Stages#next",
+            "JieGarden@Roguelike@GetDrops#next",
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@NextLevel#next",
+            "JieGarden@Roguelike@TodoEnter",
+            "JieGarden@Roguelike@Continue",
+            "JieGarden@Roguelike@StartExploreCD",
+            "JieGarden@(Roguelike@IntegratedStrategies)@QuickSwitch@ToTerminal#next",
+            "JieGarden@Roguelike@ReturnButtons#next",
+            "JieGarden@Roguelike@ReturnConfirm",
+            "JieGarden@Roguelike@StartUpThemes#next"
+        ],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
+    },
+    "JieGarden@Roguelike@ResumeCurrentMap": {
+        "baseTask": "Roguelike@TutorialButton",
+        "action": "DoNothing",
+        "cache": false,
+        "next": ["JieGarden@Roguelike@ResumeCurrentMapCoffer"],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "Doc": "Require the map help icon before accepting the shared Coin Coffer footer.",
+        "template": "Roguelike@TutorialButton.png"
+    },
+    "JieGarden@Roguelike@ResumeOpenCoffer": {
+        "algorithm": "OcrDetect",
+        "text": ["隐藏"],
+        "roi": [760, 670, 140, 50],
+        "fullMatch": true,
+        "cache": false,
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@StrategyChange"]
+    },
+    "JieGarden@Roguelike@StageEncounterJudgeOption": {
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "Doc": "Recognition timeout must stop the IS task in place; never abandon a run from an unreadable event or Candleguest screen.",
+        "next": [
+            "JieGarden@Roguelike@LocalCandleguestFlag",
+            "JieGarden@Roguelike@StageEncounterOptions#next",
+            "JieGarden@Roguelike@Stages#next"
+        ]
+    },
+    "JieGarden@Roguelike@ResumeEncounter": {
+        "baseTask": "Roguelike@StageEncounterOcr",
+        "text": [
+            "解惑",
+            "岔路",
+            "偏安",
+            "护鸭金刚",
+            "来者不拒",
+            "相会",
+            "相逢",
+            "老贼羽",
+            "鲍老板连锁",
+            "催债鬼夜叉",
+            "火祀",
+            "鼓上佩洛",
+            "偏安",
+            "掌灯与引烛",
+            "会友",
+            "夕江对擂",
+            "烛堂",
+            "天险",
+            "烟火漫天",
+            "滚圆财神",
+            "饕餮廊",
+            "同心",
+            "见钱问柳",
+            "柳儿",
+            "硕果园",
+            "孤钓",
+            "集印",
+            "海中来客",
+            "观者自在",
+            "千古鸭帝",
+            "石山",
+            "禳解",
+            "地镇",
+            "传讯",
+            "入暂亭",
+            "南武群英会",
+            "祠堂口",
+            "所见",
+            "百氏之乱",
+            "生机",
+            "榆蝶",
+            "珀",
+            "应“蕴”而生",
+            "点拨",
+            "不速之客",
+            "点睛",
+            "种因得果",
+            "三缺一",
+            "掷地有声",
+            "天圆地方",
+            "存形失意",
+            "执棋",
+            "移时换物"
+        ],
+        "action": "DoNothing",
+        "fullMatch": true,
+        "cache": false,
+        "next": ["JieGarden@Roguelike@StageEncounterJudgeOption"],
+        "Doc": "Recognize an existing event title before treating the shared Coin Coffer footer as a route map.",
+        "roi": [75, 420, 500, 60]
+    },
+    "JieGarden@Roguelike@LocalCandleguestFlag": {
+        "algorithm": "OcrDetect",
+        "text": ["成为伺烛客"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [1040, 640, 240, 80],
+        "fullMatch": true,
+        "cache": false,
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@LocalCandleguestSelect"]
+    },
+    "JieGarden@Roguelike@LocalCandleguestNames": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "roi": [365, 80, 840, 540],
+        "cache": false
+    },
+    "JieGarden@Roguelike@LocalCandleguestSelect": {
+        "algorithm": "JustReturn",
+        "action": "DoNothing",
+        "postDelay": 400,
+        "next": ["JieGarden@Roguelike@LocalCandleguestConfirm"],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
+    },
+    "JieGarden@Roguelike@LocalCandleguestConfirm": {
+        "baseTask": "JieGarden@Roguelike@LocalCandleguestFlag",
+        "action": "ClickSelf",
+        "postDelay": 900,
+        "next": ["JieGarden@Roguelike@StageEncounterJudgeOption"],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
+    },
+    "JieGarden@Roguelike@Stages_aggressive_localCautious": {
+        "baseTask": "JieGarden@Roguelike@Stages_aggressive",
+        "next": [
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
+            "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
+            "JieGarden@Roguelike@StageCombatOps",
+            "JieGarden@Roguelike@StageSafeHouse",
+            "JieGarden@Roguelike@StageBoons",
+            "JieGarden@Roguelike@StageTrader",
+            "JieGarden@Roguelike@StageEncounter",
+            "JieGarden@Roguelike@StageConfrontation",
+            "JieGarden@Roguelike@StageWindAndRain",
+            "JieGarden@Roguelike@StageProphecy",
+            "JieGarden@Roguelike@StageEmergencyTransportation",
+            "JieGarden@Roguelike@StageEmergencyOps",
+            "JieGarden@Roguelike@StageDreadfulFoe",
+            "JieGarden@Roguelike@StageDreadfulFoe-5"
+        ]
+    },
+    "JieGarden@Roguelike@Stages_boskyPassageDefault_localCautious": {
+        "baseTask": "JieGarden@Roguelike@Stages_boskyPassageDefault",
+        "next": [
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
+            "JieGarden@Roguelike@Routing_BoskyPassage",
+            "JieGarden@Roguelike@Stages_leaveBoskyPassage#next"
+        ]
+    },
+    "JieGarden@Roguelike@Stages_default_localCautious": {
+        "baseTask": "JieGarden@Roguelike@Stages_default",
+        "next": [
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
+            "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
+            "JieGarden@Roguelike@StageTrader",
+            "JieGarden@Roguelike@StageSafeHouse",
+            "JieGarden@Roguelike@StageBoons",
+            "JieGarden@Roguelike@StageEmergencyTransportation",
+            "JieGarden@Roguelike@StageProphecy",
+            "JieGarden@Roguelike@StageEncounter",
+            "JieGarden@Roguelike@StageWindAndRain",
+            "JieGarden@Roguelike@StageConfrontation",
+            "JieGarden@Roguelike@StageCombatOps",
+            "JieGarden@Roguelike@StageEmergencyOps",
+            "JieGarden@Roguelike@StageDreadfulFoe",
+            "JieGarden@Roguelike@StageDreadfulFoe-5"
+        ]
+    },
+    "JieGarden@Roguelike@Stages_fastPass_localCautious": {
+        "baseTask": "JieGarden@Roguelike@Stages_fastPass",
+        "next": [
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
+            "JieGarden@Roguelike@Routing-FastPass"
+        ]
+    },
+    "JieGarden@Roguelike@Stages_leaveBoskyPassage_localCautious": {
+        "baseTask": "JieGarden@Roguelike@Stages_leaveBoskyPassage",
+        "next": ["JieGarden@Roguelike@ClickRemainingCandleFlame"]
+    },
+    "JieGarden@Roguelike@Stages_pragmatic_localCautious": {
+        "baseTask": "JieGarden@Roguelike@Stages_pragmatic",
+        "next": [
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
+            "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
+            "JieGarden@Roguelike@StageCombatOps",
+            "JieGarden@Roguelike@StageSafeHouse",
+            "JieGarden@Roguelike@StageBoons",
+            "JieGarden@Roguelike@StageEncounter",
+            "JieGarden@Roguelike@StageConfrontation",
+            "JieGarden@Roguelike@StageTrader",
+            "JieGarden@Roguelike@StageProphecy",
+            "JieGarden@Roguelike@StageWindAndRain",
+            "JieGarden@Roguelike@StageEmergencyTransportation",
+            "JieGarden@Roguelike@StageEmergencyOps",
+            "JieGarden@Roguelike@StageDreadfulFoe",
+            "JieGarden@Roguelike@StageDreadfulFoe-5"
+        ]
+    },
+    "JieGarden@Roguelike@Stages_progressionF1_localCautious": {
+        "baseTask": "JieGarden@Roguelike@Stages_progressionF1",
+        "next": [
+            "JieGarden@Roguelike@NextLevel",
+            "JieGarden@Roguelike@RandomPickAfterNextLevel",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionContinue)",
+            "JieGarden@Roguelike@Stages@(JieGarden@Roguelike@CloseCollectionClose)",
+            "JieGarden@Roguelike@StageCombatOps",
+            "JieGarden@Roguelike@StageGuidance",
+            "JieGarden@Roguelike@StageBoskyPassage",
+            "JieGarden@Roguelike@StageTrader",
+            "JieGarden@Roguelike@StageSafeHouse",
+            "JieGarden@Roguelike@StageBoons",
+            "JieGarden@Roguelike@StageEmergencyTransportation",
+            "JieGarden@Roguelike@StageProphecy",
+            "JieGarden@Roguelike@StageEncounter",
+            "JieGarden@Roguelike@StageWindAndRain",
+            "JieGarden@Roguelike@StageConfrontation",
+            "JieGarden@Roguelike@StageEmergencyOps",
+            "JieGarden@Roguelike@StageDreadfulFoe",
+            "JieGarden@Roguelike@StageDreadfulFoe-5"
+        ]
+    },
+    "JieGarden@Roguelike@ResumeTimesChange": {
+        "algorithm": "OcrDetect",
+        "text": ["移时换物"],
+        "roi": [130, 480, 240, 40],
+        "fullMatch": false,
+        "cache": false,
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@StageEncounterJudgeOption"]
+    },
+    "JieGarden@OrderlyPaction@Roguelike@GamePass": {
+        "algorithm": "OcrDetect",
+        "text": ["PLACTION"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "cache": false,
+        "roi": [540, 60, 230, 38],
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@ClearSettlementConfirm", "JieGarden@Roguelike@ClickToStartPoint"]
+    },
+    "JieGarden@Roguelike@ClearSettlementConfirm": {
+        "algorithm": "MatchTemplate",
+        "template": "JieGarden@RoguelikeSettlementConfirm.png",
+        "roi": [580, 590, 130, 130],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "next": ["JieGarden@Roguelike@Begin"]
+    },
+    "JieGarden@Roguelike@ReadinessGuardPreviewName": {
+        "baseTask": "BattleStageName",
+        "roi": [810, 188, 465, 62],
+        "cache": false,
+        "withoutDet": false
+    },
+    "JieGarden@Roguelike@ReadinessGuardContinue": {
+        "algorithm": "JustReturn",
+        "action": "DoNothing",
+        "next": [
+            "JieGarden@Roguelike@StageCombatOpsEnter",
+            "JieGarden@Roguelike@StageEmergencyOpsEnter",
+            "JieGarden@Roguelike@Stages#next"
+        ]
+    },
+    "JieGarden@Roguelike@ResumeBoskyMap": {
+        "algorithm": "OcrDetect",
+        "text": ["是非境"],
+        "roi": [590, 12, 160, 36],
+        "withoutDet": true,
+        "fullMatch": true,
+        "cache": false,
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@ResumeBoskyCandle"],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "Doc": "Recognize a resumed Bosky map before generic event/reward recovery; require a second candle-label check before restoring the navigator."
+    },
+    "JieGarden@Roguelike@ResumeBoskyCandle": {
+        "algorithm": "OcrDetect",
+        "text": ["烛火"],
+        "roi": [1110, 125, 165, 60],
+        "fullMatch": false,
+        "cache": false,
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@StrategyChange"],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
+    },
+    "JieGarden@Roguelike@ResumeBattleResult": {
+        "algorithm": "OcrDetect",
+        "text": ["指挥等级"],
+        "roi": [640, 250, 160, 60],
+        "fullMatch": true,
+        "cache": false,
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@ResumeBattleResultCheck"],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "Doc": "Resume the post-battle statistics page only after both independent labels match. Never infer victory from battle completion."
+    },
+    "JieGarden@Roguelike@ResumeBattleResultCheck": {
+        "algorithm": "OcrDetect",
+        "text": ["本次战斗"],
+        "roi": [800, 250, 150, 60],
+        "fullMatch": true,
+        "cache": false,
+        "action": "ClickRect",
+        "specificRect": [630, 630, 1, 1],
+        "postDelay": 700,
+        "next": [
+            "JieGarden@Roguelike@DropsFlag",
+            "JieGarden@Roguelike@GetDrop1",
+            "JieGarden@Roguelike@GetDrop2",
+            "JieGarden@Roguelike@ChooseOperFlag"
+        ],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"]
+    },
+    "JieGarden@Roguelike@ResumeCurrentMapCoffer": {
+        "algorithm": "OcrDetect",
+        "text": ["钱盒"],
+        "roi": [680, 675, 220, 44],
+        "fullMatch": true,
+        "cache": false,
+        "action": "DoNothing",
+        "next": ["JieGarden@Roguelike@StrategyChange"],
+        "Doc": "Second map cue; the Coin Coffer footer alone also appears on encounter screens."
+    },
+    "JieGarden@Roguelike@LocalLiuReward": {
+        "algorithm": "OcrDetect",
+        "text": ["那大概就是柳儿"],
+        "roi": [835, 265, 430, 90],
+        "fullMatch": true,
+        "cache": false,
+        "action": "ClickSelf",
+        "postDelay": 600,
+        "next": [
+            "JieGarden@Roguelike@StageEncounterLeaveConfirm",
+            "JieGarden@Roguelike@LocalLiuRewardConfirm",
+            "JieGarden@Roguelike@ChooseOperFlag",
+            "JieGarden@Roguelike@DropsFlag"
+        ],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "Doc": "Claim the terminal Liu exchange reward by its exact enabled header, including after a task restart."
+    },
+    "JieGarden@Roguelike@LocalLiuRewardConfirm": {
+        "algorithm": "OcrDetect",
+        "text": ["那大概就是柳儿"],
+        "roi": [835, 265, 430, 90],
+        "fullMatch": true,
+        "cache": false,
+        "action": "ClickSelf",
+        "postDelay": 600,
+        "next": [
+            "JieGarden@Roguelike@StageEncounterLeaveConfirm",
+            "JieGarden@Roguelike@ChooseOperFlag",
+            "JieGarden@Roguelike@DropsFlag"
+        ],
+        "onErrorNext": ["JieGarden@RoguelikeControlTaskPlugin-Stop"],
+        "Doc": "Claim the terminal Liu exchange reward by its exact enabled header, including after a task restart.",
+        "maxTimes": 1
+    },
+    "JieGarden@Roguelike@ResumeLiuEncounter": {
+        "baseTask": "JieGarden@Roguelike@ResumeEncounter",
+        "text": ["见钱问柳"],
+        "roi": [75, 480, 550, 40],
+        "Doc": "Liu has a lower title position; keep this exact-title check separate from the generic encounter ROI to exclude narrative false matches."
+    },
+    "JieGarden@Roguelike@PreferredRewardNames": {
+        "baseTask": "RoguelikeTraderShoppingOcr",
+        "roi": [0, 120, 1280, 360],
+        "text": ["电弧的掌机", "伥物房账簿", "束伥索", "散轶诗简"],
+        "fullMatch": true,
+        "cache": false
+    }
 }

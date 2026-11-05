@@ -37,7 +37,8 @@
                     "is_start": true,
                     "is_key": true,
                     "recruit_priority": 999,
-                    "promote_priority": 999
+                    "promote_priority": 999,
+                    "skill_usage": 1
                 }
             ]
         },
@@ -1154,6 +1155,11 @@
                             "groups": ["单奶", "群奶"],
                             "is_less": true,
                             "offset": 120
+                        },
+                        {
+                            "groups": ["奶盾", "重装", "挡人先锋"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
                     ]
                 },
@@ -1167,6 +1173,11 @@
                             "groups": ["凯尔希", "重装"],
                             "threshold": 1,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["奶盾", "重装", "挡人先锋"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
                     ]
                 },
@@ -1180,6 +1191,11 @@
                             "groups": ["重装"],
                             "threshold": 1,
                             "offset": -100
+                        },
+                        {
+                            "groups": ["奶盾", "重装", "挡人先锋"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
                     ]
                 },
@@ -1193,7 +1209,8 @@
                             "threshold": 1,
                             "offset": -140
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 }
             ]
         },
@@ -1376,6 +1393,11 @@
                             "groups": ["益达"],
                             "threshold": 1,
                             "offset": 10
+                        },
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
                     ]
                 },
@@ -1390,8 +1412,19 @@
                             "groups": ["水陈", "速狙"],
                             "threshold": 1,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["益达", "提丰", "新能"],
+                            "threshold": 1,
+                            "offset": -1000
+                        },
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "预备干员-狙击",
@@ -1405,7 +1438,8 @@
             "name": "召唤",
             "opers": [
                 {
-                    "name": "电弧"
+                    "name": "电弧",
+                    "skill_usage": 1
                 },
                 {
                     "name": "令",
@@ -1459,8 +1493,14 @@
                             "groups": ["凯尔希", "近卫"],
                             "threshold": 1,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["电弧"],
+                            "threshold": 1,
+                            "offset": -1000
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 }
             ]
         },
@@ -1468,19 +1508,64 @@
             "name": "元素奶",
             "opers": [
                 {
-                    "name": "纯烬艾雅法拉"
+                    "name": "纯烬艾雅法拉",
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
-                    "name": "蜜莓"
+                    "name": "蜜莓",
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
-                    "name": "桑葚"
+                    "name": "桑葚",
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
-                    "name": "哈洛德"
+                    "name": "哈洛德",
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
-                    "name": "褐果"
+                    "name": "褐果",
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 }
             ]
         },
@@ -1552,6 +1637,12 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -200
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
                     ]
                 },
@@ -1566,8 +1657,15 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "絮雨",
@@ -1580,12 +1678,28 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "闪灵",
-                    "skill": 2
+                    "skill": 2,
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
                     "name": "赫默",
@@ -1597,8 +1711,15 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "华法琳",
@@ -1610,20 +1731,45 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ],
+                    "is_key": true
+                },
+                {
+                    "name": "图耶",
+                    "skill": 2,
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
                     ]
                 },
                 {
-                    "name": "图耶",
-                    "skill": 2
-                },
-                {
                     "name": "亚叶",
-                    "skill": 2
+                    "skill": 2,
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
                     "name": "苏苏洛",
-                    "skill": 1,
+                    "skill": 2,
                     "is_key": true,
                     "is_start": true,
                     "recruit_priority": 680,
@@ -1633,13 +1779,27 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
                     ]
                 },
                 {
                     "name": "末药",
                     "is_key": true,
-                    "recruit_priority": 406
+                    "recruit_priority": 406,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
                     "name": "嘉维尔",
@@ -1652,6 +1812,12 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
                     ]
                 },
@@ -1680,6 +1846,12 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
                     ]
                 },
@@ -1694,8 +1866,25 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 1,
+                            "offset": -1000
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "芙蓉",
@@ -1707,12 +1896,38 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 1,
+                            "offset": -1000
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "锡兰",
-                    "skill": 2
+                    "skill": 2,
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
                     "name": "预备干员-后勤",
@@ -1724,7 +1939,8 @@
                             "threshold": 1,
                             "offset": -300
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "Lancet-2"
@@ -1954,6 +2170,12 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
                     ]
                 },
@@ -1982,8 +2204,15 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 3,
                             "offset": -200
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "白面鸮",
@@ -2000,8 +2229,15 @@
                             "groups": ["益达"],
                             "threshold": 1,
                             "offset": 250
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "调香师",
@@ -2013,8 +2249,20 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 2,
+                            "offset": -2000
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "微风",
@@ -2026,8 +2274,15 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "明椒",
@@ -2039,11 +2294,27 @@
                             "groups": ["单奶", "群奶"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
-                    "name": "莎草"
+                    "name": "莎草",
+                    "is_key": true,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
+                        }
+                    ]
                 },
                 {
                     "name": "淬羽赫默",
@@ -2065,8 +2336,15 @@
                             "groups": ["单奶", "群奶"],
                             "is_less": true,
                             "offset": 500
+                        },
+                        {
+                            "groups": ["稳定治疗"],
+                            "threshold": 0,
+                            "is_less": true,
+                            "offset": 250
                         }
-                    ]
+                    ],
+                    "is_key": true
                 },
                 {
                     "name": "波登可",
@@ -2297,6 +2575,11 @@
                             "groups": ["投锋", "挡人先锋", "情报官"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -2000
                         }
                     ]
                 },
@@ -2310,6 +2593,11 @@
                             "groups": ["投锋", "挡人先锋", "情报官"],
                             "threshold": 2,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -2000
                         }
                     ]
                 },
@@ -2331,8 +2619,19 @@
                             "groups": ["投锋", "挡人先锋", "情报官"],
                             "threshold": 1,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -1000
+                        },
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -2000
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "香草",
@@ -2344,8 +2643,19 @@
                             "groups": ["投锋", "挡人先锋", "情报官"],
                             "threshold": 1,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -1000
+                        },
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -2000
                         }
-                    ]
+                    ],
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "风笛"
@@ -2367,7 +2677,14 @@
                 },
                 {
                     "name": "红豆",
-                    "skill": 2
+                    "skill": 2,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -2000
+                        }
+                    ]
                 },
                 {
                     "name": "翎羽",
@@ -2378,6 +2695,11 @@
                             "groups": ["投锋", "挡人先锋", "情报官"],
                             "threshold": 1,
                             "offset": -300
+                        },
+                        {
+                            "groups": ["回费"],
+                            "threshold": 1,
+                            "offset": -2000
                         }
                     ]
                 }
@@ -2638,14 +2960,28 @@
                     "name": "卡达",
                     "skill": 2,
                     "is_key": true,
-                    "recruit_priority": 563
+                    "recruit_priority": 563,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
+                        }
+                    ]
                 },
                 {
                     "name": "史都华德",
                     "skill": 1,
                     "skill_usage": 0,
                     "is_key": true,
-                    "recruit_priority": 562
+                    "recruit_priority": 562,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
+                        }
+                    ]
                 }
             ]
         },
@@ -2952,7 +3288,15 @@
                     "name": "梓兰",
                     "skill": 1,
                     "is_key": true,
-                    "recruit_priority": 423
+                    "recruit_priority": 423,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["电弧"],
+                            "threshold": 1,
+                            "offset": -1000
+                        }
+                    ],
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "龙腾.F"
@@ -3106,9 +3450,6 @@
                 },
                 {
                     "name": "古米"
-                },
-                {
-                    "name": "赛柯"
                 },
                 {
                     "name": "泡泡"
@@ -3331,10 +3672,12 @@
                     "name": "月见夜"
                 },
                 {
-                    "name": "芬"
+                    "name": "芬",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
-                    "name": "香草"
+                    "name": "香草",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "贝娜",
@@ -3419,9 +3762,6 @@
             "opers": [
                 {
                     "name": "丰川祥子"
-                },
-                {
-                    "name": "赛柯"
                 },
                 {
                     "name": "棘刺"
@@ -3577,6 +3917,97 @@
             ]
         },
         {
+            "name": "稳定治疗",
+            "opers": [
+                {
+                    "name": "Touch"
+                },
+                {
+                    "name": "纯烬艾雅法拉"
+                },
+                {
+                    "name": "蜜莓"
+                },
+                {
+                    "name": "桑葚"
+                },
+                {
+                    "name": "哈洛德"
+                },
+                {
+                    "name": "流明"
+                },
+                {
+                    "name": "絮雨"
+                },
+                {
+                    "name": "闪灵"
+                },
+                {
+                    "name": "赫默"
+                },
+                {
+                    "name": "华法琳"
+                },
+                {
+                    "name": "图耶"
+                },
+                {
+                    "name": "亚叶"
+                },
+                {
+                    "name": "苏苏洛"
+                },
+                {
+                    "name": "末药"
+                },
+                {
+                    "name": "嘉维尔"
+                },
+                {
+                    "name": "褐果"
+                },
+                {
+                    "name": "清流"
+                },
+                {
+                    "name": "安赛尔",
+                    "recruit_priority_when_team_full": 0
+                },
+                {
+                    "name": "芙蓉",
+                    "recruit_priority_when_team_full": 0
+                },
+                {
+                    "name": "锡兰"
+                },
+                {
+                    "name": "遥"
+                },
+                {
+                    "name": "夜莺"
+                },
+                {
+                    "name": "白面鸮"
+                },
+                {
+                    "name": "调香师"
+                },
+                {
+                    "name": "微风"
+                },
+                {
+                    "name": "明椒"
+                },
+                {
+                    "name": "莎草"
+                },
+                {
+                    "name": "夏栎"
+                }
+            ]
+        },
+        {
             "name": "奶",
             "doc": "所有能回复血的远程，包括单奶，群奶，辅助",
             "opers": [
@@ -3669,10 +4100,12 @@
                     "name": "嘉维尔"
                 },
                 {
-                    "name": "安赛尔"
+                    "name": "安赛尔",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
-                    "name": "芙蓉"
+                    "name": "芙蓉",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "淬羽赫默"
@@ -3770,10 +4203,12 @@
                     "name": "凛冬"
                 },
                 {
-                    "name": "芬"
+                    "name": "芬",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
-                    "name": "香草"
+                    "name": "香草",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "琴柳"
@@ -3832,7 +4267,8 @@
                     "name": "娜仁图亚"
                 },
                 {
-                    "name": "电弧"
+                    "name": "电弧",
+                    "skill_usage": 1
                 },
                 {
                     "name": "假日威龙陈"
@@ -3921,7 +4357,8 @@
                     "name": "梅"
                 },
                 {
-                    "name": "克洛丝"
+                    "name": "克洛丝",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "刻俄柏"
@@ -4048,7 +4485,8 @@
                     "skill": 2
                 },
                 {
-                    "name": "深海色"
+                    "name": "深海色",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "Pith"
@@ -4192,9 +4630,6 @@
                     "name": "卡夫卡"
                 },
                 {
-                    "name": "赛柯"
-                },
-                {
                     "name": "Mon3tr"
                 },
                 {
@@ -4261,7 +4696,8 @@
                     "name": "月见夜"
                 },
                 {
-                    "name": "芬"
+                    "name": "芬",
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "米格鲁"
@@ -4609,7 +5045,8 @@
                 {
                     "name": "预备干员-近战",
                     "is_alternate": true,
-                    "recruit_priority": 208
+                    "recruit_priority": 208,
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "流形"
@@ -4732,7 +5169,14 @@
                     "name": "安德切尔",
                     "skill": 1,
                     "is_key": true,
-                    "recruit_priority": 455
+                    "recruit_priority": 455,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
+                        }
+                    ]
                 },
                 {
                     "name": "罗宾",
@@ -4831,7 +5275,14 @@
                 },
                 {
                     "name": "远山",
-                    "skill": 2
+                    "skill": 2,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
+                        }
+                    ]
                 },
                 {
                     "name": "谬因",
@@ -4852,7 +5303,14 @@
                 },
                 {
                     "name": "夜烟",
-                    "skill": 2
+                    "skill": 2,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
+                        }
+                    ]
                 },
                 {
                     "name": "阿",
@@ -4879,7 +5337,14 @@
                 {
                     "name": "炎熔",
                     "is_key": true,
-                    "recruit_priority": 206
+                    "recruit_priority": 206,
+                    "recruit_priority_offsets": [
+                        {
+                            "groups": ["主力输出"],
+                            "threshold": 2,
+                            "offset": -2000
+                        }
+                    ]
                 },
                 {
                     "name": "空爆",
@@ -4889,7 +5354,8 @@
                 {
                     "name": "预备干员-术师",
                     "is_alternate": true,
-                    "recruit_priority": 205
+                    "recruit_priority": 205,
+                    "recruit_priority_when_team_full": 0
                 },
                 {
                     "name": "预备干员-狙击"
@@ -4904,23 +5370,141 @@
                     "name": "“打字机”"
                 }
             ]
+        },
+        {
+            "name": "三格治疗",
+            "opers": [
+                {
+                    "name": "Touch"
+                },
+                {
+                    "name": "纯烬艾雅法拉"
+                },
+                {
+                    "name": "蜜莓"
+                },
+                {
+                    "name": "桑葚"
+                },
+                {
+                    "name": "哈洛德"
+                },
+                {
+                    "name": "流明"
+                },
+                {
+                    "name": "絮雨"
+                },
+                {
+                    "name": "闪灵"
+                },
+                {
+                    "name": "赫默"
+                },
+                {
+                    "name": "华法琳"
+                },
+                {
+                    "name": "图耶"
+                },
+                {
+                    "name": "亚叶"
+                },
+                {
+                    "name": "苏苏洛"
+                },
+                {
+                    "name": "末药"
+                },
+                {
+                    "name": "嘉维尔"
+                },
+                {
+                    "name": "褐果"
+                },
+                {
+                    "name": "清流"
+                },
+                {
+                    "name": "锡兰"
+                }
+            ]
+        },
+        {
+            "name": "主力输出",
+            "opers": [
+                {
+                    "name": "维什戴尔"
+                },
+                {
+                    "name": "新约能天使"
+                },
+                {
+                    "name": "电弧"
+                },
+                {
+                    "name": "提丰"
+                },
+                {
+                    "name": "酒神"
+                },
+                {
+                    "name": "蕾缪安"
+                }
+            ]
+        },
+        {
+            "name": "多段处理",
+            "opers": [
+                {
+                    "name": "伊桑"
+                },
+                {
+                    "name": "砾"
+                }
+            ]
+        },
+        {
+            "name": "卡达",
+            "opers": [
+                {
+                    "name": "卡达"
+                }
+            ]
+        },
+        {
+            "name": "电弧一技能召唤",
+            "doc": "S1 Dive only; keep S2 Cycle in the separate fish group. Dive cannot receive direct healing.",
+            "opers": [
+                {
+                    "name": "戴乌"
+                }
+            ]
         }
     ],
     "team_complete_condition": [
         {
-            "groups": ["益达", "玛恩纳", "新能"],
-            "threshold": 2
+            "groups": ["电弧"],
+            "threshold": 1
         },
         {
-            "groups": ["重装", "近卫", "召唤", "凯尔希"],
-            "threshold": 2
+            "groups": ["稳定治疗"],
+            "threshold": 1
         },
         {
-            "groups": ["焰苇", "单奶", "群奶"],
+            "groups": ["益达", "新能", "主力输出"],
+            "threshold": 1
+        },
+        {
+            "groups": ["奶盾", "重装", "挡人先锋"],
             "threshold": 1
         },
         {
             "groups": ["回费"],
+            "threshold": 1
+        },
+        {
+            "groups": ["多段处理"],
             "threshold": 1
         }
     ]

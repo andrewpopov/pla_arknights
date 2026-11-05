@@ -22,6 +22,7 @@ private:
     // 该分析器不支持外部设置ROI
     using VisionHelper::set_roi;
 
+    void recognize_unmarked_names();
     std::string name_analyze(const Rect& roi);
     std::vector<Rect> skill_analyze(const Rect& roi);
     void team_full_analyze();

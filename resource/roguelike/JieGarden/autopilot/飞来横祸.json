@@ -9,10 +9,19 @@
     "blacklist_location": [],
     "deploy_plan": [
         {
-            "groups": ["挡人先锋", "回费", "鱼"],
-            "location": [5, 5],
-            "direction": "left",
-            "condition": [0, 10]
+            "groups": ["益达"],
+            "location": [6, 3],
+            "direction": "left"
+        },
+        {
+            "groups": ["地面阻挡", "其他地面"],
+            "location": [6, 1],
+            "direction": "down"
+        },
+        {
+            "groups": ["稳定治疗"],
+            "location": [7, 2],
+            "direction": "left"
         },
         {
             "groups": ["召唤"],
@@ -20,9 +29,10 @@
             "direction": "down"
         },
         {
-            "groups": ["地面阻挡", "其他地面"],
-            "location": [6, 1],
-            "direction": "down"
+            "groups": ["挡人先锋", "回费", "鱼"],
+            "location": [5, 5],
+            "direction": "left",
+            "condition": [0, 10]
         },
         {
             "groups": ["地面阻挡", "其他地面"],
@@ -35,24 +45,9 @@
             "direction": "right"
         },
         {
-            "groups": ["益达", "提丰", "焰苇", "水陈", "高台输出", "奶"],
-            "location": [6, 3],
-            "direction": "left"
-        },
-        {
             "groups": ["玛恩纳", "地面远程", "重装", "地面阻挡", "回费", "处决者", "其他地面"],
             "location": [7, 1],
             "direction": "down"
-        },
-        {
-            "groups": ["高台输出"],
-            "location": [7, 2],
-            "direction": "down"
-        },
-        {
-            "groups": ["单奶", "群奶"],
-            "location": [4, 1],
-            "direction": "right"
         },
         {
             "groups": ["鱼"],
@@ -64,5 +59,6 @@
             "location": [8, 2],
             "direction": "left"
         }
-    ]
+    ],
+    "Doc": "Deploy Wisadel before summon/blocker spending. Reserve 7,2 facing left for a stable healer covering Wisadel 6,3 and the upper blockers."
 }

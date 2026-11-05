@@ -291,6 +291,12 @@ jobs:
 
           cp tools/DependencySetup_依赖库安装.bat install
 
+      - name: Bundle Sand task resources
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path install/modules -Force | Out-Null
+          Copy-Item -Path modules/sand -Destination install/modules -Recurse -Force
+
       - name: Generate file list
         run: pwsh tools/GenerateFileList.ps1 -InstallDir install
 

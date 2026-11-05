@@ -1,0 +1,105 @@
+{
+    "schema_version": 1,
+    "theme": "Tales",
+    "source_kind": "Exported game records, joined by identical stageId; names are not translated guesses.",
+    "sources": {
+        "en_US": {
+            "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData_YoStar/main/en_US/gamedata/excel/sandbox_perm_table.json",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+            "sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313"
+        },
+        "ja_JP": {
+            "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData_YoStar/main/ja_JP/gamedata/excel/sandbox_perm_table.json",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\ja_JP-sandbox_perm_table.json",
+            "sha256": "db0cf52bc86d84b98a59c5e0a10bf1fe4d3f1584607cecb2c0f72ad82fcf6114"
+        }
+    },
+    "stages": {
+        "sandbox_1_01": {
+            "stage_id": "sandbox_1_01",
+            "english": "Shrubbery Galore",
+            "japanese": "豊かな低木林",
+            "level_id": "Obt/Sandbox/sandbox_1/level_sandbox1_01",
+            "action_cost": 1,
+            "raid_action_cost": 1,
+            "observer": "SandAuto@StageShrubberyGalore",
+            "execution_calibrated": false,
+            "saved_english_positive": {
+                "kind": "selected world sidebar title",
+                "fixture": "tests/navigation-native.json",
+                "score": 0.984821,
+                "live_transition_verified": false
+            }
+        },
+        "sandbox_1_38": {
+            "stage_id": "sandbox_1_38",
+            "english": "Jagged Jungle",
+            "japanese": "不揃いな木々",
+            "level_id": "Obt/Sandbox/sandbox_1/level_sandbox1_35",
+            "action_cost": 1,
+            "raid_action_cost": 1,
+            "observer": "SandAuto@StageJaggedJungle",
+            "execution_calibrated": false
+        },
+        "sandbox_1_40": {
+            "stage_id": "sandbox_1_40",
+            "english": "Within Range",
+            "japanese": "射程内",
+            "level_id": "Obt/Sandbox/sandbox_1/level_sandbox1_37",
+            "action_cost": 1,
+            "raid_action_cost": 1,
+            "observer": "SandAuto@StageWithinRange",
+            "execution_calibrated": false
+        },
+        "sandbox_1_55": {
+            "stage_id": "sandbox_1_55",
+            "english": "Drinkwater as Bait",
+            "japanese": "水に惹かれて",
+            "level_id": "Obt/Sandbox/sandbox_1/level_sandbox1_52",
+            "action_cost": 1,
+            "raid_action_cost": 1,
+            "observer": "SandAuto@StageDrinkwaterasBait",
+            "execution_calibrated": false
+        },
+        "sandbox_1_56": {
+            "stage_id": "sandbox_1_56",
+            "english": "Straight Into the Abyss",
+            "japanese": "深淵へ身を投ず",
+            "level_id": "Obt/Sandbox/sandbox_1/level_sandbox1_53",
+            "action_cost": 1,
+            "raid_action_cost": 1,
+            "observer": "SandAuto@StageStraightIntotheAbyss",
+            "execution_calibrated": false,
+            "saved_english_positive": {
+                "kind": "visible world node only",
+                "fixture": "tests/navigation-native.json",
+                "score": 0.968561,
+                "live_transition_verified": false
+            }
+        },
+        "sandbox_1_26": {
+            "stage_id": "sandbox_1_26",
+            "english": "Desolate Interception Point",
+            "japanese": "荒涼たる迎撃の地",
+            "level_id": "Obt/Sandbox/sandbox_1/level_sandbox1_26",
+            "action_cost": 1,
+            "raid_action_cost": 1,
+            "observer": "SandAuto@StageDesolateInterceptionPoint",
+            "kind": "outpost",
+            "world_label_ocr": "Desolate Interception",
+            "execution_calibrated": false,
+            "scope": "Actual English detail and world label; battle normal frame saved, selected-camera and combat route remain unverified.",
+            "node_selection": "Current raid marker only, followed by exact selected outpost title; non-raid outpost navigation is unsupported."
+        },
+        "sandbox_1_09": {
+            "stage_id": "sandbox_1_09",
+            "english": "Gathering of Feathers",
+            "japanese": "羽獣の集う地",
+            "level_id": "Obt/Sandbox/sandbox_1/level_sandbox1_09",
+            "action_cost": 1,
+            "raid_action_cost": 1,
+            "observer": "SandAuto@StageGatheringOfFeathers",
+            "execution_calibrated": false
+        }
+    }
+}

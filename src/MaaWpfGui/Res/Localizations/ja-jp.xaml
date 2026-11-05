@@ -1394,6 +1394,11 @@ DEBUGディレクトリに保存される画像には数量制限があり、超
     <system:String x:Key="Infrast.UsePinusSylvestris.Tip" xml:space="preserve">必須オペレーター：フレイムテイル（昇進2）、ヴィヴィアナ（昇進2）、ワイルドメイン（昇進2）/アッシュロック（昇進2）/ファートゥース（昇進2）のうち1名以上&#10;計算対象オペレーター：グラベル</system:String>
     <system:String x:Key="Infrast.UseWorldlyPlight">俗世の憂い連携を使用</system:String>
     <system:String x:Key="Infrast.UseWorldlyPlight.Tip" xml:space="preserve">必須オペレーター：マルベリー（昇進2）、ステンレス（昇進2）&#10;計算対象オペレーター：チョンユエ、リィン、シー</system:String>
+    <system:String x:Key="LocalSuiCandleguest">伺燭客を自動選択</system:String>
+    <system:String x:Key="LocalSuiConserve">不要な募集券を保存</system:String>
+    <system:String x:Key="LocalSuiRouting">戦力不足時は安全な経路を優先</system:String>
+    <system:String x:Key="LocalSuiStrategy">ローカル歳戦略</system:String>
+    <system:String x:Key="LocalSuiTongbao">編成に合わせて通宝を管理</system:String>
     <system:String x:Key="Logging.LogItemDateFormatString">日付書式文字列</system:String>
     <system:String x:Key="Logging.MaxNumberOfLogThumbnails">ログサムネイルの最大数</system:String>
     <system:String x:Key="Logging.Overlay.Tip" xml:space="preserve">左クリック：ログフローティングウィンドウの切り替え
@@ -1927,6 +1932,7 @@ MAA は非インストール型のアプリケーションであり、レジス�
     <system:String x:Key="Settings.Update.GitHub.Token.Tip" xml:space="preserve">GitHub API への匿名アクセスはレート制限の対象です。未入力の場合、更新確認は MAA Team が提供します。
 独自の {key=Settings.Update.GitHub.Token} を入力して検証に成功すると、専用の枠が使えるほか、ソフトウェアとリソースの更新確認とダウンロードはどちらも GitHub が提供します。
 読み取り専用 Token の使用を推奨します。他の権限は不要です。</system:String>
+    <system:String x:Key="Settings.Update.LocalBuild.Tip">ローカルビルドでもリモートリソースを更新し、カスタム戦略の変更を保持します。プログラムの更新は MAA 終了後に Build-Local-MAA.cmd --install を実行してください。</system:String>
     <system:String x:Key="Settings.Update.LocalResourcePackageTooOld">リソースパッケージのバージョン（{0}）は現在のバージョン（{1}）と同じか古いため、インポートをスキップしました。</system:String>
     <system:String x:Key="Settings.Update.MaaVersion">Software バージョン</system:String>
     <system:String x:Key="Settings.Update.MirrorChyan.Cdk">{key=Settings.Update.Source.MirrorChyan} CDK</system:String>
@@ -2169,6 +2175,11 @@ MAA は非インストール型のアプリケーションであり、レジス�
     <system:String x:Key="TaskQueue.PostAction.SkippedDueToError">タスクが失敗したため、後続の処理はスキップされました。</system:String>
     <system:String x:Key="TaskQueue.PostAction.Sleep">スリープ</system:String>
     <system:String x:Key="TaskQueue.PostAction.Sleep.Prompt">完了しました、スリープ状態に入ります</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.EnglishOnly">砂中の準備モードは現在、英語版のみに対応しています。</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ModuleMissing">Sandモジュールがありません。完全なローカルMAAビルドをインストールしてください。</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.Prosperity.Tip">既存セーブで道具を作成して繁栄ポイントを獲得します。素材を消費します。セーブを保持し、新規ゲームは開始しません。</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ResumeSand">砂中の記録を再開（ワールドマップで停止）</system:String>
+    <system:String x:Key="TaskQueue.Reclamation.ResumeSand.Tip">英語版の既存セーブを再開し、ワールドマップで停止します。行動回数は消費しません。1～6日目の戦闘にはマップの調整が必要です。ホーム、ターミナル、テーマ選択またはワールドマップから開始してください。</system:String>
     <system:String x:Key="TaskQueue.Rename">名前を変更</system:String>
     <system:String x:Key="TaskQueue.RenameTask">タスク名を変更</system:String>
     <system:String x:Key="TaskQueue.RenameTaskPrompt">新しいタスク名を入力してください：</system:String>

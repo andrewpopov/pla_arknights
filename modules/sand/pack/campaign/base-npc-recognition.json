@@ -1,0 +1,72 @@
+{
+    "schema_version": 1,
+    "guide_reference": "https://note.com/kuniya_ark/n/nddc3dcd1022d",
+    "guide_image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-36.png",
+    "guide_image_sha256": "1434a29543d63dd245cd8dba79e7e31bc1435af62f67ddd093ec811c2f72f133",
+    "english_table": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+    "english_table_sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313",
+    "npc_id": "npc_guide_trmedic1",
+    "trap_id": "trap_473_trmedic",
+    "dialogue_id": "dialog_sandbox_1_guide_trmedic1",
+    "variant_disambiguation": "Guide image36: shared Japanese final line plus stone5. Variant2 grants sandbox_1_tactical_20 x3; final line alone cannot select the routine.",
+    "native_report": "I:\\MAA-data\\sand-player\\base-npc-20261030\\native-report.json",
+    "source_preparation": "Remove90px side pillars, preserve aspect ratio at height720, then center-crop1280 wide. No executable NPC tile coordinates are derived.",
+    "template": {
+        "name": "SandBaseNpcStone.png",
+        "crop": [595, 324, 94, 63],
+        "sha256": "c087f32719aa1870954c1fb495cc4e427ae37cae427fd10365dd5ea2f15bbcd7"
+    },
+    "component_native_result": {
+        "image": "I:\\MAA-data\\sand-player\\base-npc-20261030\\source-reward.png",
+        "item_id": "sandbox_1_stone",
+        "quantity": 5,
+        "icon": {
+            "algorithm": "MatchTemplate",
+            "hit": true,
+            "rect": [595, 324, 94, 63],
+            "score": 0.999999,
+            "task": "SandAuto@BaseNpcStone",
+            "templ": "SandBaseNpcStone.png"
+        },
+        "quantity_reads": [
+            {
+                "rect": [675, 396, 17, 16],
+                "score": 0.998416,
+                "text": "5"
+            }
+        ],
+        "prepared_image": null,
+        "inventory_updated": false,
+        "scene_verified": false
+    },
+    "native_english_scene_positive": false,
+    "npc_initiation_calibrated": false,
+    "live_dialogue_verified": false,
+    "npc_withdrawal_verified": false,
+    "quest_save_verified": false,
+    "route_unlock_verified": false,
+    "game_connected": false,
+    "images_captured": false,
+    "public_cli": true,
+    "uses": [
+        "shared exact dialogue token/speaker recognition",
+        "native OCR and template matching",
+        "existing known-dialogue advance input",
+        "existing combat return/pause guard",
+        "ActJournal durable intent before each input"
+    ],
+    "completion_boundary": "dialogue_observed_paused; source script contains withdrawal and save but they are not observed proof",
+    "remaining": [
+        "Native English full-body/speaker/choice/reward positive",
+        "Calibrated marked-NPC initiation at camp",
+        "Live reward acknowledgement and final combat pause",
+        "NPC withdrawal, world stone delta and persistent save verification"
+    ],
+    "camp_return_reference": "campaign/base-camp-recognition.json",
+    "english_default_camp_reader_positive": true,
+    "live_camp_return_verified": false,
+    "cli_flag": "--base-npc",
+    "cli_operation_field": "npc_operation",
+    "cli_scope": "Exact current first dialogue, or return with owned pre-input baseline; never selects an NPC or imports historical captures",
+    "live_cli_verified": false
+}

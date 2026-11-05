@@ -1,0 +1,32 @@
+{
+    "schema_version": 1,
+    "time": "2026-10-31T19:17:10.134873+00:00",
+    "what": "craft_receipt_native_replay",
+    "rows": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\day1-pump-20261031T190500Z\\live\\00008-pump-stock-confirm.png",
+            "hits": {
+                "SandAuto@CraftReceiptTitle": {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [550, 249, 195, 22],
+                    "score": 0.9686,
+                    "task": "SandAuto@CraftReceiptTitle",
+                    "text": "ResourceGained!"
+                },
+                "SandAuto@CraftReceiptContinue": {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [538, 459, 207, 17],
+                    "score": 0.951232,
+                    "task": "SandAuto@CraftReceiptContinue",
+                    "text": "Tapanywheretocontinue"
+                }
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\day1-pump-20261031T190500Z\\live\\00003-pump-recipe-opened.png",
+            "hits": {}
+        }
+    ]
+}

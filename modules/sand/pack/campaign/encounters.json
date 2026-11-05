@@ -1,0 +1,5 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "policies": ["guides/slightest-effort.json", "guides/exchange-troubles.json"]
+}

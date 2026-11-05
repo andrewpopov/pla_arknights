@@ -1,0 +1,227 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "requests": {
+        "1.1-article": {
+            "stage_id": "sandbox_1_01",
+            "source_reference": "guides/kuniya-day1.json",
+            "named_roles": ["chopper", "collector"],
+            "required": [
+                "stage-bound camera anchor manifest",
+                "normal and selected-camera slot points",
+                "individually reviewed directions",
+                "actual hand DP costs where required",
+                "placement and coverage evidence"
+            ],
+            "coordinate_rule": "No source-image pixels, nearest nominal cells or unresolved collector fit may be used as live coordinates.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "additional": ["bounded chop_game_seconds", "explicit carrier collection trips: name,slot,minimum,timeout"]
+        },
+        "1.1-video": {
+            "stage_id": "sandbox_1_01",
+            "source_reference": "guides/shrubbery-six-operator-candidate.json",
+            "named_roles": ["dp-opener", "main-chopper", "attack-recovery-chopper", "collector"],
+            "required": [
+                "stage-bound camera anchor manifest",
+                "normal and selected-camera slot points",
+                "individually reviewed directions",
+                "actual hand DP costs where required",
+                "placement and coverage evidence"
+            ],
+            "coordinate_rule": "No source-image pixels, nearest nominal cells or unresolved collector fit may be used as live coordinates.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "additional": ["bounded chop_game_seconds", "explicit carrier collection trips: name,slot,minimum,timeout"]
+        },
+        "2.1": {
+            "stage_id": "sandbox_1_38",
+            "source_reference": "guides/kuniya-days2-3-deployments.json",
+            "named_roles": ["chopper", "collector"],
+            "required": [
+                "stage-bound camera anchor manifest",
+                "normal and selected-camera slot points",
+                "individually reviewed directions",
+                "actual hand DP costs where required",
+                "placement and coverage evidence"
+            ],
+            "coordinate_rule": "No source-image pixels, nearest nominal cells or unresolved collector fit may be used as live coordinates.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "additional": ["bounded chop_game_seconds", "explicit carrier collection trips: name,slot,minimum,timeout"]
+        },
+        "3.2": {
+            "stage_id": "sandbox_1_40",
+            "source_reference": "guides/kuniya-days2-3-deployments.json",
+            "named_roles": ["chopper", "collector"],
+            "required": [
+                "stage-bound camera anchor manifest",
+                "normal and selected-camera slot points",
+                "individually reviewed directions",
+                "actual hand DP costs where required",
+                "placement and coverage evidence"
+            ],
+            "coordinate_rule": "No source-image pixels, nearest nominal cells or unresolved collector fit may be used as live coordinates.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "additional": ["bounded chop_game_seconds", "explicit carrier collection trips: name,slot,minimum,timeout"]
+        },
+        "4.1": {
+            "stage_id": "sandbox_1_40",
+            "source_reference": "guides/kuniya-days4-6-deployments.json",
+            "named_roles": ["pump", "hub", "below-hub", "left-hub"],
+            "required": [
+                "stage-bound camera anchor manifest",
+                "normal and selected-camera slot points",
+                "individually reviewed directions",
+                "actual hand DP costs where required",
+                "placement and coverage evidence"
+            ],
+            "coordinate_rule": "No source-image pixels, nearest nominal cells or unresolved collector fit may be used as live coordinates.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "additional": ["identified defender", "ballista_coverage_evidence", "hub facing Down"],
+            "equipped_tool_observer_supported": true,
+            "equipped_tool_observer_reference": "campaign/tool-loadout-recognition.json",
+            "english_selected_tool_positive": false,
+            "equipment_view_requirement": "Complete visible selected card, actual quantity badge and numbered next empty slot; clipped tools remain unknown"
+        },
+        "6.1": {
+            "stage_id": "sandbox_1_38",
+            "source_reference": "guides/kuniya-days4-6-deployments.json",
+            "named_roles": [
+                "lower-hub",
+                "lower-defender",
+                "lower-healer",
+                "upper-hub",
+                "upper-defender",
+                "upper-healer"
+            ],
+            "required": [
+                "stage-bound camera anchor manifest",
+                "normal and selected-camera slot points",
+                "individually reviewed directions",
+                "actual hand DP costs where required",
+                "placement and coverage evidence"
+            ],
+            "coordinate_rule": "No source-image pixels, nearest nominal cells or unresolved collector fit may be used as live coordinates.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "additional": ["healing_coverage_evidence for both hub teams"],
+            "equipped_tool_observer_supported": true,
+            "equipped_tool_observer_reference": "campaign/tool-loadout-recognition.json",
+            "english_selected_tool_positive": false,
+            "equipment_view_requirement": "Complete visible selected card, actual quantity badge and numbered next empty slot; clipped tools remain unknown"
+        },
+        "6.2": {
+            "stage_id": "sandbox_1_56",
+            "source_reference": "guides/kuniya-days4-6-deployments.json",
+            "named_roles": ["pump1", "pump2"],
+            "required": [
+                "stage-bound camera anchor manifest",
+                "normal and selected-camera slot points",
+                "individually reviewed directions",
+                "actual hand DP costs where required",
+                "placement and coverage evidence"
+            ],
+            "coordinate_rule": "No source-image pixels, nearest nominal cells or unresolved collector fit may be used as live coordinates.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "additional": ["water_tile_evidence for two separate pump cells"],
+            "equipped_tool_observer_supported": true,
+            "equipped_tool_observer_reference": "campaign/tool-loadout-recognition.json",
+            "english_selected_tool_positive": false,
+            "equipment_view_requirement": "Complete visible selected card, actual quantity badge and numbered next empty slot; clipped tools remain unknown"
+        },
+        "3.raid": {
+            "kind": "raid-combat",
+            "stage_id": "sandbox_1_56",
+            "source_reference": "guides/kuniya-days2-3-deployments.json",
+            "required_source_squad": ["Fang", "Vanilla", "Kroos", "Ansel", "Midnight", "Popukar"],
+            "required": [
+                "stage-bound idle/selected-camera anchors",
+                "reviewed role slots and facing",
+                "current actual hand DP costs",
+                "complete verified deployment order",
+                "fresh observed raid wave and initial lives"
+            ],
+            "additional": [
+                "Day5 later ground/ranged identities must be reviewed; formation order is not deployment order"
+            ],
+            "coordinate_rule": "Use the existing registered player coordinates and green-tile check; no nearest nominal tile guesses.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "result_collection_supported": true,
+            "live_result_collection_verified": false,
+            "raid_launch_supported": true,
+            "raid_launch_live_validated": false,
+            "raid_launch_requirements": [
+                "current raid_reachable, raid_stage_id and raid_enemy_count observations",
+                "source roster already selected and not tired",
+                "English selected raid label bound to native marker and interception control",
+                "actual two-drink trip budget and empty first tool slot",
+                "calibrated combat profile with result collection enabled"
+            ]
+        },
+        "5.raid": {
+            "kind": "raid-combat",
+            "stage_id": "sandbox_1_38",
+            "source_reference": "guides/kuniya-day5-raid.json",
+            "required_source_squad": ["Fang", "Midnight", "Popukar", "Ansel", "Beagle", "Lava"],
+            "required": [
+                "stage-bound idle/selected-camera anchors",
+                "reviewed role slots and facing",
+                "current actual hand DP costs",
+                "complete verified deployment order",
+                "fresh observed raid wave and initial lives"
+            ],
+            "additional": [
+                "Source order: Fang, Midnight, Popukar, Ansel, Lava, then Beagle replacing Fang on the same tile.",
+                "Review replacement_evidence and replacement_mode=retreat_when_funded as an automation policy; source frames do not establish whether Fang was retreated or defeated.",
+                "Beagle must share Fang's calibrated slot; actual replacement DP must be available before a verified combat retreat."
+            ],
+            "coordinate_rule": "Use the existing registered player coordinates and green-tile check; no nearest nominal tile guesses.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "result_collection_supported": true,
+            "live_result_collection_verified": false,
+            "raid_launch_supported": true,
+            "raid_launch_live_validated": false,
+            "raid_launch_requirements": [
+                "current raid_reachable, raid_stage_id and raid_enemy_count observations",
+                "source roster already selected and not tired",
+                "English selected raid label bound to native marker and interception control",
+                "actual two-drink trip budget and empty first tool slot",
+                "calibrated combat profile with result collection enabled"
+            ]
+        },
+        "1.2-hunting": {
+            "kind": "hunting",
+            "stage_id": "sandbox_1_56",
+            "source_reference": "guides/kuniya-day1.json",
+            "routine_compiler_supported": true,
+            "required_source_squad": ["Gravel", "Kroos", "Adnachiel", "Ansel", "Steward", "Plume"],
+            "required": [
+                "stage-bound camera anchors",
+                "normal and selected-camera points for pump, kroos, adnachiel, gravel and steward",
+                "actual DP costs and independently reviewed facing for every deployment",
+                "water_tile_evidence",
+                "hunting_coverage_evidence",
+                "hunting_timing_evidence",
+                "gravel_recall_remaining:25 < recall <=180; reviewed Gravel timing only"
+            ],
+            "recall_rule": "Fresh actor/cargo identity and confirmed cooling; zero cargo credits nothing; positive cargo uses existing verified banking. Uncertain click stays pending.",
+            "completion_rule": "Require same-image current-operation water10 and exact Tenderloin counts totaling80 base energy before exit; independently verify settlement water10 and delivered food80. Unknown food remains unknown.",
+            "current_operation_food_monitor_supported": true,
+            "coordinate_rule": "Source pixels and present-by screenshot times are not live coordinates or deployment triggers.",
+            "calibration_complete": false,
+            "live_validation_complete": false,
+            "recognition_reference": "campaign/hunting-bag-recognition.json",
+            "actual_english_food_bag_positive": false,
+            "equipped_tool_observer_supported": true,
+            "equipped_tool_observer_reference": "campaign/tool-loadout-recognition.json",
+            "english_selected_tool_positive": false,
+            "equipment_view_requirement": "Complete visible selected card, actual quantity badge and numbered next empty slot; clipped tools remain unknown"
+        }
+    }
+}

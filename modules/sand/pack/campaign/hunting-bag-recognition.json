@@ -1,0 +1,39 @@
+{
+    "schema_version": 1,
+    "item_id": "sandbox_1_venison",
+    "english_name": "Puffball Tenderloin",
+    "base_ingredient_energy": 40,
+    "template": "resource/template/SandBagTenderloin.png",
+    "template_sha256": "ef145ff44c41fa2d5b09f91d6fc27567819b450ea20b11b440be84573571641f",
+    "source_image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\25.png",
+    "source_sha256": "422363f0512f98e8d0c08366354c05a1c3f210ac9cb22b0707a8362490519d16",
+    "preparation": {
+        "method": "Resize saved UI image to1280x720 for native DebugImageTest; no battle coordinates derived",
+        "crop": [573, 338, 42, 42],
+        "quantity_roi_offset": [25, 40, 52, 30]
+    },
+    "native_probe_report": "I:\\MAA-data\\sand-player\\hunting-bag-20261030\\native-probe-report.json",
+    "native_reader_report": "I:\\MAA-data\\sand-player\\hunting-bag-20261030\\native-reader-report.json",
+    "native_images_tested": 119,
+    "independent_positive_count": 0,
+    "template_source_self_match_only": true,
+    "source_quantity": {
+        "text": "+2",
+        "score": 0.999683
+    },
+    "source_joint_goal": {
+        "water": 10,
+        "base_food_energy": 80,
+        "ready_to_save": true
+    },
+    "water_only_negative": {
+        "observed_food": null,
+        "ready_to_save": false
+    },
+    "english_nonbag_negatives": 3,
+    "actual_english_bag_positive": false,
+    "game_connected": false,
+    "inventory_updated": false,
+    "recognized_bag_food_ids": ["sandbox_1_venison"],
+    "unrecognized_food_policy": "Remain unknown; do not credit generic meat, warehouse totals or guide yields"
+}

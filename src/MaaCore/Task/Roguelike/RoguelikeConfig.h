@@ -1,4 +1,5 @@
 #pragma once
+#include "JieGarden/JieGardenStrategyPolicy.h"
 #include <functional>
 #include <meojson/json.hpp>
 #include <optional>
@@ -72,6 +73,7 @@ public:
     int formation_upper_limit = 6;                        // 当前编队上限
 
     std::unordered_map<std::string, RoguelikeOper> opers; // 干员精英&等级
+    std::unordered_map<std::string, int> selected_skills; // Last prebattle selection; cleared on every preview and run
     std::vector<std::string> collections;                 // 已获得的藏品
 
     // ------------------ 招募 ------------------
@@ -92,6 +94,7 @@ public:
     int burden_upper_limit = 3; // 负荷上限
 
     // ------------------ 界园 ------------------
+    std::unordered_set<std::string> candleguests;
     int ticket_count = 0; // 票券数量
 };
 
@@ -119,6 +122,9 @@ public:
     }
 
     bool verify_and_load_params(const json::value& params);
+
+    const JieGardenStrategyOptions& jiegarden_strategy() const { return m_jiegarden_strategy; }
+
     void clear(); // 重置肉鸽局内数据
 
     const std::vector<std::string>& get_blackflow_start_animals() const { return m_blackflow_start_animals; }
@@ -181,6 +187,7 @@ public:
     int get_find_playTime_target() const { return m_find_playTime_target; }
 
 private:
+    JieGardenStrategyOptions m_jiegarden_strategy;
     std::string m_theme;                       // 主题
     RoguelikeMode m_mode = RoguelikeMode::Exp; // 模式
     int m_difficulty = 0;                      // 难度
@@ -226,6 +233,8 @@ private:
     // ================================================================================
 public:
     auto& status() { return m_status; }
+
+    const auto& status() const { return m_status; }
 
     // ------------------ 开局 ------------------
     void set_start_opers(std::vector<RoguelikeStartOper> opers) { m_start_opers = std::move(opers); }

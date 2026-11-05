@@ -1,0 +1,147 @@
+{
+    "scope": "Cached native saved-image observations for offline mock-runtime tests; not live execution.",
+    "rows": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\pump-recipe.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [514, 184, 141, 24],
+                    "score": 0.958783,
+                    "task": "SandAuto@PumpRecipeScreen",
+                    "text": "CrabbiePumpie"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorkbenchScreen"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorkbenchPumpName"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1057, 158, 21, 24],
+                    "score": 0.997291,
+                    "task": "SandAuto@ToolRecipeStock",
+                    "text": "0"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [803, 514, 11, 25],
+                    "score": 0.998497,
+                    "task": "SandAuto@ToolCraftQuantity",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [228, 543, 55, 28],
+                    "score": 0.969285,
+                    "task": "SandAuto@ToolCost0",
+                    "text": "13/10"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [378, 258, 28, 28],
+                    "score": 0.303142,
+                    "task": "SandAuto@WorkbenchPumpStock",
+                    "text": "1"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\pump-stock.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@PumpRecipeScreen"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [107, 25, 111, 24],
+                    "score": 0.996953,
+                    "task": "SandAuto@WorkbenchScreen",
+                    "text": "Workbench"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [421, 127, 137, 33],
+                    "score": 0.999812,
+                    "task": "SandAuto@WorkbenchPumpName",
+                    "text": "CrabbiePumpie"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@ToolRecipeStock"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@ToolCraftQuantity"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@ToolCost0"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [378, 258, 28, 28],
+                    "score": 0.959208,
+                    "task": "SandAuto@WorkbenchPumpStock",
+                    "text": "1"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\pump-crafted.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@PumpRecipeScreen"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorkbenchScreen"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorkbenchPumpName"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@ToolRecipeStock"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [795, 507, 32, 42],
+                    "score": 0.294054,
+                    "task": "SandAuto@ToolCraftQuantity",
+                    "text": "."
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [228, 543, 37, 28],
+                    "score": 0.25169,
+                    "task": "SandAuto@ToolCost0",
+                    "text": "N"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorkbenchPumpStock"
+                }
+            ]
+        }
+    ]
+}

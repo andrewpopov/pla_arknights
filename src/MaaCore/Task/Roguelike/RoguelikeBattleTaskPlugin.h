@@ -54,7 +54,11 @@ protected:
     };
 
     bool do_best_deploy();
+    bool jiegarden_warmup_safe() const;
+    bool confirm_deployment(bool accepted, battle::Role role, const std::string& name, const Point& location);
     bool calc_stage_info();
+    int recognize_jiegarden_talisman_route();
+    bool apply_jiegarden_talisman_route(int dangerous_row);
 
     void all_melee_retreat();
 
@@ -91,6 +95,7 @@ protected:
         const Point& placed_loc,
         battle::DeployDirection direction);
 
+    bool try_clear_jiegarden_revenant(const Point& location);
     void check_drone_tiles();
     void wait_until_start_button_clicked();
 
@@ -129,6 +134,9 @@ protected:
 
     size_t m_cur_home_index = 0;
     bool m_first_deploy = true;
+    std::unordered_map<Point, int> m_deploy_failure_counts;
+    int m_w_burst_evidence_count = 0;
+    std::unordered_set<Point> m_revenant_clear_attempts;
     bool m_melee_full = false;
     bool m_ranged_full = false;
 

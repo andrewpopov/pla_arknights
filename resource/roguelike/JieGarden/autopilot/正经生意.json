@@ -14,6 +14,21 @@
             "direction": "left"
         },
         {
+            "groups": ["稳定治疗", "单奶", "群奶"],
+            "location": [6, 1],
+            "direction": "down"
+        },
+        {
+            "groups": ["电弧", "召唤", "高台输出"],
+            "location": [6, 3],
+            "direction": "left"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [5, 4],
+            "direction": "left"
+        },
+        {
             "groups": ["益达", "狙击"],
             "location": [6, 2],
             "direction": "left"
@@ -24,19 +39,9 @@
             "direction": "down"
         },
         {
-            "groups": ["高台输出"],
-            "location": [6, 3],
-            "direction": "left"
-        },
-        {
             "groups": ["地面阻挡", "处决者", "其他地面"],
             "location": [6, 4],
             "direction": "left"
-        },
-        {
-            "groups": ["单奶"],
-            "location": [6, 1],
-            "direction": "down"
         },
         {
             "groups": ["高台输出", "群奶"],

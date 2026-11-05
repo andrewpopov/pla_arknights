@@ -1,0 +1,145 @@
+{
+    "schema_version": 1,
+    "reason": "The camp has no gathering timer; the generic Liaison timer-based return guard cannot certify this scene.",
+    "native_report": "I:\\MAA-data\\sand-player\\base-npc-camp-20261030\\refined-native\\report.json",
+    "native_observations": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\guide-check\\00006-camp-ready.png",
+            "camp_identified": true,
+            "hits": {
+                "SandAuto@CampExit": {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [51, 29, 55, 55],
+                    "score": 0.999999,
+                    "task": "SandAuto@CampExit",
+                    "templ": "SandCampExit.png"
+                },
+                "SandAuto@CampBag": {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [158, 35, 51, 44],
+                    "score": 0.999789,
+                    "task": "SandAuto@CampBag",
+                    "templ": "SandCampBag.png"
+                },
+                "SandAuto@CampTent": {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [103, 502, 123, 87],
+                    "score": 0.999714,
+                    "task": "SandAuto@CampTent",
+                    "templ": "SandCampTent.png"
+                }
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\guide-check\\00007-camp-paused-inspection.png",
+            "camp_identified": true,
+            "hits": {
+                "SandAuto@CampExit": {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [51, 29, 55, 55],
+                    "score": 0.986557,
+                    "task": "SandAuto@CampExit",
+                    "templ": "SandCampExit.png"
+                },
+                "SandAuto@CampBag": {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [158, 35, 51, 44],
+                    "score": 1.0,
+                    "task": "SandAuto@CampBag",
+                    "templ": "SandCampBag.png"
+                },
+                "SandAuto@CampTent": {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [103, 502, 123, 87],
+                    "score": 1.0,
+                    "task": "SandAuto@CampTent",
+                    "templ": "SandCampTent.png"
+                },
+                "SandAuto@Paused": {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [553, 328, 170, 50],
+                    "score": 0.997926,
+                    "task": "SandAuto@Paused",
+                    "text": "PAUSE"
+                }
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\guide-check\\00008-camp-exit.png",
+            "camp_identified": false,
+            "hits": {}
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\guide-check\\00012-build-ready.png",
+            "camp_identified": false,
+            "hits": {}
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\guide-check\\00017-hq-upgrade-before.png",
+            "camp_identified": false,
+            "hits": {}
+        }
+    ],
+    "thresholds": {
+        "templates": 0.95,
+        "pause_ocr": 0.85
+    },
+    "assets": {
+        "SandCampExit.png": {
+            "source": "I:\\MAA-data\\sand-player\\guide-check\\00006-camp-ready.png",
+            "source_sha256": "f68783a3fbb9221bf62c8d38e4a59953777d997c542e3c37ea51702275f7ef9d",
+            "crop": [51, 29, 55, 55],
+            "sha256": "c698ab5bf8f48eee116c0e92b9db39b877c46a90e9bfab5a94e448df9123f0a7"
+        },
+        "SandCampBag.png": {
+            "source": "I:\\MAA-data\\sand-player\\guide-check\\00007-camp-paused-inspection.png",
+            "source_sha256": "1bf259fcb6380490c503d4844c8aff7fc74d504072938833016a102677a1d126",
+            "crop": [158, 35, 51, 44],
+            "sha256": "be24cd59bc2430b656b3f54aefb3a6634983f8f39601afa52f0904b8cddee0de"
+        },
+        "SandCampTent.png": {
+            "source": "I:\\MAA-data\\sand-player\\guide-check\\00007-camp-paused-inspection.png",
+            "source_sha256": "1bf259fcb6380490c503d4844c8aff7fc74d504072938833016a102677a1d126",
+            "crop": [103, 502, 123, 87],
+            "sha256": "13ab85ab33f18d07619f4758929962fb9db71bccad7ee884336aa6cb8c355013"
+        }
+    },
+    "initial_failed_upstream_exit_score": 0.930087,
+    "initial_failed_report": "I:\\MAA-data\\sand-player\\base-npc-camp-20261030\\native-report.json",
+    "change": "Tighter actual English icon crop; no lowered threshold. Exit trained from running frame; bag/tent trained from paused frame; each has an independent other-state match.",
+    "game_connected": false,
+    "images_captured": false,
+    "live_transition_verified": false,
+    "npc_withdrawal_verified": false,
+    "quest_save_verified": false,
+    "world_stone_delta_verified": false,
+    "camera_scope": "Saved default camp camera only; shifted/zoomed camera and other field negatives still need validation.",
+    "return_contract": [
+        "Dialogue log absent",
+        "Camp exit, bag and tent all match at least0.95",
+        "Pause only a recognized camp or field; never blind toggle",
+        "Fresh final capture confirms pause at least0.85 and all camp controls without dialogue",
+        "Field or raid evidence causes paused rejection, never camp success"
+    ],
+    "remaining": [
+        "Actual English full NPC sequence and live final transition",
+        "NPC initiation, persistent save, and actual world stone delta",
+        "Camera variation and broader battle negatives"
+    ],
+    "negative_frame_classification": {
+        "00008-camp-exit.png": "black loading frame, not a confirmation modal",
+        "00012-build-ready.png": "build editor",
+        "00017-hq-upgrade-before.png": "HQ details"
+    },
+    "live_camp_entry_pause_verified": true,
+    "live_camp_exit_verified": true,
+    "live_npc_return_verified": false,
+    "live_camp_pause_image": "I:\\MAA-data\\sand-player\\takeover-20261031T020126Z\\live\\00032-camp-paused.png"
+}

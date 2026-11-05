@@ -1,0 +1,13 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_40",
+    "location": "I:\\MAA-data\\sand-player\\within-range-canonical-20261102",
+    "sha256": {
+        "idle.png": "35f5106124869a3ba2447609aa45e9a325db4ef92e1e06a7e851940ecd61f90d",
+        "side.png": "0176e51385ad0ba1b117ba39bbc925b52507bb0bc0d72e48c7fbf34d8e57c4fb"
+    },
+    "provenance": {
+        "idle": "I:/MAA-data/sand-player/live-control-v20-20261102/runtime/00123-supervised-error-paused-008-bank-full-east-collector.png",
+        "side": "I:/MAA-data/sand-player/live-control-v21-20261102/runtime/00117-selected-hand.png"
+    }
+}

@@ -14,6 +14,11 @@
             "direction": "up"
         },
         {
+            "groups": ["稳定治疗"],
+            "location": [8, 2],
+            "direction": "down"
+        },
+        {
             "groups": ["益达", "提丰"],
             "location": [8, 4],
             "direction": "left"
@@ -31,16 +36,6 @@
         {
             "groups": ["焰苇", "水陈", "高台输出"],
             "location": [8, 4],
-            "direction": "Right"
-        },
-        {
-            "groups": ["单奶", "群奶"],
-            "location": [8, 2],
-            "direction": "Right"
-        },
-        {
-            "groups": ["焰苇", "水陈", "高台输出"],
-            "location": [8, 2],
             "direction": "Right"
         },
         {

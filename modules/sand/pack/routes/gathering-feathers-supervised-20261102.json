@@ -1,0 +1,50 @@
+{
+    "schema_version": 1,
+    "id": "gathering-feathers-supervised-20261102",
+    "theme": "Tales",
+    "stage": "Gathering of Feathers",
+    "stage_id": "sandbox_1_09",
+    "autoplay_enabled": false,
+    "validation_status": "Supervised paused-field calibration only; placements, survival and food delivery remain unverified.",
+    "coordinate_system": "registered-1280x720",
+    "anchor_manifest": "calibration/gathering-feathers-supervised-20261102-anchors.json",
+    "anchors": {
+        "idle": "idle.png",
+        "side": "side.png"
+    },
+    "normal_points": {
+        "north_archer": [656, 155],
+        "south_archer": [766, 577],
+        "healer": [884, 133]
+    },
+    "side_points": {
+        "north_archer": [716, 169],
+        "south_archer": [832, 545],
+        "healer": [945, 119]
+    },
+    "required_squad": ["Gravel", "Kroos", "Adnachiel", "Ansel", "Steward", "Plume"],
+    "required_formation_skills": {
+        "Gravel": 2,
+        "Kroos": 1,
+        "Adnachiel": 1,
+        "Ansel": 1,
+        "Steward": 1,
+        "Plume": 1
+    },
+    "steps": [
+        {
+            "action": "deploy",
+            "name": "Kroos",
+            "slot": "north_archer",
+            "direction": "Down"
+        },
+        {
+            "action": "finish"
+        }
+    ],
+    "placement_evidence": {
+        "native_projection": "I:/MAA-data/sand-player/supervised-v16-20261102/003-project-feathers-reply.json",
+        "camera_mapping": "Fresh post-placement/pan canonical view; selected-to-idle registration passed unchanged strict inlier thresholds.",
+        "healer_point": "Upper interior of lower platform, within the existing clear-viewport guard."
+    }
+}

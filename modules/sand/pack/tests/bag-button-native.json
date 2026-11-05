@@ -1,0 +1,125 @@
+{
+    "native": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [153, 37, 58, 39],
+                    "score": 1.0,
+                    "task": "SandAuto@BagButton",
+                    "templ": "SandBagButton.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [153, 37, 58, 39],
+                    "score": 1.0,
+                    "task": "SandPilot@ToggleBattleBag",
+                    "templ": "SandBagButton.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\anchors\\idle.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [153, 37, 58, 39],
+                    "score": 1.0,
+                    "task": "SandAuto@BagButton",
+                    "templ": "SandBagButton.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [153, 37, 58, 39],
+                    "score": 1.0,
+                    "task": "SandPilot@ToggleBattleBag",
+                    "templ": "SandBagButton.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@BagButton"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@ToggleBattleBag"
+                }
+            ]
+        }
+    ],
+    "source_report": "I:\\MAA-data\\sand-player\\bag-button-offline-20261029\\report.json",
+    "source_sha256": "9ccd65626bf0c7aa3960feed93aefe6ac49e4e371d52ccb74320f708b547dbfb",
+    "image_hashes": {
+        "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png": "bed44edf1c2f4cfa3a01cf3079b4b8d7c978b0005594778d02f0616fc3e5739b",
+        "I:\\MAA-data\\sand-player\\anchors\\idle.png": "bed44edf1c2f4cfa3a01cf3079b4b8d7c978b0005594778d02f0616fc3e5739b",
+        "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-formation.png": "fbe811360a0aef81465e641b90b91c5b7c059519f83ed2b248145b2dd45e01a4",
+        "I:\\MAA-data\\sand-player\\wire-worker\\00086-wait-dp.png": "c5c729278d7b698a149b12a1add0c3f7e396c862a48461423f7197fe31f285d0",
+        "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-57.png": "6349673910a3671866b03cd080e3d96829f3f9f50aaa7b112874f3e96d791c1a"
+    },
+    "live_toggle_verified": false,
+    "english_open_bag_verified": false,
+    "independent": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\wire-worker\\00086-wait-dp.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [153, 37, 58, 39],
+                    "score": 1.0,
+                    "task": "SandAuto@BagButton",
+                    "templ": "SandBagButton.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [153, 37, 58, 39],
+                    "score": 1.0,
+                    "task": "SandPilot@ToggleBattleBag",
+                    "templ": "SandBagButton.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@BagHeader"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-57.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@BagButton"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@ToggleBattleBag"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [340, 137, 38, 37],
+                    "score": 0.997397,
+                    "task": "SandAuto@BagHeader",
+                    "templ": "SandBagHeader.png"
+                }
+            ]
+        }
+    ],
+    "independent_report": "I:\\MAA-data\\sand-player\\bag-button-independent-20261029\\report.json",
+    "independent_report_sha256": "0e7a46a58226b5e2d5e86b3975b2f717b36932e3f25d193f359d95cd30020cf1"
+}

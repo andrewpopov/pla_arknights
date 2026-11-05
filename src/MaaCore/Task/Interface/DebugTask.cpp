@@ -1,5 +1,7 @@
 #include "DebugTask.h"
 
+#include "Task/Miscellaneous/BattleFormationTask.h"
+
 #include "MaaUtils/Encoding.h"
 #include <boost/regex.hpp>
 #include <filesystem>
@@ -7,6 +9,8 @@
 
 #include "Common/AsstMsg.h"
 #include "Common/AsstTypes.h"
+#include "Config/Miscellaneous/BattleDataConfig.h"
+#include "Config/Miscellaneous/TilePack.h"
 #include "Config/TaskData.h"
 #include "Config/TemplResource.h"
 #include "MaaUtils/ImageIo.h"
@@ -23,6 +27,11 @@
 #include "Vision/MultiMatcher.h"
 #include "Vision/OCRer.h"
 #include "Vision/RegionOCRer.h"
+#include "Vision/Roguelike/RoguelikeSkillSelectionImageAnalyzer.h"
+
+MAA_SUPPRESS_CV_WARNINGS_BEGIN
+#include <Arknights-Tile-Pos/TileCalc2.hpp>
+MAA_SUPPRESS_CV_WARNINGS_END
 
 asst::DebugTask::DebugTask(const AsstCallback& callback, Assistant* inst) :
     InterfaceTask(callback, inst, TaskType)
@@ -34,6 +43,18 @@ bool asst::DebugTask::run()
     // PackageTask::run 被覆盖，运行标记须自行置位，set_params 据此拒绝运行中更新
     m_running = true;
 
+    if (m_image_test_mode == "tile_projection") {
+        return image_test_tile_projection();
+    }
+    if (m_image_test_mode == "formation_operators") {
+        return image_test_formation_operators();
+    }
+    if (m_image_test_mode == "battle_deployment") {
+        return image_test_battle_deployment();
+    }
+    if (m_image_test_mode == "roguelike_skills") {
+        return image_test_roguelike_skills();
+    }
     if (m_image_test_mode == "report") {
         return image_test_report();
     }
@@ -147,6 +168,7 @@ bool asst::DebugTask::set_params_impl(const json::value& params)
 
     // 全部解析校验通过后才写成员，AsstSetTaskParams 更新失败时任务保持原有完整参数
     std::vector<std::string> images;
+    std::vector<std::string> stages;
     std::vector<std::string> tasks;
     std::vector<std::string> templates;
     std::string templ_task;
@@ -154,12 +176,23 @@ bool asst::DebugTask::set_params_impl(const json::value& params)
     double threshold = TemplThresholdDefault;
     std::optional<std::pair<int, int>> resize;
 
-    auto images_opt = params.find<std::vector<std::string>>("images");
-    if (!images_opt || images_opt->empty()) {
-        LogError << __FUNCTION__ << "failed, images not found";
-        return false;
+    if (mode == "tile_projection") {
+        auto stages_opt = params.find<std::vector<std::string>>("stages");
+        if (!stages_opt || stages_opt->empty() || stages_opt->size() > 16 ||
+            std::ranges::any_of(*stages_opt, [](const auto& stage) { return stage.empty() || stage.size() > 128; })) {
+            LogError << __FUNCTION__ << "failed, invalid stage IDs";
+            return false;
+        }
+        stages = std::move(*stages_opt);
     }
-    images = std::move(*images_opt);
+    else {
+        auto images_opt = params.find<std::vector<std::string>>("images");
+        if (!images_opt || images_opt->empty()) {
+            LogError << __FUNCTION__ << "failed, images not found";
+            return false;
+        }
+        images = std::move(*images_opt);
+    }
 
     if (mode == "report" || mode == "pipeline") {
         auto tasks_opt = params.find<std::vector<std::string>>("tasks");
@@ -221,13 +254,25 @@ bool asst::DebugTask::set_params_impl(const json::value& params)
             }
         }
     }
+    else if (
+        mode == "roguelike_skills" || mode == "battle_deployment" || mode == "formation_operators" ||
+        mode == "tile_projection") {
+        // Runs the actual formation skill analyzer without connecting to a device.
+    }
     else {
         LogError << __FUNCTION__ << "failed, unknown mode:" << mode;
         return false;
     }
 
+    m_eval_formation_prefix = params.get("task_prefix", "");
+    if (!m_eval_formation_prefix.empty() &&
+        (mode != "formation_operators" || m_eval_formation_prefix != "SandRoster@")) {
+        LogError << __FUNCTION__ << "Unsupported offline formation layout prefix";
+        return false;
+    }
     m_image_test_mode = std::move(mode);
     m_eval_images = std::move(images);
+    m_eval_stages = std::move(stages);
     m_eval_tasks = std::move(tasks);
     m_eval_templates = std::move(templates);
     m_eval_templ_task = std::move(templ_task);
@@ -244,6 +289,129 @@ void asst::DebugTask::emit_eval_error(const std::string& mode, const std::string
         AsstMsg::SubTaskExtraInfo,
         json::object { { "what", "DebugImageTest" },
                        { "details", json::object { { "mode", mode }, { "image", image_path }, { "error", error } } } });
+}
+
+bool asst::DebugTask::image_test_formation_operators()
+{
+    bool all_ok = true;
+    for (const auto& path : m_eval_images) {
+        auto image = load_eval_image(path);
+        if (!image) {
+            all_ok = false;
+            emit_eval_error("formation_operators", path, "failed to load image");
+            continue;
+        }
+        const auto recognized = BattleFormationTask::analyzer_opers(*image, m_eval_formation_prefix);
+        json::array operators;
+        for (const auto& oper : recognized) {
+            const auto [elite, level] =
+                BattleQuickFormation::analyze_oper_level(*image, oper.flag_rect, m_eval_formation_prefix);
+            json::array character_ids;
+            for (const auto& id : BattleData.get_ids(oper.role, oper.text)) {
+                character_ids.emplace_back(id);
+            }
+            operators.emplace_back(
+                json::object {
+                    { "character_ids", std::move(character_ids) },
+                    { "name", oper.text },
+                    { "name_score", oper.score },
+                    { "role", static_cast<int>(oper.role) },
+                    { "selected", oper.is_selected },
+                    { "elite", elite },
+                    { "level", level },
+                    { "rect", json::array { oper.rect.x, oper.rect.y, oper.rect.width, oper.rect.height } },
+                    { "flag_rect",
+                      json::array { oper.flag_rect.x, oper.flag_rect.y, oper.flag_rect.width, oper.flag_rect.height } },
+                    { "flag_score", oper.flag_score } });
+        }
+        callback(
+            AsstMsg::SubTaskExtraInfo,
+            json::object { { "what", "DebugImageTest" },
+                           { "details",
+                             json::object { { "mode", "formation_operators" },
+                                            { "task_prefix", m_eval_formation_prefix },
+                                            { "image", path },
+                                            { "hit", !recognized.empty() },
+                                            { "operators", std::move(operators) },
+                                            { "elite_zero_may_be_template_miss", true },
+                                            { "inputs_issued", false } } } });
+    }
+    return all_ok;
+}
+
+bool asst::DebugTask::image_test_battle_deployment()
+{
+    bool all_ok = true;
+    for (const auto& path : m_eval_images) {
+        auto image = load_eval_image(path);
+        if (!image) {
+            all_ok = false;
+            emit_eval_error("battle_deployment", path, "failed to load image");
+            continue;
+        }
+        BattlefieldMatcher analyzer(*image);
+        BattlefieldMatcher::ObjectOfInterest interest;
+        interest.deployment = true;
+        interest.oper_cost = true;
+        interest.costs = true;
+        analyzer.set_object_of_interest(interest);
+        auto result = analyzer.analyze();
+        json::array operators;
+        if (result) {
+            for (const auto& oper : result->deployment) {
+                operators.emplace_back(
+                    json::object {
+                        { "index", oper.index },
+                        { "role", static_cast<int>(oper.role) },
+                        { "cost", oper.cost },
+                        { "available", oper.available },
+                        { "cooling", oper.cooling },
+                        { "rect", json::array { oper.rect.x, oper.rect.y, oper.rect.width, oper.rect.height } } });
+            }
+        }
+        callback(
+            AsstMsg::SubTaskExtraInfo,
+            json::object { { "what", "DebugImageTest" },
+                           { "details",
+                             json::object { { "mode", "battle_deployment" },
+                                            { "image", path },
+                                            { "hit", result.has_value() },
+                                            { "dp", result ? result->costs.value : -1 },
+                                            { "operators", std::move(operators) } } } });
+    }
+    return all_ok;
+}
+
+bool asst::DebugTask::image_test_roguelike_skills()
+{
+    bool all_ok = true;
+    for (const auto& path : m_eval_images) {
+        auto image = load_eval_image(path);
+        if (!image) {
+            all_ok = false;
+            emit_eval_error("roguelike_skills", path, "failed to load image");
+            continue;
+        }
+        RoguelikeSkillSelectionImageAnalyzer analyzer(*image);
+        const bool hit = analyzer.analyze();
+        json::array rows;
+        for (const auto& [name, skills] : analyzer.get_result()) {
+            json::array rects;
+            for (const auto& rect : skills) {
+                rects.emplace_back(json::array { rect.x, rect.y, rect.width, rect.height });
+            }
+            rows.emplace_back(json::object { { "name", name }, { "skills", std::move(rects) } });
+        }
+        callback(
+            AsstMsg::SubTaskExtraInfo,
+            json::object { { "what", "DebugImageTest" },
+                           { "details",
+                             json::object { { "mode", "roguelike_skills" },
+                                            { "image", path },
+                                            { "hit", hit },
+                                            { "rows", std::move(rows) } } } });
+    }
+    return all_ok;
 }
 
 bool asst::DebugTask::image_test_report()
@@ -625,4 +793,80 @@ void asst::DebugTask::test_match_template()
 #undef TEST
 #undef ASSERT_ACTIVE
 #undef ASSERT_INACTIVE
+}
+
+bool asst::DebugTask::image_test_tile_projection()
+{
+    bool all_ok = true;
+    for (const auto& stage : m_eval_stages) {
+        const auto level = TilePack::find_level(stage);
+        if (!level || level->key.stageId != stage) {
+            LogError << __FUNCTION__ << "unknown or ambiguous stage ID:" << stage;
+            callback(
+                AsstMsg::SubTaskExtraInfo,
+                json::object { { "what", "DebugImageTest" },
+                               { "details",
+                                 json::object { { "mode", "tile_projection" },
+                                                { "stage_id", stage },
+                                                { "error", "Unknown or ambiguous stage ID" } } } });
+            all_ok = false;
+            continue;
+        }
+        const auto projection = TilePack::calc(*level);
+        std::optional<double> floor_z;
+        for (int y = 0; y < level->get_height() && !floor_z; ++y) {
+            for (int x = 0; x < level->get_width(); ++x) {
+                if (level->get_item(y, x).heightType == static_cast<int>(TilePack::HeightType::Floor)) {
+                    floor_z = Map::TileCalc2::get_tile_world_pos(*level, y, x)[2];
+                    break;
+                }
+            }
+        }
+        json::array tiles;
+        for (int y = 0; y < level->get_height(); ++y) {
+            for (int x = 0; x < level->get_width(); ++x) {
+                const Point loc(x, y);
+                const auto normal = projection.normal_tile_info.find(loc);
+                const auto selected = projection.side_tile_info.find(loc);
+                if (normal == projection.normal_tile_info.end() || selected == projection.side_tile_info.end()) {
+                    LogError << __FUNCTION__ << "missing projected tile:" << stage << loc;
+                    all_ok = false;
+                    continue;
+                }
+                const auto tile = level->get_item(y, x);
+                json::object projected { { "tile", json::array { x, y } },
+                                         { "normal", json::array { normal->second.pos.x, normal->second.pos.y } },
+                                         { "selected", json::array { selected->second.pos.x, selected->second.pos.y } },
+                                         { "tile_key", tile.tileKey },
+                                         { "height_type", tile.heightType },
+                                         { "buildable_type", tile.buildableType } };
+                if (floor_z) {
+                    // A diagnostic plane, never a statement that this tile was cleared or is buildable.
+                    auto ground = Map::TileCalc2::get_tile_world_pos(*level, y, x);
+                    ground[2] = *floor_z;
+                    const auto floor_normal = Map::TileCalc2::world_to_screen(*level, ground, false);
+                    const auto floor_selected = Map::TileCalc2::world_to_screen(*level, ground, true);
+                    projected.emplace("floor_normal", json::array { floor_normal.x, floor_normal.y });
+                    projected.emplace("floor_selected", json::array { floor_selected.x, floor_selected.y });
+                }
+                tiles.emplace_back(std::move(projected));
+            }
+        }
+        callback(
+            AsstMsg::SubTaskExtraInfo,
+            json::object { { "what", "DebugImageTest" },
+                           { "details",
+                             json::object { { "mode", "tile_projection" },
+                                            { "stage_id", level->key.stageId },
+                                            { "level_id", level->key.levelId },
+                                            { "name", level->key.name },
+                                            { "width", level->get_width() },
+                                            { "height", level->get_height() },
+                                            { "camera_shift", json::array { 0, 0 } },
+                                            { "live_camera_verified", false },
+                                            { "floor_plane_available", floor_z.has_value() },
+                                            { "floor_plane_live_verified", false },
+                                            { "tiles", std::move(tiles) } } } });
+    }
+    return all_ok;
 }

@@ -1,0 +1,478 @@
+{
+    "kind": "actual native roster analyzer with RA task layout; saved images only",
+    "game_connected": false,
+    "core_sha256": "9fdc2286e5b6b9b3b301918f175bf1eb8ab851d41380cf85f1da9a6a104181ae",
+    "images": [
+        {
+            "path": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png",
+            "sha256": "f8aa1a6cc811b038fdd11a2c926b915faf04a3b2dc4c63dc98773bf9ace8c37b"
+        },
+        {
+            "path": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00057-fresh-vanguard-roster.png",
+            "sha256": "bca37194f33781c2d910aeeb2247a69d40a4daeabc26f0246cc5c7789e3a8724"
+        },
+        {
+            "path": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00068-confirm-guide-squad.png",
+            "sha256": "3903741df1b4fe37f3dd7ec8d6522c15c3cfe1fbd4f00e34cfec80611d3a29c0"
+        },
+        {
+            "path": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "sha256": "0323ca4283f6b90734d45d9d364acd43201c3b78d20885e7be5b37d1b32bda27"
+        }
+    ],
+    "task_prefix": "SandRoster@",
+    "native": [
+        {
+            "elite_zero_may_be_template_miss": true,
+            "hit": true,
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png",
+            "inputs_issued": false,
+            "mode": "formation_operators",
+            "operators": [
+                {
+                    "character_ids": ["char_500_noirc"],
+                    "elite": 0,
+                    "flag_rect": [464, 87, 25, 25],
+                    "flag_score": 0.987548,
+                    "level": 30,
+                    "name": "黑角",
+                    "name_score": 0.960453,
+                    "rect": [622, 94, 72, 16],
+                    "role": 3,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_4093_frston"],
+                    "elite": 0,
+                    "flag_rect": [464, 231, 25, 25],
+                    "flag_score": 0.98502,
+                    "level": 30,
+                    "name": "Friston-3",
+                    "name_score": 0.993607,
+                    "rect": [622, 238, 64, 16],
+                    "role": 3,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_163_hpsts"],
+                    "elite": 0,
+                    "flag_rect": [464, 375, 25, 25],
+                    "flag_score": 0.980942,
+                    "level": 1,
+                    "name": "火神",
+                    "name_score": 0.996307,
+                    "rect": [621, 381, 47, 17],
+                    "role": 3,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_4025_aprot2", "char_512_aprot"],
+                    "elite": 0,
+                    "flag_rect": [464, 518, 25, 25],
+                    "flag_score": 0.976902,
+                    "level": 1,
+                    "name": "暮落",
+                    "name_score": 0.998511,
+                    "rect": [621, 525, 51, 17],
+                    "role": 3,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_422_aurora"],
+                    "elite": 0,
+                    "flag_rect": [834, 87, 25, 25],
+                    "flag_score": 0.982313,
+                    "level": 1,
+                    "name": "极光",
+                    "name_score": 0.998473,
+                    "rect": [991, 94, 47, 16],
+                    "role": 3,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_4047_pianst"],
+                    "elite": 0,
+                    "flag_rect": [834, 231, 25, 25],
+                    "flag_score": 0.979566,
+                    "level": 1,
+                    "name": "车尔尼",
+                    "name_score": 0.994537,
+                    "rect": [991, 237, 48, 18],
+                    "role": 3,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_226_hmau"],
+                    "elite": 0,
+                    "flag_rect": [834, 375, 25, 25],
+                    "flag_score": 0.975425,
+                    "level": 1,
+                    "name": "吽",
+                    "name_score": 0.999322,
+                    "rect": [992, 381, 36, 18],
+                    "role": 3,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_431_ashlok"],
+                    "elite": 0,
+                    "flag_rect": [834, 518, 25, 25],
+                    "flag_score": 0.973466,
+                    "level": 1,
+                    "name": "灰毫",
+                    "name_score": 0.998813,
+                    "rect": [991, 525, 54, 17],
+                    "role": 3,
+                    "selected": false
+                }
+            ],
+            "task_prefix": "SandRoster@"
+        },
+        {
+            "elite_zero_may_be_template_miss": true,
+            "hit": true,
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00057-fresh-vanguard-roster.png",
+            "inputs_issued": false,
+            "mode": "formation_operators",
+            "operators": [
+                {
+                    "character_ids": ["char_4064_mlynar"],
+                    "elite": 0,
+                    "flag_rect": [412, 88, 25, 25],
+                    "flag_score": 0.958489,
+                    "level": -1,
+                    "name": "玛恩纳",
+                    "name_score": 0.977006,
+                    "rect": [568, 94, 46, 18],
+                    "role": 2,
+                    "selected": true
+                },
+                {
+                    "character_ids": ["char_122_beagle"],
+                    "elite": 0,
+                    "flag_rect": [410, 231, 25, 25],
+                    "flag_score": 0.983603,
+                    "level": 55,
+                    "name": "米格鲁",
+                    "name_score": 0.998613,
+                    "rect": [568, 238, 46, 17],
+                    "role": 3,
+                    "selected": true
+                },
+                {
+                    "character_ids": ["char_284_spot"],
+                    "elite": 0,
+                    "flag_rect": [410, 375, 25, 25],
+                    "flag_score": 0.979385,
+                    "level": 55,
+                    "name": "斑点",
+                    "name_score": 0.998379,
+                    "rect": [567, 381, 33, 18],
+                    "role": 3,
+                    "selected": true
+                },
+                {
+                    "character_ids": ["char_209_ardign"],
+                    "elite": 0,
+                    "flag_rect": [410, 518, 25, 25],
+                    "flag_score": 0.976254,
+                    "level": 55,
+                    "name": "卡缇",
+                    "name_score": 0.997803,
+                    "rect": [567, 525, 61, 17],
+                    "role": 3,
+                    "selected": true
+                },
+                {
+                    "character_ids": ["char_500_noirc"],
+                    "elite": 0,
+                    "flag_rect": [780, 87, 25, 25],
+                    "flag_score": 0.976492,
+                    "level": 30,
+                    "name": "黑角",
+                    "name_score": 0.963102,
+                    "rect": [938, 94, 72, 16],
+                    "role": 3,
+                    "selected": true
+                },
+                {
+                    "character_ids": ["char_4087_ines"],
+                    "elite": 0,
+                    "flag_rect": [780, 231, 25, 25],
+                    "flag_score": 0.94529,
+                    "level": 0,
+                    "name": "伊内丝",
+                    "name_score": 0.996387,
+                    "rect": [938, 238, 29, 16],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_222_bpipe"],
+                    "elite": 0,
+                    "flag_rect": [780, 375, 25, 25],
+                    "flag_score": 0.949619,
+                    "level": 30,
+                    "name": "风笛",
+                    "name_score": 0.998328,
+                    "rect": [938, 381, 54, 18],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_479_sleach"],
+                    "elite": 0,
+                    "flag_rect": [780, 519, 25, 25],
+                    "flag_score": 0.946553,
+                    "level": 30,
+                    "name": "琴柳",
+                    "name_score": 0.996882,
+                    "rect": [937, 525, 57, 17],
+                    "role": 1,
+                    "selected": false
+                }
+            ],
+            "task_prefix": "SandRoster@"
+        },
+        {
+            "elite_zero_may_be_template_miss": true,
+            "hit": true,
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00068-confirm-guide-squad.png",
+            "inputs_issued": false,
+            "mode": "formation_operators",
+            "operators": [
+                {
+                    "character_ids": [],
+                    "elite": 0,
+                    "flag_rect": [640, 87, 25, 25],
+                    "flag_score": 0.932921,
+                    "level": 0,
+                    "name": "Fang thernene",
+                    "name_score": 0.683138,
+                    "rect": [797, 86, 75, 25],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_502_nblade"],
+                    "elite": 0,
+                    "flag_rect": [640, 231, 25, 25],
+                    "flag_score": 0.931418,
+                    "level": 30,
+                    "name": "夜刀",
+                    "name_score": 0.998605,
+                    "rect": [797, 238, 33, 16],
+                    "role": 1,
+                    "selected": true
+                },
+                {
+                    "character_ids": ["char_4188_confes"],
+                    "elite": 0,
+                    "flag_rect": [640, 375, 25, 25],
+                    "flag_score": 0.924283,
+                    "level": 30,
+                    "name": "CONFESS-47",
+                    "name_score": 0.99859,
+                    "rect": [797, 381, 89, 17],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": ["char_220_grani"],
+                    "elite": 0,
+                    "flag_rect": [639, 519, 25, 25],
+                    "flag_score": 0.93573,
+                    "level": 1,
+                    "name": "格拉尼",
+                    "name_score": 0.981933,
+                    "rect": [797, 525, 36, 17],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": [],
+                    "elite": 0,
+                    "flag_rect": [1010, 87, 25, 25],
+                    "flag_score": 0.91351,
+                    "level": 1,
+                    "name": "Chia All",
+                    "name_score": 0.930713,
+                    "rect": [1161, 82, 91, 29],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": [],
+                    "elite": 0,
+                    "flag_rect": [1009, 231, 25, 25],
+                    "flag_score": 0.92264,
+                    "level": 1,
+                    "name": "Reer",
+                    "name_score": 0.834985,
+                    "rect": [1161, 226, 91, 29],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": [],
+                    "elite": 0,
+                    "flag_rect": [1009, 375, 25, 25],
+                    "flag_score": 0.940348,
+                    "level": 1,
+                    "name": "Wgmane",
+                    "name_score": 0.783188,
+                    "rect": [1161, 370, 91, 29],
+                    "role": 1,
+                    "selected": false
+                },
+                {
+                    "character_ids": [],
+                    "elite": 0,
+                    "flag_rect": [1009, 519, 25, 25],
+                    "flag_score": 0.951469,
+                    "level": 1,
+                    "name": "P",
+                    "name_score": 0.902162,
+                    "rect": [1161, 514, 91, 29],
+                    "role": 1,
+                    "selected": false
+                }
+            ],
+            "task_prefix": "SandRoster@"
+        },
+        {
+            "elite_zero_may_be_template_miss": true,
+            "hit": false,
+            "image": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "inputs_issued": false,
+            "mode": "formation_operators",
+            "operators": [],
+            "task_prefix": "SandRoster@"
+        }
+    ],
+    "roster_page_gates": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [464, 661, 43, 27],
+                    "score": 0.910409,
+                    "task": "SandRoster@PageClear",
+                    "text": "Clear"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1105, 668, 130, 23],
+                    "score": 0.987274,
+                    "task": "SandRoster@PageConfirm",
+                    "text": "AddedtoSquad"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00057-fresh-vanguard-roster.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [464, 661, 43, 27],
+                    "score": 0.910409,
+                    "task": "SandRoster@PageClear",
+                    "text": "Clear"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1105, 668, 130, 23],
+                    "score": 0.987274,
+                    "task": "SandRoster@PageConfirm",
+                    "text": "AddedtoSquad"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00068-confirm-guide-squad.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [464, 662, 43, 24],
+                    "score": 0.997014,
+                    "task": "SandRoster@PageClear",
+                    "text": "Clear"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1105, 668, 130, 23],
+                    "score": 0.987274,
+                    "task": "SandRoster@PageConfirm",
+                    "text": "AddedtoSquad"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageClear"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageConfirm"
+                }
+            ]
+        }
+    ],
+    "live_selection_verified": false,
+    "owned_elite_verified": false,
+    "layout_sha256": "4ce24361f44a7aadd06c65f76c718fa53537ea07fae6b3aa87ffdf883463676d",
+    "selection_template_sha256": "e0ee15fcfbf5cc25a04f7092b4fd3943105556949a42a7b0be753d5c80ce056f",
+    "level_candidates_verified": false,
+    "level_limitation": "Some RA level crops are inaccurate; only identity/selection is admitted by the adapter. Native elite0 also means template miss.",
+    "unselected_probes": [
+        {
+            "character_id": "char_500_noirc",
+            "expected_unselected": true,
+            "roi": [669, 110, 25, 10],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": true,
+                        "rect": [669, 110, 25, 10],
+                        "score": 1.0,
+                        "template": "SandRosterUnselectedStrip.png"
+                    }
+                ]
+            }
+        },
+        {
+            "character_id": "char_500_noirc",
+            "expected_unselected": false,
+            "roi": [985, 110, 25, 10],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00057-fresh-vanguard-roster.png",
+                "mode": "templ",
+                "results": [
+                    {
+                        "hit": false,
+                        "rect": [985, 110, 25, 10],
+                        "score": 0.0,
+                        "template": "SandRosterUnselectedStrip.png"
+                    }
+                ]
+            }
+        }
+    ],
+    "unselected_template_sha256": "c9027ef191292f67cbf7f39ef0b306d64cb7cac8643f8261d13a03859c2a162c"
+}

@@ -50,6 +50,7 @@ class CoreEval:
     :param global_client: 国际服名（YoStarJP / YoStarEN / YoStarKR / txwy），
                           加载主资源后再叠加对应分服资源与 OCR 模型
     :param user_dir:  core 日志（debug/asst.log）写入目录，默认临时目录
+    :param overlays:  Optional resource roots loaded after the client locale for offline replay.
     :param verbose:   额外打印 core 回调的其余消息
     """
 
@@ -60,6 +61,7 @@ class CoreEval:
         global_client=None,
         user_dir=None,
         verbose=False,
+        overlays=(),
     ):
         self._verbose = verbose
         self._resource = pathlib.Path(resource)
@@ -96,6 +98,14 @@ class CoreEval:
             if not self._lib.AsstLoadResource(str(global_path.parent).encode("utf-8")):
                 raise RuntimeError(f"load global resource failed: {global_path.parent}")
             self._global_resource = global_path
+
+        # Optional isolated recognition packs load after the client locale.
+        for overlay in overlays:
+            overlay = pathlib.Path(overlay)
+            if not (overlay / "resource").is_dir():
+                raise ValueError(f"Overlay must contain resource/: {overlay}")
+            if not self._lib.AsstLoadResource(str(overlay).encode("utf-8")):
+                raise RuntimeError(f"load overlay failed: {overlay}")
 
         self._handle = self._lib.AsstCreateEx(self._callback, None)
         if not self._handle:
@@ -165,6 +175,37 @@ class CoreEval:
     @staticmethod
     def _abs_images(images):
         return [str(pathlib.Path(p).resolve()) for p in images]
+
+    def tile_projection(self, stages):
+        """Project exact stage IDs with the existing native TilePack; no device or image input."""
+        return self._run_task({"mode": "tile_projection", "stages": list(stages)})
+
+    def formation_operators(self, images, task_prefix=""):
+        """Read roster names/roles/selection/levels using the actual formation analyzer.
+
+        Pass task_prefix="SandRoster@" with the reviewed RA resource overlay.
+        Elite zero is also the native template-miss fallback; it does not prove E0.
+        This saved-image mode never connects to a controller or selects operators.
+        """
+        return self._run_task(
+            {
+                "mode": "formation_operators",
+                "images": self._abs_images(images),
+                "task_prefix": task_prefix,
+            }
+        )
+
+    def battle_deployment(self, images):
+        """Replay the actual battle hand detector, including cost, availability and cooldown."""
+        return self._run_task(
+            {"mode": "battle_deployment", "images": self._abs_images(images)}
+        )
+
+    def roguelike_skills(self, images):
+        """Run the actual IS skill-row analyzer; returns names and native skill rectangles."""
+        return self._run_task(
+            {"mode": "roguelike_skills", "images": self._abs_images(images)}
+        )
 
     def report(self, images, tasks):
         """每张图 × 每个任务独立评估：[{image, results: [{task, hit, score, rect, ...}]}]。
@@ -382,7 +423,16 @@ def main():
     parser.add_argument("images", nargs="+", help="图片路径（可多张）")
     parser.add_argument(
         "--mode",
-        choices=["report", "pipeline", "ocr", "templ", "depot", "replay"],
+        choices=[
+            "report",
+            "pipeline",
+            "ocr",
+            "templ",
+            "depot",
+            "replay",
+            "battle_deployment",
+            "formation_operators",
+        ],
         default="report",
     )
     parser.add_argument("--tasks", help="逗号分隔的任务名列表")
@@ -412,6 +462,18 @@ def main():
     )
     parser.add_argument("--global", dest="global_client", help="国际服名，如 YoStarJP")
     parser.add_argument("--user-dir", help="core 日志写入目录")
+    parser.add_argument(
+        "--overlay",
+        action="append",
+        default=[],
+        help="Optional offline recognition resource root; may be repeated",
+    )
+    parser.add_argument(
+        "--task-prefix",
+        default="",
+        choices=["", "SandRoster@"],
+        help="Reviewed formation layout for saved-image recognition",
+    )
     parser.add_argument("--verbose", action="store_true", help="打印 core 其余回调消息")
     args = parser.parse_args()
 
@@ -425,6 +487,7 @@ def main():
         global_client=args.global_client,
         user_dir=args.user_dir,
         verbose=args.verbose,
+        overlays=args.overlay,
     )
     try:
         _run_cli(ev, args)
@@ -439,6 +502,18 @@ def _run_cli(ev, args):
     if args.mode == "report":
         tasks = [t.strip() for t in args.tasks.split(",") if t.strip()]
         _print_report(ev.report(args.images, tasks))
+    elif args.mode == "formation_operators":
+        print(
+            json.dumps(
+                ev.formation_operators(args.images, args.task_prefix),
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+    elif args.mode == "battle_deployment":
+        print(
+            json.dumps(ev.battle_deployment(args.images), ensure_ascii=False, indent=2)
+        )
     elif args.mode == "pipeline":
         tasks = [t.strip() for t in args.tasks.split(",") if t.strip()]
         for r in ev.pipeline(args.images, tasks):

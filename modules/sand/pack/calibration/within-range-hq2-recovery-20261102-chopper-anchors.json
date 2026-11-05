@@ -1,0 +1,13 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_40",
+    "location": "I:\\MAA-data\\sand-player\\within-range-hq2-recovery-20261102-chopper",
+    "sha256": {
+        "idle.png": "f972e2f1dbad53754670bb3dc6b5f831cc00ef4a61253fc6bff33b580d27bf85",
+        "side.png": "d551880925d4c08767ff4bf2d3a5c1104d596fe85adcedf0c2bf9137703ffe0b"
+    },
+    "provenance": {
+        "idle": "I:\\MAA-data\\sand-player\\live-control-v19-20261102\\runtime\\00086-supervised-paused-017-settle-physical-deployment.png",
+        "side": "I:\\MAA-data\\sand-player\\live-control-v19-20261102\\runtime\\00041-selected-hand.png"
+    }
+}

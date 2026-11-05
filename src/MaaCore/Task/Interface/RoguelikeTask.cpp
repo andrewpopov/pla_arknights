@@ -8,6 +8,8 @@
 
 // ------------------ 通用配置及插件 ------------------
 #include "Task/Miscellaneous/ScreenshotTaskPlugin.h"
+#include "Task/Roguelike/JieGarden/RoguelikeRewardSelectionTaskPlugin.h"
+#include "Task/Roguelike/JieGarden/RoguelikeStageReadinessTaskPlugin.h"
 #include "Task/Roguelike/RoguelikeBattleTaskPlugin.h"
 #include "Task/Roguelike/RoguelikeConfig.h"
 #include "Task/Roguelike/RoguelikeControlTaskPlugin.h"
@@ -43,6 +45,7 @@
 #include "Task/Roguelike/Map/RoguelikeRoutingTaskPlugin.h"
 
 // ------------------ 界园主题专用配置及插件 ------------------
+#include "Task/Roguelike/JieGarden/RoguelikeCandleguestTaskPlugin.h"
 #include "Task/Roguelike/JieGarden/RoguelikeCoppersTaskPlugin.h"
 
 // ------------------ 黑流树海主题专用配置及插件 ------------------
@@ -99,6 +102,7 @@ asst::RoguelikeTask::RoguelikeTask(const AsstCallback& callback, Assistant* inst
 
     m_roguelike_task_ptr->register_plugin<RoguelikeDifficultySelectionTaskPlugin>(m_config_ptr, m_control_ptr);
     m_roguelike_task_ptr->register_plugin<RoguelikeStrategyChangeTaskPlugin>(m_config_ptr, m_control_ptr);
+    m_roguelike_task_ptr->register_plugin<RoguelikeStageReadinessTaskPlugin>(m_config_ptr, m_control_ptr);
 
     m_roguelike_task_ptr->register_plugin<RoguelikeIterateMonthlySquadPlugin>(m_config_ptr, m_control_ptr)
         ->set_retry_times(3);
@@ -123,7 +127,11 @@ asst::RoguelikeTask::RoguelikeTask(const AsstCallback& callback, Assistant* inst
     m_roguelike_task_ptr->register_plugin<RoguelikeBoskyPassageRoutingTaskPlugin>(m_config_ptr, m_control_ptr);
 
     // ------------------ 界园主题专用插件 ------------------
+    m_roguelike_task_ptr->register_plugin<RoguelikeCandleguestTaskPlugin>(m_config_ptr, m_control_ptr);
     m_roguelike_task_ptr->register_plugin<RoguelikeCoppersTaskPlugin>(m_config_ptr, m_control_ptr);
+    m_roguelike_task_ptr->register_plugin<RoguelikeRewardSelectionTaskPlugin>(m_config_ptr, m_control_ptr)
+        ->set_retry_times(0)
+        .set_ignore_error(true);
 
     // ------------------ 黑流树海主题专用插件 ------------------
     m_blackflow_map_source_ptr = std::make_shared<blackflow::BlackFlowMapObservationSource>();

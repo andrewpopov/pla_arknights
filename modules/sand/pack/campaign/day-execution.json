@@ -1,0 +1,218 @@
+{
+    "schema_version": 1,
+    "scope": "Operational completion contracts; map recipes still require calibrated native routes.",
+    "minimum_reward_policy": "Wood1 means positive operational yield only; it does not certify guide performance or construction readiness.",
+    "acts": {
+        "1.1": {
+            "minimum_rewards": {
+                "wood": 10
+            },
+            "required_flags": [],
+            "recipe": [
+                "Use at most six rested operators.",
+                "Article: Młynar S3 faces Left; rotate carriers after confirmed loads.",
+                "Video alternative: Saileach Right, Młynar Right, Executor the Ex Foedere Left.",
+                "Choose one calibrated strategy; do not combine their camera coordinates.",
+                "Bank carriers before leaving; retain ten observed wood for the first pump."
+            ],
+            "source_yield_example": {
+                "wood": 24,
+                "gold": 2
+            },
+            "source_yield_is_inventory": false,
+            "maximum_squad": 6
+        },
+        "1.2": {
+            "minimum_rewards": {
+                "water": 10
+            },
+            "required_flags": ["food_reward_verified"],
+            "recipe": [
+                "Craft and equip one pump from confirmed wood.",
+                "Use the separate rested source hunting squad; pump, Kroos, Adnachiel and Gravel, reviewed Gravel recall, then Steward.",
+                "Use registered water tiles and independently reviewed hunter facings and coverage; source timestamps are not deployment triggers.",
+                "Wait with paused same-image operation-bag checks for water10 and reviewed Tenderloin food80; preserve25 seconds and the bounded game-time budget.",
+                "Require independent settlement water10 and at least80 base raw-food energy from exact identified delivered item counts. Unknown or generic food never proves readiness."
+            ],
+            "source_yield_example": {
+                "water": 10,
+                "gold": 2,
+                "puffball_tenderloin": 2
+            },
+            "source_yield_is_inventory": false,
+            "maximum_squad": 6,
+            "minimum_raw_food_base_energy": 80,
+            "source_raw_food_example": {
+                "sandbox_1_venison": 2
+            },
+            "source_food_identity": "Puffball Tenderloin (Japanese: まんまるスライス); exported item ID sandbox_1_venison"
+        },
+        "2.1": {
+            "minimum_rewards": {
+                "wood": 30
+            },
+            "required_flags": [],
+            "recipe": [
+                "Jagged Jungle: source Młynar at the lower-right tree cluster, facing Right; independently calibrate carrier positions.",
+                "Protect against enemies approaching from the left.",
+                "Rotate and bank carriers; a positive yield is the operational floor, not the source target."
+            ],
+            "source_yield_example": {},
+            "source_yield_is_inventory": false,
+            "source_harvest_target": {
+                "wood": 30
+            },
+            "target_semantics": "Primary guide explicitly targets around30 wood; actual delivered quantity must be read."
+        },
+        "2.2": {
+            "minimum_rewards": {},
+            "required_flags": ["route_unlock_verified"],
+            "recipe": [
+                "Open and identify the actual encounter.",
+                "Use the reviewed Slightest Effort policy only after exact scene/options recognition.",
+                "Confirm one Act consumed and inspect the newly opened route."
+            ],
+            "source_yield_example": {},
+            "source_yield_is_inventory": false
+        },
+        "3.1": {
+            "minimum_rewards": {},
+            "required_flags": ["raid_victory_verified", "lives_preserved_verified"],
+            "recipe": [
+                "Observe actual raid arrival and interception map.",
+                "Use a dedicated combat route; harvest scripts are forbidden during raids.",
+                "If no raid is urgent, explicitly review a safe alternative instead of assuming the guide timing."
+            ],
+            "source_yield_example": {},
+            "source_yield_is_inventory": false
+        },
+        "3.2": {
+            "minimum_rewards": {
+                "wood": 30
+            },
+            "required_flags": [],
+            "recipe": [
+                "Within Range: source Młynar north of the central tree cluster, facing Down; calibrate carrier tiles and gather/bank wood.",
+                "Keep HQ2 construction resources separate from optional tool spending.",
+                "After both Acts, review HQ2 upgrade and marked base NPC; do not advance day automatically."
+            ],
+            "source_yield_example": {},
+            "source_yield_is_inventory": false,
+            "source_harvest_target": {
+                "wood": 30
+            },
+            "target_semantics": "Primary guide explicitly targets around30 wood; actual delivered quantity must be read."
+        },
+        "4.1": {
+            "minimum_rewards": {
+                "wood": 1,
+                "water": 10
+            },
+            "required_flags": [],
+            "recipe": [
+                "Require observed HQ2.",
+                "Deploy one pump, then one hub facing Down at calibrated source positions.",
+                "Młynar protects below hub; the source uses Spot on its left against ballista fire. Review owned skill behavior and any substitute defender separately.",
+                "Verify healer/support coverage and gather outside hub coverage.",
+                "Bank carriers and verify both wood and water settlement.",
+                "After the observed settlement, optionally use --prepare-planter with protected reserves while the world day is visible; craft stock then separately place and save. If unaffordable, continue without it."
+            ],
+            "source_yield_example": {
+                "wood": 49,
+                "water": 10,
+                "gold": 3
+            },
+            "source_yield_is_inventory": false
+        },
+        "4.2": {
+            "minimum_rewards": {},
+            "required_flags": ["quest_save_verified", "route_unlock_verified"],
+            "recipe": [
+                "Require fresh evidence that first Liaison introduction is pending.",
+                "Empty squad and no tools; verify actual two-drink launch cost.",
+                "Complete the reviewed first-contact dialogue; pause on battle return.",
+                "Save/leave, verify world return, then separately verify quest save and route unlock."
+            ],
+            "source_yield_example": {},
+            "source_yield_is_inventory": false,
+            "maximum_squad": 0
+        },
+        "5.1": {
+            "minimum_rewards": {},
+            "required_flags": ["route_unlock_verified"],
+            "recipe": [
+                "Inspect raid arrival before opening an unexplored route.",
+                "Use reviewed Exchange Troubles policy only if exact actual scene/options match.",
+                "Confirm world return and route unlock; source gold range is not an inventory credit."
+            ],
+            "source_yield_example": {},
+            "source_yield_is_inventory": false
+        },
+        "5.2": {
+            "minimum_rewards": {},
+            "required_flags": ["raid_victory_verified", "lives_preserved_verified"],
+            "recipe": [
+                "Identify actual interception map and enemy count.",
+                "Guide example is Jagged Jungle with 42 enemies; do not treat it as guaranteed.",
+                "Use verified combat placements and check actual lives at settlement.",
+                "Source images show Lava deployed while Beagle remains in hand; later Beagle occupies Fang's original lane tile and Fang is cooling.",
+                "Do not force six simultaneous unique deployment slots. A calibrated replacement policy must verify the old actor, available replacement DP and cooling before deploying the blocker.",
+                "The source does not show whether Fang was retreated or defeated; a funded retreat is an explicit automation policy, and snapshot kill counts are not timing triggers."
+            ],
+            "source_yield_example": {},
+            "source_yield_is_inventory": false
+        },
+        "6.1": {
+            "minimum_rewards": {
+                "wood": 1
+            },
+            "required_flags": [],
+            "recipe": [
+                "Require HQ2; equip two hubs and Beagle, Spot, Hibiscus, Ansel.",
+                "Deploy first hub by lower trees; protect with Spot and Ansel.",
+                "Deploy second hub by upper-right trees; protect with Beagle and Hibiscus.",
+                "Deploy hubs early using actual DP, not source timestamps.",
+                "Validate explicit healer/defender/hub logical tiles and facing against existing MAA E1 medic ranges and native terrain; then verify actual healing, hub health, and observed wood settlement live."
+            ],
+            "source_yield_example": {
+                "wood": 43,
+                "gold": 2
+            },
+            "source_yield_is_inventory": false
+        },
+        "6.2": {
+            "minimum_rewards": {
+                "water": 20
+            },
+            "required_flags": [],
+            "recipe": [
+                "Empty operator squad; equip exactly two pumps, budget two drinks.",
+                "Deploy both on separately verified water tiles by the central island.",
+                "Wait for actual operation bag water20, preserving at least 25 seconds.",
+                "Use save/leave and verify settlement water20; no dialogue or fixed timer requirement."
+            ],
+            "source_yield_example": {
+                "water": 20,
+                "gold": 2
+            },
+            "source_yield_is_inventory": false,
+            "maximum_squad": 0
+        }
+    },
+    "day_end": {
+        "1": ["Review pump stock, food and distinct rested squads for Day2."],
+        "2": ["Inspect actual raid timing; retain HQ2 resources."],
+        "3": [
+            "Use the journaled --upgrade-hq2 mode after fresh current observations: verify actual wood60/water5 and survival, then world HQ2, unchanged Acts and exact debit; no automatic day advance.",
+            "Complete the first Rhodes Island Operator base conversation: exact first dialogue variant, sole Many thanks choice and observed stone5. The journaled BaseNpcDialogue library stops paused; NPC initiation and persistent save/world credit still require validation before Day4.",
+            "Before Day4, refresh actual pump/hub stock and craft affordability after HQ2. With zero starting wood and consumed tools, exact wood24+30+30 leaves14 after first pump/HQ2; a new Day4 pump+hub costs17. Require3 additional observed wood or verified remaining tools; source examples are not guaranteed funding."
+        ],
+        "4": [
+            "Review optional planter stock and saved placement separately; baseline stock preparation is after Act1 while the world day is visible. Stock alone never certifies production.",
+            "Verify Liaison quest save and route availability."
+        ],
+        "5": ["Review raid result, remaining lives and tool budgets."],
+        "6": ["Verify both settlements and campaign save."]
+    },
+    "automatic_day_advance": false
+}

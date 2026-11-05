@@ -1,0 +1,250 @@
+{
+    "schema_version": 1,
+    "id": "shrubbery-guide-mlynar",
+    "theme": "Tales",
+    "stage": "Shrubbery Galore",
+    "stage_id": "sandbox_1_01",
+    "autoplay_enabled": false,
+    "validation_status": "Native geometry now matches source eastern chopper7,11 and collector5,11 with unbuildable6,11 between. Green placement, collector facing/yield and repeat carrier waves are unverified. Current first-wave candidate capacity14 does not certify full source wood24 budget. Autoplay disabled.",
+    "coordinate_system": "registered-1280x720",
+    "anchor_manifest": "anchors/shrubbery-owned.json",
+    "anchors": {
+        "idle": "idle.png",
+        "side": "side.png"
+    },
+    "normal_points": {
+        "chopper": [766, 290],
+        "carrier": [598, 290]
+    },
+    "side_points": {
+        "chopper": [829, 283],
+        "carrier": [672, 298]
+    },
+    "placement_evidence": {
+        "tile_and_camera": "Eastern cell [7,11] live verified with Saria; Młynar must face Left from two columns east of the guide collection tile. Prior upper adjacent-wood cell filled Młynar carry3 and is not the source chopper position.",
+        "owned_squad_image": "I:/MAA-data/sand-player/settlement-recovery-20261031T173000Z/live/00069-six-guide-formation.png",
+        "live_yield_verified": false,
+        "source_image": "I:/MAA-data/sand-guides/20261028/kuniya-day1/12.png",
+        "source_chopper_point": [731, 276],
+        "source_collector_point": [594, 276],
+        "live_mlynar_coverage_verified": false,
+        "logical_tiles": {
+            "chopper": [7, 11],
+            "carrier": [5, 11],
+            "intermediate_unbuildable": [6, 11]
+        },
+        "native_geometry_reference": "tests/native-campaign-tiles.json",
+        "collector_note": "Source image14 collector is two columns west of Mlynar, not the prior lower harvesting tile. Native projection is a candidate until green tile and actual cargo are verified.",
+        "carrier_facing_note": "Left is an experimental west-grove choice; source14 does not establish facing. Live harvest coverage remains unverified."
+    },
+    "steps": [
+        {
+            "action": "wait_dp",
+            "minimum": 12,
+            "remaining_floor": 30
+        },
+        {
+            "action": "deploy",
+            "name": "Młynar",
+            "slot": "chopper",
+            "direction": "Left"
+        },
+        {
+            "action": "maintain_skills",
+            "skills": [
+                {
+                    "name": "Młynar",
+                    "slot": "chopper",
+                    "sp_cost": 42,
+                    "maximum": 3
+                }
+            ],
+            "duration": 26,
+            "remaining_floor": 30
+        },
+        {
+            "action": "wait_dp",
+            "minimum": 16,
+            "remaining_floor": 30
+        },
+        {
+            "action": "deploy",
+            "name": "Beagle",
+            "slot": "carrier",
+            "direction": "Left"
+        },
+        {
+            "action": "collect",
+            "name": "Beagle",
+            "slot": "carrier",
+            "minimum": 3,
+            "timeout": 40,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Beagle",
+            "slot": "carrier"
+        },
+        {
+            "action": "wait_dp",
+            "minimum": 15,
+            "remaining_floor": 30
+        },
+        {
+            "action": "deploy",
+            "name": "Spot",
+            "slot": "carrier",
+            "direction": "Left"
+        },
+        {
+            "action": "collect",
+            "name": "Spot",
+            "slot": "carrier",
+            "minimum": 3,
+            "timeout": 40,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Spot",
+            "slot": "carrier"
+        },
+        {
+            "action": "wait_dp",
+            "minimum": 16,
+            "remaining_floor": 30
+        },
+        {
+            "action": "deploy",
+            "name": "Cardigan",
+            "slot": "carrier",
+            "direction": "Left"
+        },
+        {
+            "action": "collect",
+            "name": "Cardigan",
+            "slot": "carrier",
+            "minimum": 3,
+            "timeout": 40,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Cardigan",
+            "slot": "carrier"
+        },
+        {
+            "action": "wait_dp",
+            "minimum": 12,
+            "remaining_floor": 30
+        },
+        {
+            "action": "deploy",
+            "name": "Noir Corne",
+            "slot": "carrier",
+            "direction": "Left"
+        },
+        {
+            "action": "collect",
+            "name": "Noir Corne",
+            "slot": "carrier",
+            "minimum": 3,
+            "timeout": 40,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Noir Corne",
+            "slot": "carrier"
+        },
+        {
+            "action": "wait_dp",
+            "minimum": 5,
+            "remaining_floor": 30
+        },
+        {
+            "action": "deploy",
+            "name": "Yato",
+            "slot": "carrier",
+            "direction": "Left"
+        },
+        {
+            "action": "collect",
+            "name": "Yato",
+            "slot": "carrier",
+            "minimum": 2,
+            "timeout": 40,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Yato",
+            "slot": "carrier"
+        },
+        {
+            "action": "finish"
+        }
+    ],
+    "required_squad": ["Młynar", "Beagle", "Spot", "Cardigan", "Yato", "Noir Corne"],
+    "zero_capacity_actors": ["Młynar"],
+    "background_skills": [
+        {
+            "name": "Młynar",
+            "slot": "chopper",
+            "sp_cost": 42,
+            "maximum": 3
+        }
+    ],
+    "background_skill_remaining_floor": 25,
+    "resource_budget_note": {
+        "guide_day1_wood_example": 24,
+        "first_pump_wood": 10,
+        "day2_planned_wood": 30,
+        "day3_planned_wood": 30,
+        "hq2_wood_cost": 60,
+        "two_hubs_wood_cost": 14,
+        "day1_wood_needed_if_later_targets_are_exactly_met": 27,
+        "counts_are_planning_targets_not_inventory": true,
+        "current_candidate_first_carrier_wave_capacity": 14,
+        "unresolved": "Repeated carrier availability/DP handling and additional waves are needed to reach the full guide budget.",
+        "day4_fresh_pump_and_hub_wood": 17,
+        "day4_fresh_hub_stone": 1,
+        "budget_assumptions": [
+            "Start with zero wood and no stock of the required tools",
+            "Each deployed tool charge is consumed; actual remaining stock must be observed",
+            "Day2 and Day3 each deliver exactly30 wood; no other wood credits",
+            "HQ2 costs60 wood and5 water; Day4 fresh pump10 plus hub7 wood"
+        ],
+        "guide_example_24_does_not_guarantee_day4_funding": true,
+        "adaptive_budget_note": "With actual Day1 wood24, the stated replacement scenario needs3 extra wood from observed later harvests, or verified existing tool stock. Recompute from real remaining stock; never credit guide examples or synthetic replay results."
+    },
+    "required_formation_skills": {
+        "Młynar": 3,
+        "Beagle": 1,
+        "Spot": 1,
+        "Cardigan": 1
+    },
+    "required_formation_ranks": {
+        "Młynar": 10,
+        "Beagle": 7,
+        "Spot": 7,
+        "Cardigan": 7
+    },
+    "required_formation_levels": {
+        "Młynar": 90,
+        "Beagle": 55,
+        "Spot": 55,
+        "Cardigan": 55,
+        "Yato": 30,
+        "Noir Corne": 30
+    },
+    "required_formation_elites": {
+        "Młynar": 2,
+        "Beagle": 1,
+        "Spot": 1,
+        "Cardigan": 1,
+        "Yato": 0,
+        "Noir Corne": 0
+    }
+}

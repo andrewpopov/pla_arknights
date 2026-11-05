@@ -538,6 +538,12 @@ public class AsstProxy
             loaded &= LoadResIfExists(pcPlatformRes);
         }
 
+        // Local Sand tasks reuse the application's core and controller lease.
+        if (clientType == ClientType.EN)
+        {
+            loaded &= LoadResIfExists(Path.Combine(PathsHelper.BaseDir, "modules", "sand", "pack", "resource"));
+        }
+
         return loaded;
 
         static bool LoadResIfExists(string path)
@@ -764,7 +770,9 @@ public class AsstProxy
         // TODO: 之后把这个 OnUIThread 拆出来
         Execute.OnUIThread(
             async () => {
-                bool runDirectly = SettingsViewModel.StartSettings.RunDirectly;
+                // One-shot queue start preserves the saved startup preference and the normal cancel countdown.
+                bool runDirectly = SettingsViewModel.StartSettings.RunDirectly ||
+                                   Environment.GetCommandLineArgs().Contains("--run-once", StringComparer.OrdinalIgnoreCase);
                 bool isPcConnection = SettingsViewModel.ConnectSettings.IsPCConnectConfig;
                 bool openConnectionTarget = isPcConnection
                     ? SettingsViewModel.StartSettings.OpenPcClientAfterLaunch

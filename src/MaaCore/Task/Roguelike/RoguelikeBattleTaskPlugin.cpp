@@ -12,8 +12,15 @@
 #include "Config/Roguelike/RoguelikeRecruitConfig.h"
 #include "Config/TaskData.h"
 #include "Controller/Controller.h"
+#include "JieGarden/JieGardenBattleSafety.h"
+#include "JieGarden/JieGardenOpening.h"
+#include "JieGarden/JieGardenStrategy.h"
+#include "JieGarden/JieGardenStrategyPolicy.h"
+#include "JieGarden/JieGardenTalismanRoute.h"
 #include "Task/ProcessTask.h"
+#include "Utils/DebugImageHelper.hpp"
 #include "Utils/Logger.hpp"
+#include "Vision/Matcher.h"
 #include "Vision/RegionOCRer.h"
 
 using namespace asst::battle;
@@ -63,12 +70,19 @@ bool asst::RoguelikeBattleTaskPlugin::_run()
         return false;
     }
 
+    const int talisman_row = recognize_jiegarden_talisman_route();
+    if (need_exit()) {
+        return true;
+    }
     if (!update_deployment(true)) {
         Log.error("update deployment failed");
         return false;
     }
 
     cache_oper_elite_status();
+    if (!apply_jiegarden_talisman_route(talisman_row)) {
+        return true;
+    }
     speed_up();
     bool timeout = false;
     auto start_time = std::chrono::steady_clock::now();
@@ -82,6 +96,17 @@ bool asst::RoguelikeBattleTaskPlugin::_run()
         image_prev = std::move(image);
 
         auto duration = std::chrono::steady_clock::now() - start_time;
+        if (m_config->get_theme() == RoguelikeTheme::JieGarden && stop_stalled_jiegarden_battle(duration)) {
+            Matcher running(image_prev);
+            running.set_task_info("BattlePauseCancelCheck");
+            if (running.analyze()) {
+                pause();
+            }
+            save_map(ctrler()->get_image());
+            LogWarn << "Sui battle stalled; stopping without retreating or abandoning: " << m_stage_name;
+            m_task_ptr->set_enable(false);
+            return true;
+        }
         if (!timeout && duration > 8min) {
             timeout = true;
             Log.info("Timeout, retreat!");
@@ -97,7 +122,153 @@ bool asst::RoguelikeBattleTaskPlugin::_run()
     }
     // 通知战斗结束，无论成功与否
     auto info = basic_info_with_what("RoguelikeCombatEnd");
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden) {
+        auto& details = info["details"];
+        details["stage"] = m_stage_name;
+        details["kills"] = m_kills;
+        details["total_kills"] = m_total_kills;
+        details["last_tracked_operators"] = json::array();
+        for (const auto& [oper_tag, location] : m_battlefield_opers) {
+            details["last_tracked_operators"].as_array().emplace_back(
+                json::object { { "name", oper_tag.name }, { "tile", json::array { location.x, location.y } } });
+        }
+        details["failed_placements"] = json::array();
+        for (const auto& [location, attempts] : m_deploy_failure_counts) {
+            details["failed_placements"].as_array().emplace_back(
+                json::object { { "tile", json::array { location.x, location.y } }, { "attempts", attempts } });
+        }
+        // Battle end alone does not establish victory or defeat. Preserve its final HUD for review.
+        utils::save_debug_image(
+            image_prev,
+            utils::path("debug") / "roguelike" / "battle-end",
+            true,
+            "Sui battle-end evidence",
+            m_stage_name,
+            "jpeg",
+            { cv::IMWRITE_JPEG_QUALITY, 90 });
+    }
     callback(AsstMsg::SubTaskExtraInfo, info);
+    return true;
+}
+
+int asst::RoguelikeBattleTaskPlugin::recognize_jiegarden_talisman_route()
+{
+    if (m_config->get_theme() != RoguelikeTheme::JieGarden || m_stage_name != "长驱不复") {
+        return 0;
+    }
+    std::array<std::pair<int, int>, 7> upper, lower;
+    for (int x = 2; x <= 8; ++x) {
+        if (!m_normal_tile_info.contains({ x, 2 }) || !m_normal_tile_info.contains({ x, 4 })) {
+            return 0;
+        }
+        const auto a = m_normal_tile_info.at({ x, 2 }).pos;
+        const auto b = m_normal_tile_info.at({ x, 4 }).pos;
+        upper[x - 2] = { a.x, a.y };
+        lower[x - 2] = { b.x, b.y };
+    }
+    JieGardenRouteVote vote;
+    const auto start = std::chrono::steady_clock::now();
+    std::optional<std::chrono::steady_clock::time_point> visible;
+    int saved = 0;
+    cv::Mat last;
+    // Observe before deployment/skill animations obscure the opening path. Do not speed up here.
+    while (!need_exit() && std::chrono::steady_clock::now() - start < std::chrono::seconds(8)) {
+        last = ctrler()->get_image();
+        if (last.empty() || last.type() != CV_8UC3) {
+            if (!sleep(100)) {
+                break;
+            }
+            continue;
+        }
+        const bool hud = check_pause_button(last);
+        if (hud && !visible) {
+            visible = std::chrono::steady_clock::now();
+        }
+        // The title fade can hide the HUD while the path is already visible.
+        const auto evidence = sample_jiegarden_talisman_route(
+            last.cols,
+            last.rows,
+            [&](int x, int y) {
+                const auto bgr = last.at<cv::Vec3b>(y, x);
+                return std::array<int, 3> { bgr[2], bgr[1], bgr[0] };
+            },
+            upper,
+            lower);
+        vote.observe(evidence);
+        if (saved < 4 &&
+            (evidence.upper >= 3 || evidence.lower >= 3 ||
+             (visible && std::chrono::steady_clock::now() - *visible >= std::chrono::milliseconds(saved * 400)))) {
+            utils::save_debug_image(
+                last,
+                utils::path("debug") / "roguelike" / "talisman-route",
+                true,
+                "Sui opening route evidence",
+                "route");
+            ++saved;
+        }
+        // Keep observing for contradictions instead of locking in on the first flash.
+        if (visible && std::chrono::steady_clock::now() - *visible >= std::chrono::seconds(2)) {
+            break;
+        }
+        if (!sleep(100)) {
+            break;
+        }
+    }
+    const int danger = vote.dangerous_row();
+    LogInfo << "Sui talisman route: danger row " << danger << " upper votes " << vote.upper_votes << " lower votes "
+            << vote.lower_votes;
+    auto info = basic_info_with_what("SuiTalismanRoute");
+    info["details"] = json::object { { "stage", m_stage_name },
+                                     { "dangerous_row", danger },
+                                     { "upper_votes", vote.upper_votes },
+                                     { "lower_votes", vote.lower_votes } };
+    callback(AsstMsg::SubTaskExtraInfo, info);
+    if (danger == 0 && !last.empty()) {
+        utils::save_debug_image(
+            last,
+            utils::path("debug") / "roguelike" / "talisman-route",
+            true,
+            "Sui unresolved opening route",
+            "unknown");
+    }
+    return danger;
+}
+
+bool asst::RoguelikeBattleTaskPlugin::apply_jiegarden_talisman_route(int dangerous_row)
+{
+    if (m_config->get_theme() != RoguelikeTheme::JieGarden || m_stage_name != "长驱不复") {
+        return true;
+    }
+    const bool raidian_e2 = std::ranges::any_of(m_cur_deployment_opers, [&](const auto& oper) {
+        return oper.name == "电弧" && !oper.cooling && m_oper_elite.contains(oper.name) &&
+               m_oper_elite.at(oper.name) == 2 &&
+               RoguelikeRecruit.get_oper_info(m_config->get_theme(), { oper.role, oper.name }).skill == 2;
+    });
+    if (!raidian_e2) {
+        LogInfo << "Sui route formation bypassed: no confirmed E2 Raidian in deployed squad";
+        return true;
+    }
+    // An uncertain observation never authorizes guessing the carry's safe row.
+    if (dangerous_row != 2 && dangerous_row != 4) {
+        pause();
+        LogWarn << "Sui route unresolved: paused before deploying Raidian";
+        m_task_ptr->set_enable(false);
+        return false;
+    }
+    const int safe_row = dangerous_row == 2 ? 4 : 2;
+    const auto plan = RoguelikeCopilot.get_stage_data("长驱不复_route_safe_" + std::to_string(safe_row));
+    if (!plan || plan->deploy_plan.empty()) {
+        pause();
+        m_task_ptr->set_enable(false);
+        return false;
+    }
+    m_deploy_plan = plan->deploy_plan;
+    m_retreat_plan = plan->retreat_plan;
+    // Prevent generic fallback from filling the row traversed by talismans.
+    for (const int x : { 2, 4, 6, 8 }) {
+        m_blacklist_location.insert({ x, dangerous_row });
+    }
+    LogInfo << "Sui route formation: safe row " << safe_row << " Raidian facing left; summons isolate retaliation";
     return true;
 }
 
@@ -182,6 +353,38 @@ bool asst::RoguelikeBattleTaskPlugin::calc_stage_info()
     }
     else {
         opt = RoguelikeCopilot.get_stage_data(m_stage_name);
+    }
+
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden) {
+        const auto& status = m_config->status();
+        const auto raidian = status.opers.find("电弧");
+        const auto skill = status.selected_skills.find("电弧");
+        if (raidian != status.opers.end() && skill != status.selected_skills.end() &&
+            use_jiegarden_dark_arrows_s2_plan(m_stage_name, raidian->second.elite, skill->second)) {
+            if (auto variant = RoguelikeCopilot.get_stage_data("暗箭难防_raidian_s2")) {
+                opt = std::move(variant);
+                auto info = basic_info_with_what("SuiStagePlanSelection");
+                info["details"] = json::object { { "stage", m_stage_name },
+                                                 { "plan", "暗箭难防_raidian_s2" },
+                                                 { "raidian_elite", raidian->second.elite },
+                                                 { "selected_skill", skill->second } };
+                callback(AsstMsg::SubTaskExtraInfo, info);
+            }
+        }
+
+        if (raidian != status.opers.end() && skill != status.selected_skills.end() &&
+            use_jiegarden_boss_s1_plan(m_stage_name, raidian->second.elite, skill->second)) {
+            if (auto variant = RoguelikeCopilot.get_stage_data("破岁阵祀_raidian_s1")) {
+                opt = std::move(variant);
+                LogInfo << "Sui boss plan: confirmed E2 Raidian with selected S1";
+                auto info = basic_info_with_what("SuiBossPlanSelection");
+                info["details"] = json::object { { "stage", m_stage_name },
+                                                 { "plan", "破岁阵祀_raidian_s1" },
+                                                 { "raidian_elite", raidian->second.elite },
+                                                 { "selected_skill", skill->second } };
+                callback(AsstMsg::SubTaskExtraInfo, info);
+            }
+        }
     }
 
     if (opt) {
@@ -330,6 +533,21 @@ bool asst::RoguelikeBattleTaskPlugin::do_best_deploy()
     LogTraceFunction;
     Log.info("m_kills", m_kills);
 
+    // Expired opening positions must not reappear through generic fallback placement.
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden) {
+        for (const auto& [group, plans] : m_deploy_plan) {
+            for (const auto& plan : plans) {
+                if (m_kills <= plan.kill_upper_bound || m_blacklist_location.contains(plan.location)) {
+                    continue;
+                }
+                if (expired_jiegarden_deploy_location(m_kills, plan.location, m_deploy_plan)) {
+                    m_blacklist_location.insert(plan.location);
+                    LogInfo << "Sui deployment window closed: tile " << plan.location << " kills " << m_kills;
+                }
+            }
+        }
+    }
+
     bool is_success = false;
     for (const auto& info : m_retreat_plan) {
         if (m_kills >= info.kill_lower_bound && m_kills <= info.kill_upper_bound) {
@@ -401,7 +619,20 @@ bool asst::RoguelikeBattleTaskPlugin::do_best_deploy()
         }
     }
     std::sort(deploy_plan_list.begin(), deploy_plan_list.end());
+    const bool preferred_opening_pending =
+        m_config->get_theme() == RoguelikeTheme::JieGarden &&
+        !std::ranges::any_of(
+            m_battlefield_opers,
+            [](const auto& entry) { return jiegarden_opening_preference(entry.first.name) > 0; }) &&
+        std::ranges::any_of(deploy_plan_list, [&](const auto& plan) {
+            return jiegarden_opening_preference(plan.oper_name) > 0 && !m_used_tiles.contains(plan.placed) &&
+                   !m_blacklist_location.contains(plan.placed);
+        });
     for (const auto& deploy_plan : deploy_plan_list) {
+        if (preferred_opening_pending && jiegarden_secondary_opener(deploy_plan.oper_name)) {
+            LogTrace << "Defer secondary Sui opener for Raidian or Wisadel: " << deploy_plan.oper_name;
+            continue;
+        }
         if (!m_used_tiles.contains(deploy_plan.placed) &&
             !m_blacklist_location.contains(deploy_plan.placed) /* 判断该位置是否已被占据 */) {
             if (auto oper_it = std::ranges::find_if(
@@ -410,14 +641,27 @@ bool asst::RoguelikeBattleTaskPlugin::do_best_deploy()
                         return oper.role == deploy_plan.role && oper.name == deploy_plan.oper_name;
                     });
                 oper_it == m_cur_deployment_opers.end() || !oper_it->available) { // 等费
+                if (oper_it != m_cur_deployment_opers.end() && m_config->get_theme() == RoguelikeTheme::JieGarden &&
+                    oper_it->role == Role::Drone && (oper_it->name == "赛柯" || oper_it->name == "Cycle") &&
+                    oper_it->cost <= m_cost) {
+                    // A summon quota or deployment limit can gray out Cycle even with enough DP.
+                    // Keep its authored lane pending, but let a ready healer or blocker deploy.
+                    LogTrace << "Defer unavailable Cycle with sufficient DP: " << oper_it->name << " cost "
+                             << oper_it->cost << " DP " << m_cost;
+                    continue;
+                }
                 LogTrace << "    best deploy is" << deploy_plan.oper_name << "with rank" << deploy_plan.rank
                          << "but now waiting for cost.";
                 return true;
             }
-            deploy_oper(deploy_plan.role, deploy_plan.oper_name, deploy_plan.placed, deploy_plan.direction);
+            const bool accepted =
+                deploy_oper(deploy_plan.role, deploy_plan.oper_name, deploy_plan.placed, deploy_plan.direction);
             battle::OperNameTag oper_tag { deploy_plan.role, deploy_plan.oper_name };
             // 防止滑动丢失(有些物体比如鸟笼没有方向),点一下右下角费用那里
             asst::BattleHelper::cancel_oper_selection();
+            if (!confirm_deployment(accepted, deploy_plan.role, deploy_plan.oper_name, deploy_plan.placed)) {
+                return true;
+            }
             // 开始计时
             auto deployed_time = std::chrono::steady_clock::now();
             m_deployed_time.insert_or_assign(oper_tag, deployed_time);
@@ -432,8 +676,119 @@ bool asst::RoguelikeBattleTaskPlugin::do_best_deploy()
     return is_success;
 }
 
+bool asst::RoguelikeBattleTaskPlugin::confirm_deployment(
+    bool accepted,
+    battle::Role role,
+    const std::string& name,
+    const Point& location)
+{
+    if (m_config->get_theme() != RoguelikeTheme::JieGarden || role == Role::Drone) {
+        return accepted;
+    }
+    bool analyzed = accepted && update_deployment();
+    auto in_hand = std::ranges::find_if(m_cur_deployment_opers, [&](const auto& oper) {
+        return oper.role == role && oper.name == name;
+    });
+    if (accepted && analyzed && in_hand != m_cur_deployment_opers.end() && !in_hand->cooling) {
+        // A slow emulator may still show the hand card during the placement animation.
+        sleep(350);
+        analyzed = update_deployment();
+        in_hand = std::ranges::find_if(m_cur_deployment_opers, [&](const auto& oper) {
+            return oper.role == role && oper.name == name;
+        });
+    }
+    if (accepted && analyzed && in_hand == m_cur_deployment_opers.end()) {
+        return true;
+    }
+
+    m_battlefield_opers.erase(battle::OperNameTag { role, name });
+    m_used_tiles.erase(location);
+    if (accepted && (!analyzed || in_hand->cooling)) {
+        LogWarn << "Sui deployment has no active defender confirmation: " << name << " tile " << location
+                << " analyzed " << analyzed;
+        return false;
+    }
+
+    if (in_hand != m_cur_deployment_opers.end()) {
+        LogWarn << "Sui rejected placement hand state: " << name << " tile " << location << " card cost "
+                << in_hand->cost << " available " << in_hand->available;
+    }
+    const int failures = ++m_deploy_failure_counts[location];
+    if (failures == 1 && try_clear_jiegarden_revenant(location)) {
+        // The next normal deployment attempt must still confirm that the operator left the hand.
+        // Keep the failure count so a respawn or unsuccessful retreat cannot cause an unbounded loop.
+        return false;
+    }
+    const bool retry = retry_jiegarden_deploy(failures);
+    if (!retry) {
+        m_blacklist_location.insert(location);
+    }
+    LogWarn << "Sui deployment not confirmed: " << name << " tile " << location << " attempt " << failures
+            << " retry same tile " << retry << " DP " << m_cost;
+    const auto evidence = ctrler()->get_image();
+    if (!evidence.empty()) {
+        save_map(evidence);
+    }
+    return false;
+}
+
+bool asst::RoguelikeBattleTaskPlugin::try_clear_jiegarden_revenant(const Point& location)
+{
+    if (m_config->get_theme() != RoguelikeTheme::JieGarden || m_used_tiles.contains(location) ||
+        m_revenant_clear_attempts.size() >= 4 || m_revenant_clear_attempts.contains(location) ||
+        !std::ranges::any_of(m_battlefield_opers, [](const auto& entry) { return entry.first.name == "维什戴尔"; })) {
+        return false;
+    }
+    m_revenant_clear_attempts.insert(location);
+    cancel_oper_selection();
+    if (need_exit() || !click_oper_on_battlefield(location)) {
+        return false;
+    }
+    // W's automatically spawned tokens are absent from the hand and occupancy table.
+    // A failed placement only authorizes inspection, never an unconditional retreat.
+    for (int observation = 0; observation < 2; ++observation) {
+        const auto image = ctrler()->get_image();
+        if (need_exit() || image.empty() || analyze_detail_page_oper_name(image, battle::Role::Drone) != "魂灵之影") {
+            cancel_oper_selection();
+            LogInfo << "Sui blocked-tile recovery: no verified Revenant at" << location;
+            return false;
+        }
+        if (observation == 0) {
+            sleep(150);
+        }
+    }
+    const auto evidence = ctrler()->get_image();
+    utils::save_debug_image(
+        evidence,
+        utils::path("debug") / "roguelike" / "revenant-recovery",
+        true,
+        "Verified Revenant before retreat",
+        m_stage_name);
+    const bool sent = click_retreat();
+    cancel_oper_selection();
+    if (!sent) {
+        return false;
+    }
+    sleep(250);
+    set_position_full(location, false);
+    LogInfo << "Sui blocked-tile recovery: verified Revenant retreat sent at" << location
+            << "; retrying operator deployment with hand confirmation";
+    return true;
+}
+
 bool asst::RoguelikeBattleTaskPlugin::do_once(const cv::Mat& image, const cv::Mat& image_prev)
 {
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden) {
+        // Failed paused deployments can leave a valid battlefield with frozen DP and cooldowns.
+        // Reuse the exact center-label gate and its recognized resume graph, never toggle blindly.
+        OCRer paused(image);
+        paused.set_task_info("LocalBattleUnpause");
+        if (paused.analyze()) {
+            LogWarn << "Sui idle frame is paused; running recognized battle resume";
+            ProcessTask(*this, { "LocalBattleResume" }).set_retry_times(0).run();
+            return true;
+        }
+    }
     check_drone_tiles();
 
     // TODO: move this to controller
@@ -450,7 +805,46 @@ bool asst::RoguelikeBattleTaskPlugin::do_once(const cv::Mat& image, const cv::Ma
     prev_frame_time = std::chrono::steady_clock::now();
 
     if (!m_first_deploy) {
-        use_all_ready_skill(image);
+        // Keep the pre-burst frame for retrospective chest/retaliation diagnosis.
+        bool capture_w_burst = false;
+        if (m_config->get_theme() == RoguelikeTheme::JieGarden && m_w_burst_evidence_count < 3) {
+            for (const auto& [oper_tag, location] : m_battlefield_opers) {
+                if (oper_tag.name != "维什戴尔") {
+                    continue;
+                }
+                const auto usage = m_skill_usage.find(oper_tag);
+                const bool automatic = usage != m_skill_usage.end() &&
+                                       (usage->second == SkillUsage::Possibly || usage->second == SkillUsage::Times);
+                capture_w_burst = automatic && is_skill_ready(location, image);
+                break;
+            }
+        }
+        const auto skill_time_before = m_last_use_skill_time;
+        const bool used_skill = use_all_ready_skill(image);
+        if (capture_w_burst) {
+            for (const auto& [oper_tag, when] : m_last_use_skill_time) {
+                const auto before = skill_time_before.find(oper_tag);
+                if (oper_tag.name == "维什戴尔" && (before == skill_time_before.end() || before->second != when)) {
+                    ++m_w_burst_evidence_count;
+                    LogInfo << "Sui W pre-burst evidence: " << m_stage_name << " kills " << m_kills << " total "
+                            << m_total_kills << " DP " << m_cost << " sample " << m_w_burst_evidence_count;
+                    utils::save_debug_image(
+                        image,
+                        utils::path("debug") / "roguelike" / "w-bursts",
+                        true,
+                        "Sui pre-burst evidence",
+                        m_stage_name,
+                        "jpeg",
+                        { cv::IMWRITE_JPEG_QUALITY, 90 });
+                    break;
+                }
+            }
+        }
+        if (used_skill) {
+            // Skills can add summon cards and shift every hand position. Observe a fresh frame before deploying.
+            LogInfo << "Refreshing battle hand after skill activation";
+            return true;
+        }
     }
 
     std::unordered_set<std::string> pre_cooling;
@@ -469,8 +863,11 @@ bool asst::RoguelikeBattleTaskPlugin::do_once(const cv::Mat& image, const cv::Ma
             if (std::chrono::steady_clock::now() - m_deployed_time.at(oper_tag) >=
                 oper_info.auto_retreat * std::chrono::seconds(1)) {
                 // 时间到了就撤退
-                asst::BattleHelper::retreat_oper(oper_tag.role, oper_tag.name);
-                m_deployed_time.erase(oper_tag);
+                if (asst::BattleHelper::retreat_oper(oper_tag.role, oper_tag.name)) {
+                    m_deployed_time.erase(oper_tag);
+                    // Retreat inserts a cooling card; the old frame no longer describes the hand.
+                    return true;
+                }
             }
         }
     }
@@ -561,7 +958,13 @@ bool asst::RoguelikeBattleTaskPlugin::do_once(const cv::Mat& image, const cv::Ma
         }
         const auto& [placed_loc, direction] = *best_loc_opt;
 
-        deploy_oper(best_oper.role, best_oper.name, placed_loc, direction);
+        const bool accepted = deploy_oper(best_oper.role, best_oper.name, placed_loc, direction);
+        if (m_config->get_theme() == RoguelikeTheme::JieGarden) {
+            cancel_oper_selection();
+            if (!confirm_deployment(accepted, best_oper.role, best_oper.name, placed_loc)) {
+                return true;
+            }
+        }
         postproc_of_deployment_conditions(best_oper, placed_loc, direction);
 
         battle::OperNameTag oper_tag { best_oper.role, best_oper.name };
@@ -707,12 +1110,35 @@ std::optional<size_t> asst::RoguelikeBattleTaskPlugin::check_urgent(
     return m_urgent_home_index.front();
 }
 
+bool asst::RoguelikeBattleTaskPlugin::jiegarden_warmup_safe() const
+{
+    if (m_homes_status.empty() ||
+        std::ranges::any_of(m_homes_status, [](const auto& home) { return home.wait_blocking; })) {
+        return false;
+    }
+    // The Phalanx caster does not attack during S2 startup. Require an existing damage source.
+    return std::ranges::any_of(m_battlefield_opers, [](const auto& entry) {
+        const auto& tag = entry.first;
+        return tag.role == Role::Sniper || (tag.role == Role::Warrior && tag.name != "玛恩纳") ||
+               (tag.role == Role::Caster && tag.name != "圣聆初雪" && tag.name != "卡涅利安" && tag.name != "蜜蜡" &&
+                tag.name != "薄绿" && tag.name != "林");
+    });
+}
+
 std::optional<asst::battle::DeploymentOper> asst::RoguelikeBattleTaskPlugin::calc_best_oper() const
 {
+    // Cycle needs an authored firing lane; generic blocking and direction scoring are unsuitable.
+    const auto needs_authored_plan = [&](const DeploymentOper& oper) {
+        return m_config->get_theme() == RoguelikeTheme::JieGarden && oper.role == Role::Drone &&
+               (oper.name == "赛柯" || oper.name == "Cycle");
+    };
     bool has_medic = false;
     bool has_blocking = false;
     bool has_air_defense = false;
     for (const auto& oper : m_cur_deployment_opers) {
+        if (needs_authored_plan(oper)) {
+            continue;
+        }
         const auto& role = oper.role;
         switch (role) {
         case Role::Medic:
@@ -747,9 +1173,61 @@ std::optional<asst::battle::DeploymentOper> asst::RoguelikeBattleTaskPlugin::cal
     bool use_medic = has_medic && m_homes_status[m_cur_home_index].wait_medic && !m_ranged_full;
     Log.trace("use_air_defense", use_air_defense, ", use_blocking", use_blocking, ", use_medic", use_medic);
 
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden && m_battlefield_opers.empty() && !m_ranged_full) {
+        const auto carry = jiegarden_opening_carry(
+            m_cur_deployment_opers,
+            [&](const auto& oper) { return jiegarden_opening_preference(oper.name) > 0 && !get_position_full(oper); },
+            [](const auto& oper) { return jiegarden_opening_preference(oper.name); });
+        if (carry) {
+            const auto& oper = m_cur_deployment_opers[*carry];
+            if (oper.available) {
+                return oper;
+            }
+            LogTrace << "Reserve DP for preferred Sui opening carry: " << oper.name;
+            return std::nullopt;
+        }
+    }
+
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden && use_air_defense &&
+        m_force_air_defense.stop_blocking_deploy_num == 0 && m_battlefield_opers.empty()) {
+        const auto carry = jiegarden_opening_carry(
+            m_cur_deployment_opers,
+            [&](const auto& oper) {
+                return get_role_position(oper.role) == OperPosition::AirDefense &&
+                       jiegarden_recruit_role(oper.name) == JieGardenRecruitRole::Core;
+            },
+            [&](const auto& oper) {
+                return RoguelikeRecruit.get_oper_info(m_config->get_theme(), { oper.role, oper.name }).recruit_priority;
+            });
+        if (carry) {
+            const auto& oper = m_cur_deployment_opers[*carry];
+            if (oper.available) {
+                return oper;
+            }
+            LogTrace << "Reserve DP for Sui opening carry: " << oper.name;
+            return std::nullopt;
+        }
+    }
+
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden && !use_blocking && !use_medic && !m_ranged_full &&
+        jiegarden_warmup_safe()) {
+        const auto warmup = std::ranges::find_if(m_cur_deployment_opers, [&](const auto& oper) {
+            return oper.name == "圣聆初雪" && !oper.cooling &&
+                   RoguelikeRecruit.get_oper_info(m_config->get_theme(), { oper.role, oper.name }).skill == 2;
+        });
+        if (warmup != m_cur_deployment_opers.end()) {
+            if (warmup->available) {
+                LogTrace << "Sui protected lane: deploy Pramanix early for S2 startup";
+                return *warmup;
+            }
+            LogTrace << "Sui protected lane: reserve DP for Pramanix S2 instead of auxiliary summons";
+            return std::nullopt;
+        }
+    }
+
     std::vector<DeploymentOper> cur_available;
     for (const auto& oper : m_cur_deployment_opers) {
-        if (oper.available) {
+        if (oper.available && !needs_authored_plan(oper)) {
             cur_available.emplace_back(oper);
         }
     }
@@ -822,6 +1300,9 @@ void asst::RoguelikeBattleTaskPlugin::clear()
 
     m_cur_home_index = 0;
     m_first_deploy = true;
+    m_deploy_failure_counts.clear();
+    m_w_burst_evidence_count = 0;
+    m_revenant_clear_attempts.clear();
     m_melee_full = false;
     m_ranged_full = false;
     m_homes_status.clear();
@@ -963,7 +1444,8 @@ std::optional<asst::RoguelikeBattleTaskPlugin::DeployInfo>
 
     // 取距离最近的N个点，计算分数。然后使用得分最高的点
     constexpr int CalcPointCount = 4;
-    for (const auto& loc : available_loc | std::views::take(CalcPointCount)) {
+    const size_t candidate_count = oper.role == battle::Role::Medic ? available_loc.size() : CalcPointCount;
+    for (const auto& loc : available_loc | std::views::take(candidate_count)) {
         const auto& [cur_direction, cur_score] = calc_best_direction_and_score(loc, oper, home.direction);
         // 离得远的要扣分
         constexpr int DistWeights = -1050;
@@ -1081,7 +1563,7 @@ asst::RoguelikeBattleTaskPlugin::DirectionAndScore asst::RoguelikeBattleTaskPlug
                 if (auto iter = m_used_tiles.find(absolute_pos);
                     iter != m_used_tiles.cend() &&
                     iter->second.role != battle::Role::Drone) { // 根据哪个方向上人多决定朝向哪
-                    score += 10'000;
+                    score += 100'000;
                 }
                 if (auto iter = m_side_tile_info.find(absolute_pos); iter == m_side_tile_info.end()) {
                 }

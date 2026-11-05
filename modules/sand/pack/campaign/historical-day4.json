@@ -1,0 +1,17 @@
+{
+    "day": 4,
+    "acts_used": 0,
+    "hq": 1,
+    "wood": 3,
+    "water": 1,
+    "drinks": 0,
+    "raw_food_energy": 80,
+    "squad_size": 3,
+    "squad": ["Blaze", "Mountain", "Saria"],
+    "tired": [],
+    "threat": "unknown",
+    "settled": true,
+    "snapshot_current": false,
+    "evidence": "Historical 2026-10-28 cooking preview: Ready1 +20/60. No live state requested.",
+    "stone": 1
+}

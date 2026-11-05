@@ -1,0 +1,66 @@
+{
+    "schema_version": 1,
+    "item_id": "sandbox_1_venison",
+    "english_name": "Puffball Tenderloin",
+    "japanese_name": "まんまるスライス",
+    "base_ingredient_energy": 40,
+    "source_example_count": 2,
+    "source_example_base_energy": 80,
+    "template": "resource/template/SandSettlementTenderloin.png",
+    "template_sha256": "ccb5743bd1e87de066bb77e3434b3fab38fdfabbffc90b6f0b1747b1e6e2bb1c",
+    "source_image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\26.png",
+    "source_image_sha256": "867a6b0053287f242e907fd6f440facaea9996906684da047ad00098cef1f6ff",
+    "evidence_preparation": {
+        "left_pillar_removed_px": 40,
+        "scale": "720/source_height",
+        "crop": [72, 558, 50, 45],
+        "scope": "Saved result-panel recognition only; never battle/map coordinates"
+    },
+    "native_probe_report": "I:\\MAA-data\\sand-player\\food-recognition-20261030\\native-probe-report.json",
+    "native_probe_images": 102,
+    "independent_positives": [
+        {
+            "source": "kuniya-days2-3/image-21.png",
+            "score": 0.979709
+        },
+        {
+            "source": "kuniya-days4-6/image-39.png",
+            "score": 0.985643
+        }
+    ],
+    "cached_tables": {
+        "en_US": {
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+            "sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313"
+        },
+        "ja_JP": {
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\ja_JP-sandbox_perm_table.json",
+            "sha256": "db0cf52bc86d84b98a59c5e0a10bf1fe4d3f1584607cecb2c0f72ad82fcf6114"
+        }
+    },
+    "game_connected": false,
+    "actual_english_reward_positive": false,
+    "inventory_credit": false,
+    "native_counter_reports": [
+        "I:/MAA-data/sand-player/food-recognition-20261030/native-final-report.json",
+        "I:/MAA-data/sand-player/food-recognition-20261030/native-wide-counts-report.json"
+    ],
+    "english_reader_regression": {
+        "report": "I:/MAA-data/sand-player/food-recognition-20261030/english-reader/report.json",
+        "expected_counts_preserved": true,
+        "gather_settled": {
+            "wood": 2,
+            "water": 1,
+            "gold": 2,
+            "fowlbeast_wing": 1,
+            "wild_plant": 1
+        },
+        "second_result": {
+            "wood": 11,
+            "gold": 3
+        },
+        "new_tenderloin_english_positive": false
+    },
+    "counter_crop_policy": "Original32px crop first; bounded60px wide retry only on failed parse/confidence; one magnified retry after that.",
+    "corpus_note": "Three matches among102 replayed frames; two independently reviewed positives and two explicit English non-result negatives. Remaining corpus is not exhaustively annotated."
+}

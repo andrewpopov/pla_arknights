@@ -54,6 +54,8 @@ bool asst::SingleStepTask::append_copilot_action(const json::value& details)
     LogTraceFunction;
 
     auto task = std::make_shared<SingleStepBattleProcessTask>(m_callback, m_inst, TaskType);
+    // A failed batch may already have deployed units; do not replay earlier actions.
+    task->set_retry_times(0);
 
     try {
         // 请参考自动战斗协议

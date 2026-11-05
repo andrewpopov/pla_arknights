@@ -1,0 +1,27 @@
+{
+    "example_only": true,
+    "day": 4,
+    "acts_used": 0,
+    "hq": 2,
+    "wood": 17,
+    "water": 0,
+    "stone": 1,
+    "drinks": 0,
+    "squad_size": 1,
+    "squad": ["Młynar"],
+    "tired": [],
+    "threat": "clear",
+    "settled": true,
+    "snapshot_current": true,
+    "tools": {},
+    "raw_food_inventory": {
+        "sandbox_1_wheat": 6
+    },
+    "raw_food_inventory_complete": true,
+    "food_spendable_ids": ["sandbox_1_wheat"],
+    "food_reserves": {
+        "sandbox_1_wheat": 1
+    },
+    "food_energy_multiplier": 1,
+    "conversion_note": "Illustrative1x rate, not an active-game mode observation."
+}

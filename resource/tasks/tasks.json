@@ -1691,6 +1691,8 @@
     "RecruitBegin": {
         "algorithm": "JustReturn",
         "next": [
+            "RecruitBegin@LoadingIcon",
+            "Recruit@ReturnConfirm",
             "RecruitFlag",
             "Recruit@FromRecruitTagsPage",
             "Recruit",
@@ -2242,6 +2244,7 @@
     "VisitBegin": {
         "algorithm": "JustReturn",
         "next": [
+            "VisitBegin@LoadingIcon",
             "Visit",
             "FriendsList",
             "StartToVisit",
@@ -2292,7 +2295,7 @@
             ]
         ],
         "roi": [1080, 570, 200, 130],
-        "next": ["VisitLimited", "VisitNext", "VisitNextBlack", "VisitNextOcr"]
+        "next": ["VisitBegin@LoadingIcon", "VisitLimited", "VisitNext", "VisitNextBlack", "VisitNextOcr"]
     },
     "VisitNextBlack": {
         "method": "HSVCount",
@@ -2310,7 +2313,7 @@
         "text": ["访问下位"],
         "action": "ClickSelf",
         "roi": [1080, 570, 200, 130],
-        "next": ["VisitLimited", "VisitNext", "VisitNextBlack", "VisitNextOcr"]
+        "next": ["VisitBegin@LoadingIcon", "VisitLimited", "VisitNext", "VisitNextBlack", "VisitNextOcr"]
     },
     "MallBegin": {
         "algorithm": "JustReturn",
@@ -2512,6 +2515,7 @@
     "InfrastBegin": {
         "algorithm": "JustReturn",
         "next": [
+            "Infrast@ReturnConfirm",
             "Infrast",
             "InfrastNotification",
             "InfrastEnteredFlag",
@@ -4686,7 +4690,7 @@
         "specificRect": [1170, 20, 60, 60],
         "postDelay": 50,
         "maxTimes": 10,
-        "next": ["BattlePauseCancelCheck", "BattlePauseCancel"]
+        "next": ["BattleDirectionCancelResume", "BattlePauseCancelCheck", "BattlePauseCancel"]
     },
     "BattlePauseCancelCheck": {
         "template": "BattleOfficiallyBegin.png",
@@ -4697,7 +4701,8 @@
         "algorithm": "JustReturn",
         "action": "ClickRect",
         "specificRect": [630, 0, 20, 20],
-        "postDelay": 500
+        "postDelay": 500,
+        "next": ["BattleDirectionCancel", "BattleSelectionCancelDone"]
     },
     "BattleAvatarData": {
         "template": "empty.png",
@@ -6948,5 +6953,31 @@
         "action": "ClickRect",
         "specificRect": [169, 473, 88, 104],
         "postDelay": 1000
+    },
+    "RecruitBegin@LoadingIcon": {
+        "baseTask": "LoadingIcon",
+        "algorithm": "MatchTemplate",
+        "template": "LoadingIcon.png",
+        "templThreshold": 0.95,
+        "roi": [480, 210, 320, 280],
+        "action": "DoNothing",
+        "maxTimes": 60,
+        "postDelay": 500,
+        "next": ["RecruitBegin"],
+        "exceededNext": ["RecruitFlag"],
+        "Doc": "Wait for a positively recognized Rhodes Island loading screen after quick navigation. Bounded retries; no repeat navigation taps. On timeout require the real recruitment page."
+    },
+    "VisitBegin@LoadingIcon": {
+        "baseTask": "LoadingIcon",
+        "algorithm": "MatchTemplate",
+        "template": "LoadingIcon.png",
+        "templThreshold": 0.95,
+        "roi": [480, 210, 320, 280],
+        "action": "DoNothing",
+        "maxTimes": 60,
+        "postDelay": 500,
+        "next": ["VisitBegin"],
+        "exceededNext": ["VisitLimited", "VisitNext", "VisitNextBlack", "VisitNextOcr"],
+        "Doc": "Wait on recognized loading screens between friend visits; resume the existing visit graph without navigation taps while loading."
     }
 }

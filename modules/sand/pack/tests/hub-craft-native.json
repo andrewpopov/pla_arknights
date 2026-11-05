@@ -1,0 +1,100 @@
+{
+    "native": {
+        "identity": [
+            {
+                "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\pump-recipe.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [514, 184, 141, 24],
+                        "score": 0.958783,
+                        "task": "SandAuto@PumpRecipeScreen",
+                        "text": "CrabbiePumpie"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@HubRecipeScreen"
+                    }
+                ]
+            },
+            {
+                "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\workbench.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "hit": false,
+                        "task": "SandAuto@PumpRecipeScreen"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@HubRecipeScreen"
+                    }
+                ]
+            },
+            {
+                "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-43.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "hit": false,
+                        "task": "SandAuto@PumpRecipeScreen"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@HubRecipeScreen"
+                    }
+                ]
+            }
+        ],
+        "guide_materials": [
+            {
+                "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-43.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [298, 551, 36, 12],
+                        "score": 0.962237,
+                        "text": "9/14"
+                    }
+                ]
+            }
+        ],
+        "guide_quantity": [
+            {
+                "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-43.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [767, 511, 21, 32],
+                        "score": 0.960122,
+                        "text": "2"
+                    }
+                ]
+            }
+        ]
+    },
+    "enlarged": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\hub-craft-offline-20261028\\enlarged\\guide-recipe-reward-count-175.png",
+            "mode": "ocr",
+            "results": [
+                {
+                    "rect": [468, 295, 186, 68],
+                    "score": 0.999549,
+                    "text": "19/14"
+                },
+                {
+                    "rect": [864, 289, 121, 79],
+                    "score": 0.997749,
+                    "text": "4/2"
+                }
+            ]
+        }
+    ],
+    "source_image": "I:/MAA-data/sand-guides/20261028/kuniya-days4-6/image-43.png",
+    "source_sha256": "17eee8b9f3c0ca04689e32295459337b052afbe5e1bce412e5d6dbe91f161a6e",
+    "actual_english_hub_positive": false,
+    "quantity_two_not_admitted_for_crafting": true
+}

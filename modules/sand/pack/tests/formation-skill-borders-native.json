@@ -1,0 +1,587 @@
+{
+    "kind": "Read-only native generic selected-skill border replay",
+    "game_connected": false,
+    "task_sha256": "d129c3d0ae59cec02e512b1bfa2524fef382798cb9456f4a4a3406bbe4299dff",
+    "positive_slots": [1, 2, 3, 4],
+    "right_column_positive_verified": false,
+    "native": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill2Bottom"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [544, 133, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot1Skill3Corner",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [496, 193, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot1Skill3Bottom",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [406, 273, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot2Skill1Corner",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [358, 333, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot2Skill1Bottom",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill3Bottom"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [406, 413, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot3Skill1Corner",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [358, 473, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot3Skill1Bottom",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill3Bottom"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [406, 553, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot4Skill1Corner",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [358, 613, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot4Skill1Bottom",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill3Bottom"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\takeover-20261031T022729Z\\live\\00004-campaign-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill1Bottom"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [475, 133, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot1Skill2Corner",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [427, 193, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot1Skill2Bottom",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill1Bottom"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [475, 273, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot2Skill2Corner",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [427, 333, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot2Skill2Bottom",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill1Bottom"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [475, 413, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot3Skill2Corner",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [427, 473, 3, 3],
+                    "score": 1.0,
+                    "task": "SandFormation@Slot3Skill2Bottom",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill3Bottom"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot1Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot2Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot3Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot4Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot5Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot6Skill3Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill1Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill1Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill2Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill2Bottom"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill3Corner"
+                },
+                {
+                    "hit": false,
+                    "task": "SandFormation@Slot7Skill3Bottom"
+                }
+            ]
+        }
+    ]
+}

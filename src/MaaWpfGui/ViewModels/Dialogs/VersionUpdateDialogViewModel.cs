@@ -560,6 +560,16 @@ public partial class VersionUpdateDialogViewModel : Screen
     /// <returns>Task</returns>
     public async Task ShowUpdateOrDownload()
     {
+        if (!SettingsViewModel.VersionUpdateSettings.IsStockUpdateSupported)
+        {
+            if (!Bootstrapper.IsCoreInitSkipped)
+            {
+                await ResourceUpdater.ResourceUpdateAndReloadAsync();
+            }
+
+            return;
+        }
+
         if (IsFirstBootAfterUpdate)
         {
             IsFirstBootAfterUpdate = false;

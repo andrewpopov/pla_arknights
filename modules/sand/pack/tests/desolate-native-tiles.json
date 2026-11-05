@@ -1,0 +1,2233 @@
+{
+    "schema_version": 1,
+    "native_configuration": "Debug",
+    "source": "I:\\MAA-data\\sand-player\\daily-sand-test-20261031T033300Z\\desolate-native-projection.json",
+    "sha256": "958cba1ba89589cfb7857d894a5dc054ce7eaeb0ba87a4b5bd9ccbfd0a0823f9",
+    "stages": [
+        {
+            "camera_shift": [0, 0],
+            "floor_plane_available": true,
+            "floor_plane_live_verified": false,
+            "height": 13,
+            "level_id": "obt/sandbox/sandbox_1/level_sandbox1_26",
+            "live_camera_verified": false,
+            "mode": "tile_projection",
+            "name": "\u8352\u5f03\u8fce\u654c\u4e4b\u5904",
+            "stage_id": "sandbox_1_26",
+            "tiles": [
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [287, -151],
+                    "floor_selected": [385, -49],
+                    "height_type": 1,
+                    "normal": [287, -151],
+                    "selected": [385, -49],
+                    "tile": [0, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [351, -151],
+                    "floor_selected": [439, -57],
+                    "height_type": 1,
+                    "normal": [351, -151],
+                    "selected": [439, -57],
+                    "tile": [1, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [415, -151],
+                    "floor_selected": [493, -66],
+                    "height_type": 1,
+                    "normal": [415, -151],
+                    "selected": [493, -66],
+                    "tile": [2, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [479, -151],
+                    "floor_selected": [549, -74],
+                    "height_type": 1,
+                    "normal": [479, -151],
+                    "selected": [549, -74],
+                    "tile": [3, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [544, -151],
+                    "floor_selected": [605, -83],
+                    "height_type": 1,
+                    "normal": [544, -151],
+                    "selected": [605, -83],
+                    "tile": [4, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [608, -151],
+                    "floor_selected": [663, -92],
+                    "height_type": 1,
+                    "normal": [608, -151],
+                    "selected": [663, -92],
+                    "tile": [5, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [672, -151],
+                    "floor_selected": [721, -101],
+                    "height_type": 1,
+                    "normal": [672, -151],
+                    "selected": [721, -101],
+                    "tile": [6, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [736, -151],
+                    "floor_selected": [781, -111],
+                    "height_type": 0,
+                    "normal": [734, -127],
+                    "selected": [782, -90],
+                    "tile": [7, 0],
+                    "tile_key": "tile_end"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [801, -151],
+                    "floor_selected": [842, -120],
+                    "height_type": 0,
+                    "normal": [797, -127],
+                    "selected": [842, -99],
+                    "tile": [8, 0],
+                    "tile_key": "tile_end"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [865, -151],
+                    "floor_selected": [903, -130],
+                    "height_type": 0,
+                    "normal": [860, -127],
+                    "selected": [902, -108],
+                    "tile": [9, 0],
+                    "tile_key": "tile_end"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [929, -151],
+                    "floor_selected": [966, -140],
+                    "height_type": 1,
+                    "normal": [929, -151],
+                    "selected": [966, -140],
+                    "tile": [10, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [993, -151],
+                    "floor_selected": [1030, -150],
+                    "height_type": 1,
+                    "normal": [993, -151],
+                    "selected": [1030, -150],
+                    "tile": [11, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1057, -151],
+                    "floor_selected": [1096, -160],
+                    "height_type": 1,
+                    "normal": [1057, -151],
+                    "selected": [1096, -160],
+                    "tile": [12, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1122, -151],
+                    "floor_selected": [1162, -171],
+                    "height_type": 1,
+                    "normal": [1122, -151],
+                    "selected": [1162, -171],
+                    "tile": [13, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1186, -151],
+                    "floor_selected": [1230, -182],
+                    "height_type": 1,
+                    "normal": [1186, -151],
+                    "selected": [1230, -182],
+                    "tile": [14, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1250, -151],
+                    "floor_selected": [1300, -193],
+                    "height_type": 1,
+                    "normal": [1250, -151],
+                    "selected": [1300, -193],
+                    "tile": [15, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1314, -151],
+                    "floor_selected": [1370, -204],
+                    "height_type": 1,
+                    "normal": [1314, -151],
+                    "selected": [1370, -204],
+                    "tile": [16, 0],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [275, -111],
+                    "floor_selected": [378, -10],
+                    "height_type": 1,
+                    "normal": [275, -111],
+                    "selected": [378, -10],
+                    "tile": [0, 1],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [341, -111],
+                    "floor_selected": [433, -19],
+                    "height_type": 0,
+                    "normal": [348, -87],
+                    "selected": [441, 0],
+                    "tile": [1, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [408, -111],
+                    "floor_selected": [489, -27],
+                    "height_type": 0,
+                    "normal": [413, -87],
+                    "selected": [496, -8],
+                    "tile": [2, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [474, -111],
+                    "floor_selected": [546, -36],
+                    "height_type": 0,
+                    "normal": [478, -87],
+                    "selected": [552, -17],
+                    "tile": [3, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [540, -111],
+                    "floor_selected": [604, -45],
+                    "height_type": 0,
+                    "normal": [543, -87],
+                    "selected": [609, -25],
+                    "tile": [4, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [607, -111],
+                    "floor_selected": [663, -54],
+                    "height_type": 0,
+                    "normal": [608, -87],
+                    "selected": [667, -34],
+                    "tile": [5, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [673, -111],
+                    "floor_selected": [724, -63],
+                    "height_type": 1,
+                    "normal": [673, -111],
+                    "selected": [724, -63],
+                    "tile": [6, 1],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [740, -111],
+                    "floor_selected": [785, -72],
+                    "height_type": 0,
+                    "normal": [737, -87],
+                    "selected": [786, -51],
+                    "tile": [7, 1],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [806, -111],
+                    "floor_selected": [848, -82],
+                    "height_type": 0,
+                    "normal": [802, -87],
+                    "selected": [848, -60],
+                    "tile": [8, 1],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [872, -111],
+                    "floor_selected": [912, -91],
+                    "height_type": 0,
+                    "normal": [867, -87],
+                    "selected": [910, -70],
+                    "tile": [9, 1],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [939, -111],
+                    "floor_selected": [977, -101],
+                    "height_type": 1,
+                    "normal": [939, -111],
+                    "selected": [977, -101],
+                    "tile": [10, 1],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1005, -111],
+                    "floor_selected": [1043, -111],
+                    "height_type": 0,
+                    "normal": [997, -87],
+                    "selected": [1039, -89],
+                    "tile": [11, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1071, -111],
+                    "floor_selected": [1111, -121],
+                    "height_type": 0,
+                    "normal": [1062, -87],
+                    "selected": [1105, -99],
+                    "tile": [12, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1138, -111],
+                    "floor_selected": [1180, -132],
+                    "height_type": 0,
+                    "normal": [1126, -87],
+                    "selected": [1172, -109],
+                    "tile": [13, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1204, -111],
+                    "floor_selected": [1250, -143],
+                    "height_type": 0,
+                    "normal": [1191, -87],
+                    "selected": [1241, -119],
+                    "tile": [14, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1270, -111],
+                    "floor_selected": [1322, -153],
+                    "height_type": 0,
+                    "normal": [1256, -87],
+                    "selected": [1311, -129],
+                    "tile": [15, 1],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1337, -111],
+                    "floor_selected": [1395, -165],
+                    "height_type": 1,
+                    "normal": [1337, -111],
+                    "selected": [1395, -165],
+                    "tile": [16, 1],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [262, -68],
+                    "floor_selected": [370, 30],
+                    "height_type": 1,
+                    "normal": [262, -68],
+                    "selected": [370, 30],
+                    "tile": [0, 2],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [331, -68],
+                    "floor_selected": [427, 22],
+                    "height_type": 0,
+                    "normal": [338, -44],
+                    "selected": [435, 40],
+                    "tile": [1, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [400, -68],
+                    "floor_selected": [484, 13],
+                    "height_type": 0,
+                    "normal": [405, -44],
+                    "selected": [492, 32],
+                    "tile": [2, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [468, -68],
+                    "floor_selected": [543, 5],
+                    "height_type": 0,
+                    "normal": [472, -44],
+                    "selected": [549, 24],
+                    "tile": [3, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [537, -68],
+                    "floor_selected": [603, -4],
+                    "height_type": 0,
+                    "normal": [539, -44],
+                    "selected": [608, 16],
+                    "tile": [4, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [606, -68],
+                    "floor_selected": [664, -13],
+                    "height_type": 0,
+                    "normal": [606, -44],
+                    "selected": [668, 7],
+                    "tile": [5, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [674, -68],
+                    "floor_selected": [726, -22],
+                    "height_type": 0,
+                    "normal": [674, -44],
+                    "selected": [729, -2],
+                    "tile": [6, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [743, -68],
+                    "floor_selected": [790, -31],
+                    "height_type": 0,
+                    "normal": [741, -44],
+                    "selected": [791, -10],
+                    "tile": [7, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [812, -68],
+                    "floor_selected": [855, -40],
+                    "height_type": 0,
+                    "normal": [808, -44],
+                    "selected": [854, -19],
+                    "tile": [8, 2],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [880, -68],
+                    "floor_selected": [921, -50],
+                    "height_type": 0,
+                    "normal": [875, -44],
+                    "selected": [919, -29],
+                    "tile": [9, 2],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [949, -68],
+                    "floor_selected": [988, -60],
+                    "height_type": 0,
+                    "normal": [942, -44],
+                    "selected": [985, -38],
+                    "tile": [10, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1018, -68],
+                    "floor_selected": [1057, -70],
+                    "height_type": 0,
+                    "normal": [1009, -44],
+                    "selected": [1052, -47],
+                    "tile": [11, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1086, -68],
+                    "floor_selected": [1127, -80],
+                    "height_type": 0,
+                    "normal": [1076, -44],
+                    "selected": [1120, -57],
+                    "tile": [12, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1155, -68],
+                    "floor_selected": [1198, -90],
+                    "height_type": 0,
+                    "normal": [1143, -44],
+                    "selected": [1190, -67],
+                    "tile": [13, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1224, -68],
+                    "floor_selected": [1271, -101],
+                    "height_type": 0,
+                    "normal": [1210, -44],
+                    "selected": [1261, -77],
+                    "tile": [14, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1292, -68],
+                    "floor_selected": [1346, -112],
+                    "height_type": 0,
+                    "normal": [1277, -44],
+                    "selected": [1334, -87],
+                    "tile": [15, 2],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1361, -68],
+                    "floor_selected": [1422, -123],
+                    "height_type": 1,
+                    "normal": [1361, -68],
+                    "selected": [1422, -123],
+                    "tile": [16, 2],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [249, -22],
+                    "floor_selected": [361, 73],
+                    "height_type": 1,
+                    "normal": [249, -22],
+                    "selected": [361, 73],
+                    "tile": [0, 3],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [320, -22],
+                    "floor_selected": [420, 65],
+                    "height_type": 0,
+                    "normal": [328, 1],
+                    "selected": [429, 83],
+                    "tile": [1, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [391, -22],
+                    "floor_selected": [479, 57],
+                    "height_type": 0,
+                    "normal": [397, 1],
+                    "selected": [487, 75],
+                    "tile": [2, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [462, -22],
+                    "floor_selected": [540, 48],
+                    "height_type": 0,
+                    "normal": [467, 1],
+                    "selected": [547, 67],
+                    "tile": [3, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [533, -22],
+                    "floor_selected": [602, 40],
+                    "height_type": 0,
+                    "normal": [536, 1],
+                    "selected": [607, 59],
+                    "tile": [4, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [604, -22],
+                    "floor_selected": [665, 31],
+                    "height_type": 0,
+                    "normal": [605, 1],
+                    "selected": [669, 50],
+                    "tile": [5, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [676, -22],
+                    "floor_selected": [729, 22],
+                    "height_type": 1,
+                    "normal": [676, -22],
+                    "selected": [729, 22],
+                    "tile": [6, 3],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [747, -22],
+                    "floor_selected": [795, 13],
+                    "height_type": 0,
+                    "normal": [744, 1],
+                    "selected": [796, 33],
+                    "tile": [7, 3],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [818, -22],
+                    "floor_selected": [862, 4],
+                    "height_type": 0,
+                    "normal": [813, 1],
+                    "selected": [861, 24],
+                    "tile": [8, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [889, -22],
+                    "floor_selected": [930, -6],
+                    "height_type": 0,
+                    "normal": [883, 1],
+                    "selected": [928, 15],
+                    "tile": [9, 3],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [960, -22],
+                    "floor_selected": [1000, -15],
+                    "height_type": 1,
+                    "normal": [960, -22],
+                    "selected": [1000, -15],
+                    "tile": [10, 3],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1031, -22],
+                    "floor_selected": [1071, -25],
+                    "height_type": 0,
+                    "normal": [1022, 1],
+                    "selected": [1066, -3],
+                    "tile": [11, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1102, -22],
+                    "floor_selected": [1144, -35],
+                    "height_type": 0,
+                    "normal": [1091, 1],
+                    "selected": [1137, -13],
+                    "tile": [12, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1173, -22],
+                    "floor_selected": [1218, -46],
+                    "height_type": 0,
+                    "normal": [1160, 1],
+                    "selected": [1209, -23],
+                    "tile": [13, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1245, -22],
+                    "floor_selected": [1294, -56],
+                    "height_type": 0,
+                    "normal": [1230, 1],
+                    "selected": [1283, -33],
+                    "tile": [14, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1316, -22],
+                    "floor_selected": [1371, -67],
+                    "height_type": 0,
+                    "normal": [1299, 1],
+                    "selected": [1358, -43],
+                    "tile": [15, 3],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1387, -22],
+                    "floor_selected": [1450, -78],
+                    "height_type": 1,
+                    "normal": [1387, -22],
+                    "selected": [1450, -78],
+                    "tile": [16, 3],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [234, 28],
+                    "floor_selected": [353, 119],
+                    "height_type": 1,
+                    "normal": [234, 28],
+                    "selected": [353, 119],
+                    "tile": [0, 4],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [308, 28],
+                    "floor_selected": [413, 111],
+                    "height_type": 1,
+                    "normal": [308, 28],
+                    "selected": [413, 111],
+                    "tile": [1, 4],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [382, 28],
+                    "floor_selected": [474, 103],
+                    "height_type": 0,
+                    "normal": [388, 51],
+                    "selected": [482, 121],
+                    "tile": [2, 4],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [456, 28],
+                    "floor_selected": [537, 94],
+                    "height_type": 1,
+                    "normal": [456, 28],
+                    "selected": [537, 94],
+                    "tile": [3, 4],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [529, 28],
+                    "floor_selected": [601, 86],
+                    "height_type": 1,
+                    "normal": [529, 28],
+                    "selected": [601, 86],
+                    "tile": [4, 4],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [603, 28],
+                    "floor_selected": [666, 78],
+                    "height_type": 0,
+                    "normal": [604, 51],
+                    "selected": [670, 97],
+                    "tile": [5, 4],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [677, 28],
+                    "floor_selected": [732, 69],
+                    "height_type": 1,
+                    "normal": [677, 28],
+                    "selected": [732, 69],
+                    "tile": [6, 4],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [751, 28],
+                    "floor_selected": [800, 60],
+                    "height_type": 0,
+                    "normal": [748, 51],
+                    "selected": [801, 80],
+                    "tile": [7, 4],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [824, 28],
+                    "floor_selected": [870, 51],
+                    "height_type": 0,
+                    "normal": [820, 51],
+                    "selected": [869, 71],
+                    "tile": [8, 4],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [898, 28],
+                    "floor_selected": [940, 41],
+                    "height_type": 0,
+                    "normal": [892, 51],
+                    "selected": [938, 62],
+                    "tile": [9, 4],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [972, 28],
+                    "floor_selected": [1013, 32],
+                    "height_type": 1,
+                    "normal": [972, 28],
+                    "selected": [1013, 32],
+                    "tile": [10, 4],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1046, 28],
+                    "floor_selected": [1086, 22],
+                    "height_type": 0,
+                    "normal": [1036, 51],
+                    "selected": [1081, 44],
+                    "tile": [11, 4],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [1120, 28],
+                    "floor_selected": [1162, 12],
+                    "height_type": 1,
+                    "normal": [1120, 28],
+                    "selected": [1162, 12],
+                    "tile": [12, 4],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1193, 28],
+                    "floor_selected": [1239, 2],
+                    "height_type": 0,
+                    "normal": [1179, 51],
+                    "selected": [1229, 25],
+                    "tile": [13, 4],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [1267, 28],
+                    "floor_selected": [1318, -8],
+                    "height_type": 1,
+                    "normal": [1267, 28],
+                    "selected": [1318, -8],
+                    "tile": [14, 4],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1341, 28],
+                    "floor_selected": [1398, -19],
+                    "height_type": 1,
+                    "normal": [1341, 28],
+                    "selected": [1398, -19],
+                    "tile": [15, 4],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1415, 28],
+                    "floor_selected": [1481, -29],
+                    "height_type": 1,
+                    "normal": [1415, 28],
+                    "selected": [1481, -29],
+                    "tile": [16, 4],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [218, 82],
+                    "floor_selected": [343, 167],
+                    "height_type": 0,
+                    "normal": [230, 104],
+                    "selected": [354, 184],
+                    "tile": [0, 5],
+                    "tile_key": "tile_start"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [295, 82],
+                    "floor_selected": [405, 160],
+                    "height_type": 0,
+                    "normal": [304, 104],
+                    "selected": [415, 177],
+                    "tile": [1, 5],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [372, 82],
+                    "floor_selected": [469, 152],
+                    "height_type": 0,
+                    "normal": [379, 104],
+                    "selected": [477, 169],
+                    "tile": [2, 5],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [448, 82],
+                    "floor_selected": [533, 144],
+                    "height_type": 0,
+                    "normal": [453, 104],
+                    "selected": [540, 162],
+                    "tile": [3, 5],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [525, 82],
+                    "floor_selected": [599, 136],
+                    "height_type": 0,
+                    "normal": [528, 104],
+                    "selected": [605, 154],
+                    "tile": [4, 5],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [602, 82],
+                    "floor_selected": [667, 127],
+                    "height_type": 0,
+                    "normal": [603, 104],
+                    "selected": [671, 146],
+                    "tile": [5, 5],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [678, 82],
+                    "floor_selected": [736, 119],
+                    "height_type": 0,
+                    "normal": [677, 104],
+                    "selected": [738, 138],
+                    "tile": [6, 5],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [755, 82],
+                    "floor_selected": [806, 110],
+                    "height_type": 0,
+                    "normal": [752, 104],
+                    "selected": [807, 130],
+                    "tile": [7, 5],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [832, 82],
+                    "floor_selected": [878, 101],
+                    "height_type": 0,
+                    "normal": [827, 104],
+                    "selected": [877, 121],
+                    "tile": [8, 5],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [908, 82],
+                    "floor_selected": [951, 92],
+                    "height_type": 0,
+                    "normal": [901, 104],
+                    "selected": [949, 112],
+                    "tile": [9, 5],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [985, 82],
+                    "floor_selected": [1026, 83],
+                    "height_type": 0,
+                    "normal": [976, 104],
+                    "selected": [1022, 104],
+                    "tile": [10, 5],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1062, 82],
+                    "floor_selected": [1103, 73],
+                    "height_type": 0,
+                    "normal": [1050, 104],
+                    "selected": [1097, 95],
+                    "tile": [11, 5],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1138, 82],
+                    "floor_selected": [1182, 64],
+                    "height_type": 0,
+                    "normal": [1125, 104],
+                    "selected": [1173, 85],
+                    "tile": [12, 5],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1215, 82],
+                    "floor_selected": [1262, 54],
+                    "height_type": 0,
+                    "normal": [1200, 104],
+                    "selected": [1251, 76],
+                    "tile": [13, 5],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1291, 82],
+                    "floor_selected": [1344, 44],
+                    "height_type": 0,
+                    "normal": [1274, 104],
+                    "selected": [1331, 66],
+                    "tile": [14, 5],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1368, 82],
+                    "floor_selected": [1428, 33],
+                    "height_type": 0,
+                    "normal": [1349, 104],
+                    "selected": [1413, 56],
+                    "tile": [15, 5],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1445, 82],
+                    "floor_selected": [1514, 23],
+                    "height_type": 0,
+                    "normal": [1424, 104],
+                    "selected": [1496, 46],
+                    "tile": [16, 5],
+                    "tile_key": "tile_end"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [202, 139],
+                    "floor_selected": [333, 219],
+                    "height_type": 0,
+                    "normal": [213, 161],
+                    "selected": [344, 236],
+                    "tile": [0, 6],
+                    "tile_key": "tile_start"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [281, 139],
+                    "floor_selected": [397, 212],
+                    "height_type": 0,
+                    "normal": [291, 161],
+                    "selected": [407, 229],
+                    "tile": [1, 6],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [361, 139],
+                    "floor_selected": [463, 204],
+                    "height_type": 0,
+                    "normal": [369, 161],
+                    "selected": [471, 221],
+                    "tile": [2, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [441, 139],
+                    "floor_selected": [529, 197],
+                    "height_type": 0,
+                    "normal": [446, 161],
+                    "selected": [537, 214],
+                    "tile": [3, 6],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [520, 139],
+                    "floor_selected": [598, 189],
+                    "height_type": 0,
+                    "normal": [524, 161],
+                    "selected": [604, 206],
+                    "tile": [4, 6],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [600, 139],
+                    "floor_selected": [668, 181],
+                    "height_type": 0,
+                    "normal": [601, 161],
+                    "selected": [672, 199],
+                    "tile": [5, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [680, 139],
+                    "floor_selected": [739, 173],
+                    "height_type": 0,
+                    "normal": [679, 161],
+                    "selected": [742, 191],
+                    "tile": [6, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [760, 139],
+                    "floor_selected": [812, 164],
+                    "height_type": 0,
+                    "normal": [756, 161],
+                    "selected": [813, 183],
+                    "tile": [7, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [839, 139],
+                    "floor_selected": [887, 156],
+                    "height_type": 0,
+                    "normal": [834, 161],
+                    "selected": [886, 175],
+                    "tile": [8, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [919, 139],
+                    "floor_selected": [963, 147],
+                    "height_type": 0,
+                    "normal": [911, 161],
+                    "selected": [960, 166],
+                    "tile": [9, 6],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [999, 139],
+                    "floor_selected": [1041, 138],
+                    "height_type": 0,
+                    "normal": [989, 161],
+                    "selected": [1036, 158],
+                    "tile": [10, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1078, 139],
+                    "floor_selected": [1121, 129],
+                    "height_type": 0,
+                    "normal": [1067, 161],
+                    "selected": [1114, 149],
+                    "tile": [11, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1158, 139],
+                    "floor_selected": [1203, 119],
+                    "height_type": 0,
+                    "normal": [1144, 161],
+                    "selected": [1193, 140],
+                    "tile": [12, 6],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1238, 139],
+                    "floor_selected": [1286, 109],
+                    "height_type": 0,
+                    "normal": [1222, 161],
+                    "selected": [1275, 131],
+                    "tile": [13, 6],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1318, 139],
+                    "floor_selected": [1372, 100],
+                    "height_type": 0,
+                    "normal": [1299, 161],
+                    "selected": [1358, 122],
+                    "tile": [14, 6],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1397, 139],
+                    "floor_selected": [1460, 89],
+                    "height_type": 0,
+                    "normal": [1377, 161],
+                    "selected": [1443, 112],
+                    "tile": [15, 6],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1477, 139],
+                    "floor_selected": [1550, 79],
+                    "height_type": 0,
+                    "normal": [1454, 161],
+                    "selected": [1531, 102],
+                    "tile": [16, 6],
+                    "tile_key": "tile_end"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [183, 202],
+                    "floor_selected": [322, 275],
+                    "height_type": 0,
+                    "normal": [196, 223],
+                    "selected": [334, 291],
+                    "tile": [0, 7],
+                    "tile_key": "tile_start"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [266, 202],
+                    "floor_selected": [388, 268],
+                    "height_type": 0,
+                    "normal": [277, 223],
+                    "selected": [399, 284],
+                    "tile": [1, 7],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [349, 202],
+                    "floor_selected": [456, 261],
+                    "height_type": 0,
+                    "normal": [357, 223],
+                    "selected": [465, 277],
+                    "tile": [2, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [432, 202],
+                    "floor_selected": [525, 253],
+                    "height_type": 0,
+                    "normal": [438, 223],
+                    "selected": [533, 270],
+                    "tile": [3, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [515, 202],
+                    "floor_selected": [596, 246],
+                    "height_type": 0,
+                    "normal": [519, 223],
+                    "selected": [602, 263],
+                    "tile": [4, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [598, 202],
+                    "floor_selected": [669, 238],
+                    "height_type": 0,
+                    "normal": [600, 223],
+                    "selected": [673, 255],
+                    "tile": [5, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [682, 202],
+                    "floor_selected": [743, 230],
+                    "height_type": 0,
+                    "normal": [680, 223],
+                    "selected": [745, 248],
+                    "tile": [6, 7],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [765, 202],
+                    "floor_selected": [819, 222],
+                    "height_type": 0,
+                    "normal": [761, 223],
+                    "selected": [819, 240],
+                    "tile": [7, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [848, 202],
+                    "floor_selected": [896, 214],
+                    "height_type": 0,
+                    "normal": [842, 223],
+                    "selected": [895, 232],
+                    "tile": [8, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [931, 202],
+                    "floor_selected": [976, 206],
+                    "height_type": 0,
+                    "normal": [923, 223],
+                    "selected": [972, 224],
+                    "tile": [9, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1014, 202],
+                    "floor_selected": [1057, 197],
+                    "height_type": 0,
+                    "normal": [1003, 223],
+                    "selected": [1051, 216],
+                    "tile": [10, 7],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1097, 202],
+                    "floor_selected": [1140, 188],
+                    "height_type": 0,
+                    "normal": [1084, 223],
+                    "selected": [1132, 208],
+                    "tile": [11, 7],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1180, 202],
+                    "floor_selected": [1226, 179],
+                    "height_type": 0,
+                    "normal": [1165, 223],
+                    "selected": [1215, 199],
+                    "tile": [12, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1263, 202],
+                    "floor_selected": [1313, 170],
+                    "height_type": 0,
+                    "normal": [1245, 223],
+                    "selected": [1300, 190],
+                    "tile": [13, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1346, 202],
+                    "floor_selected": [1403, 160],
+                    "height_type": 0,
+                    "normal": [1326, 223],
+                    "selected": [1387, 181],
+                    "tile": [14, 7],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1429, 202],
+                    "floor_selected": [1495, 150],
+                    "height_type": 0,
+                    "normal": [1407, 223],
+                    "selected": [1476, 172],
+                    "tile": [15, 7],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1512, 202],
+                    "floor_selected": [1589, 140],
+                    "height_type": 0,
+                    "normal": [1488, 223],
+                    "selected": [1568, 163],
+                    "tile": [16, 7],
+                    "tile_key": "tile_end"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [163, 270],
+                    "floor_selected": [310, 335],
+                    "height_type": 1,
+                    "normal": [163, 270],
+                    "selected": [310, 335],
+                    "tile": [0, 8],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [250, 270],
+                    "floor_selected": [379, 328],
+                    "height_type": 1,
+                    "normal": [250, 270],
+                    "selected": [379, 328],
+                    "tile": [1, 8],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [336, 270],
+                    "floor_selected": [449, 322],
+                    "height_type": 0,
+                    "normal": [345, 290],
+                    "selected": [459, 337],
+                    "tile": [2, 8],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [423, 270],
+                    "floor_selected": [521, 315],
+                    "height_type": 1,
+                    "normal": [423, 270],
+                    "selected": [521, 315],
+                    "tile": [3, 8],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [510, 270],
+                    "floor_selected": [595, 307],
+                    "height_type": 1,
+                    "normal": [510, 270],
+                    "selected": [595, 307],
+                    "tile": [4, 8],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [597, 270],
+                    "floor_selected": [670, 300],
+                    "height_type": 0,
+                    "normal": [598, 290],
+                    "selected": [674, 316],
+                    "tile": [5, 8],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [683, 270],
+                    "floor_selected": [747, 293],
+                    "height_type": 1,
+                    "normal": [683, 270],
+                    "selected": [747, 293],
+                    "tile": [6, 8],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [770, 270],
+                    "floor_selected": [826, 285],
+                    "height_type": 0,
+                    "normal": [766, 290],
+                    "selected": [826, 302],
+                    "tile": [7, 8],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [857, 270],
+                    "floor_selected": [907, 277],
+                    "height_type": 0,
+                    "normal": [850, 290],
+                    "selected": [905, 295],
+                    "tile": [8, 8],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [944, 270],
+                    "floor_selected": [989, 269],
+                    "height_type": 0,
+                    "normal": [935, 290],
+                    "selected": [985, 287],
+                    "tile": [9, 8],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [1030, 270],
+                    "floor_selected": [1074, 261],
+                    "height_type": 1,
+                    "normal": [1030, 270],
+                    "selected": [1074, 261],
+                    "tile": [10, 8],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1117, 270],
+                    "floor_selected": [1161, 252],
+                    "height_type": 0,
+                    "normal": [1103, 290],
+                    "selected": [1152, 271],
+                    "tile": [11, 8],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1204, 270],
+                    "floor_selected": [1250, 244],
+                    "height_type": 0,
+                    "normal": [1187, 290],
+                    "selected": [1239, 263],
+                    "tile": [12, 8],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [1290, 270],
+                    "floor_selected": [1342, 235],
+                    "height_type": 1,
+                    "normal": [1290, 270],
+                    "selected": [1342, 235],
+                    "tile": [13, 8],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1377, 270],
+                    "floor_selected": [1436, 226],
+                    "height_type": 0,
+                    "normal": [1355, 290],
+                    "selected": [1419, 246],
+                    "tile": [14, 8],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1464, 270],
+                    "floor_selected": [1532, 217],
+                    "height_type": 1,
+                    "normal": [1464, 270],
+                    "selected": [1532, 217],
+                    "tile": [15, 8],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1551, 270],
+                    "floor_selected": [1631, 207],
+                    "height_type": 1,
+                    "normal": [1551, 270],
+                    "selected": [1631, 207],
+                    "tile": [16, 8],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [141, 345],
+                    "floor_selected": [298, 399],
+                    "height_type": 1,
+                    "normal": [141, 345],
+                    "selected": [298, 399],
+                    "tile": [0, 9],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [232, 345],
+                    "floor_selected": [369, 393],
+                    "height_type": 0,
+                    "normal": [244, 363],
+                    "selected": [381, 407],
+                    "tile": [1, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [323, 345],
+                    "floor_selected": [442, 387],
+                    "height_type": 0,
+                    "normal": [332, 363],
+                    "selected": [452, 401],
+                    "tile": [2, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [413, 345],
+                    "floor_selected": [516, 380],
+                    "height_type": 0,
+                    "normal": [420, 363],
+                    "selected": [525, 395],
+                    "tile": [3, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [504, 345],
+                    "floor_selected": [593, 374],
+                    "height_type": 0,
+                    "normal": [508, 363],
+                    "selected": [599, 389],
+                    "tile": [4, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [595, 345],
+                    "floor_selected": [671, 367],
+                    "height_type": 0,
+                    "normal": [596, 363],
+                    "selected": [676, 382],
+                    "tile": [5, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 2,
+                    "floor_normal": [685, 345],
+                    "floor_selected": [751, 360],
+                    "height_type": 1,
+                    "normal": [685, 345],
+                    "selected": [751, 360],
+                    "tile": [6, 9],
+                    "tile_key": "tile_wall"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [776, 345],
+                    "floor_selected": [834, 353],
+                    "height_type": 0,
+                    "normal": [772, 363],
+                    "selected": [834, 369],
+                    "tile": [7, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [867, 345],
+                    "floor_selected": [918, 346],
+                    "height_type": 0,
+                    "normal": [860, 363],
+                    "selected": [916, 362],
+                    "tile": [8, 9],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [957, 345],
+                    "floor_selected": [1004, 338],
+                    "height_type": 0,
+                    "normal": [948, 363],
+                    "selected": [1000, 355],
+                    "tile": [9, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1048, 345],
+                    "floor_selected": [1093, 330],
+                    "height_type": 1,
+                    "normal": [1048, 345],
+                    "selected": [1093, 330],
+                    "tile": [10, 9],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1139, 345],
+                    "floor_selected": [1184, 323],
+                    "height_type": 0,
+                    "normal": [1123, 363],
+                    "selected": [1174, 340],
+                    "tile": [11, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1230, 345],
+                    "floor_selected": [1277, 315],
+                    "height_type": 0,
+                    "normal": [1211, 363],
+                    "selected": [1265, 333],
+                    "tile": [12, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1320, 345],
+                    "floor_selected": [1373, 306],
+                    "height_type": 0,
+                    "normal": [1299, 363],
+                    "selected": [1358, 325],
+                    "tile": [13, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1411, 345],
+                    "floor_selected": [1472, 298],
+                    "height_type": 0,
+                    "normal": [1387, 363],
+                    "selected": [1453, 317],
+                    "tile": [14, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1502, 345],
+                    "floor_selected": [1573, 289],
+                    "height_type": 0,
+                    "normal": [1475, 363],
+                    "selected": [1551, 308],
+                    "tile": [15, 9],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1592, 345],
+                    "floor_selected": [1677, 280],
+                    "height_type": 1,
+                    "normal": [1592, 345],
+                    "selected": [1677, 280],
+                    "tile": [16, 9],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [117, 426],
+                    "floor_selected": [284, 469],
+                    "height_type": 1,
+                    "normal": [117, 426],
+                    "selected": [284, 469],
+                    "tile": [0, 10],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [212, 426],
+                    "floor_selected": [358, 463],
+                    "height_type": 0,
+                    "normal": [226, 442],
+                    "selected": [371, 476],
+                    "tile": [1, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [307, 426],
+                    "floor_selected": [434, 458],
+                    "height_type": 0,
+                    "normal": [318, 442],
+                    "selected": [445, 470],
+                    "tile": [2, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [402, 426],
+                    "floor_selected": [511, 452],
+                    "height_type": 0,
+                    "normal": [410, 442],
+                    "selected": [520, 465],
+                    "tile": [3, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [497, 426],
+                    "floor_selected": [591, 446],
+                    "height_type": 0,
+                    "normal": [502, 442],
+                    "selected": [598, 459],
+                    "tile": [4, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [592, 426],
+                    "floor_selected": [672, 440],
+                    "height_type": 0,
+                    "normal": [594, 442],
+                    "selected": [677, 453],
+                    "tile": [5, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [688, 426],
+                    "floor_selected": [756, 433],
+                    "height_type": 0,
+                    "normal": [686, 442],
+                    "selected": [758, 447],
+                    "tile": [6, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [783, 426],
+                    "floor_selected": [842, 427],
+                    "height_type": 0,
+                    "normal": [778, 442],
+                    "selected": [842, 441],
+                    "tile": [7, 10],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [878, 426],
+                    "floor_selected": [930, 420],
+                    "height_type": 0,
+                    "normal": [870, 442],
+                    "selected": [927, 435],
+                    "tile": [8, 10],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [973, 426],
+                    "floor_selected": [1020, 413],
+                    "height_type": 0,
+                    "normal": [962, 442],
+                    "selected": [1015, 429],
+                    "tile": [9, 10],
+                    "tile_key": "tile_defbreak"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1068, 426],
+                    "floor_selected": [1113, 406],
+                    "height_type": 0,
+                    "normal": [1054, 442],
+                    "selected": [1105, 422],
+                    "tile": [10, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1163, 426],
+                    "floor_selected": [1209, 399],
+                    "height_type": 0,
+                    "normal": [1146, 442],
+                    "selected": [1198, 415],
+                    "tile": [11, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1258, 426],
+                    "floor_selected": [1307, 392],
+                    "height_type": 0,
+                    "normal": [1238, 442],
+                    "selected": [1293, 408],
+                    "tile": [12, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1353, 426],
+                    "floor_selected": [1408, 384],
+                    "height_type": 0,
+                    "normal": [1330, 442],
+                    "selected": [1390, 401],
+                    "tile": [13, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1448, 426],
+                    "floor_selected": [1512, 376],
+                    "height_type": 0,
+                    "normal": [1422, 442],
+                    "selected": [1490, 394],
+                    "tile": [14, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1543, 426],
+                    "floor_selected": [1618, 368],
+                    "height_type": 0,
+                    "normal": [1514, 442],
+                    "selected": [1594, 386],
+                    "tile": [15, 10],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1638, 426],
+                    "floor_selected": [1728, 360],
+                    "height_type": 1,
+                    "normal": [1638, 426],
+                    "selected": [1728, 360],
+                    "tile": [16, 10],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [91, 516],
+                    "floor_selected": [269, 544],
+                    "height_type": 1,
+                    "normal": [91, 516],
+                    "selected": [269, 544],
+                    "tile": [0, 11],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [191, 516],
+                    "floor_selected": [346, 539],
+                    "height_type": 0,
+                    "normal": [206, 530],
+                    "selected": [360, 550],
+                    "tile": [1, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [291, 516],
+                    "floor_selected": [425, 534],
+                    "height_type": 0,
+                    "normal": [302, 530],
+                    "selected": [437, 545],
+                    "tile": [2, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [390, 516],
+                    "floor_selected": [506, 529],
+                    "height_type": 0,
+                    "normal": [399, 530],
+                    "selected": [515, 541],
+                    "tile": [3, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [490, 516],
+                    "floor_selected": [589, 524],
+                    "height_type": 0,
+                    "normal": [495, 530],
+                    "selected": [596, 536],
+                    "tile": [4, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [590, 516],
+                    "floor_selected": [674, 519],
+                    "height_type": 0,
+                    "normal": [592, 530],
+                    "selected": [679, 531],
+                    "tile": [5, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [690, 516],
+                    "floor_selected": [761, 513],
+                    "height_type": 1,
+                    "normal": [690, 516],
+                    "selected": [761, 513],
+                    "tile": [6, 11],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [790, 516],
+                    "floor_selected": [851, 507],
+                    "height_type": 0,
+                    "normal": [785, 530],
+                    "selected": [851, 520],
+                    "tile": [7, 11],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [890, 516],
+                    "floor_selected": [943, 502],
+                    "height_type": 0,
+                    "normal": [881, 530],
+                    "selected": [940, 515],
+                    "tile": [8, 11],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [989, 516],
+                    "floor_selected": [1038, 495],
+                    "height_type": 0,
+                    "normal": [978, 530],
+                    "selected": [1032, 509],
+                    "tile": [9, 11],
+                    "tile_key": "tile_floor"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1089, 516],
+                    "floor_selected": [1136, 489],
+                    "height_type": 1,
+                    "normal": [1089, 516],
+                    "selected": [1136, 489],
+                    "tile": [10, 11],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1189, 516],
+                    "floor_selected": [1236, 483],
+                    "height_type": 0,
+                    "normal": [1171, 530],
+                    "selected": [1224, 497],
+                    "tile": [11, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1289, 516],
+                    "floor_selected": [1339, 476],
+                    "height_type": 0,
+                    "normal": [1267, 530],
+                    "selected": [1323, 491],
+                    "tile": [12, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1389, 516],
+                    "floor_selected": [1446, 470],
+                    "height_type": 0,
+                    "normal": [1364, 530],
+                    "selected": [1426, 485],
+                    "tile": [13, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1489, 516],
+                    "floor_selected": [1555, 463],
+                    "height_type": 0,
+                    "normal": [1460, 530],
+                    "selected": [1532, 478],
+                    "tile": [14, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 1,
+                    "floor_normal": [1589, 516],
+                    "floor_selected": [1668, 456],
+                    "height_type": 0,
+                    "normal": [1557, 530],
+                    "selected": [1640, 472],
+                    "tile": [15, 11],
+                    "tile_key": "tile_road"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1688, 516],
+                    "floor_selected": [1784, 448],
+                    "height_type": 1,
+                    "normal": [1688, 516],
+                    "selected": [1784, 448],
+                    "tile": [16, 11],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [62, 615],
+                    "floor_selected": [253, 626],
+                    "height_type": 1,
+                    "normal": [62, 615],
+                    "selected": [253, 626],
+                    "tile": [0, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [167, 615],
+                    "floor_selected": [333, 622],
+                    "height_type": 1,
+                    "normal": [167, 615],
+                    "selected": [333, 622],
+                    "tile": [1, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [272, 615],
+                    "floor_selected": [415, 618],
+                    "height_type": 1,
+                    "normal": [272, 615],
+                    "selected": [415, 618],
+                    "tile": [2, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [377, 615],
+                    "floor_selected": [500, 614],
+                    "height_type": 1,
+                    "normal": [377, 615],
+                    "selected": [500, 614],
+                    "tile": [3, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [482, 615],
+                    "floor_selected": [586, 609],
+                    "height_type": 1,
+                    "normal": [482, 615],
+                    "selected": [586, 609],
+                    "tile": [4, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [587, 615],
+                    "floor_selected": [675, 605],
+                    "height_type": 1,
+                    "normal": [587, 615],
+                    "selected": [675, 605],
+                    "tile": [5, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [693, 615],
+                    "floor_selected": [767, 600],
+                    "height_type": 1,
+                    "normal": [693, 615],
+                    "selected": [767, 600],
+                    "tile": [6, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [798, 615],
+                    "floor_selected": [861, 596],
+                    "height_type": 0,
+                    "normal": [792, 627],
+                    "selected": [860, 606],
+                    "tile": [7, 12],
+                    "tile_key": "tile_start"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [903, 615],
+                    "floor_selected": [958, 591],
+                    "height_type": 0,
+                    "normal": [894, 627],
+                    "selected": [954, 601],
+                    "tile": [8, 12],
+                    "tile_key": "tile_start"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1008, 615],
+                    "floor_selected": [1058, 586],
+                    "height_type": 0,
+                    "normal": [995, 627],
+                    "selected": [1051, 597],
+                    "tile": [9, 12],
+                    "tile_key": "tile_start"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1113, 615],
+                    "floor_selected": [1160, 581],
+                    "height_type": 1,
+                    "normal": [1113, 615],
+                    "selected": [1160, 581],
+                    "tile": [10, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1218, 615],
+                    "floor_selected": [1266, 575],
+                    "height_type": 1,
+                    "normal": [1218, 615],
+                    "selected": [1266, 575],
+                    "tile": [11, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1324, 615],
+                    "floor_selected": [1375, 570],
+                    "height_type": 1,
+                    "normal": [1324, 615],
+                    "selected": [1375, 570],
+                    "tile": [12, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1429, 615],
+                    "floor_selected": [1487, 564],
+                    "height_type": 1,
+                    "normal": [1429, 615],
+                    "selected": [1487, 564],
+                    "tile": [13, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1534, 615],
+                    "floor_selected": [1603, 558],
+                    "height_type": 1,
+                    "normal": [1534, 615],
+                    "selected": [1603, 558],
+                    "tile": [14, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1639, 615],
+                    "floor_selected": [1723, 552],
+                    "height_type": 1,
+                    "normal": [1639, 615],
+                    "selected": [1723, 552],
+                    "tile": [15, 12],
+                    "tile_key": "tile_forbidden"
+                },
+                {
+                    "buildable_type": 0,
+                    "floor_normal": [1744, 615],
+                    "floor_selected": [1847, 546],
+                    "height_type": 1,
+                    "normal": [1744, 615],
+                    "selected": [1847, 546],
+                    "tile": [16, 12],
+                    "tile_key": "tile_forbidden"
+                }
+            ],
+            "width": 17
+        }
+    ],
+    "live_camera_verified": false
+}

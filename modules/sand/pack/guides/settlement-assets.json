@@ -1,0 +1,23 @@
+{
+    "schema_version": 1,
+    "source": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\gather-settled.png",
+    "source_sha256": "63ba66c7afe676df8ec4fd178c625bf0e80945816746d4faf80bab689f7c1b94",
+    "normalization": [1280, 720],
+    "template_origin": "Cropped from saved English reward icons; no AI-generated assets.",
+    "templates": {
+        "SandSettlementWildPlant.png": "73009b030014cfd11b9cbe4ec6e541ce77bf145cbe02a73e061fd13037ce6b55",
+        "SandSettlementGold.png": "588dc59fc8161075bddbebb3358c290265d7e80a1d4f601a6d385a72df56d266",
+        "SandSettlementWater.png": "750040dbc1508e99b42339e8db88db43ac45775a6cebe445ffc595d1d7ba2cf6",
+        "SandSettlementWood.png": "bbb6c9dc065ccc829721efea5cc602a0eb257f27f74c17afecbda983737e36a5",
+        "SandSettlementWing.png": "8cfb019f6162143171e504d7743c6b0e43946f4528837261d1402a330fd35d82"
+    },
+    "verification": "Native matcher: five mixed items on source, shifted wood/gold on independent second-result; no hits on black loading frame or paused battle.",
+    "numeric_verification": "I:/MAA-data/sand-player/settlement-offline-20261028/counts-canvas/rewards.json",
+    "limitations": [
+        "first six reward slots only",
+        "five known item types",
+        "missing matches are unknown",
+        "stage and result header required",
+        "no full-inventory reconciliation or Act proof"
+    ]
+}

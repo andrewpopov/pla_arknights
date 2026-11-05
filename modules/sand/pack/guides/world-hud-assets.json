@@ -1,0 +1,20 @@
+{
+    "source": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\day-two-ready.png",
+    "sha256": "5c468fdeaf828a470597887ee7b1271ad82507930b6ae5a4e84e47d4a73824bf",
+    "normalization": [1280, 720],
+    "templates": {
+        "SandWorldGold.png": "571357ec28d192dddc305d524a806f30750a590a01af4d52f997106c57defbf6",
+        "SandWorldWater.png": "5dd69d70a4cbe42a0a08db5a7b3d05f0c210e9986cbb5bf7d809f7123a2dd757",
+        "SandWorldWood.png": "99fd0ee4e4e51abc542f0fcb65496ec961b603da3e2928ca9d549c16c9b788f8",
+        "SandWorldStone.png": "a6abe72b8912bd1dd604b20b810baa35f226a480b8446aae248a629143e4c47e",
+        "SandWorldRice.png": "1e733ac013d346dbb8266ea82afdfe9247883616b8bee512f8f77ce1a8f1bcbb"
+    },
+    "crop_rects": {
+        "Gold": [147, 10, 44, 39],
+        "Water": [414, 15, 20, 32],
+        "Wood": [465, 15, 25, 32],
+        "Stone": [520, 16, 25, 31],
+        "Rice": [577, 12, 22, 38]
+    },
+    "scope": "Fixed English world HUD resource glyphs, each count requires its matching glyph."
+}

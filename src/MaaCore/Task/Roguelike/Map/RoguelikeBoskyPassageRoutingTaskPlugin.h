@@ -34,6 +34,7 @@ private:
     // ———————— constants and variables ———————————————————————————————————————————————
     RoutingStrategy m_bosky_routing_strategy = RoutingStrategy::None;
     RoguelikeBoskyPassageMap::BoskyPassageMapConfig m_bosky_config;
+    std::unordered_map<size_t, unsigned> m_tavern_visits;
 
     // 界园树洞地图使用单例模式，通过 RoguelikeBoskyPassageMap::get_instance() 访问
 };

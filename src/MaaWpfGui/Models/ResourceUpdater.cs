@@ -232,7 +232,14 @@ public static class ResourceUpdater
 
         try
         {
-            DirectoryMerge(ExtractFolder, PathsHelper.BaseDir);
+            if (SettingsViewModel.VersionUpdateSettings.IsStockUpdateSupported)
+            {
+                DirectoryMerge(ExtractFolder, PathsHelper.BaseDir);
+            }
+            else
+            {
+                DirectoryMerge(Path.Combine(ExtractFolder, "resource"), PathsHelper.ResourceDir);
+            }
         }
         catch (Exception e)
         {
@@ -305,9 +312,18 @@ public static class ResourceUpdater
                 return CheckUpdateRetT.NoNeedToUpdate;
             }
 
-            if (ret == CheckUpdateRetT.NoMirrorChyanCdk)
+            if (ret == CheckUpdateRetT.NoMirrorChyanCdk && source == UpdateSource.MirrorChyan)
             {
                 ToastNotification.ShowDirect(LocalizationHelper.GetStringFormat("Settings.Update.MirrorChyan.ResourceUpdate.Tip", releaseNote));
+            }
+
+            if (!SettingsViewModel.VersionUpdateSettings.IsStockUpdateSupported &&
+                SettingsViewModel.VersionUpdateSettings.UpdateSource == UpdateSource.GitHub &&
+                ret is CheckUpdateRetT.OK or CheckUpdateRetT.NoMirrorChyanCdk)
+            {
+                return await UpdateFromGithubAsync()
+                    ? CheckUpdateRetT.OnlyGameResourceUpdated
+                    : CheckUpdateRetT.UnknownError;
             }
 
             if (ret != CheckUpdateRetT.OK)
@@ -712,7 +728,15 @@ public static class ResourceUpdater
             }
 
             string tempPath = Path.Combine(destDirName, file.Name);
-            file.CopyTo(tempPath, true); // 覆盖现有文件
+            if (SettingsViewModel.VersionUpdateSettings.IsStockUpdateSupported)
+            {
+                file.CopyTo(tempPath, true);
+            }
+            else
+            {
+                LocalResourceOverrides.CopyFile(file.FullName, tempPath, PathsHelper.ResourceDir,
+                    Path.Combine(PathsHelper.BaseDir, "local-resource-overrides.json"));
+            }
         }
 
         foreach (DirectoryInfo subDir in dirs)

@@ -1,0 +1,89 @@
+{
+    "theme": "Tales",
+    "stage": "Shrubbery Galore",
+    "required_squad": ["Blaze", "Mountain", "Saria"],
+    "anchors": {
+        "idle": "idle.png",
+        "side": "side.png"
+    },
+    "normal_points": {
+        "upper": [675, 228],
+        "lower": [675, 365]
+    },
+    "side_points": {
+        "upper": [747, 230],
+        "lower": [747, 360]
+    },
+    "schema_version": 1,
+    "id": "shrubbery-development",
+    "autoplay_enabled": false,
+    "validation_status": "Calibration route only: normal Mountain carries1; this three-operator route cannot certify the Day1 wood10 pump budget. A live four-operator experiment banked8; world delivery of8 is verified after emulator recovery. Use a separately validated source-guided campaign route for progression.",
+    "coordinate_system": "registered-1280x720",
+    "steps": [
+        {
+            "action": "wait_dp",
+            "minimum": 35,
+            "remaining_floor": 160
+        },
+        {
+            "action": "deploy",
+            "name": "Blaze",
+            "slot": "upper",
+            "direction": "Left"
+        },
+        {
+            "action": "deploy",
+            "name": "Mountain",
+            "slot": "lower",
+            "direction": "Left"
+        },
+        {
+            "action": "collect",
+            "name": "Mountain",
+            "slot": "lower",
+            "minimum": 1,
+            "timeout": 100,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Mountain",
+            "slot": "lower"
+        },
+        {
+            "action": "deploy",
+            "name": "Saria",
+            "slot": "lower",
+            "direction": "Left"
+        },
+        {
+            "action": "collect",
+            "name": "Saria",
+            "slot": "lower",
+            "minimum": 3,
+            "timeout": 20,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Saria",
+            "slot": "lower"
+        },
+        {
+            "action": "collect",
+            "name": "Blaze",
+            "slot": "upper",
+            "minimum": 3,
+            "timeout": 110,
+            "skill_once": false
+        },
+        {
+            "action": "bank",
+            "name": "Blaze",
+            "slot": "upper"
+        },
+        {
+            "action": "finish"
+        }
+    ]
+}

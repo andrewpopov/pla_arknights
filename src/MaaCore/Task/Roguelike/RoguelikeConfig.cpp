@@ -21,6 +21,10 @@ bool asst::RoguelikeConfig::verify_and_load_params(const json::value& params)
         return false;
     }
 
+    m_jiegarden_strategy = { params.get("jiegarden_conserve_vouchers", true),
+                             params.get("jiegarden_manage_coppers", true),
+                             params.get("jiegarden_auto_candleguest", true),
+                             params.get("jiegarden_cautious_routing", true) };
     m_blackflow_start_animals.clear();
     m_blackflow_start_rewards = 0;
     m_blackflow_start_utopia = false;

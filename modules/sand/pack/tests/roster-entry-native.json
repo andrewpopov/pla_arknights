@@ -1,0 +1,77 @@
+{
+    "game_connected": false,
+    "live_click_verified": false,
+    "native": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [823, 28, 82, 17],
+                    "score": 0.973378,
+                    "task": "SandAuto@Squad",
+                    "text": "QuickSelect"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageClear"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageConfirm"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@Squad"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [464, 661, 43, 27],
+                    "score": 0.910409,
+                    "task": "SandRoster@PageClear",
+                    "text": "Clear"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1105, 668, 130, 23],
+                    "score": 0.987274,
+                    "task": "SandRoster@PageConfirm",
+                    "text": "AddedtoSquad"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@Squad"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageClear"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageConfirm"
+                }
+            ]
+        }
+    ],
+    "images_sha256": {
+        "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png": "0538859b1f3ad79241a1af83cc27183200b3c39bf401144c05812d25f7f370cb",
+        "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png": "f8aa1a6cc811b038fdd11a2c926b915faf04a3b2dc4c63dc98773bf9ace8c37b",
+        "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png": "0323ca4283f6b90734d45d9d364acd43201c3b78d20885e7be5b37d1b32bda27"
+    }
+}

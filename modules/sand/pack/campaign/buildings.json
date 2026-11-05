@@ -1,0 +1,21 @@
+{
+    "schema_version": 1,
+    "source": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+    "source_sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313",
+    "items": {
+        "sandbox_1_building_1": {
+            "id": "sandbox_1_building_1",
+            "name": "Planting Box Group",
+            "trap_id": "trap_456_xbfarmm",
+            "materials": {
+                "water": 10,
+                "wood": 30
+            },
+            "min_hq": 2,
+            "output_ratio": 1,
+            "reviewed_hq2_placement_cap": 4
+        }
+    },
+    "placement_is_separate": true,
+    "inventory_credit_enabled": false
+}

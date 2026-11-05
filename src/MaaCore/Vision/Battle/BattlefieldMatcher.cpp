@@ -10,6 +10,7 @@
 #include "Utils/Logger.hpp"
 #include "Vision/BestMatcher.h"
 #include "Vision/Matcher.h"
+#include "Vision/Miscellaneous/PixelAnalyzer.h"
 #include "Vision/MultiMatcher.h"
 #include "Vision/RegionOCRer.h"
 #include "Vision/TemplDetOCRer.h"
@@ -84,10 +85,21 @@ std::vector<battle::DeploymentOper> BattlefieldMatcher::deployment_analyze() con
 #endif
 
     auto flag_opt = flags_analyzer.analyze();
-    if (!flag_opt) {
-        return {};
+    auto flags = flag_opt.value_or(MultiMatcher::ResultsVec {});
+    if (const auto candidate = Task.get("BattleOpersShadowPuppetFlag")) {
+        if (auto highlighted = shadow_puppet_flag_analyze()) {
+            auto existing = std::ranges::find_if(flags, [&](const auto& flag) {
+                return std::abs(flag.rect.x - candidate->roi.x) < 10 && std::abs(flag.rect.y - candidate->roi.y) < 8;
+            });
+            if (existing == flags.end()) {
+                flags.emplace_back(*highlighted, 1.0, "shadow-puppet");
+            }
+            else {
+                // A visible C marker can still be brightened by the border when deployment is blocked.
+                existing->templ_name = "shadow-puppet";
+            }
+        }
     }
-    auto& flags = flag_opt.value();
     sort_by_horizontal_(flags);
 
     const Rect& click_move = Task.get("BattleOperClickRange")->rect_move;
@@ -146,9 +158,22 @@ std::vector<battle::DeploymentOper> BattlefieldMatcher::deployment_analyze() con
         }
 #endif
 
-        if (m_object_of_interest.oper_cost) {
+        const bool highlighted = flag_res.templ_name == "shadow-puppet";
+        if (m_object_of_interest.oper_cost || highlighted) {
             Rect cost_rect = correct_rect(flag_res.rect.move(cost_move), m_image);
             oper.cost = oper_cost_analyze(cost_rect);
+        }
+
+        if (highlighted) {
+            // The colored border brightens the cost marker even when DP is insufficient.
+            // Read fresh DP rather than inheriting the previous-frame cost cache.
+            const auto dp = BattlefieldMatcher(m_image).costs_analyze();
+            const auto limit_task = Task.get("BattleOpersShadowPuppetUnitLimit");
+            const int unit_limit = limit_task ? oper_cost_analyze(limit_task->roi) : -1;
+            oper.available = oper.available && !oper.cooling && oper.cost >= 0 && unit_limit > 0 &&
+                             dp.status == MatchStatus::Success && dp.value >= oper.cost;
+            LogTrace << __FUNCTION__ << "Recovered shadow-puppet hand card" << oper.rect << "cost" << oper.cost
+                     << "available" << oper.available;
         }
 
         oper.index = index++;
@@ -157,6 +182,29 @@ std::vector<battle::DeploymentOper> BattlefieldMatcher::deployment_analyze() con
     }
 
     return oper_result;
+}
+
+std::optional<Rect> BattlefieldMatcher::shadow_puppet_flag_analyze() const
+{
+    // Shadow-puppet collectibles tint the rightmost card and obscure its C marker.
+    // Require both border colors; the normal role, cost and cooldown analyzers still validate the card.
+    for (const auto* name : { "BattleOpersShadowPuppetPink", "BattleOpersShadowPuppetCyan" }) {
+        const auto task = Task.get<MatchTaskInfo>(name);
+        if (!task || task->color_scales.size() != 1 || task->special_params.empty() ||
+            !std::holds_alternative<MatchTaskInfo::ColorRange>(task->color_scales.front())) {
+            return std::nullopt;
+        }
+        const auto& range = std::get<MatchTaskInfo::ColorRange>(task->color_scales.front());
+        PixelAnalyzer border(m_image, task->roi);
+        border.set_log_tracing(false);
+        border.set_filter(PixelAnalyzer::Filter::HSV);
+        border.set_lb(range.first);
+        border.set_ub(range.second);
+        if (!border.analyze() || border.get_result().size() < static_cast<size_t>(task->special_params.front())) {
+            return std::nullopt;
+        }
+    }
+    return Task.get("BattleOpersShadowPuppetFlag")->roi;
 }
 
 battle::Role BattlefieldMatcher::oper_role_analyze(const Rect& roi) const

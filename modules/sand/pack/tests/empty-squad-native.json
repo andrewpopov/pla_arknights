@@ -1,0 +1,83 @@
+{
+    "native": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1160, 22, 27, 26],
+                    "score": 0.995422,
+                    "task": "SandAuto@ClearSquad",
+                    "templ": "Tales@RA@ClearSquad.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@ClearSquadConfirm"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [814, 404, 141, 19],
+                    "score": 0.975244,
+                    "task": "SandAuto@EmptySquadSlot7",
+                    "text": "AddSquadMembers"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@ClearSquad"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@ClearSquadConfirm"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot1"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot7"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-open.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@ClearSquad"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@ClearSquadConfirm"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot1"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EmptySquadSlot7"
+                }
+            ]
+        }
+    ],
+    "source_report": "I:\\MAA-data\\sand-player\\empty-squad-offline-20261029\\report.json",
+    "source_sha256": "f479dd9c8ba2cca3f2bd8fd5e3598daad24b97ace4a081d560a2532011b67676",
+    "english_all_empty_verified": false,
+    "live_clear_verified": false,
+    "confirmation_positive_verified": false
+}

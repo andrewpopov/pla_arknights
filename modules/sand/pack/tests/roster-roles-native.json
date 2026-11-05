@@ -1,0 +1,499 @@
+{
+    "kind": "RA class menu saved-image native replay",
+    "game_connected": false,
+    "native": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 138, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RolePioneer",
+                    "templ": "SandRosterRolePioneer.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedPioneer"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 198, 50, 45],
+                    "score": 0.994189,
+                    "task": "SandRoster@RoleWarrior",
+                    "templ": "SandRosterRoleWarrior.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedWarrior"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleTank"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1203, 264, 3, 3],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleSelectedTank",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 318, 50, 45],
+                    "score": 0.995548,
+                    "task": "SandRoster@RoleSniper",
+                    "templ": "SandRosterRoleSniper.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSniper"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 378, 50, 45],
+                    "score": 0.976448,
+                    "task": "SandRoster@RoleCaster",
+                    "templ": "SandRosterRoleCaster.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedCaster"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 438, 50, 45],
+                    "score": 0.995871,
+                    "task": "SandRoster@RoleMedic",
+                    "templ": "SandRosterRoleMedic.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedMedic"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 498, 50, 45],
+                    "score": 0.997501,
+                    "task": "SandRoster@RoleSupport",
+                    "templ": "SandRosterRoleSupport.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSupport"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 558, 50, 45],
+                    "score": 0.991582,
+                    "task": "SandRoster@RoleSpecial",
+                    "templ": "SandRosterRoleSpecial.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSpecial"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 58, 50, 40],
+                    "score": 0.99862,
+                    "task": "SandRoster@RoleMenuOpen",
+                    "templ": "SandRosterRoleMenuOpen.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [464, 661, 43, 27],
+                    "score": 0.910409,
+                    "task": "SandRoster@PageClear",
+                    "text": "Clear"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1105, 668, 130, 23],
+                    "score": 0.987274,
+                    "task": "SandRoster@PageConfirm",
+                    "text": "AddedtoSquad"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00057-fresh-vanguard-roster.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandRoster@RolePioneer"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1206, 148, 3, 3],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleSelectedPioneer",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 198, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleWarrior",
+                    "templ": "SandRosterRoleWarrior.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedWarrior"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 258, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleTank",
+                    "templ": "SandRosterRoleTank.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedTank"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 318, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleSniper",
+                    "templ": "SandRosterRoleSniper.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSniper"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 378, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleCaster",
+                    "templ": "SandRosterRoleCaster.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedCaster"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 438, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleMedic",
+                    "templ": "SandRosterRoleMedic.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedMedic"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 498, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleSupport",
+                    "templ": "SandRosterRoleSupport.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSupport"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 558, 50, 45],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleSpecial",
+                    "templ": "SandRosterRoleSpecial.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSpecial"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 58, 50, 40],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleMenuOpen",
+                    "templ": "SandRosterRoleMenuOpen.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [464, 661, 43, 27],
+                    "score": 0.910409,
+                    "task": "SandRoster@PageClear",
+                    "text": "Clear"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1105, 668, 130, 23],
+                    "score": 0.987274,
+                    "task": "SandRoster@PageConfirm",
+                    "text": "AddedtoSquad"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00068-confirm-guide-squad.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandRoster@RolePioneer"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1206, 148, 3, 3],
+                    "score": 1.0,
+                    "task": "SandRoster@RoleSelectedPioneer",
+                    "templ": "SandRosterRoleBlue.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 198, 50, 45],
+                    "score": 0.998147,
+                    "task": "SandRoster@RoleWarrior",
+                    "templ": "SandRosterRoleWarrior.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedWarrior"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 258, 50, 45],
+                    "score": 0.994464,
+                    "task": "SandRoster@RoleTank",
+                    "templ": "SandRosterRoleTank.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedTank"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 318, 50, 45],
+                    "score": 0.995824,
+                    "task": "SandRoster@RoleSniper",
+                    "templ": "SandRosterRoleSniper.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSniper"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 378, 50, 45],
+                    "score": 0.990389,
+                    "task": "SandRoster@RoleCaster",
+                    "templ": "SandRosterRoleCaster.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedCaster"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 438, 50, 45],
+                    "score": 0.993574,
+                    "task": "SandRoster@RoleMedic",
+                    "templ": "SandRosterRoleMedic.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedMedic"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 498, 50, 45],
+                    "score": 0.998224,
+                    "task": "SandRoster@RoleSupport",
+                    "templ": "SandRosterRoleSupport.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSupport"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 558, 50, 45],
+                    "score": 0.983641,
+                    "task": "SandRoster@RoleSpecial",
+                    "templ": "SandRosterRoleSpecial.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSpecial"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1180, 58, 50, 40],
+                    "score": 0.99995,
+                    "task": "SandRoster@RoleMenuOpen",
+                    "templ": "SandRosterRoleMenuOpen.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [464, 662, 43, 24],
+                    "score": 0.997014,
+                    "task": "SandRoster@PageClear",
+                    "text": "Clear"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1105, 668, 130, 23],
+                    "score": 0.987274,
+                    "task": "SandRoster@PageConfirm",
+                    "text": "AddedtoSquad"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandRoster@RolePioneer"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedPioneer"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleWarrior"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedWarrior"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleTank"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedTank"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSniper"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSniper"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleCaster"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedCaster"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleMedic"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedMedic"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSupport"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSupport"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSpecial"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleSelectedSpecial"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@RoleMenuOpen"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageClear"
+                },
+                {
+                    "hit": false,
+                    "task": "SandRoster@PageConfirm"
+                }
+            ]
+        }
+    ],
+    "source_images": [
+        {
+            "path": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00054-noir-corne-column.png",
+            "sha256": "f8aa1a6cc811b038fdd11a2c926b915faf04a3b2dc4c63dc98773bf9ace8c37b"
+        },
+        {
+            "path": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00057-fresh-vanguard-roster.png",
+            "sha256": "bca37194f33781c2d910aeeb2247a69d40a4daeabc26f0246cc5c7789e3a8724"
+        },
+        {
+            "path": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00068-confirm-guide-squad.png",
+            "sha256": "3903741df1b4fe37f3dd7ec8d6522c15c3cfe1fbd4f00e34cfec80611d3a29c0"
+        },
+        {
+            "path": "I:\\MAA-data\\sand-player\\energy-carryover-20261031\\live\\00011-carryover-funded-world.png",
+            "sha256": "0323ca4283f6b90734d45d9d364acd43201c3b78d20885e7be5b37d1b32bda27"
+        }
+    ],
+    "role_layout_sha256": "b5832b0d236c6378b6faed86052bfb87399694eba2b2a0cfc8feb95b7ca33737",
+    "live_role_switch_verified": false,
+    "selected_role_positive_sources": ["Pioneer", "Tank"],
+    "template_sha256": {
+        "SandRosterRoleBlue.png": "6e9b43f22252f9f0cd3837dd796cbb1b2936e2a9251f48830e0490d67a84ff61",
+        "SandRosterRoleCaster.png": "8635587792eff3ecc573f28af5c9fb3dcbe40b433589022f15bd2a1c6e79234a",
+        "SandRosterRoleMedic.png": "2cc0018cae2fcc753f7967c1084f07200b6d8b6a301018bc7bd405d99fdbc4cf",
+        "SandRosterRoleMenuOpen.png": "b504590d8918f8a7d0004d827a0bf3959a9e64e9b56ef4fe3354581d81474197",
+        "SandRosterRolePioneer.png": "d3e22e28194242df03bede8925d84154f6a08f7ef3e0b7bb2fd039c74bc9e8be",
+        "SandRosterRoleSniper.png": "e646ced25f1c63a6206b703f38a87e96d2d03b9c279e46971a4d6196b089cb5f",
+        "SandRosterRoleSpecial.png": "85ea601d1a1442919e0a819f6ff9d2dafb8b5978380023e961d67c3423955d22",
+        "SandRosterRoleSupport.png": "22aa9db5ecaf41d7530110221adca61ae4175928a8a878f1f2d439abad598939",
+        "SandRosterRoleTank.png": "77b046603a1feae5161cff156750e71f7a1857d1224e5b47f14a3ffe86992d11",
+        "SandRosterRoleWarrior.png": "783ca719682bae0dfefbd26dfbe43f37258f2b1e7ca3cb1b5430ee900efd1075"
+    }
+}

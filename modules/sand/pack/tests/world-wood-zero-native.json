@@ -1,0 +1,971 @@
+{
+    "schema_version": 1,
+    "roi": [491, 35, 28, 27],
+    "rows": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\day1-resume-20261031T160000Z\\live-connected\\00014-fresh-world-wood-fixed.png",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [50, 644, 40, 47],
+                    "score": 0.94648,
+                    "task": "SandAuto@World",
+                    "templ": "Tales@RA@HeadquartersButton.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1155, 55, 38, 25],
+                    "score": 0.995037,
+                    "task": "SandAuto@WorldDaysLabel",
+                    "text": "Days"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1160, 72, 29, 38],
+                    "score": 0.993095,
+                    "task": "SandAuto@WorldDayNumber",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [45, 689, 55, 28],
+                    "score": 0.931401,
+                    "task": "SandAuto@WorldHQLevel",
+                    "text": "LV.1"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1163, 115, 25, 12],
+                    "score": 0.9783,
+                    "task": "SandAuto@WorldActs2",
+                    "templ": "Tales@RA@ActsLeft2.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [198, 38, 14, 20],
+                    "score": 0.952254,
+                    "task": "SandAuto@WorldGold",
+                    "text": "0"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [436, 40, 11, 17],
+                    "score": 0.909095,
+                    "task": "SandAuto@WorldWater",
+                    "text": "0"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [491, 40, 11, 18],
+                    "score": 0.931657,
+                    "task": "SandAuto@WorldWood",
+                    "text": "0"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [147, 10, 44, 39],
+                    "score": 0.993569,
+                    "task": "SandAuto@WorldIconGold",
+                    "templ": "SandWorldGold.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [414, 15, 20, 32],
+                    "score": 0.973476,
+                    "task": "SandAuto@WorldIconWater",
+                    "templ": "SandWorldWater.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [465, 15, 25, 32],
+                    "score": 0.998773,
+                    "task": "SandAuto@WorldIconWood",
+                    "templ": "SandWorldWood.png"
+                }
+            ],
+            "facts": {
+                "image": "I:\\MAA-data\\sand-player\\day1-resume-20261031T160000Z\\live-connected\\00014-fresh-world-wood-fixed.png",
+                "day": 1,
+                "acts_remaining": 2,
+                "hq": 1,
+                "resources": {
+                    "gold": 0,
+                    "water": 0,
+                    "wood": 0,
+                    "stone": null,
+                    "rice": null
+                },
+                "evidence": {
+                    "SandAuto@World": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [50, 644, 40, 47],
+                        "score": 0.94648,
+                        "task": "SandAuto@World",
+                        "templ": "Tales@RA@HeadquartersButton.png"
+                    },
+                    "SandAuto@WorldDaysLabel": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [1155, 55, 38, 25],
+                        "score": 0.995037,
+                        "task": "SandAuto@WorldDaysLabel",
+                        "text": "Days"
+                    },
+                    "SandAuto@WorldDayNumber": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [1160, 72, 29, 38],
+                        "score": 0.993095,
+                        "task": "SandAuto@WorldDayNumber",
+                        "text": "1"
+                    },
+                    "SandAuto@WorldHQLevel": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [45, 689, 55, 28],
+                        "score": 0.931401,
+                        "task": "SandAuto@WorldHQLevel",
+                        "text": "LV.1"
+                    },
+                    "SandAuto@WorldActs2": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [1163, 115, 25, 12],
+                        "score": 0.9783,
+                        "task": "SandAuto@WorldActs2",
+                        "templ": "Tales@RA@ActsLeft2.png"
+                    },
+                    "SandAuto@WorldGold": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [198, 38, 14, 20],
+                        "score": 0.952254,
+                        "task": "SandAuto@WorldGold",
+                        "text": "0"
+                    },
+                    "SandAuto@WorldWater": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [436, 40, 11, 17],
+                        "score": 0.909095,
+                        "task": "SandAuto@WorldWater",
+                        "text": "0"
+                    },
+                    "SandAuto@WorldWood": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [491, 40, 11, 18],
+                        "score": 0.931657,
+                        "task": "SandAuto@WorldWood",
+                        "text": "0"
+                    },
+                    "SandAuto@WorldIconGold": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [147, 10, 44, 39],
+                        "score": 0.993569,
+                        "task": "SandAuto@WorldIconGold",
+                        "templ": "SandWorldGold.png"
+                    },
+                    "SandAuto@WorldIconWater": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [414, 15, 20, 32],
+                        "score": 0.973476,
+                        "task": "SandAuto@WorldIconWater",
+                        "templ": "SandWorldWater.png"
+                    },
+                    "SandAuto@WorldIconWood": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [465, 15, 25, 32],
+                        "score": 0.998773,
+                        "task": "SandAuto@WorldIconWood",
+                        "templ": "SandWorldWood.png"
+                    }
+                },
+                "unknown_fields": ["stone", "rice"],
+                "inventory_updated": false,
+                "snapshot_current": false,
+                "freshness": "Caller must establish capture freshness and campaign continuity."
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\day-two-ready.png",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [50, 644, 40, 47],
+                    "score": 0.946644,
+                    "task": "SandAuto@World",
+                    "templ": "Tales@RA@HeadquartersButton.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1155, 55, 38, 25],
+                    "score": 0.995112,
+                    "task": "SandAuto@WorldDaysLabel",
+                    "text": "Days"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1160, 72, 29, 38],
+                    "score": 0.999731,
+                    "task": "SandAuto@WorldDayNumber",
+                    "text": "2"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [45, 689, 55, 28],
+                    "score": 0.922765,
+                    "task": "SandAuto@WorldHQLevel",
+                    "text": "LV.1"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1163, 115, 25, 12],
+                    "score": 0.979413,
+                    "task": "SandAuto@WorldActs2",
+                    "templ": "Tales@RA@ActsLeft2.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [198, 38, 14, 20],
+                    "score": 0.999568,
+                    "task": "SandAuto@WorldGold",
+                    "text": "5"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [438, 41, 8, 16],
+                    "score": 0.996608,
+                    "task": "SandAuto@WorldWater",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [491, 40, 12, 17],
+                    "score": 0.999507,
+                    "task": "SandAuto@WorldWood",
+                    "text": "3"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [540, 35, 42, 22],
+                    "score": 0.992043,
+                    "task": "SandAuto@WorldStone",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [595, 35, 17, 22],
+                    "score": 0.996167,
+                    "task": "SandAuto@WorldRice",
+                    "text": "2"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [147, 10, 44, 39],
+                    "score": 0.999654,
+                    "task": "SandAuto@WorldIconGold",
+                    "templ": "SandWorldGold.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [414, 15, 20, 32],
+                    "score": 0.999573,
+                    "task": "SandAuto@WorldIconWater",
+                    "templ": "SandWorldWater.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [465, 15, 25, 32],
+                    "score": 0.999598,
+                    "task": "SandAuto@WorldIconWood",
+                    "templ": "SandWorldWood.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [520, 16, 25, 31],
+                    "score": 0.999518,
+                    "task": "SandAuto@WorldIconStone",
+                    "templ": "SandWorldStone.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [577, 12, 22, 38],
+                    "score": 0.999235,
+                    "task": "SandAuto@WorldIconRice",
+                    "templ": "SandWorldRice.png"
+                }
+            ],
+            "facts": {
+                "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\day-two-ready.png",
+                "day": 2,
+                "acts_remaining": 2,
+                "hq": 1,
+                "resources": {
+                    "gold": 5,
+                    "water": 1,
+                    "wood": 3,
+                    "stone": null,
+                    "rice": 2
+                },
+                "evidence": {
+                    "SandAuto@World": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [50, 644, 40, 47],
+                        "score": 0.946644,
+                        "task": "SandAuto@World",
+                        "templ": "Tales@RA@HeadquartersButton.png"
+                    },
+                    "SandAuto@WorldDaysLabel": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [1155, 55, 38, 25],
+                        "score": 0.995112,
+                        "task": "SandAuto@WorldDaysLabel",
+                        "text": "Days"
+                    },
+                    "SandAuto@WorldDayNumber": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [1160, 72, 29, 38],
+                        "score": 0.999731,
+                        "task": "SandAuto@WorldDayNumber",
+                        "text": "2"
+                    },
+                    "SandAuto@WorldHQLevel": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [45, 689, 55, 28],
+                        "score": 0.922765,
+                        "task": "SandAuto@WorldHQLevel",
+                        "text": "LV.1"
+                    },
+                    "SandAuto@WorldActs2": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [1163, 115, 25, 12],
+                        "score": 0.979413,
+                        "task": "SandAuto@WorldActs2",
+                        "templ": "Tales@RA@ActsLeft2.png"
+                    },
+                    "SandAuto@WorldGold": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [198, 38, 14, 20],
+                        "score": 0.999568,
+                        "task": "SandAuto@WorldGold",
+                        "text": "5"
+                    },
+                    "SandAuto@WorldWater": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [438, 41, 8, 16],
+                        "score": 0.996608,
+                        "task": "SandAuto@WorldWater",
+                        "text": "1"
+                    },
+                    "SandAuto@WorldWood": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [491, 40, 12, 17],
+                        "score": 0.999507,
+                        "task": "SandAuto@WorldWood",
+                        "text": "3"
+                    },
+                    "SandAuto@WorldStone": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [540, 35, 42, 22],
+                        "score": 0.992043,
+                        "task": "SandAuto@WorldStone",
+                        "text": "1"
+                    },
+                    "SandAuto@WorldRice": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [595, 35, 17, 22],
+                        "score": 0.996167,
+                        "task": "SandAuto@WorldRice",
+                        "text": "2"
+                    },
+                    "SandAuto@WorldIconGold": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [147, 10, 44, 39],
+                        "score": 0.999654,
+                        "task": "SandAuto@WorldIconGold",
+                        "templ": "SandWorldGold.png"
+                    },
+                    "SandAuto@WorldIconWater": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [414, 15, 20, 32],
+                        "score": 0.999573,
+                        "task": "SandAuto@WorldIconWater",
+                        "templ": "SandWorldWater.png"
+                    },
+                    "SandAuto@WorldIconWood": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [465, 15, 25, 32],
+                        "score": 0.999598,
+                        "task": "SandAuto@WorldIconWood",
+                        "templ": "SandWorldWood.png"
+                    },
+                    "SandAuto@WorldIconStone": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [520, 16, 25, 31],
+                        "score": 0.999518,
+                        "task": "SandAuto@WorldIconStone",
+                        "templ": "SandWorldStone.png"
+                    },
+                    "SandAuto@WorldIconRice": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [577, 12, 22, 38],
+                        "score": 0.999235,
+                        "task": "SandAuto@WorldIconRice",
+                        "templ": "SandWorldRice.png"
+                    }
+                },
+                "unknown_fields": ["stone"],
+                "inventory_updated": false,
+                "snapshot_current": false,
+                "freshness": "Caller must establish capture freshness and campaign continuity."
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\pump-crafted.png",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [50, 644, 40, 47],
+                    "score": 0.946682,
+                    "task": "SandAuto@World",
+                    "templ": "Tales@RA@HeadquartersButton.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1160, 72, 37, 42],
+                    "score": 0.978151,
+                    "task": "SandAuto@WorldDayNumber",
+                    "text": ">"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [45, 689, 55, 28],
+                    "score": 0.922765,
+                    "task": "SandAuto@WorldHQLevel",
+                    "text": "LV.1"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1162, 55, 34, 78],
+                    "score": 0.945474,
+                    "task": "SandAuto@WorldActs0",
+                    "templ": "Tales@RA@NextDay.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [195, 38, 23, 24],
+                    "score": 0.999866,
+                    "task": "SandAuto@WorldGold",
+                    "text": "5"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [438, 41, 8, 16],
+                    "score": 0.996888,
+                    "task": "SandAuto@WorldWater",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [491, 40, 12, 17],
+                    "score": 0.99951,
+                    "task": "SandAuto@WorldWood",
+                    "text": "3"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [540, 35, 16, 22],
+                    "score": 0.99796,
+                    "task": "SandAuto@WorldStone",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [147, 10, 44, 39],
+                    "score": 0.995601,
+                    "task": "SandAuto@WorldIconGold",
+                    "templ": "SandWorldGold.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [414, 15, 20, 32],
+                    "score": 0.998715,
+                    "task": "SandAuto@WorldIconWater",
+                    "templ": "SandWorldWater.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [465, 15, 25, 32],
+                    "score": 0.999471,
+                    "task": "SandAuto@WorldIconWood",
+                    "templ": "SandWorldWood.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [520, 16, 25, 31],
+                    "score": 0.999375,
+                    "task": "SandAuto@WorldIconStone",
+                    "templ": "SandWorldStone.png"
+                }
+            ],
+            "facts": {
+                "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\pump-crafted.png",
+                "day": null,
+                "acts_remaining": 0,
+                "hq": 1,
+                "resources": {
+                    "gold": 5,
+                    "water": 1,
+                    "wood": 3,
+                    "stone": null,
+                    "rice": null
+                },
+                "evidence": {
+                    "SandAuto@World": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [50, 644, 40, 47],
+                        "score": 0.946682,
+                        "task": "SandAuto@World",
+                        "templ": "Tales@RA@HeadquartersButton.png"
+                    },
+                    "SandAuto@WorldDayNumber": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [1160, 72, 37, 42],
+                        "score": 0.978151,
+                        "task": "SandAuto@WorldDayNumber",
+                        "text": ">"
+                    },
+                    "SandAuto@WorldHQLevel": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [45, 689, 55, 28],
+                        "score": 0.922765,
+                        "task": "SandAuto@WorldHQLevel",
+                        "text": "LV.1"
+                    },
+                    "SandAuto@WorldActs0": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [1162, 55, 34, 78],
+                        "score": 0.945474,
+                        "task": "SandAuto@WorldActs0",
+                        "templ": "Tales@RA@NextDay.png"
+                    },
+                    "SandAuto@WorldGold": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [195, 38, 23, 24],
+                        "score": 0.999866,
+                        "task": "SandAuto@WorldGold",
+                        "text": "5"
+                    },
+                    "SandAuto@WorldWater": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [438, 41, 8, 16],
+                        "score": 0.996888,
+                        "task": "SandAuto@WorldWater",
+                        "text": "1"
+                    },
+                    "SandAuto@WorldWood": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [491, 40, 12, 17],
+                        "score": 0.99951,
+                        "task": "SandAuto@WorldWood",
+                        "text": "3"
+                    },
+                    "SandAuto@WorldStone": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [540, 35, 16, 22],
+                        "score": 0.99796,
+                        "task": "SandAuto@WorldStone",
+                        "text": "1"
+                    },
+                    "SandAuto@WorldIconGold": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [147, 10, 44, 39],
+                        "score": 0.995601,
+                        "task": "SandAuto@WorldIconGold",
+                        "templ": "SandWorldGold.png"
+                    },
+                    "SandAuto@WorldIconWater": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [414, 15, 20, 32],
+                        "score": 0.998715,
+                        "task": "SandAuto@WorldIconWater",
+                        "templ": "SandWorldWater.png"
+                    },
+                    "SandAuto@WorldIconWood": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [465, 15, 25, 32],
+                        "score": 0.999471,
+                        "task": "SandAuto@WorldIconWood",
+                        "templ": "SandWorldWood.png"
+                    },
+                    "SandAuto@WorldIconStone": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [520, 16, 25, 31],
+                        "score": 0.999375,
+                        "task": "SandAuto@WorldIconStone",
+                        "templ": "SandWorldStone.png"
+                    }
+                },
+                "unknown_fields": ["day", "stone", "rice"],
+                "inventory_updated": false,
+                "snapshot_current": false,
+                "freshness": "Caller must establish capture freshness and campaign continuity."
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [45, 689, 55, 28],
+                    "score": 0.195994,
+                    "task": "SandAuto@WorldHQLevel",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [195, 36, 40, 26],
+                    "score": 0.195925,
+                    "task": "SandAuto@WorldGold",
+                    "text": "h"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [497, 52, 22, 10],
+                    "score": 0.739455,
+                    "task": "SandAuto@WorldWood",
+                    "text": "-"
+                }
+            ],
+            "rejected": "World facts require the map control and identified day HUD"
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\day-two.png",
+            "results": [],
+            "rejected": "World facts require the map control and identified day HUD"
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\energy-recovery-20261028\\day4-settle\\00008-settled-day.png",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [50, 644, 40, 47],
+                    "score": 0.946416,
+                    "task": "SandAuto@World",
+                    "templ": "Tales@RA@HeadquartersButton.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1155, 55, 38, 25],
+                    "score": 0.995329,
+                    "task": "SandAuto@WorldDaysLabel",
+                    "text": "Days"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [1160, 72, 29, 38],
+                    "score": 0.999744,
+                    "task": "SandAuto@WorldDayNumber",
+                    "text": "4"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [45, 689, 55, 28],
+                    "score": 0.923148,
+                    "task": "SandAuto@WorldHQLevel",
+                    "text": "LV.1"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1163, 115, 25, 12],
+                    "score": 0.979169,
+                    "task": "SandAuto@WorldActs2",
+                    "templ": "Tales@RA@ActsLeft2.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [199, 38, 44, 24],
+                    "score": 0.357684,
+                    "task": "SandAuto@WorldGold",
+                    "text": "CB"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [430, 41, 42, 18],
+                    "score": 0.979919,
+                    "task": "SandAuto@WorldWater",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [491, 40, 28, 19],
+                    "score": 0.998503,
+                    "task": "SandAuto@WorldWood",
+                    "text": "3"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [540, 35, 42, 24],
+                    "score": 0.990789,
+                    "task": "SandAuto@WorldStone",
+                    "text": "1"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [595, 35, 42, 25],
+                    "score": 0.898934,
+                    "task": "SandAuto@WorldRice",
+                    "text": "2"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [414, 15, 20, 32],
+                    "score": 0.998102,
+                    "task": "SandAuto@WorldIconWater",
+                    "templ": "SandWorldWater.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [465, 15, 25, 32],
+                    "score": 0.991735,
+                    "task": "SandAuto@WorldIconWood",
+                    "templ": "SandWorldWood.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [520, 16, 25, 31],
+                    "score": 0.994794,
+                    "task": "SandAuto@WorldIconStone",
+                    "templ": "SandWorldStone.png"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [577, 12, 22, 38],
+                    "score": 0.987756,
+                    "task": "SandAuto@WorldIconRice",
+                    "templ": "SandWorldRice.png"
+                }
+            ],
+            "facts": {
+                "image": "I:\\MAA-data\\sand-player\\energy-recovery-20261028\\day4-settle\\00008-settled-day.png",
+                "day": 4,
+                "acts_remaining": 2,
+                "hq": 1,
+                "resources": {
+                    "gold": null,
+                    "water": 1,
+                    "wood": 3,
+                    "stone": null,
+                    "rice": 2
+                },
+                "evidence": {
+                    "SandAuto@World": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [50, 644, 40, 47],
+                        "score": 0.946416,
+                        "task": "SandAuto@World",
+                        "templ": "Tales@RA@HeadquartersButton.png"
+                    },
+                    "SandAuto@WorldDaysLabel": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [1155, 55, 38, 25],
+                        "score": 0.995329,
+                        "task": "SandAuto@WorldDaysLabel",
+                        "text": "Days"
+                    },
+                    "SandAuto@WorldDayNumber": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [1160, 72, 29, 38],
+                        "score": 0.999744,
+                        "task": "SandAuto@WorldDayNumber",
+                        "text": "4"
+                    },
+                    "SandAuto@WorldHQLevel": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [45, 689, 55, 28],
+                        "score": 0.923148,
+                        "task": "SandAuto@WorldHQLevel",
+                        "text": "LV.1"
+                    },
+                    "SandAuto@WorldActs2": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [1163, 115, 25, 12],
+                        "score": 0.979169,
+                        "task": "SandAuto@WorldActs2",
+                        "templ": "Tales@RA@ActsLeft2.png"
+                    },
+                    "SandAuto@WorldGold": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [199, 38, 44, 24],
+                        "score": 0.357684,
+                        "task": "SandAuto@WorldGold",
+                        "text": "CB"
+                    },
+                    "SandAuto@WorldWater": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [430, 41, 42, 18],
+                        "score": 0.979919,
+                        "task": "SandAuto@WorldWater",
+                        "text": "1"
+                    },
+                    "SandAuto@WorldWood": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [491, 40, 28, 19],
+                        "score": 0.998503,
+                        "task": "SandAuto@WorldWood",
+                        "text": "3"
+                    },
+                    "SandAuto@WorldStone": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [540, 35, 42, 24],
+                        "score": 0.990789,
+                        "task": "SandAuto@WorldStone",
+                        "text": "1"
+                    },
+                    "SandAuto@WorldRice": {
+                        "algorithm": "OcrDetect",
+                        "hit": true,
+                        "rect": [595, 35, 42, 25],
+                        "score": 0.898934,
+                        "task": "SandAuto@WorldRice",
+                        "text": "2"
+                    },
+                    "SandAuto@WorldIconWater": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [414, 15, 20, 32],
+                        "score": 0.998102,
+                        "task": "SandAuto@WorldIconWater",
+                        "templ": "SandWorldWater.png"
+                    },
+                    "SandAuto@WorldIconWood": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [465, 15, 25, 32],
+                        "score": 0.991735,
+                        "task": "SandAuto@WorldIconWood",
+                        "templ": "SandWorldWood.png"
+                    },
+                    "SandAuto@WorldIconStone": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [520, 16, 25, 31],
+                        "score": 0.994794,
+                        "task": "SandAuto@WorldIconStone",
+                        "templ": "SandWorldStone.png"
+                    },
+                    "SandAuto@WorldIconRice": {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [577, 12, 22, 38],
+                        "score": 0.987756,
+                        "task": "SandAuto@WorldIconRice",
+                        "templ": "SandWorldRice.png"
+                    }
+                },
+                "unknown_fields": ["gold", "stone"],
+                "inventory_updated": false,
+                "snapshot_current": false,
+                "freshness": "Caller must establish capture freshness and campaign continuity."
+            }
+        }
+    ],
+    "passed": true,
+    "historical_resource_correction": "Legacy Stone icon was a food icon; raw native results preserved, derived stone inventory is unknown."
+}

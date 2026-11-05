@@ -1,0 +1,31 @@
+{
+    "schema_version": 1,
+    "passed": true,
+    "native_version": "v6.0.0-local.78ca631.43cfb749",
+    "rows": [
+        {
+            "image": "I:/MAA-data/sand-player/live-control-v18-20261102/runtime/00054-facing.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@CancelFacing"
+                }
+            ]
+        },
+        {
+            "image": "I:/MAA-data/sand-player/live-control-v18-20261102/runtime/00058-supervised-error-paused-006-deploy-adnachiel.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [585, 303, 41, 18],
+                    "score": 0.993632,
+                    "task": "SandAuto@CancelFacing",
+                    "text": "Cancel"
+                }
+            ]
+        }
+    ]
+}

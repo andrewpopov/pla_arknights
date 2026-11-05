@@ -1,0 +1,102 @@
+{
+    "schema_version": 1,
+    "id": "jagged-jungle-supervised-20261101",
+    "theme": "Tales",
+    "stage": "Jagged Jungle",
+    "stage_id": "sandbox_1_38",
+    "autoplay_enabled": false,
+    "validation_status": "Supervised live placement and cargo checks: Noir at above banked3; Beagle and Cardigan at upper each banked3. Full30-wood rotation and lower piles remain unverified.",
+    "coordinate_system": "registered-1280x720",
+    "anchor_manifest": "calibration/jagged-jungle-supervised-20261101-anchors.json",
+    "anchors": {
+        "idle": "idle.png",
+        "side": "side.png"
+    },
+    "normal_points": {
+        "dps": [644, 332],
+        "above": [631, 251],
+        "upper": [618, 174],
+        "below": [657, 410],
+        "front": [553, 342],
+        "tree_mid": [738, 321],
+        "tree_upper": [725, 247],
+        "tree_lower": [751, 397]
+    },
+    "side_points": {
+        "dps": [713, 337],
+        "above": [699, 259],
+        "upper": [685, 189],
+        "below": [728, 413],
+        "front": [627, 355],
+        "tree_mid": [804, 317],
+        "tree_upper": [788, 246],
+        "tree_lower": [820, 392]
+    },
+    "required_squad": ["Młynar", "Beagle", "Spot", "Cardigan", "Noir Corne", "Yato"],
+    "required_formation_skills": {
+        "Młynar": 3
+    },
+    "required_formation_ranks": {
+        "Młynar": 10
+    },
+    "required_formation_levels": {
+        "Młynar": 90
+    },
+    "required_formation_elites": {
+        "Młynar": 2
+    },
+    "zero_capacity_actors": ["Młynar"],
+    "background_skills": [
+        {
+            "name": "Młynar",
+            "slot": "dps",
+            "sp_cost": 42,
+            "maximum": 3
+        }
+    ],
+    "background_skill_remaining_floor": 25,
+    "source_wood_target": 30,
+    "unvalidated_slots": ["dps", "below", "front", "tree_mid", "tree_upper", "tree_lower"],
+    "steps": [
+        {
+            "action": "wait_dp",
+            "minimum": 12,
+            "remaining_floor": 200
+        },
+        {
+            "action": "deploy",
+            "name": "Młynar",
+            "slot": "dps",
+            "direction": "Right"
+        },
+        {
+            "action": "finish"
+        }
+    ],
+    "registration_mask": "jungle",
+    "calibration_pose": "Settled post-deployment/operator-focus camera; initial entry references superseded",
+    "collection_observations": [
+        {
+            "slot": "above",
+            "actor": "Noir Corne",
+            "banked": 3,
+            "subsequent_empty_actor": "Spot",
+            "lesson": "Cargo is state-dependent: do not reuse a depleted collector tile."
+        },
+        {
+            "slot": "upper",
+            "actors": ["Beagle", "Cardigan"],
+            "banked_each": 3,
+            "lesson": "Confirmed six-wood pile supports two three-capacity collectors, then is depleted."
+        }
+    ],
+    "placement_evidence": {
+        "actual_banked_and_settled_wood": 15,
+        "settlement_image": "I:/MAA-data/sand-player/live-control-v14-20261101/runtime/00417-settlement.png",
+        "world_wood_delta": 15,
+        "mlynar_recall_cargo": 3,
+        "dps_tile_noir_bank": 3,
+        "blocked_green_check_slots": ["below"],
+        "source_wood_target_still_unverified": true
+    }
+}

@@ -151,6 +151,11 @@ public class VersionUpdateSettingsUserControlModel : PropertyChangedBase
             ? "DEBUG_VERSION"
             : _uiVersion;
 
+    /// <summary>
+    /// Gets whether this build can safely use the stock updater.
+    /// </summary>
+    public bool IsStockUpdateSupported => !_uiVersion.Contains("-local.", StringComparison.OrdinalIgnoreCase);
+
     public static string UiVersionDisplay => string.Join("\u200B", UiVersion.ToCharArray());
 
     public static DateTimeOffset BuildDateTime { get; } = Assembly.GetExecutingAssembly().GetCustomAttribute<BuildDateTimeAttribute>()?.BuildTime ?? DateTimeOffset.MinValue;
@@ -559,7 +564,7 @@ public class VersionUpdateSettingsUserControlModel : PropertyChangedBase
     [UsedImplicitly]
     public async Task ManualUpdate()
     {
-        if (IsCheckingForUpdates)
+        if (!IsStockUpdateSupported || IsCheckingForUpdates)
         {
             return;
         }
@@ -611,7 +616,7 @@ public class VersionUpdateSettingsUserControlModel : PropertyChangedBase
             return;
         }
 
-        if (SettingsViewModel.VersionUpdateSettings.UpdateSource == UpdateSource.MirrorChyan && string.IsNullOrEmpty(SettingsViewModel.VersionUpdateSettings.MirrorChyanCdk))
+        if (UpdateSource == UpdateSource.MirrorChyan && string.IsNullOrEmpty(MirrorChyanCdk))
         {
             ToastNotification.ShowDirect(LocalizationHelper.GetString("Settings.Update.MirrorChyan.SelectedButNoCdk"));
             return;

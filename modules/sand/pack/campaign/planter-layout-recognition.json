@@ -1,0 +1,215 @@
+{
+    "schema_version": 1,
+    "item_id": "sandbox_1_building_1",
+    "backend": "tools/maa_sand_layout.py",
+    "native_report": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\native-probe-report.json",
+    "game_connected": false,
+    "images_captured": false,
+    "actual_english_build_editor_positive": true,
+    "actual_english_saved_count": {
+        "count": 1,
+        "limit": 2,
+        "day": 3,
+        "hq_level": 1
+    },
+    "hq2_saved_count_positive": false,
+    "english_unlocked_recipe_positive": false,
+    "native_placement_actor": false,
+    "live_save_transition_verified": false,
+    "placement_location_verified": false,
+    "production_verified": false,
+    "native_evidence": {
+        "results": [
+            {
+                "image": "english-editor.png",
+                "result": {
+                    "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\english-editor.png",
+                    "editor_verified": true,
+                    "evidence": {
+                        "SandAuto@HQBuildTitle": {
+                            "algorithm": "OcrDetect",
+                            "hit": true,
+                            "rect": [285, 32, 215, 14],
+                            "score": 0.937182,
+                            "task": "SandAuto@HQBuildTitle",
+                            "text": "Headquarters"
+                        },
+                        "SandAuto@HQBuildSave": {
+                            "algorithm": "MatchTemplate",
+                            "hit": true,
+                            "rect": [1170, 31, 69, 55],
+                            "score": 0.999999,
+                            "task": "SandAuto@HQBuildSave",
+                            "templ": "SandHQBuildSave.png"
+                        },
+                        "SandAuto@HQBuildBack": {
+                            "algorithm": "MatchTemplate",
+                            "hit": true,
+                            "rect": [53, 26, 45, 52],
+                            "score": 1.0,
+                            "task": "SandAuto@HQBuildBack",
+                            "templ": "SandHQBuildBack.png"
+                        }
+                    },
+                    "placement_verified": false,
+                    "saved_layout_verified": false,
+                    "production_verified": false
+                }
+            },
+            {
+                "image": "english-saved-hq.png",
+                "result": {
+                    "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\english-saved-hq.png",
+                    "count": 1,
+                    "limit": 2,
+                    "day": 3,
+                    "evidence": {
+                        "SandAuto@Headquarters": {
+                            "algorithm": "OcrDetect",
+                            "hit": true,
+                            "rect": [52, 153, 199, 14],
+                            "score": 0.958569,
+                            "task": "SandAuto@Headquarters",
+                            "text": "HeadquartersConstructStatus"
+                        },
+                        "SandAuto@HQDetails": {
+                            "algorithm": "OcrDetect",
+                            "hit": true,
+                            "rect": [569, 425, 141, 26],
+                            "score": 0.999101,
+                            "task": "SandAuto@HQDetails",
+                            "text": "Headquarters"
+                        },
+                        "SandAuto@HQPlanterName": {
+                            "algorithm": "OcrDetect",
+                            "hit": true,
+                            "rect": [50, 183, 140, 24],
+                            "score": 0.998,
+                            "task": "SandAuto@HQPlanterName",
+                            "text": "PlantingBoxGroup"
+                        }
+                    },
+                    "quantity_reads": [
+                        {
+                            "rect": [365, 181, 26, 25],
+                            "score": 0.997064,
+                            "text": "1/2"
+                        }
+                    ],
+                    "prepared_image": null,
+                    "calendar": {
+                        "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\english-saved-hq.png",
+                        "day": 3,
+                        "day_reads": [
+                            {
+                                "rect": [39, 31, 96, 117],
+                                "score": 0.999796,
+                                "text": "3"
+                            }
+                        ],
+                        "prepared_image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\english-saved-hq-reward-count-1154.png",
+                        "evidence": {
+                            "SandAuto@HQDetails": {
+                                "algorithm": "OcrDetect",
+                                "hit": true,
+                                "rect": [569, 425, 141, 26],
+                                "score": 0.999101,
+                                "task": "SandAuto@HQDetails",
+                                "text": "Headquarters"
+                            }
+                        }
+                    },
+                    "freshness_verified": false,
+                    "production_verified": false
+                }
+            }
+        ],
+        "independent_controls": [
+            {
+                "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\source-editor-left.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "hit": false,
+                        "task": "SandAuto@HQBuildSave"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@HQBuildBack"
+                    }
+                ]
+            },
+            {
+                "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\source-editor-right.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [1170, 31, 69, 55],
+                        "score": 0.956942,
+                        "task": "SandAuto@HQBuildSave",
+                        "templ": "SandHQBuildSave.png"
+                    },
+                    {
+                        "hit": false,
+                        "task": "SandAuto@HQBuildBack"
+                    }
+                ]
+            }
+        ],
+        "game_connected": false,
+        "live_save_verified": false
+    },
+    "source_normalization": "Guide image-16: remove 90px side pillars, preserve aspect ratio at height720, separate left/right1280 panels. Recognition evidence only; no deployment coordinates.",
+    "independent_template_match": {
+        "save": 0.956942,
+        "back": null
+    },
+    "thresholds": {
+        "ocr": 0.85,
+        "template": 0.95
+    },
+    "assets": {
+        "english-editor.png": {
+            "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\english-editor.png",
+            "sha256": "6254d6eeda794c9b3ad7b0bd32f82ea23d3e3bf1b6f6422fec2fc5f869bb2869"
+        },
+        "english-saved-hq.png": {
+            "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\english-saved-hq.png",
+            "sha256": "0dffb48b4ab189c766c5ad46949460218fae9e0dee771f6e2aff08ee7583624e"
+        },
+        "source-editor-left.png": {
+            "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\source-editor-left.png",
+            "sha256": "75909446c639953b690c261e9febb4f7e8c1665932da8964793b9504b60236c5"
+        },
+        "source-editor-right.png": {
+            "image": "I:\\MAA-data\\sand-player\\planter-layout-20261030\\source-editor-right.png",
+            "sha256": "fb53c26ee0c35c752de883ff835b8ac56b80b0f2beb8b72a15c7a7c4879ab59b"
+        },
+        "SandHQBuildSave.png": {
+            "source": "english-editor.png",
+            "crop": [1170, 31, 69, 55],
+            "sha256": "557bd0daa067c4a468ef154da02585a532560084a8291353f7679576a7f89c30"
+        },
+        "SandHQBuildBack.png": {
+            "source": "english-editor.png",
+            "crop": [53, 26, 45, 52],
+            "sha256": "5cf979254da3eaf6fe52d29a01f9d014c82248c112cc324e9c8dab84b8f08b9b"
+        }
+    },
+    "contract": [
+        "Owned planter-stock receipt and current HQ2 baseline; capacity4",
+        "Three distinct original captures in active runtime output: saved HQ baseline, before and after placement recipe",
+        "One stock consumed and exactly one deployed added, unchanged crafting resources",
+        "Persist intent before one Save; guarded one-shot exit and HQ reopen",
+        "Fresh saved count after reopening, unchanged world resources, day, Acts and HQ"
+    ],
+    "remaining": [
+        "Calibrated placement selection/drag actor and safe tile/location proof",
+        "Actual English HQ2 saved count and unlocked recipe",
+        "Live save, exit and reopen transitions",
+        "Rice production and complete Day1\u20136 live validation"
+    ],
+    "public_cli": false
+}

@@ -1,0 +1,133 @@
+{
+    "source_report": "I:\\MAA-data\\sand-player\\campaign-navigation-offline-20261028\\report.json",
+    "source_sha256": "96297750450a438496e2fe820c9cf211e52ff63ba337487a601555dcfcc90b5d",
+    "native": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-squad.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsShrubberyGalore"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [316, 558, 118, 15],
+                    "score": 0.964626,
+                    "task": "SandAuto@StageStraightIntotheAbyss",
+                    "text": "StraightIntotheAbyss"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [316, 558, 118, 14],
+                    "score": 0.968561,
+                    "task": "SandPilot@NodeStraightIntotheAbyss",
+                    "text": "StraightIntotheAbyss"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@FormationShrubberyGalore"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@FormationToolsTab"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-open.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [908, 136, 177, 22],
+                    "score": 0.984821,
+                    "task": "SandAuto@DetailsShrubberyGalore",
+                    "text": "ShrubberyGalore"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageStraightIntotheAbyss"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@NodeStraightIntotheAbyss"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [908, 136, 177, 22],
+                    "score": 0.984821,
+                    "task": "SandPilot@FormationShrubberyGalore",
+                    "text": "ShrubberyGalore"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@FormationToolsTab"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsShrubberyGalore"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageStraightIntotheAbyss"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@NodeStraightIntotheAbyss"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@FormationShrubberyGalore"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [297, 664, 39, 19],
+                    "score": 0.996812,
+                    "task": "SandPilot@FormationToolsTab",
+                    "text": "Tools"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsShrubberyGalore"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageStraightIntotheAbyss"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@NodeStraightIntotheAbyss"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@FormationShrubberyGalore"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@FormationToolsTab"
+                }
+            ]
+        }
+    ],
+    "live_navigation_verified": false,
+    "tools_tab_transition_verified": false,
+    "equipped_tools_verified": false
+}

@@ -402,6 +402,54 @@ public class RoguelikeTaskUserControlModel : TaskSettingsViewModel, RoguelikeTas
     /// <summary>
     /// Gets the list of roguelike lists.
     /// </summary>
+    public bool LocalConserveVouchers
+    {
+        get => GetTaskConfig<RoguelikeTask>().LocalStrategy.ConserveVouchers;
+        set => SetTaskConfig<RoguelikeTask>(t => t.LocalStrategy.ConserveVouchers == value, t => t.LocalStrategy = new JieGardenStrategySettings
+        {
+            ConserveVouchers = value,
+            ManageTongbao = t.LocalStrategy.ManageTongbao,
+            AutoCandleguest = t.LocalStrategy.AutoCandleguest,
+            CautiousRouting = t.LocalStrategy.CautiousRouting,
+        });
+    }
+
+    public bool LocalManageTongbao
+    {
+        get => GetTaskConfig<RoguelikeTask>().LocalStrategy.ManageTongbao;
+        set => SetTaskConfig<RoguelikeTask>(t => t.LocalStrategy.ManageTongbao == value, t => t.LocalStrategy = new JieGardenStrategySettings
+        {
+            ConserveVouchers = t.LocalStrategy.ConserveVouchers,
+            ManageTongbao = value,
+            AutoCandleguest = t.LocalStrategy.AutoCandleguest,
+            CautiousRouting = t.LocalStrategy.CautiousRouting,
+        });
+    }
+
+    public bool LocalAutoCandleguest
+    {
+        get => GetTaskConfig<RoguelikeTask>().LocalStrategy.AutoCandleguest;
+        set => SetTaskConfig<RoguelikeTask>(t => t.LocalStrategy.AutoCandleguest == value, t => t.LocalStrategy = new JieGardenStrategySettings
+        {
+            ConserveVouchers = t.LocalStrategy.ConserveVouchers,
+            ManageTongbao = t.LocalStrategy.ManageTongbao,
+            AutoCandleguest = value,
+            CautiousRouting = t.LocalStrategy.CautiousRouting,
+        });
+    }
+
+    public bool LocalCautiousRouting
+    {
+        get => GetTaskConfig<RoguelikeTask>().LocalStrategy.CautiousRouting;
+        set => SetTaskConfig<RoguelikeTask>(t => t.LocalStrategy.CautiousRouting == value, t => t.LocalStrategy = new JieGardenStrategySettings
+        {
+            ConserveVouchers = t.LocalStrategy.ConserveVouchers,
+            ManageTongbao = t.LocalStrategy.ManageTongbao,
+            AutoCandleguest = t.LocalStrategy.AutoCandleguest,
+            CautiousRouting = value,
+        });
+    }
+
     public LocalizedObservableList<Theme> RoguelikeThemeList { get; } = new(
         (Theme.Phantom, "Roguelike.Theme.Phantom"),
         (Theme.Mizuki, "Roguelike.Theme.Mizuki"),
@@ -1729,6 +1777,7 @@ public class RoguelikeTaskUserControlModel : TaskSettingsViewModel, RoguelikeTas
             bool roguelikeSquadIsProfessional = roguelike.Mode == Mode.Collectible && roguelike.Theme != Theme.Phantom && roguelike.Squad is "突击战术分队" or "堡垒战术分队" or "远程战术分队" or "破坏战术分队";
             bool roguelikeSquadIsFoldartal = roguelike.Mode == Mode.Collectible && roguelike.Theme == Theme.Sami && roguelike.Squad == "生活至上分队";
             var task = new AsstRoguelikeTask() {
+                LocalStrategy = roguelike.LocalStrategy,
                 Theme = roguelike.Theme,
                 Mode = roguelike.Mode,
                 Starts = roguelike.StartCount,

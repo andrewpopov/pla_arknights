@@ -1,0 +1,148 @@
+{
+    "source_report": "I:\\MAA-data\\sand-player\\encounter-offline-20261028\\report.json",
+    "source_sha256": "eb18a081a07db222c4cb86cfd2cb898466ebaef8b8f950a135b424eceef7bba6",
+    "native": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\note-read.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [253, 318, 101, 28],
+                    "score": 0.995829,
+                    "task": "SandAuto@EventANote",
+                    "text": "ANote"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [887, 403, 59, 22],
+                    "score": 0.996649,
+                    "task": "SandAuto@EventNoteThanks",
+                    "text": "Thanks"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventSlightestEffort"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventFreeRide"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorldActs1"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1163, 115, 25, 12],
+                    "score": 0.980401,
+                    "task": "SandAuto@WorldActs2",
+                    "templ": "Tales@RA@ActsLeft2.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-squad.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventANote"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventNoteThanks"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventSlightestEffort"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventFreeRide"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1163, 115, 25, 12],
+                    "score": 0.981909,
+                    "task": "SandAuto@WorldActs1",
+                    "templ": "Tales@RA@ActsLeft1.png"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorldActs2"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\day-two-ready.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventANote"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventNoteThanks"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventSlightestEffort"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventFreeRide"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorldActs1"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [1163, 115, 25, 12],
+                    "score": 0.979413,
+                    "task": "SandAuto@WorldActs2",
+                    "templ": "Tales@RA@ActsLeft2.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventANote"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventNoteThanks"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventSlightestEffort"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@EventFreeRide"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorldActs1"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@WorldActs2"
+                }
+            ]
+        }
+    ],
+    "actual_slightest_effort_positive": false,
+    "live_transition_verified": false
+}

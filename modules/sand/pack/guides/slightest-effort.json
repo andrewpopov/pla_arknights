@@ -1,0 +1,58 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "entry_scene_id": "scene_business_2_enter",
+    "result_scene_id": "scene_business_2_3",
+    "title": "Slightest Effort",
+    "title_observer": "SandAuto@EventSlightestEffort",
+    "entry_digest": "5b4b98055e8c69f258e9943f7988d287dd7d1582252e608c1fbd79b0ed4b6786",
+    "result_digest": "01662e873e4252452fa530f7d06501a1aceca265f0fe4ba8ff1298fed522ccd4",
+    "choices": [
+        {
+            "choiceId": "choice_business_2_1",
+            "title": "Offer some cheap food",
+            "costAction": 1,
+            "type": "NEXT",
+            "observer": "SandAuto@EventCheapFood"
+        },
+        {
+            "choiceId": "choice_business_2_2",
+            "title": "Offer some high-grade stuff",
+            "costAction": 1,
+            "type": "NEXT",
+            "observer": "SandAuto@EventHighGradeFood"
+        },
+        {
+            "choiceId": "choice_business_2_3",
+            "title": "Give them a free ride",
+            "costAction": 1,
+            "type": "NEXT",
+            "observer": "SandAuto@EventFreeRide"
+        }
+    ],
+    "selected_choice": "choice_business_2_3",
+    "act_cost": 1,
+    "food_cost": {},
+    "expected_gold_range": [55, 65],
+    "leave": {
+        "choice_id": "choice_business_2_leave_1",
+        "title": "Alright",
+        "act_cost": 0,
+        "observer": "SandAuto@EventAlright"
+    },
+    "source": {
+        "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+        "sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313"
+    },
+    "guide": {
+        "url": "https://note.com/kuniya_ark/n/nddc3dcd1022d",
+        "images": [12, 13],
+        "gold_before": 6,
+        "gold_after": 61
+    },
+    "limits": [
+        "English actual event positive and live transition still pending.",
+        "Expected range is not an inventory credit.",
+        "Map node opening and route unlock are not handled."
+    ]
+}

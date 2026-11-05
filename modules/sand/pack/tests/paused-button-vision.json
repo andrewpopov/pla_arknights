@@ -1,0 +1,60 @@
+{
+    "crop": [1188, 37, 39, 33],
+    "threshold": 0.95,
+    "rows": [
+        {
+            "expected_paused": true,
+            "image": "I:/MAA-data/sand-player/live-control-v13-20261101/runtime/00017-pause-confirm.png",
+            "score": 1.0,
+            "passed": true
+        },
+        {
+            "expected_paused": true,
+            "image": "I:/MAA-data/sand-player/live-control-v13-20261101/runtime/00010-pause-confirm.png",
+            "score": 1.0,
+            "passed": true
+        },
+        {
+            "expected_paused": true,
+            "image": "I:/MAA-data/sand-player/live-control-v11-20261101/runtime/00016-selected-hand.png",
+            "score": 0.9984533190727234,
+            "passed": true
+        },
+        {
+            "expected_paused": true,
+            "image": "I:/MAA-data/sand-player/live-control-v10-20261101/runtime/00039-supervised-paused-014-launch-jungle-paused.png",
+            "score": 0.9987924098968506,
+            "passed": true
+        },
+        {
+            "expected_paused": true,
+            "image": "I:/MAA-data/sand-player/live-control-v12-20261101/runtime/00009-supervised-error-paused-001-adopt-mlynar.png",
+            "score": 0.9974789619445801,
+            "passed": true
+        },
+        {
+            "expected_paused": false,
+            "image": "I:/MAA-data/sand-player/live-control-v13-20261101/runtime/00008-pause-confirm.png",
+            "score": 0.3620204031467438,
+            "passed": true
+        },
+        {
+            "expected_paused": false,
+            "image": "I:/MAA-data/sand-player/live-control-v13-20261101/runtime/00009-pause-check.png",
+            "score": 0.3584456145763397,
+            "passed": true
+        },
+        {
+            "expected_paused": false,
+            "image": "I:/MAA-data/sand-player/fast-live-20261101/0007.png",
+            "score": 0.3973730206489563,
+            "passed": true
+        },
+        {
+            "expected_paused": false,
+            "image": "I:/MAA-data/sand-player/live-control-v8-20261101/runtime/00007-supervised-007-world.png",
+            "score": 0.25532880425453186,
+            "passed": true
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-<UserControl
+﻿<UserControl
     x:Class="MaaWpfGui.Views.UserControl.Settings.VersionUpdateSettingsUserControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -48,7 +48,8 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Content="{DynamicResource Settings.Update.AutoCheck}"
-                        IsChecked="{Binding UpdateAutoCheck}" />
+                        IsChecked="{Binding UpdateAutoCheck}"
+                        IsEnabled="{Binding IsStockUpdateSupported}" />
                     <controls:TooltipBlock TooltipText="{DynamicResource Settings.Update.AutoCheck.Tip}" />
                 </StackPanel>
                 <StackPanel Margin="8" Orientation="Horizontal">
@@ -56,7 +57,8 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Content="{DynamicResource Settings.Update.AutoDownload}"
-                        IsChecked="{Binding AutoDownloadUpdatePackage}" />
+                        IsChecked="{Binding AutoDownloadUpdatePackage}"
+                        IsEnabled="{Binding IsStockUpdateSupported}" />
                     <controls:TooltipBlock TooltipText="{DynamicResource Settings.Update.AutoDownload.Tip}" />
                 </StackPanel>
                 <StackPanel Margin="8" Orientation="Horizontal">
@@ -64,7 +66,8 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Content="{DynamicResource Settings.Update.AutoInstall}"
-                        IsChecked="{Binding AutoInstallUpdatePackage}" />
+                        IsChecked="{Binding AutoInstallUpdatePackage}"
+                        IsEnabled="{Binding IsStockUpdateSupported}" />
                     <controls:TooltipBlock TooltipText="{DynamicResource Settings.Update.AutoInstall.Tip}" />
                 </StackPanel>
                 <CheckBox
@@ -98,6 +101,7 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         DisplayMemberPath="Display"
+                        IsEnabled="{Binding IsStockUpdateSupported}"
                         ItemsSource="{Binding VersionTypeList}"
                         SelectedValue="{Binding VersionType}"
                         SelectedValuePath="Value" />
@@ -405,7 +409,7 @@
                             Margin="5"
                             Command="{s:Action ManualUpdate}"
                             Content="{DynamicResource Settings.Update.CheckNow}"
-                            IsEnabled="{c:Binding !IsCheckingForUpdates}" />
+                            IsEnabled="{c:Binding IsStockUpdateSupported &amp;&amp; !IsCheckingForUpdates}" />
                         <Button
                             Margin="5"
                             Command="{s:Action ShowChangelog}"
@@ -413,6 +417,21 @@
                             IsEnabled="{c:Binding !IsCheckingForUpdates}" />
                     </StackPanel>
                     <StackPanel Grid.Row="4">
+                        <controls:TextBlock
+                            Margin="8"
+                            Text="{DynamicResource Settings.Update.LocalBuild.Tip}"
+                            TextWrapping="Wrap">
+                            <controls:TextBlock.Style>
+                                <Style TargetType="controls:TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsStockUpdateSupported}" Value="False">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </controls:TextBlock.Style>
+                        </controls:TextBlock>
                         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                             <controls:TooltipBlock TooltipText="{DynamicResource Settings.Update.ResourceUpdate.Tip}" Visibility="Hidden" />
                             <Button

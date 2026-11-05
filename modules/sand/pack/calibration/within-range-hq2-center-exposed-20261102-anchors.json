@@ -1,0 +1,13 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_40",
+    "location": "I:\\MAA-data\\sand-player\\within-range-hq2-center-exposed-20261102",
+    "sha256": {
+        "idle.png": "ea8708aab8c9a75a0ba59aae5f767dbf1a0b77be3d40a97e4311263ce29d79d8",
+        "side.png": "1595fd4a316ec6bef1de5aa5b2fac157914ad62dcf77755f3b7b8f7df9fb6e3d"
+    },
+    "provenance": {
+        "idle": "I:/MAA-data/sand-player/live-control-v25-20261102/runtime/00248-supervised-paused-022-collect-and-bank-eastern-three.png",
+        "side": "I:/MAA-data/sand-player/live-control-v25-20261102/runtime/00256-selected-hand.png"
+    }
+}

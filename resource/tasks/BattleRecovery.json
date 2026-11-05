@@ -1,0 +1,21 @@
+{
+    "BattleDirectionCancel": {
+        "algorithm": "OcrDetect",
+        "text": ["取消", "Cancel"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [220, 200, 580, 400],
+        "fullMatch": true,
+        "cache": false,
+        "action": "ClickSelf",
+        "postDelay": 150,
+        "Doc": "Cancel an unfinished deployment-direction prompt; clicking an empty HUD area does not dismiss it."
+    },
+    "BattleSelectionCancelDone": {
+        "algorithm": "JustReturn",
+        "action": "DoNothing"
+    },
+    "BattleDirectionCancelResume": {
+        "baseTask": "BattleDirectionCancel",
+        "next": ["BattlePauseCancelCheck", "BattlePauseCancel"]
+    }
+}

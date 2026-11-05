@@ -1,0 +1,40 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "day": 6,
+    "act": 2,
+    "stage_id": "sandbox_1_56",
+    "source": "https://note.com/kuniya_ark/n/n19803f0f953f",
+    "source_images": {
+        "equipped": 53,
+        "empty_squad_warning": 54,
+        "pumps_deployed": 55,
+        "pumps_finished": 56,
+        "bag": 57,
+        "save_confirmation": 58,
+        "settlement": 59
+    },
+    "source_squad": [],
+    "pumps": 2,
+    "drinks_required": 2,
+    "act_cost": 1,
+    "completion": {
+        "kind": "current_operation_bag_water",
+        "target": 20,
+        "helper": "maa_sand_bag.read_bag_water + water_goal",
+        "timer_expiry_required": false,
+        "settlement_required": true
+    },
+    "evidence_limits": [
+        "Quantity20 is the source strategy target, not a claimed universal tool capacity.",
+        "Do not use bottom warehouse water25 or expected production as the current haul.",
+        "No English bag positive or water tile/hand identity has been verified.",
+        "No tool-equip/deploy or save/leave action is enabled by this reference."
+    ],
+    "source_timing": {
+        "pumps_present_remaining": "03:36",
+        "pumps_absent_remaining": "02:16",
+        "bag_remaining": "02:13",
+        "rule": "Observe yield; do not convert screenshot differences into a wait action."
+    }
+}

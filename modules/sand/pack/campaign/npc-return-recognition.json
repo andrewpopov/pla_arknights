@@ -1,0 +1,127 @@
+{
+    "schema_version": 1,
+    "backend": "tools/maa_sand_base_npc.py",
+    "methods": ["run(before_world_image, before_calendar_image)", "return_world()"],
+    "native_report": "I:\\MAA-data\\sand-player\\npc-return-20261030\\native\\report.json",
+    "historical_exit_log": "I:\\MAA-data\\sand-player\\guide-check\\player.jsonl",
+    "historical_exit_log_sha256": "d98100ea90876f335f8455092fa5f962fa13617e28d5a7b78c455b46042b08f4",
+    "historical_exit_trace": [
+        {
+            "time": "2026-10-28T21:30:03.978272+00:00",
+            "what": "native_task",
+            "task": "SandPilot@LeaveCamp"
+        },
+        {
+            "time": "2026-10-28T21:30:09.959300+00:00",
+            "what": "camp_exit",
+            "image": "I:\\MAA-data\\sand-player\\guide-check\\00008-camp-exit.png",
+            "states": {}
+        },
+        {
+            "time": "2026-10-28T21:30:47.684075+00:00",
+            "what": "returned",
+            "states": {
+                "SandAuto@World": {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [50, 644, 40, 47],
+                    "score": 0.943108,
+                    "task": "SandAuto@World",
+                    "templ": "Tales@RA@HeadquartersButton.png"
+                }
+            },
+            "image": "I:\\MAA-data\\sand-player\\guide-check\\00009-world-ready.png"
+        }
+    ],
+    "historical_scope": "Existing camp exit followed by world return; not an NPC reward or persistent save test. Intermediate exit image is black loading.",
+    "reuses": [
+        "Existing English camp identity and pause guard",
+        "Native LeaveCamp/ConfirmLeaveCamp chain with maxTimes1 per input",
+        "ActJournal intent and resumable observation",
+        "Native world reader and HQ calendar reader"
+    ],
+    "contract": [
+        "Baseline bound to distinct original runtime-output captures before first dialogue input",
+        "Owned completed dialogue plus identified five-stone gift",
+        "Submit exit and confirm chain once, never retry uncertain input",
+        "Read new world: stone+5, same Acts/HQ/day and unchanged known unrelated resources",
+        "If world day hidden at zero Acts, one fresh HQ calendar visit before final world proof"
+    ],
+    "native_confirmation_positive": true,
+    "live_npc_world_delta_verified": false,
+    "quest_save_verified": false,
+    "npc_withdrawal_verified": false,
+    "route_unlock_verified": false,
+    "game_connected": false,
+    "images_captured": false,
+    "public_cli": true,
+    "completion_status": "world_return_verified; observed facts only, never automatic inventory credit",
+    "remaining": [
+        "Calibrated NPC initiation and pre-conversation baseline capture",
+        "Actual English confirmation positive and full live exit",
+        "Actual stone delta, save/reload persistence and NPC withdrawal",
+        "Full Day1\u20136 live validation"
+    ],
+    "native_exit_control_positive": true,
+    "native_exit_control_score": 0.986557,
+    "debug_task_load_verified": true,
+    "cli_flag": "--base-npc",
+    "cli_operation_field": "npc_operation",
+    "cli_scope": "Exact current first dialogue, or return with owned pre-input baseline; never selects an NPC or imports historical captures",
+    "live_cli_verified": false,
+    "english_confirmation_evidence": {
+        "time": "2026-10-31T02:18:06.526747+00:00",
+        "what": "camp_exit_dialog",
+        "image": "I:\\MAA-data\\sand-player\\takeover-20261031T020126Z\\live\\00034-camp-exit-dialog.png",
+        "ocr": [
+            {
+                "rect": [402, 251, 282, 28],
+                "score": 0.988982,
+                "text": "Leave Current Zone"
+            },
+            {
+                "rect": [398, 299, 712, 23],
+                "score": 0.95588,
+                "text": "Finished with business here? Proceed to conclude and save current zone"
+            },
+            {
+                "rect": [398, 334, 90, 24],
+                "score": 0.997857,
+                "text": "progress"
+            },
+            {
+                "rect": [930, 455, 251, 22],
+                "score": 0.993902,
+                "text": "Are you sure you want to"
+            },
+            {
+                "rect": [276, 467, 89, 31],
+                "score": 0.976971,
+                "text": "Back"
+            },
+            {
+                "rect": [925, 487, 72, 31],
+                "score": 0.995223,
+                "text": "leave?"
+            }
+        ],
+        "confirmation": {
+            "SandPilot@NpcConfirmLeaveCamp": {
+                "algorithm": "MatchTemplate",
+                "hit": true,
+                "rect": [889, 467, 33, 32],
+                "score": 0.997829,
+                "task": "SandPilot@NpcConfirmLeaveCamp",
+                "templ": "Tales@RA@DialogConfirmYellow.png"
+            }
+        }
+    },
+    "live_free_camp_exit_verified": true,
+    "live_free_camp_exit_evidence": {
+        "before": "I:\\MAA-data\\sand-player\\takeover-20261031T020126Z\\live\\00015-world-before-camp.png",
+        "after": "I:\\MAA-data\\sand-player\\takeover-20261031T020126Z\\live\\00046-camp-return-world.png",
+        "day": 4,
+        "acts_unchanged": true,
+        "resources_unchanged": true
+    }
+}

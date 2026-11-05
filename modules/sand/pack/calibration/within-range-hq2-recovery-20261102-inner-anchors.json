@@ -1,0 +1,13 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_40",
+    "location": "I:\\MAA-data\\sand-player\\within-range-hq2-recovery-20261102-inner",
+    "sha256": {
+        "idle.png": "3e4e424f4178adc9e6d1d4dab57b39affb1e2d8b86ecfe55f988566d9cc10bb2",
+        "side.png": "0176e51385ad0ba1b117ba39bbc925b52507bb0bc0d72e48c7fbf34d8e57c4fb"
+    },
+    "provenance": {
+        "idle": "I:\\MAA-data\\sand-player\\live-control-v21-20261102\\runtime\\00103-supervised-paused-009-bank-second-west-load.png",
+        "side": "I:\\MAA-data\\sand-player\\live-control-v21-20261102\\runtime\\00117-selected-hand.png"
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "schema_version": 1,
+    "native_version": "v6.0.0-local.78ca631.43cfb749",
+    "passed": true,
+    "problem": "Class icon was concatenated with the exact operator name, causing selection refusals.",
+    "rows": [
+        {
+            "roi": [0, 105, 250, 48],
+            "analysis": {
+                "image": "I:/MAA-data/sand-player/live-control-v16-20261102/runtime/00025-selected-hand.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [25, 123, 16, 14],
+                        "score": 0.386223,
+                        "text": "Y"
+                    },
+                    {
+                        "rect": [49, 121, 51, 17],
+                        "score": 0.998384,
+                        "text": "Kroos"
+                    }
+                ]
+            }
+        },
+        {
+            "roi": [45, 105, 205, 48],
+            "analysis": {
+                "image": "I:/MAA-data/sand-player/live-control-v16-20261102/runtime/00025-selected-hand.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [50, 120, 52, 19],
+                        "score": 0.998781,
+                        "text": "Kroos"
+                    }
+                ]
+            }
+        }
+    ]
+}

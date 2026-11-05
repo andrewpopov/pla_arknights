@@ -40,6 +40,9 @@ public:
         bool is_selected = false; // 是否选中
     };
 
+    // Shared read-only roster recognition for formation and offline Debug replay.
+    static std::vector<QuickFormationOper> analyzer_opers(const cv::Mat& image, std::string_view task_prefix = {});
+
     void append_additional_formation(AdditionalFormation formation) { m_additional.emplace_back(std::move(formation)); }
 
     // 设置追加自定干员列表
@@ -135,8 +138,6 @@ protected:
     // 干员组中有干员已被选中
     bool has_oper_selected(const std::vector<asst::battle::OperUsage>& opers) const;
     bool has_oper_unchecked(const std::vector<asst::battle::OperUsage>& opers) const;
-
-    std::vector<QuickFormationOper> analyzer_opers(const cv::Mat& image);
 
     std::unordered_map<battle::Role, std::vector<OperGroup>> m_formation;      // 作业编队
     std::unordered_map<battle::Role, std::vector<OperGroup>> m_formation_last; // 上次的编队

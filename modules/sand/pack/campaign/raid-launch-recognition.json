@@ -1,0 +1,34 @@
+{
+    "schema_version": 1,
+    "native_report": "I:\\MAA-data\\sand-player\\raid-launch-20261030\\native-final-report.json",
+    "world_marker": {
+        "template": "resource/template/SandRaidWorldMarker.png",
+        "source": "kuniya-days2-3/image-17.png",
+        "crop": [437, 254, 54, 52],
+        "independent_source_score": 0.976674,
+        "sha256": "d71313c524cce69aa1aacb35f33d6ec36f10ba6d2eef1018fc9215cea4482b76"
+    },
+    "interception_start": {
+        "template": "resource/template/SandRaidInterceptionStart.png",
+        "source": "kuniya-days4-6/image-27.png",
+        "crop": [1086, 537, 88, 22],
+        "independent_positive_available": false,
+        "sha256": "5f7deba5b2695222c6ece8975dc59fb3ebba88e27e23c089d0c893151bbdf900"
+    },
+    "english_ordinary_detail_negative": "wood-open.png; both features rejected",
+    "scope": "UI feature crops; left/right height-normalized source panels are not live map coordinates",
+    "actual_english_raid_launch_positive": false,
+    "live_launch_validated": false,
+    "game_connected": false,
+    "required_guards": [
+        "observed reachable map and enemy total",
+        "exact selected title",
+        "marker bound to map label",
+        "red interception feature",
+        "actual roster and no-tools indicator",
+        "complete funded trip ratio",
+        "fresh raid HUD after one Start"
+    ],
+    "promoted_native_report": "I:\\MAA-data\\sand-player\\raid-launch-20261030\\native-promoted-report.json",
+    "promoted_tasks_verified": true
+}

@@ -79,3 +79,7 @@
 - MSB3026/MSB3021 构建复制失败时，挡构建的是占用仓库构建版 `build\bin\Debug\MAA.exe` 的进程（与安装版无关），临时验证程序引用 MaaWpfGui 时同理。
 - 文档站在主仓库 `docs/` 下直接跑，日常验证改完文件看 `pnpm dev` 热重载即可，无必要不跑 build；非交互 install 加 `CI=true`。
 - 纯 UI 验证（改 XAML、文案、截图）用 `MAA.exe --skip-core-init` 启动，无需编译布置 MaaCore 及其运行时依赖；验证涉及内核的链路时不适用。
+
+## OCR tooling capability map
+
+For OCR failures or saved-image recognition replay, inspect `tools/maa_core_eval.py` before adding a new tool. Its native Debug adapter provides report, pipeline, replay, OCR and template matching against saved images without connecting to an emulator. Arknights MaaCore task schemas differ from MaaEnd/MaaFramework. Passing replay checks does not establish a successful live game transition.

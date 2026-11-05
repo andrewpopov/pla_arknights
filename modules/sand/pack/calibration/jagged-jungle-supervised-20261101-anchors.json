@@ -1,0 +1,13 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_38",
+    "location": "I:\\MAA-data\\sand-player\\jungle-canonical-anchors-20261101",
+    "sha256": {
+        "idle.png": "724f3a3064e5214b4e839c98de50233187d0cb6be4c2d38d5e82530152c8851c",
+        "side.png": "4cb1e34e2a05a564145c7a618c6c8452be632980628a052c6c7eb58166d2d7bd"
+    },
+    "provenance": {
+        "idle": "I:/MAA-data/sand-player/live-control-v14-20261101/runtime/00027-supervised-error-paused-004-mlynar-s3.png",
+        "side": "I:/MAA-data/sand-player/live-control-v14-20261101/runtime/00035-selected-hand.png"
+    }
+}

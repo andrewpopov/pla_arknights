@@ -1,0 +1,233 @@
+{
+    "schema_version": 1,
+    "id": "early-days-1-6",
+    "autoplay_enabled": false,
+    "sources": {
+        "day1": "https://note.com/kuniya_ark/n/n195fca2e6482",
+        "days2-3": "https://note.com/kuniya_ark/n/nddc3dcd1022d",
+        "days4-6": "https://note.com/kuniya_ark/n/n19803f0f953f",
+        "video": "https://www.bilibili.com/video/BV1G4421A7Ge/"
+    },
+    "stage_names": "Japanese source labels retained until English identity is verified; never OCR aliases.",
+    "steps": [
+        {
+            "day": 1,
+            "act": 1,
+            "objective": "harvest",
+            "source_stage": "Shrubbery Galore",
+            "source": "day1",
+            "min_hq": 1,
+            "notes": "Młynar S3 plus carriers; at most six operators. Video alternative starts Saileach, Młynar, Executor Alter; source geometry remains uncalibrated.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": "sandbox_1_01",
+            "stage": "Shrubbery Galore",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 1,
+            "act": 2,
+            "objective": "water_hunt",
+            "source_stage": "深淵へ身を投ず",
+            "source": "day1",
+            "min_hq": 1,
+            "notes": "Use one basic pump; hunt wildlife for food with a separate rested squad.",
+            "required_tools": {
+                "Crabbie Pumpie": 1
+            },
+            "tools_only_supported": false,
+            "stage_id": "sandbox_1_56",
+            "stage": "Straight Into the Abyss",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 2,
+            "act": 1,
+            "objective": "harvest",
+            "source_stage": "不揃いな木々",
+            "source": "days2-3",
+            "min_hq": 1,
+            "notes": "Source lower-right tree cluster: Młynar faces Right; enemies approach from the left. Carrier tiles and live coverage require calibration.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": "sandbox_1_38",
+            "stage": "Jagged Jungle",
+            "deployment_reference": "guides/kuniya-days2-3-deployments.json",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 2,
+            "act": 2,
+            "objective": "encounter",
+            "source_stage": null,
+            "source": "days2-3",
+            "min_hq": 1,
+            "notes": "Open the route through an encounter. Outcomes vary; inspect choices before committing. Select a policy only after exact scene/options recognition; the guide examples are Slightest Effort on Day2 and Exchange Troubles on Day5.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": null,
+            "stage": null,
+            "deployment_reference": "guides/kuniya-days2-3-deployments.json",
+            "expedition_required": false,
+            "empty_squad_supported": false,
+            "encounter_reference": "campaign/encounters.json"
+        },
+        {
+            "day": 3,
+            "act": 1,
+            "objective": "raid",
+            "source_stage": null,
+            "source": "days2-3",
+            "min_hq": 1,
+            "notes": "Read raid arrival and intercept if reachable. Otherwise gather remaining wood or explore safely.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": null,
+            "stage": null,
+            "deployment_reference": "guides/kuniya-days2-3-deployments.json",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 3,
+            "act": 2,
+            "objective": "harvest",
+            "source_stage": "射程内",
+            "source": "days2-3",
+            "min_hq": 1,
+            "notes": "Source Młynar is north of the central cluster, facing Down. Carrier tiles and live camera calibration remain unverified.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": "sandbox_1_40",
+            "stage": "Within Range",
+            "deployment_reference": "guides/kuniya-days2-3-deployments.json",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 4,
+            "act": 1,
+            "objective": "hub_water",
+            "source_stage": "射程内",
+            "source": "days4-6",
+            "min_hq": 2,
+            "notes": "Place a pump, then a downward hub. Protect hub below and left from ballista fire; collect outside its range.",
+            "required_tools": {
+                "Crabbie Pumpie": 1,
+                "Sawing Harvester Hub": 1
+            },
+            "tools_only_supported": false,
+            "deployment_reference": "guides/kuniya-days4-6-deployments.json",
+            "stage_id": "sandbox_1_40",
+            "stage": "Within Range",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 4,
+            "act": 2,
+            "objective": "talk",
+            "source_stage": "水に惹かれて",
+            "source": "days4-6",
+            "min_hq": 1,
+            "notes": "Source enters with no operators/tools for two drinks; the first-contact dialogue starts automatically. Complete the known conversation and verify the save/route unlock separately.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": "sandbox_1_55",
+            "stage": "Drinkwater as Bait",
+            "expedition_required": true,
+            "empty_squad_supported": true,
+            "source_squad": [],
+            "dialogue_reference": "guides/liaison-first-contact.json"
+        },
+        {
+            "day": 5,
+            "act": 1,
+            "objective": "encounter",
+            "source_stage": null,
+            "source": "days4-6",
+            "min_hq": 1,
+            "notes": "Open an unexplored route; check raid arrival first. Select a policy only after exact scene/options recognition; the guide examples are Slightest Effort on Day2 and Exchange Troubles on Day5.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": null,
+            "stage": null,
+            "expedition_required": false,
+            "empty_squad_supported": false,
+            "encounter_reference": "campaign/encounters.json"
+        },
+        {
+            "day": 5,
+            "act": 2,
+            "objective": "raid",
+            "source_stage": null,
+            "source": "days4-6",
+            "min_hq": 1,
+            "notes": "Intercept the observed raid. Guide example moves lower-left to upper-right; verify the actual map.",
+            "required_tools": {},
+            "tools_only_supported": false,
+            "stage_id": null,
+            "stage": null,
+            "deployment_reference": "guides/kuniya-day5-raid.json",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 6,
+            "act": 1,
+            "objective": "hub_wood",
+            "source_stage": "不揃いな木々",
+            "source": "days4-6",
+            "min_hq": 2,
+            "notes": "Two hubs gather wood, protected by defenders and medics. Deploy early.",
+            "required_tools": {
+                "Sawing Harvester Hub": 2
+            },
+            "tools_only_supported": false,
+            "deployment_reference": "guides/kuniya-days4-6-deployments.json",
+            "stage_id": "sandbox_1_38",
+            "stage": "Jagged Jungle",
+            "expedition_required": true,
+            "empty_squad_supported": false
+        },
+        {
+            "day": 6,
+            "act": 2,
+            "objective": "water",
+            "source_stage": "深淵へ身を投ず",
+            "source": "days4-6",
+            "min_hq": 1,
+            "notes": "Two pumps only. Check the current-operation bag for +20 water, then save/leave and verify settlement. Source timestamps are not a fixed waiting script. No Day6 dialogue is shown.",
+            "required_tools": {
+                "Crabbie Pumpie": 2
+            },
+            "tools_only_supported": true,
+            "deployment_reference": "guides/kuniya-days4-6-deployments.json",
+            "stage_id": "sandbox_1_56",
+            "stage": "Straight Into the Abyss",
+            "expedition_required": true,
+            "empty_squad_supported": true,
+            "completion_reference": "guides/day6-water-completion.json"
+        }
+    ],
+    "construction": {
+        "hq2": {
+            "wood": 60,
+            "water": 5
+        },
+        "planter": {
+            "wood": 30,
+            "water": 10
+        }
+    },
+    "rules": [
+        "Observed threats override guide dates.",
+        "Guide yields are examples, not inventory credits.",
+        "Never advance a day or reset automatically.",
+        "Settlement evidence is required before updating inventory.",
+        "Distinct rested squads are needed for separate daily operations."
+    ]
+}

@@ -10,6 +10,7 @@
 #include "MaaUtils/NoWarningCV.hpp"
 #include "Task/ProcessTask.h"
 #include "Task/Roguelike/BlackFlow/BlackFlowSession.h"
+#include "Task/Roguelike/JieGarden/JieGardenBoskyPolicy.h"
 #include "Task/Roguelike/Map/RoguelikeBoskyPassageMap.h"
 #include "Utils/DebugImageHelper.hpp"
 #include "Utils/Logger.hpp"
@@ -206,6 +207,12 @@ std::optional<std::string> asst::RoguelikeStageEncounterTaskPlugin::handle_singl
         return select_blackflow_option(event, choose_option);
     }
 
+    if (theme == RoguelikeTheme::JieGarden && event.name == "点睛" && m_config->jiegarden_strategy().cautious_routing &&
+        mode != RoguelikeMode::FindPlaytime) {
+        handle_jiegarden_tavern(event);
+        return std::nullopt;
+    }
+
     // 界园只操作本次识别的选项，失败后结束当前事件处理。
     if (theme == RoguelikeTheme::JieGarden) {
         reset_option_list_and_view_data();
@@ -287,6 +294,56 @@ std::optional<std::string> asst::RoguelikeStageEncounterTaskPlugin::handle_singl
     }
 
     return event.next_event.empty() ? std::nullopt : std::optional { event.next_event };
+}
+
+void asst::RoguelikeStageEncounterTaskPlugin::handle_jiegarden_tavern(const Config::RoguelikeEvent& event)
+{
+    // A visit has entry, one exchange and at most one repeat. Each page is freshly analyzed.
+    auto continuation = event;
+    continuation.next_event = event.name;
+    for (unsigned page = 0; page < 5 && !need_exit(); ++page) {
+        const auto image = ctrler()->get_image();
+        OCRer title(image);
+        title.set_task_info("JieGarden@Roguelike@StageEncounterOcr");
+        title.set_required({ event.name });
+        if (!title.analyze() || title.get_result().empty() || title.get_result().front().text != event.name) {
+            return;
+        }
+        reset_option_list_and_view_data();
+        if (!update_option_list()) {
+            return;
+        }
+        save_img(image, "bosky tavern decision");
+        const int current_hp = hp(ctrler()->get_image());
+        size_t selected = m_option_list.size();
+        int priority = 0;
+        for (size_t i = 0; i < m_option_list.size(); ++i) {
+            const auto& option = m_option_list[i];
+            const int candidate = jiegarden_tavern_option_priority(option.text, page < 3, current_hp);
+            if (option.enabled && candidate > priority) {
+                priority = candidate;
+                selected = i;
+            }
+        }
+        if (selected == m_option_list.size()) {
+            // Never use the generic last-enabled fallback on an unknown trade page.
+            LogWarn << "Bosky Tavern: no recognized safe exchange or exit; stopping in place";
+            m_task_ptr->set_enable(false);
+            return;
+        }
+        LogInfo << "Bosky Tavern: page" << page << "HP" << current_hp << "priority" << priority
+                << m_option_list[selected].text;
+        if (!select_analyzed_option(selected)) {
+            m_task_ptr->set_enable(false);
+            return;
+        }
+        report_selected_option(event, SelectedOption { selected, false }, nullptr);
+        if (priority == 10 || !next_jiegarden_event(continuation)) {
+            return;
+        }
+    }
+    LogWarn << "Bosky Tavern: page limit reached; stopping in place";
+    m_task_ptr->set_enable(false);
 }
 
 bool asst::RoguelikeStageEncounterTaskPlugin::satisfies_condition(

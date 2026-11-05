@@ -1,0 +1,78 @@
+{
+    "native": [
+        {
+            "dp": -1,
+            "hit": false,
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-55.png",
+            "mode": "battle_deployment",
+            "operators": []
+        },
+        {
+            "dp": -1,
+            "hit": false,
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-45.png",
+            "mode": "battle_deployment",
+            "operators": []
+        },
+        {
+            "dp": 36,
+            "hit": true,
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "battle_deployment",
+            "operators": [
+                {
+                    "available": true,
+                    "cooling": false,
+                    "cost": 10,
+                    "index": 0,
+                    "rect": [513, 598, 75, 120],
+                    "role": 1
+                },
+                {
+                    "available": true,
+                    "cooling": false,
+                    "cost": 11,
+                    "index": 1,
+                    "rect": [632, 598, 75, 120],
+                    "role": 2
+                },
+                {
+                    "available": true,
+                    "cooling": false,
+                    "cost": 14,
+                    "index": 2,
+                    "rect": [750, 598, 75, 120],
+                    "role": 1
+                },
+                {
+                    "available": true,
+                    "cooling": false,
+                    "cost": 22,
+                    "index": 3,
+                    "rect": [869, 598, 75, 120],
+                    "role": 3
+                },
+                {
+                    "available": true,
+                    "cooling": false,
+                    "cost": 23,
+                    "index": 4,
+                    "rect": [988, 598, 75, 120],
+                    "role": 3
+                },
+                {
+                    "available": true,
+                    "cooling": false,
+                    "cost": 24,
+                    "index": 5,
+                    "rect": [1106, 598, 75, 120],
+                    "role": 2
+                }
+            ]
+        }
+    ],
+    "source_report": "I:\\MAA-data\\sand-player\\tool-hand-offline-20261029\\report.json",
+    "source_sha256": "c1b71167ac8859dfb7f7c4df26b5ec5174026686bd63e83e857bc5c2b4237202",
+    "guide_layout_comparable_to_live": false,
+    "english_tool_positive_verified": false
+}

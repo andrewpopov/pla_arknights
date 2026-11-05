@@ -1,4 +1,5 @@
 #include "BattleHelper.h"
+#include "Task/BattleDeployGeometry.h"
 
 #include <future>
 #include <thread>
@@ -455,7 +456,7 @@ bool asst::BattleHelper::deploy_oper(
         pause();
     }
     Point oper_point(oper_rect.x + oper_rect.width / 2, oper_rect.y + oper_rect.height / 2);
-    m_inst_helper.ctrler()->swipe(
+    bool gesture_ok = m_inst_helper.ctrler()->swipe(
         oper_point,
         target_point,
         duration,
@@ -465,7 +466,7 @@ bool asst::BattleHelper::deploy_oper(
         deploy_with_pause && depoly_when_pause_not_support);
 
     // 拖动干员朝向
-    if (direction != DeployDirection::None) {
+    if (gesture_ok && direction != DeployDirection::None) {
         static const std::unordered_map<DeployDirection, Point> DirectionMap = {
             { DeployDirection::Right, Point::right() }, { DeployDirection::Down, Point::down() },
             { DeployDirection::Left, Point::left() },   { DeployDirection::Up, Point::up() },
@@ -477,19 +478,19 @@ bool asst::BattleHelper::deploy_oper(
 
         // 将方向转换为实际的 swipe end 坐标点，并对滑动距离进行缩放
         const auto scale_size = m_inst_helper.ctrler()->get_scale_size();
-        static const int coeff =
-            static_cast<int>(swipe_oper_task_ptr->special_params.at(0) * scale_size.second / 720.0);
-        Point end_point = target_point + (direction_target * coeff);
-
-        fix_swipe_out_of_limit(
-            target_point,
-            end_point,
+        const int coeff = static_cast<int>(swipe_oper_task_ptr->special_params.at(0) * scale_size.second / 720.0);
+        const auto [end_x, end_y] = deployment_facing_endpoint(
+            target_point.x,
+            target_point.y,
+            direction_target.x,
+            direction_target.y,
+            coeff,
             scale_size.first,
-            scale_size.second,
-            swipe_oper_task_ptr->special_params.at(1));
+            scale_size.second);
+        const Point end_point { end_x, end_y };
 
         m_inst_helper.sleep(use_oper_task_ptr->post_delay);
-        m_inst_helper.ctrler()->swipe(target_point, end_point, swipe_oper_task_ptr->post_delay);
+        gesture_ok = m_inst_helper.ctrler()->swipe(target_point, end_point, swipe_oper_task_ptr->post_delay);
         // 仅简单复用，该延迟含义与此处逻辑无关 by MistEO
         m_inst_helper.sleep(use_oper_task_ptr->pre_delay);
     }
@@ -497,6 +498,11 @@ bool asst::BattleHelper::deploy_oper(
     if (deploy_with_pause) {
         // m_inst_helper.ctrler()->press_esc();
         ProcessTask(this_task(), { "BattlePauseCancel" }).run();
+    }
+
+    if (!gesture_ok) {
+        LogWarn << "Deployment gesture failed: " << name << " tile " << loc;
+        return false;
     }
 
     // for SSS, multiple operator may be deployed at the same location.

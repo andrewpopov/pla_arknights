@@ -62,6 +62,7 @@ protected:
     bool pause_button_analyze() const;
 
     std::vector<battle::DeploymentOper> deployment_analyze() const; // 识别干员
+    std::optional<Rect> shadow_puppet_flag_analyze() const;
     battle::Role oper_role_analyze(const Rect& roi) const;
     bool oper_cooling_analyze(const Rect& roi) const;
     int oper_cost_analyze(const Rect& roi) const;

@@ -1,0 +1,99 @@
+{
+    "schema_version": 1,
+    "status": "offline six-operator proposal; not a loadable battle route",
+    "autoplay_enabled": false,
+    "source_reference": "bilibili-shrubbery.json",
+    "theme": "Tales",
+    "stage": "Shrubbery Galore",
+    "max_squad_size": 6,
+    "expected_drink_cost": 2,
+    "zero_capacity_actors": ["M\u0142ynar"],
+    "squad": [
+        {
+            "name": "Saileach",
+            "skill": 1,
+            "role": "DP opener"
+        },
+        {
+            "name": "M\u0142ynar",
+            "skill": 3,
+            "role": "broad-area chopper"
+        },
+        {
+            "name": "Executor the Ex Foedere",
+            "skill": 3,
+            "role": "attack-recovery chopper"
+        },
+        {
+            "name": "Nian",
+            "skill": 3,
+            "role": "block/carry buffer with block module"
+        },
+        {
+            "name": "Gravel",
+            "skill": 2,
+            "role": "repeat collector"
+        },
+        {
+            "name": "Kirin R Yato",
+            "skill": 3,
+            "role": "collector and wildlife burst"
+        }
+    ],
+    "opening": [
+        {
+            "name": "Saileach",
+            "facing": "Right"
+        },
+        {
+            "name": "M\u0142ynar",
+            "facing": "Right"
+        },
+        {
+            "name": "Executor the Ex Foedere",
+            "facing": "Left"
+        }
+    ],
+    "priorities": [
+        "Keep food for a required defense before funding an experiment.",
+        "Verify operation type and visible cost; hostile markers alone do not identify a raid map.",
+        "Deploy Saileach, then the two choppers; validate skills and geometry.",
+        "Observe capacity buffs on each carrier and keep evidence scoped to its deployment.",
+        "Rotate collectors, balancing gathering with wildlife and DP.",
+        "Schedule repeated DPS skills and Nian return using observed readiness and redeployment time.",
+        "Verify actual wood and food in settlement."
+    ],
+    "blocked_on": [
+        "fresh selected-camera/tile/facing validation (offline opening registration passes)",
+        "English repeated-skill title/READY/action validation",
+        "collector/buffer tile and wildlife targeting",
+        "ownership/skills/modules verification",
+        "one bounded live validation after app control returns"
+    ],
+    "no_live_actions_performed": true,
+    "maintenance_proposal_status": "Cooperative servicing implemented between bounded collecting/DP intervals; no blocking120second wait is proposed. English title/READY/action and all collector slots remain unvalidated.",
+    "opening_geometry_reference": "shrubbery-opening-geometry.json",
+    "background_skills_proposal": [
+        {
+            "name": "Saileach",
+            "slot": "dp-opener",
+            "sp_cost": 26,
+            "maximum": 3
+        },
+        {
+            "name": "M\u0142ynar",
+            "slot": "main-chopper",
+            "sp_cost": 42,
+            "maximum": 3
+        },
+        {
+            "name": "Executor the Ex Foedere",
+            "slot": "attack-recovery-chopper",
+            "sp_cost": 24,
+            "maximum": 3
+        }
+    ],
+    "background_skill_remaining_floor_proposal": 25,
+    "collector_geometry_reference": "shrubbery-collector-geometry.json",
+    "native_grid_reference": "shrubbery-native-tiles.json"
+}

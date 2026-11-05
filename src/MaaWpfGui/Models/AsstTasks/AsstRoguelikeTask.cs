@@ -30,6 +30,8 @@ public class AsstRoguelikeTask : AsstBaseTask
     public const string BlackFlowFlightRoles = "稳扎稳打";
     public const string BlackFlowFlightCoreChar = "机械师";
 
+    public JieGardenStrategySettings LocalStrategy { get; set; } = new();
+
     public override AsstTaskType TaskType => AsstTaskType.Roguelike;
 
     /// <summary>
@@ -252,6 +254,14 @@ public class AsstRoguelikeTask : AsstBaseTask
             ["starts_count"] = Starts,
             ["investment_enabled"] = InvestmentEnabled,
         };
+
+        if (Theme == RoguelikeTheme.JieGarden)
+        {
+            taskParams["jiegarden_conserve_vouchers"] = LocalStrategy.ConserveVouchers;
+            taskParams["jiegarden_manage_coppers"] = LocalStrategy.ManageTongbao;
+            taskParams["jiegarden_auto_candleguest"] = LocalStrategy.AutoCandleguest;
+            taskParams["jiegarden_cautious_routing"] = LocalStrategy.CautiousRouting;
+        }
 
         // 快速飞三层：分队、职业组和开局干员换成满天赋机械师的固定开局，沿用 Core 刷等级的默认策略。
         // 不勾选就按目标结局打，开局配置即使是这套组合也不飞。

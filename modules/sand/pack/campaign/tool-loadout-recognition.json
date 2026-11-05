@@ -1,0 +1,107 @@
+{
+    "schema_version": 1,
+    "observer": "tools/maa_sand_equipment.py",
+    "mode": "Read-only selected formation cards; no tool selection or paid Start",
+    "supported_card_rows": 2,
+    "recognized_tools": ["Crabbie Pumpie", "Sawing Harvester Hub"],
+    "supported_quantities": [1, 2],
+    "formation_requirement": "Actual English SandAuto@Squad plus same-frame icon, quantity, contiguous selected prefix and numbered next empty slot /12",
+    "source_panels": [
+        {
+            "name": "pump1.png",
+            "source": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-day1\\19.png",
+            "pillar_removed_each_side": 40,
+            "source_sha256": "d937c1740d79536b63053a803978e62fb0c9b7ca2247fd1a196639ba678f93f1"
+        },
+        {
+            "name": "pump2.png",
+            "source": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-53.png",
+            "pillar_removed_each_side": 90,
+            "source_sha256": "d147f0a4a6a398a96befa30c8a02b6c1b9a3833e33c23f5f86351bb04d577338"
+        },
+        {
+            "name": "hub2.png",
+            "source": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-44.png",
+            "pillar_removed_each_side": 90,
+            "source_sha256": "26616af1a37de58a9107d2b5e7893b278c6e4966a8ec799c5c989e670e4cede7"
+        },
+        {
+            "name": "mixed.png",
+            "source": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-06.png",
+            "source_sha256": "ed517f0d4a9d4b3dd5b18431a28df774dc90d1862ea789115ce4b4a6639a94c3",
+            "pillar_removed_each_side": 90
+        }
+    ],
+    "preparation": "Remove source pillars, resize preserving aspect to720 high, keep rightmost1280 pixels. UI component evidence only; no battle coordinates.",
+    "templates": {
+        "SandEquippedPump.png": {
+            "sha256": "4a84029e8cdf75e9c3a8d6cf1db8daef450751557506d3080378368cc9fcd986",
+            "crop": [1036, 128, 58, 56],
+            "panel": "pump2.png"
+        },
+        "SandEquippedHub.png": {
+            "sha256": "57de68b45deeeff71b211ef9fc83ef56546da4856a69c1f94d574b42e02f5ca3",
+            "crop": [1032, 104, 58, 56],
+            "panel": "hub2.png"
+        },
+        "SandEquipmentEmptyPlus.png": {
+            "sha256": "7df2a1c19f45e2b25c929403cd706e8c9015a3a9199e1c82f104addd1247fe10",
+            "crop": [1104, 255, 57, 57],
+            "panel": "pump1.png"
+        }
+    },
+    "native_match_report": "I:\\MAA-data\\sand-player\\equipment-20261030\\native-final-matches.json",
+    "native_component_reader_report": "I:\\MAA-data\\sand-player\\equipment-20261030\\native-complete-reader.json",
+    "independent_pump_positive_score": 0.963531,
+    "independent_hub_positive_available": true,
+    "quantity_scores": {
+        "pump1": {
+            "Crabbie Pumpie": 0.900632
+        },
+        "pump2": {
+            "Crabbie Pumpie": 0.999246
+        },
+        "hub2": {
+            "Sawing Harvester Hub": 0.999735
+        },
+        "mixed": {
+            "Crabbie Pumpie": 0.941024,
+            "Sawing Harvester Hub": 0.952936
+        }
+    },
+    "quantity_rule": "Exact native digits; one existing magnified retry; no stock counters, +N parsing, digit repair or confidence reduction",
+    "source_component_counts": [
+        {
+            "Crabbie Pumpie": 1
+        },
+        {
+            "Crabbie Pumpie": 2
+        },
+        {
+            "Sawing Harvester Hub": 2
+        },
+        {
+            "Crabbie Pumpie": 1,
+            "Sawing Harvester Hub": 1
+        }
+    ],
+    "english_selected_loadout_positive": true,
+    "actual_english_tool_tab_calibrated": true,
+    "english_negative_count": 3,
+    "automatic_selection_enabled": false,
+    "game_connected": false,
+    "inventory_updated": false,
+    "native_mixed_match_report": "I:\\MAA-data\\sand-player\\equipment-20261030\\native-mixed-matches.json",
+    "independent_hub_positive_score": 0.995262,
+    "quantity_retry": "On actual parse/confidence failure only, take [roi.x+8,roi.y+3,22,24] inside the badge and magnify4x through existing native OCR once; threshold remains0.85",
+    "english_selected_loadout_variants": {
+        "Crabbie Pumpie": 1
+    },
+    "english_hub_loadout_positive": false,
+    "english_two_pump_positive": false,
+    "english_native_fixture": "tests/english-pump-loadout-native.json",
+    "english_icon_score": 0.98112,
+    "english_quantity_score": 0.973305,
+    "selected_card_left_boundary": 920,
+    "live_trip_launch_verified": false
+}

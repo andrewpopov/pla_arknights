@@ -1,0 +1,30 @@
+{
+    "schema_version": 1,
+    "kind": "formation-preparation",
+    "id": "desolate-modern-opener-day5",
+    "stage_id": "sandbox_1_26",
+    "stage": "Desolate Interception Point",
+    "required_squad": ["Mountain", "Blaze", "Saria"],
+    "required_formation_skills": {
+        "Mountain": 2,
+        "Blaze": 2,
+        "Saria": 2
+    },
+    "required_formation_ranks": {
+        "Mountain": 7,
+        "Blaze": 7,
+        "Saria": 7
+    },
+    "required_formation_levels": {
+        "Mountain": 55,
+        "Blaze": 55,
+        "Saria": 55
+    },
+    "required_formation_elites": {
+        "Mountain": 1,
+        "Blaze": 1,
+        "Saria": 1
+    },
+    "combat_calibrated": false,
+    "autoplay_enabled": false
+}

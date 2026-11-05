@@ -1,0 +1,92 @@
+{
+    "schema_version": 1,
+    "kind": "Source screenshot/topology evidence; not a deployable route",
+    "autoplay_enabled": false,
+    "game_connected": false,
+    "coordinate_system": "MAA map [column,row], zero-based; nominal native projection is not registered camera calibration",
+    "native_projection_reference": "tests/native-campaign-tiles.json",
+    "source_reference": "guides/kuniya-days2-3-deployments.json",
+    "entries": [
+        {
+            "day": 2,
+            "act": 1,
+            "stage_id": "sandbox_1_38",
+            "actor": "Młynar",
+            "source_facing": "Right",
+            "logical_tile_candidate": [5, 9],
+            "topology_reasoning": "Source start at [0,9], raised crate [4,7], Młynar five columns east of the left start. The tree stockpiles sit east/south of him; arrow in image8 points Right.",
+            "native_tile": {
+                "buildable_type": 1,
+                "floor_normal": [592, 426],
+                "floor_selected": [671, 427],
+                "height_type": 0,
+                "normal": [594, 442],
+                "selected": [676, 441],
+                "tile": [5, 9],
+                "tile_key": "tile_road"
+            },
+            "source_images": [
+                {
+                    "image": 6,
+                    "url": "https://assets.st-note.com/img/1730448477-OzUfVgwbl1nWBJI52oQjerZa.png",
+                    "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-06.png",
+                    "sha256": "10d09511dec17a1f3b7b6b59cb44f49e87464dbc44477e183ad80207c07e74d7",
+                    "size": [2532, 1170]
+                },
+                {
+                    "image": 8,
+                    "url": "https://assets.st-note.com/img/1730448477-hbWI2KAutq0cfMHYdrT19SyQ.png",
+                    "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-08.png",
+                    "sha256": "ad3b0751eafd3233ac009825e80ed2b75277f997272fedec0e56c010ef4638b7",
+                    "size": [2532, 1170]
+                }
+            ],
+            "logical_tile_live_verified": false,
+            "nominal_projection_is_live_calibration": false,
+            "carrier_tiles_established": false,
+            "requires_camera_reposition": false,
+            "executable_route": false
+        },
+        {
+            "day": 3,
+            "act": 2,
+            "stage_id": "sandbox_1_40",
+            "actor": "Młynar",
+            "source_facing": "Down",
+            "logical_tile_candidate": [8, 3],
+            "topology_reasoning": "Source upper crates match native walls [5,3] and [12,3]; Młynar occupies the third column east of the left crate, north of goal [9,6]. Image28 arrow points Down.",
+            "native_tile": {
+                "buildable_type": 1,
+                "floor_normal": [824, 28],
+                "floor_selected": [868, 60],
+                "height_type": 0,
+                "normal": [820, 51],
+                "selected": [868, 80],
+                "tile": [8, 3],
+                "tile_key": "tile_road"
+            },
+            "source_images": [
+                {
+                    "image": 26,
+                    "url": "https://assets.st-note.com/img/1730450582-MCA3XzbweTSxLPVJWEus8kDF.png",
+                    "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-26.png",
+                    "sha256": "d7b7eb48bae97a52d856051a534e47505d3056dfc01bc3f79af5f2a255ed96b2",
+                    "size": [2532, 1170]
+                },
+                {
+                    "image": 28,
+                    "url": "https://assets.st-note.com/img/1730450582-D4eQP7RkO9bdW8ytIoEnfqNc.png",
+                    "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-28.png",
+                    "sha256": "38af18ef3dd32ddc3f96231cceaa8c3dac0d4e4d01fe2bb89c8361db411e4a48",
+                    "size": [2532, 1170]
+                }
+            ],
+            "logical_tile_live_verified": false,
+            "nominal_projection_is_live_calibration": false,
+            "carrier_tiles_established": false,
+            "requires_camera_reposition": true,
+            "executable_route": false
+        }
+    ],
+    "warning": "Do not scale the 2532x1170 screenshots into 1280x720 deployment coordinates. Require exact stage anchors, green tile and live coverage verification."
+}

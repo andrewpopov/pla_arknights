@@ -5,6 +5,7 @@
 #include "Controller/Controller.h"
 #include "MaaUtils/ImageIo.h"
 #include "Task/ProcessTask.h"
+#include "Task/Roguelike/JieGarden/JieGardenBoskyPolicy.h"
 #include "Utils/DebugImageHelper.hpp"
 #include "Utils/Logger.hpp"
 #include "Vision/Matcher.h"
@@ -36,6 +37,7 @@ bool asst::RoguelikeBoskyPassageRoutingTaskPlugin::load_params([[maybe_unused]] 
 void asst::RoguelikeBoskyPassageRoutingTaskPlugin::reset_in_run_variables()
 {
     RoguelikeBoskyPassageMap::get_instance().reset();
+    m_tavern_visits.clear();
 }
 
 bool asst::RoguelikeBoskyPassageRoutingTaskPlugin::verify(const AsstMsg msg, const json::value& details) const
@@ -68,7 +70,8 @@ bool asst::RoguelikeBoskyPassageRoutingTaskPlugin::_run()
     switch (m_bosky_routing_strategy) {
     case RoutingStrategy::BoskyPassage_JieGarden: {
         bosky_update_map();
-        const std::vector<RoguelikeNodeType> priority_order = get_bosky_passage_priority("Default");
+        const std::vector<RoguelikeNodeType> priority_order =
+            get_bosky_passage_priority(m_config->jiegarden_strategy().cautious_routing ? "ResourceGrowth" : "Default");
         bosky_decide_and_click(priority_order);
         break;
     }
@@ -205,6 +208,19 @@ void asst::RoguelikeBoskyPassageRoutingTaskPlugin::bosky_decide_and_click(
         }
     }
 
+    if (!found && m_bosky_routing_strategy == RoutingStrategy::BoskyPassage_JieGarden &&
+        m_config->jiegarden_strategy().cautious_routing) {
+        for (const auto node : RoguelikeBoskyPassageMap::get_instance().get_open_nodes(RoguelikeNodeType::OldShop)) {
+            if (jiegarden_bosky_revisit_allowed(m_tavern_visits[node])) {
+                chosen = node;
+                found = true;
+                LogInfo << "Bosky resource growth: revisiting Tavern" << node << "prior visits"
+                        << m_tavern_visits[node];
+                break;
+            }
+        }
+    }
+
     if (!found) {
         Log.info(__FUNCTION__, "| no open unvisited nodes available");
         Task.set_task_base("RoguelikeRoutingAction", "JieGarden@RoguelikeRoutingAction-LeaveBoskyPassage");
@@ -233,6 +249,9 @@ void asst::RoguelikeBoskyPassageRoutingTaskPlugin::bosky_decide_and_click(
     Point click_point(px + m_bosky_config.node_width / 2, py + m_bosky_config.node_height / 2);
     sleep(200);
     ctrler()->click(click_point);
+    if (node_type == RoguelikeNodeType::OldShop) {
+        ++m_tavern_visits[chosen];
+    }
     RoguelikeBoskyPassageMap::get_instance().set_visited(chosen);
     RoguelikeBoskyPassageMap::get_instance().set_curr_pos(chosen);
 

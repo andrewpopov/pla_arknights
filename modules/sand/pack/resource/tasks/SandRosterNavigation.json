@@ -1,0 +1,12 @@
+{
+    "SandRoster@PageForward": {
+        "baseTask": "BattleFormationOperListSlowlySwipeToTheRight",
+        "next": [],
+        "maxTimes": 1
+    },
+    "SandRoster@PageBackward": {
+        "baseTask": "BattleFormationOperListSwipeToTheLeft",
+        "next": [],
+        "maxTimes": 1
+    }
+}

@@ -149,6 +149,9 @@ public class TaskQueueViewModel : Screen
     /// </summary>
     public static CustomTaskUserControlModel CustomTask => CustomTaskUserControlModel.Instance;
 
+    /// <summary>Gets the queued Reclamation Algorithm settings.</summary>
+    public static ReclamationTaskUserControlModel ReclamationTask => ReclamationTaskUserControlModel.Instance;
+
     #endregion 长草任务Model
 
     private static readonly IEnumerable<TaskSettingsViewModel> _taskViewModelTypes = InitTaskViewModelList();
@@ -1748,6 +1751,7 @@ public class TaskQueueViewModel : Screen
             switch (ConfigFactory.CurrentConfig.TaskQueue[item.Index].TaskType)
             {
                 case TaskType.Roguelike:
+                case TaskType.Reclamation:
                 case TaskType.Custom:
                     continue;
             }
@@ -1772,6 +1776,7 @@ public class TaskQueueViewModel : Screen
             new TaskTypeItem(LocalizationHelper.GetString("TaskQueue.Task.Award"), typeof(AwardTask)),
             new TaskTypeItem(LocalizationHelper.GetString("TaskQueue.Task.OperProgress"), typeof(OperProgressTask), introducedVersion: "6.19.0-beta.2"),
             new TaskTypeItem(LocalizationHelper.GetString("TaskQueue.Task.Roguelike"), typeof(RoguelikeTask)),
+            new TaskTypeItem(LocalizationHelper.GetString("Toolbox.MiniGame.Reclamation.Title"), typeof(ReclamationTask)),
             new TaskTypeItem(LocalizationHelper.GetString("TaskQueue.Task.UserDataUpdate"), typeof(UserDataUpdateTask)),
             new TaskTypeItem(LocalizationHelper.GetString("TaskQueue.Task.DepotMaintain"), typeof(DepotMaintainTask)),
             new TaskTypeItem(LocalizationHelper.GetString("TaskQueue.Task.SwitchTheme"), typeof(SwitchThemeTask), introducedVersion: "6.19.0-beta.2"),
@@ -1790,6 +1795,7 @@ public class TaskQueueViewModel : Screen
                 nameof(MallTask) => LocalizationHelper.GetString("TaskQueue.Task.Mall"),
                 nameof(AwardTask) => LocalizationHelper.GetString("TaskQueue.Task.Award"),
                 nameof(OperProgressTask) => LocalizationHelper.GetString("TaskQueue.Task.OperProgress"),
+                nameof(ReclamationTask) => LocalizationHelper.GetString("Toolbox.MiniGame.Reclamation.Title"),
                 nameof(RoguelikeTask) => LocalizationHelper.GetString("TaskQueue.Task.Roguelike"),
                 nameof(UserDataUpdateTask) => LocalizationHelper.GetString("TaskQueue.Task.UserDataUpdate"),
                 nameof(DepotMaintainTask) => LocalizationHelper.GetString("TaskQueue.Task.DepotMaintain"),
@@ -2229,6 +2235,7 @@ public class TaskQueueViewModel : Screen
                 switch (ConfigFactory.CurrentConfig.TaskQueue[item.Index].TaskType)
                 {
                     case TaskType.Roguelike:
+                    case TaskType.Reclamation:
                     case TaskType.Custom:
                         continue;
                 }

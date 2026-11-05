@@ -1,0 +1,38 @@
+{
+    "BattleOpersShadowPuppetFlag": {
+        "Doc": "Rightmost shadow-puppet card C-marker anchor in normalized1280x720 battle frames. Used only after both colored border checks and ordinary role validation.",
+        "template": "empty.png",
+        "roi": [1231, 592, 10, 11]
+    },
+    "BattleOpersShadowPuppetPink": {
+        "template": "empty.png",
+        "roi": [1157, 592, 123, 8],
+        "colorScales_Doc": "HSV border color; requires a broad pink top band, not a portrait color.",
+        "colorScales": [
+            [
+                [130, 70, 100],
+                [179, 255, 255]
+            ]
+        ],
+        "specialParams_Doc": "Minimum matching pixels in the border ROI.",
+        "specialParams": [250]
+    },
+    "BattleOpersShadowPuppetCyan": {
+        "template": "empty.png",
+        "roi": [1157, 700, 123, 16],
+        "colorScales_Doc": "HSV border color; requires a broad cyan bottom band in the same card.",
+        "colorScales": [
+            [
+                [65, 60, 100],
+                [100, 255, 255]
+            ]
+        ],
+        "specialParams_Doc": "Minimum matching pixels in the border ROI.",
+        "specialParams": [800]
+    },
+    "BattleOpersShadowPuppetUnitLimit": {
+        "Doc": "Read the rightmost available deployment-slot digit; unknown or0 fails closed for highlighted cards.",
+        "template": "empty.png",
+        "roi": [1241, 550, 25, 24]
+    }
+}

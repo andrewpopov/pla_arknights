@@ -49,6 +49,8 @@ public class RoguelikeTask : BaseTask, IJsonOnDeserialized
     /// </summary>
     public RoguelikeTheme Theme { get; set; } = RoguelikeTheme.Phantom;
 
+    public JieGardenStrategySettings LocalStrategy { get; set; } = new();
+
     public int Difficulty { get; set; } = int.MaxValue;
 
     public RoguelikeMode Mode { get; set; } = RoguelikeMode.Exp;

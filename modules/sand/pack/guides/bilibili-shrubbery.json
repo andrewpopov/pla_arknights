@@ -1,0 +1,419 @@
+{
+    "source": "https://www.bilibili.com/video/BV1G4421A7Ge/",
+    "local_recording": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\walkthrough-1080p.mp4",
+    "duration_seconds": 584.433,
+    "resolution": [1920, 1080],
+    "sha256": "95e17f978238207716fb5a4aaaf3702e44df0d48b3ab5c54765f4e33e390d78c",
+    "status": "offline source-frame extraction; opening and carrier mechanics visually checked; full action sequence not yet executable",
+    "autoplay_enabled": false,
+    "roster": [
+        {
+            "id": "char_479_sleach",
+            "name": "Saileach",
+            "source_name": "琴柳",
+            "selected_skill": 1,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_479_sleach.json",
+            "identity_sha256": "e7d3bdd0a7430b2eebe1d83795ec2e571267edb412714a1d24b6bfdd0614fb1b",
+            "local_max_skill_reference": {
+                "name": "Support γ",
+                "duration": 8.0,
+                "spData": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "maxChargeTime": 1,
+                    "spCost": 26,
+                    "initSp": 15,
+                    "increment": 1.0
+                }
+            }
+        },
+        {
+            "id": "char_4064_mlynar",
+            "name": "Młynar",
+            "source_name": "玛恩纳",
+            "selected_skill": 3,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_4064_mlynar.json",
+            "identity_sha256": "8e58842dd74500462a33307c3dd53a5062835332e39379bcd2e6ee4b00728d99",
+            "local_max_skill_reference": {
+                "name": "Unbrilliant Glory",
+                "duration": 28.0,
+                "spData": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "maxChargeTime": 1,
+                    "spCost": 42,
+                    "initSp": 20,
+                    "increment": 1.0
+                }
+            }
+        },
+        {
+            "id": "char_1032_excu2",
+            "name": "Executor the Ex Foedere",
+            "source_name": "圣约送葬人",
+            "selected_skill": 3,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_1032_excu2.json",
+            "identity_sha256": "fe83dc750b5aa2b69ebc6d7cada33e2a37c08ef881592c258ca8d12d7c60e9bb",
+            "local_max_skill_reference": {
+                "name": "Damnatus Ex Foedere",
+                "duration": 0.0,
+                "spData": {
+                    "spType": "INCREASE_WHEN_ATTACK",
+                    "maxChargeTime": 1,
+                    "spCost": 24,
+                    "initSp": 12,
+                    "increment": 1.0
+                }
+            }
+        },
+        {
+            "id": "char_180_amgoat",
+            "name": "Eyjafjalla",
+            "source_name": "艾雅法拉",
+            "selected_skill": 3,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_180_amgoat.json",
+            "identity_sha256": "f2bc1436b47e2b4a006aaa88897f0c33750e909106481c0532aa656e7ead29dc",
+            "local_max_skill_reference": {
+                "name": "Volcano",
+                "duration": 15.0,
+                "spData": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "maxChargeTime": 1,
+                    "spCost": 80,
+                    "initSp": 55,
+                    "increment": 1.0
+                }
+            }
+        },
+        {
+            "id": "char_1029_yato2",
+            "name": "Kirin R Yato",
+            "source_name": "麒麟R夜刀",
+            "selected_skill": 3,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_1029_yato2.json",
+            "identity_sha256": "c0b9a0613309b1ec71d6e4f30b0257c7e252ea05e62b4379427f62e77a307e7c",
+            "local_max_skill_reference": {
+                "name": "Midair Spinning Blade Dance",
+                "duration": -1.0,
+                "spData": {
+                    "spType": 8,
+                    "maxChargeTime": 0,
+                    "spCost": 0,
+                    "initSp": 0,
+                    "increment": 0.0
+                }
+            }
+        },
+        {
+            "id": "char_250_phatom",
+            "name": "Phantom",
+            "source_name": "傀影",
+            "selected_skill": 2,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_250_phatom.json",
+            "identity_sha256": "c7a28ff47ed5f380d1bdd54ab7f7caddbd76ea30ac0a24c38cf3622a014711ab",
+            "local_max_skill_reference": {
+                "name": "Bloody Opus",
+                "duration": -1.0,
+                "spData": {
+                    "spType": 8,
+                    "maxChargeTime": 0,
+                    "spCost": 0,
+                    "initSp": 0,
+                    "increment": 0.0
+                }
+            }
+        },
+        {
+            "id": "char_243_waaifu",
+            "name": "Waai Fu",
+            "source_name": "槐琥",
+            "selected_skill": 2,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_243_waaifu.json",
+            "identity_sha256": "d2f82b47e81148bafc9c8360eb25f36019564701b6ce345b715f01f9a0a0ef03",
+            "local_max_skill_reference": {
+                "name": "Seven-styles Kick",
+                "duration": 0.0,
+                "spData": {
+                    "spType": 8,
+                    "maxChargeTime": 0,
+                    "spCost": 0,
+                    "initSp": 0,
+                    "increment": 0.0
+                }
+            }
+        },
+        {
+            "id": "char_455_nothin",
+            "name": "Mr. Nothing",
+            "source_name": "乌有",
+            "selected_skill": 1,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_455_nothin.json",
+            "identity_sha256": "38db57093d12711f87ebad7b771704b628bb3ef20b4f0dd1ce613269a561d976",
+            "local_max_skill_reference": {
+                "name": "Cautious Retreat",
+                "duration": 5.0,
+                "spData": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "maxChargeTime": 1,
+                    "spCost": 6,
+                    "initSp": 0,
+                    "increment": 1.0
+                }
+            }
+        },
+        {
+            "id": "char_237_gravel",
+            "name": "Gravel",
+            "source_name": "砾",
+            "selected_skill": 2,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_237_gravel.json",
+            "identity_sha256": "047297abeab87a7a95260e92b1aaa29248a62bc95566e90b118d499c03074904",
+            "local_max_skill_reference": {
+                "name": "Rat Swarm",
+                "duration": -1.0,
+                "spData": {
+                    "spType": 8,
+                    "maxChargeTime": 0,
+                    "spCost": 0,
+                    "initSp": 0,
+                    "increment": 0.0
+                }
+            }
+        },
+        {
+            "id": "char_2014_nian",
+            "name": "Nian",
+            "source_name": "年",
+            "selected_skill": 3,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_2014_nian.json",
+            "identity_sha256": "165f577456ebead9f0a55f85c8b409b33f051a6d9015186b4e5b53621022a705",
+            "local_max_skill_reference": {
+                "name": "Iron Defense",
+                "duration": 45.0,
+                "spData": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "maxChargeTime": 1,
+                    "spCost": 85,
+                    "initSp": 70,
+                    "increment": 1.0
+                }
+            }
+        },
+        {
+            "id": "char_136_hsguma",
+            "name": "Hoshiguma",
+            "source_name": "星熊",
+            "selected_skill": null,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_136_hsguma.json",
+            "identity_sha256": "45815a5f9d3058528e17417bb3d5970c912f6d51090c1fd12feac4f0a81d107b"
+        },
+        {
+            "id": "char_1026_gvial2",
+            "name": "Gavial the Invincible",
+            "source_name": "百炼嘉维尔",
+            "selected_skill": 3,
+            "identity_source": "\\\\wsl.localhost\\Ubuntu\\home\\andre\\proj\\emulation\\arknights-research\\operators\\char_1026_gvial2.json",
+            "identity_sha256": "51e4414921eb04b948e03e2f1ccf55e89536b7df4d7091cce4099165a93a29e6",
+            "local_max_skill_reference": {
+                "name": "Soul of the Jungle",
+                "duration": 25.0,
+                "spData": {
+                    "spType": "INCREASE_WITH_TIME",
+                    "maxChargeTime": 1,
+                    "spCost": 35,
+                    "initSp": 25,
+                    "increment": 1.0
+                }
+            }
+        }
+    ],
+    "guide_squad_size": 12,
+    "guide_drink_cost": 3,
+    "timeline_ledger": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\timeline-ledger.json",
+    "clock_policy": "Keep video source timestamps and in-game remaining clock separate; speed changes and pauses prevent a linear conversion.",
+    "settlement": {
+        "shown": false,
+        "verified_wood": null,
+        "verified_food": null,
+        "reason": "The final segment is combat expiration followed by loading; no settlement totals are shown."
+    },
+    "observations": [
+        {
+            "kind": "opening_deploy",
+            "operator": "Saileach",
+            "skill": 1,
+            "video_interval_seconds": [134, 135],
+            "game_remaining_present_by": 227,
+            "facing": "Right",
+            "facing_basis": "visible ground chevron",
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00135.jpg",
+                "sha256": "d0e8c100fafa1414c7df35aa849aa71c9d2d6dae9818c1b40d35379cf135b542"
+            }
+        },
+        {
+            "kind": "opening_deploy",
+            "operator": "Młynar",
+            "skill": 3,
+            "video_interval_seconds": [138, 140],
+            "game_remaining_present_by": 220,
+            "facing": "Right",
+            "facing_basis": "visible ground chevron in shared stable frame",
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00150.jpg",
+                "sha256": "027d4d71786d8c6710d5f2eeb4f036d1516a3a225adbf68e2c0ac71fd7215284"
+            }
+        },
+        {
+            "kind": "opening_deploy",
+            "operator": "Executor the Ex Foedere",
+            "skill": 3,
+            "video_interval_seconds": [145, 146],
+            "game_remaining_present_by": 211,
+            "facing": "Left",
+            "facing_basis": "visible ground chevron in shared stable frame",
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00150.jpg",
+                "sha256": "027d4d71786d8c6710d5f2eeb4f036d1516a3a225adbf68e2c0ac71fd7215284"
+            }
+        },
+        {
+            "kind": "skill_active_present_by",
+            "operator": "Executor the Ex Foedere",
+            "skill": 3,
+            "video_interval_seconds": [154, 156],
+            "game_remaining_present_by": 200,
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\opening-02.jpg",
+                "sha256": "50e74e4f3b3a3f27500526b56ea88c5fa5dafeecd3ebb99a3e445d73d9dce75c"
+            }
+        },
+        {
+            "kind": "opening_deploy",
+            "operator": "Eyjafjalla",
+            "skill": 3,
+            "video_interval_seconds": [160, 165],
+            "game_remaining_present_by": 195,
+            "facing": null,
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\sample-0010.jpg",
+                "sha256": "96556be6a03d6539e0723b6a130a4f1203cf12a911e45fc1465fe7fb7454ffa8"
+            }
+        },
+        {
+            "kind": "carrying_observation",
+            "operator": "Gavial the Invincible",
+            "video_seconds": 300,
+            "game_remaining_seconds": 125,
+            "current": 5,
+            "capacity": 4,
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00300.jpg",
+                "sha256": "c60153d976fade42fba593ca21d6fc0598913d6ed940f359bdb72cec1b26fc5d"
+            }
+        },
+        {
+            "kind": "partial_carrier_observation",
+            "operator": "Nian",
+            "skill": 3,
+            "video_seconds": 345,
+            "game_remaining_seconds": 109,
+            "current": 3,
+            "capacity": 4,
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\sample-0046.jpg",
+                "sha256": "d8ee0cc1c2f24590ca2dbf6e28ee1476eb485015b659cdd6a14c32c5683b7832"
+            },
+            "interpretation": "Partial return timing matters for a later skill/redeployment window; exact retreat click is not claimed."
+        },
+        {
+            "kind": "carrying_observation",
+            "operator": "Młynar",
+            "video_seconds": 385,
+            "game_remaining_seconds": 95,
+            "current": 4,
+            "capacity": 0,
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\sample-0054.jpg",
+                "sha256": "5d077e977285369a76b798e1f41c39628c511fab031eb6378f026ab63dbe1bc6"
+            }
+        },
+        {
+            "kind": "repeat_carrier_cycle",
+            "operator": "Waai Fu",
+            "video_seconds": [400, 410, 440],
+            "evidence": [
+                {
+                    "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\sample-0057.jpg",
+                    "sha256": "e7748c4f5b3262f149e562409d0781f647e11ed67f648f89e2bc9ce9680db892"
+                },
+                {
+                    "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\sample-0059.jpg",
+                    "sha256": "903fd8f11e705ad6ac4258de54ca6691ac6dfd13f2e12679ff6221be47de3448"
+                },
+                {
+                    "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\sample-0065.jpg",
+                    "sha256": "aed2fc96b667037e9ab398ebc1a0a5905c5854035b9570595d2d4be929cf1536"
+                }
+            ],
+            "interpretation": "Selected full carrier, intervening cooldown card, then selected full carrier again."
+        },
+        {
+            "kind": "late_hunt",
+            "video_seconds": 555,
+            "game_remaining_seconds": 3,
+            "evidence": {
+                "file": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00555.jpg",
+                "sha256": "b5fb7e0813fb0211e3f49d51594f3dc12ac753cf38a8d84c4d92dcb3f62b1123"
+            },
+            "kill_or_loot_confirmed": false
+        }
+    ],
+    "coordinate_reference": {
+        "coordinate_system": "source pixels in t00150.jpg",
+        "size": [1920, 1080],
+        "source_points": {
+            "Młynar": [1140, 430],
+            "Executor the Ex Foedere": [1010, 550],
+            "Saileach": [1160, 660]
+        },
+        "accuracy_pixels": 15,
+        "anchor_projection": {
+            "source": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\t00150.jpg",
+            "projections": {
+                "idle": {
+                    "Mlynar": [761, 288],
+                    "ExecutorAlter": [675, 368],
+                    "Saileach": [774, 441]
+                },
+                "side": {
+                    "rejected": "Insufficient distinct map matches"
+                }
+            },
+            "autoplay_enabled": false,
+            "bridge_via_idle": {
+                "rejected": "Map registration has too few geometric inliers"
+            }
+        },
+        "execution_allowed": false,
+        "reason": "Reference-only calibration: alternate opening mapping passes offline, but fresh tile/camera/facing and collector/buffer validation remain necessary.",
+        "alternative_selected_camera_replay": "I:\\MAA-data\\sand-guides\\20261028\\BV1G4421A7Ge\\analysis\\selected-camera-replay.json",
+        "alternative_selected_camera_pairs_accepted": 1,
+        "current_offline_status": "Default selected anchor remains unsuitable for the source opening. A pinned alternate selected-camera reference now passes3 independent opening projection paths; see shrubbery-opening-geometry.json. No live tiles or facing validated."
+    },
+    "mechanics": [
+        "Use a DP opener before costly chopping operators.",
+        "Pair broad-area choppers with fast-redeploy collectors.",
+        "Block/carry buffs can expire after collecting, leaving valid over-capacity loads such as5/4 and4/0.",
+        "A carrier can bank again after a distinct confirmed redeployment.",
+        "Nian can return partially filled to preserve time for another skill cycle.",
+        "Executor S3 uses attack recovery; time alone does not charge it.",
+        "Skill timing and wildlife handling affect the food return; do not infer food yield from a title."
+    ],
+    "unresolved": [
+        "complete per-carrier deployment/retreat/facing sequence",
+        "precise repeated skill activation times",
+        "Phantom in the Mirror live card/panel identity",
+        "fresh selected-camera/tile/facing validation; alternate opening mapping passes offline",
+        "source settlement totals",
+        "six-operator adaptation and actual food yield"
+    ]
+}

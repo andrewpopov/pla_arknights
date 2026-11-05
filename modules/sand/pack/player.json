@@ -1,0 +1,6 @@
+{
+    "schema_version": 1,
+    "default_route": "shrubbery-development",
+    "expeditions_per_launch": 1,
+    "unsupported_stage_behavior": "pause, save checkpoint, stop; never reset or advance the day"
+}

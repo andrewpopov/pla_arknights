@@ -1,0 +1,64 @@
+{
+    "game_connected": false,
+    "kind": "Native Debug resource/schema validation only; report never executes Swipe actions",
+    "native": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00057-fresh-vanguard-roster.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "JustReturn",
+                    "hit": true,
+                    "rect": [0, 0, 0, 0],
+                    "score": 0.0,
+                    "task": "SandRoster@PageForward",
+                    "templ": ""
+                },
+                {
+                    "algorithm": "JustReturn",
+                    "hit": true,
+                    "rect": [0, 0, 0, 0],
+                    "score": 0.0,
+                    "task": "SandRoster@PageBackward",
+                    "templ": ""
+                }
+            ]
+        }
+    ],
+    "installed_base_tasks": {
+        "BattleFormationOperListSlowlySwipeToTheRight": {
+            "baseTask": "SlowlySwipeToTheRight",
+            "specificRect": [1100, 350, 20, 20],
+            "rectMove": [400, 350, 20, 20],
+            "postDelay": 500
+        },
+        "BattleFormationOperListSwipeToTheLeft": {
+            "baseTask": "SwipeToTheLeft",
+            "specificRect": [400, 350, 20, 20],
+            "rectMove": [1100, 350, 20, 20]
+        },
+        "SlowlySwipeToTheRight": {
+            "algorithm": "JustReturn",
+            "action": "Swipe",
+            "postDelay": 200,
+            "specificRect": [880, 310, 100, 100],
+            "rectMove": [300, 310, 100, 100],
+            "specialParams": [200, 1, 37, 1],
+            "next": ["#next"],
+            "maxTimes": 50
+        },
+        "SwipeToTheLeft": {
+            "algorithm": "JustReturn",
+            "action": "Swipe",
+            "postDelay": 100,
+            "specificRect": [100, 310, 100, 100],
+            "rectMove": [1080, 310, 100, 100],
+            "specialParams": [150],
+            "next": ["#next"],
+            "maxTimes": 20
+        }
+    },
+    "navigation_task_sha256": "14ca7fbcfa373781bb61d4b7b5bb1e32475e9ac37d91c0a939f0bbec85a7b576",
+    "live_swipe_verified": false,
+    "standalone_task_hit_is_not_ui_authorization": true
+}

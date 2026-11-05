@@ -1,0 +1,66 @@
+{
+    "schema_version": 1,
+    "item_id": "sandbox_1_building_1",
+    "trap_id": "trap_456_xbfarmm",
+    "name": "Planting Box Group",
+    "source_recipe": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-14.png",
+    "source_recipe_sha256": "b323ce76585aad653351e15235b1963a9dd73ad20d01bc6a54d7925671ab451f",
+    "guide_reference": "https://note.com/kuniya_ark/n/n19803f0f953f",
+    "guide_learning": "Optional if unaffordable. Craft then place beside the existing planter or another area enemies do not pass. Stock does not prove deployment or production.",
+    "native_report": "I:\\MAA-data\\sand-player\\planter-20261030\\native-final-report.json",
+    "component_observation": {
+        "image": "I:\\MAA-data\\sand-player\\planter-20261030\\source-recipe.png",
+        "stock": 0,
+        "quantity": 1,
+        "placed": 1,
+        "limit": 4,
+        "available": {
+            "water": 15,
+            "wood": 49
+        },
+        "evidence": {
+            "SandAuto@ToolRecipeStock": {
+                "algorithm": "OcrDetect",
+                "hit": true,
+                "rect": [1058, 159, 21, 23],
+                "score": 0.903803,
+                "task": "SandAuto@ToolRecipeStock",
+                "text": "0"
+            },
+            "SandAuto@ToolCraftQuantity": {
+                "algorithm": "OcrDetect",
+                "hit": true,
+                "rect": [802, 511, 12, 27],
+                "score": 0.99965,
+                "task": "SandAuto@ToolCraftQuantity",
+                "text": "1"
+            },
+            "SandAuto@PlanterPlacedFraction": {
+                "algorithm": "OcrDetect",
+                "hit": true,
+                "rect": [996, 187, 99, 33],
+                "score": 0.990827,
+                "task": "SandAuto@PlanterPlacedFraction",
+                "text": "1/ MAX 4"
+            }
+        },
+        "recipe_verified": false,
+        "placement_verified": false,
+        "production_verified": false
+    },
+    "english_workbench_controls_positive": true,
+    "english_unlocked_recipe_positive": false,
+    "live_craft_verified": false,
+    "placement_verified": false,
+    "production_verified": false,
+    "game_connected": false,
+    "uses": [
+        "existing ToolCrafter stock engine",
+        "existing multi-material cost reader",
+        "existing native Workbench, craft and cancel controls",
+        "shared construction capture/pause and offline CLI",
+        "ActJournal durable intent"
+    ],
+    "phase_boundary": "ready_for_placement after stock and exact world debit proof; never rice credit",
+    "supported_baseline": "HQ2, Day4–6, visible current world day with at least one Act remaining, one target stock item, observed deployed/MAX4, explicit wood/water reserves"
+}

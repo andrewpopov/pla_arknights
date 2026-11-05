@@ -1,0 +1,250 @@
+{
+    "schema_version": 1,
+    "id": "within-range-hq2-recovery-20261102",
+    "theme": "Tales",
+    "stage": "Within Range",
+    "stage_id": "sandbox_1_40",
+    "autoplay_enabled": false,
+    "validation_status": "Experimental18wood recovery with restored owned team; two Noir and two Beagle trips plus Cardigan/Spot. Persistent depleted layout requires paused field review before replay. Live facing selector center maps to a thicket after camera returns; direct-center identity shortcut disabled.",
+    "coordinate_system": "registered-1280x720",
+    "anchor_manifest": "calibration/within-range-hq2-recovery-20261102-opening-anchors.json",
+    "anchors": {
+        "idle": "idle.png",
+        "side": "side.png"
+    },
+    "normal_points": {
+        "dps": [640, 140]
+    },
+    "side_points": {
+        "dps": [704, 153]
+    },
+    "required_squad": ["Młynar", "Beagle", "Spot", "Cardigan", "Noir Corne", "Yato"],
+    "required_formation_skills": {
+        "Młynar": 3
+    },
+    "required_formation_levels": {
+        "Młynar": 90
+    },
+    "required_formation_elites": {
+        "Młynar": 2
+    },
+    "zero_capacity_actors": ["Młynar"],
+    "background_skills": [],
+    "background_skill_remaining_floor": 25,
+    "source_wood_target": 30,
+    "steps": [
+        {
+            "action": "wait_dp",
+            "minimum": 12,
+            "remaining_floor": 220
+        },
+        {
+            "action": "deploy",
+            "name": "Młynar",
+            "slot": "dps",
+            "direction": "Down"
+        },
+        {
+            "action": "phase",
+            "name": "chopper"
+        },
+        {
+            "action": "maintain_skills",
+            "skills": [
+                {
+                    "name": "Młynar",
+                    "slot": "dps",
+                    "sp_cost": 42,
+                    "maximum": 2
+                }
+            ],
+            "duration": 40,
+            "remaining_floor": 165
+        },
+        {
+            "action": "phase",
+            "name": "outer"
+        },
+        {
+            "action": "carrier_trip",
+            "name": "Noir Corne",
+            "slot": "west_upper",
+            "direction": "Right",
+            "minimum": 3,
+            "timeout": 25
+        },
+        {
+            "action": "carrier_trip",
+            "name": "Beagle",
+            "slot": "east_upper",
+            "direction": "Left",
+            "minimum": 3,
+            "timeout": 25
+        },
+        {
+            "action": "phase",
+            "name": "chopper"
+        },
+        {
+            "action": "maintain_skills",
+            "skills": [
+                {
+                    "name": "Młynar",
+                    "slot": "dps",
+                    "sp_cost": 42,
+                    "maximum": 2
+                }
+            ],
+            "duration": 82,
+            "remaining_floor": 75
+        },
+        {
+            "action": "phase",
+            "name": "outer"
+        },
+        {
+            "action": "carrier_trip",
+            "name": "Noir Corne",
+            "slot": "west_upper",
+            "direction": "Right",
+            "minimum": 3,
+            "timeout": 25
+        },
+        {
+            "action": "phase",
+            "name": "inner"
+        },
+        {
+            "action": "carrier_trip",
+            "name": "Cardigan",
+            "slot": "west_pile",
+            "direction": "Right",
+            "minimum": 3,
+            "timeout": 25
+        },
+        {
+            "action": "carrier_trip",
+            "name": "Spot",
+            "slot": "west_pile",
+            "direction": "Right",
+            "minimum": 3,
+            "timeout": 25
+        },
+        {
+            "action": "carrier_trip",
+            "name": "Beagle",
+            "slot": "west_pile",
+            "direction": "Right",
+            "minimum": 3,
+            "timeout": 25
+        },
+        {
+            "action": "recall",
+            "name": "Młynar",
+            "slot": "dps"
+        },
+        {
+            "action": "finish"
+        }
+    ],
+    "collection_observations": [
+        {
+            "slot": "west_upper",
+            "actor": "Noir Corne",
+            "banked": 6,
+            "native_cooling_verified": true,
+            "deployments": 2
+        },
+        {
+            "slot": "east_upper",
+            "actor": "Beagle",
+            "banked": 3,
+            "native_cooling_verified": true,
+            "dynamic_retreat_control_required": true
+        }
+    ],
+    "placement_evidence": {
+        "center_floor": {
+            "status": "pending_live_identity",
+            "normal_reference": "I:/MAA-data/sand-player/live-control-v21-20261102/runtime/00103-supervised-paused-009-bank-second-west-load.png",
+            "selected_reference": "I:/MAA-data/sand-player/live-control-v21-20261102/runtime/00117-selected-hand.png",
+            "basis": "Cell directly south of chopper, former pile collected in Day4 Cardigan/Spot trips; Day5 field shows it empty, adjacent to exposed eastern6wood pile.",
+            "inspection_correction": "Normal floor-center tap490342 landed below the rendered operator hitbox; use observed body center490310. Selected green ground center572347 is unchanged."
+        },
+        "east_floor": {
+            "status": "empty_cell_verified_after_bank9; deployment pending",
+            "image": "I:/MAA-data/sand-player/live-control-v25-20261102/runtime/00402-supervised-paused-032-bank-central-remaining-three.png",
+            "basis": "Former six-wood pile emptied by Noir Corne and Spot; normal inspection point targets operator body, selected point targets green ground."
+        }
+    },
+    "camera_recovery_pan": [
+        [930, 180],
+        [1070, 168]
+    ],
+    "calibration_phases": {
+        "opening": {
+            "normal_points": {
+                "dps": [640, 140]
+            },
+            "side_points": {
+                "dps": [704, 153]
+            },
+            "anchor_manifest": "calibration/within-range-hq2-recovery-20261102-opening-anchors.json"
+        },
+        "chopper": {
+            "normal_points": {
+                "dps": [640, 238]
+            },
+            "side_points": {
+                "dps": [704, 153]
+            },
+            "anchor_manifest": "calibration/within-range-hq2-recovery-20261102-chopper-anchors.json"
+        },
+        "outer": {
+            "normal_points": {
+                "dps": [609, 238],
+                "west_upper": [440, 310],
+                "east_upper": [863, 315]
+            },
+            "side_points": {
+                "dps": [704, 252],
+                "west_upper": [551, 320],
+                "east_upper": [963, 274]
+            },
+            "anchor_manifest": "calibration/within-range-hq2-outer-exposed-20261102-anchors.json"
+        },
+        "inner": {
+            "normal_points": {
+                "dps": [628, 265],
+                "west_pile": [542, 342],
+                "center_floor": [628, 342]
+            },
+            "side_points": {
+                "dps": [697, 278],
+                "west_pile": [606, 333],
+                "center_floor": [696, 347]
+            },
+            "anchor_manifest": "calibration/within-range-hq2-recovery-20261102-inner-anchors.json"
+        },
+        "center": {
+            "normal_points": {
+                "dps": [490, 265],
+                "center_floor": [490, 310],
+                "east_floor": [570, 310]
+            },
+            "side_points": {
+                "dps": [572, 278],
+                "center_floor": [572, 347],
+                "east_floor": [650, 333]
+            },
+            "anchor_manifest": "calibration/within-range-hq2-center-exposed-20261102-anchors.json"
+        }
+    },
+    "verify_facing_center": false,
+    "reuse_operator_panel": true,
+    "keep_operator_panel": true,
+    "banked_wood_target": 18,
+    "required_formation_ranks": {
+        "Młynar": 7
+    }
+}

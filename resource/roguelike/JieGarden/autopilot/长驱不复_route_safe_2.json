@@ -1,0 +1,56 @@
+{
+    "stage_name": "长驱不复_route_safe_2",
+    "replacement_home": [
+        {
+            "location": [9, 3],
+            "direction": "down"
+        }
+    ],
+    "deploy_plan": [
+        {
+            "groups": ["电弧"],
+            "location": [2, 2],
+            "direction": "left"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [4, 5],
+            "direction": "up"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [5, 1],
+            "direction": "left"
+        },
+        {
+            "groups": ["稳定治疗"],
+            "location": [4, 2],
+            "direction": "left"
+        },
+        {
+            "groups": ["益达", "提丰", "焰苇", "水陈", "高台输出"],
+            "location": [6, 2],
+            "direction": "down"
+        },
+        {
+            "groups": ["奶盾", "地面阻挡", "挡人先锋"],
+            "location": [9, 3],
+            "direction": "down"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [8, 5],
+            "direction": "up"
+        },
+        {
+            "groups": ["玛恩纳", "地面远程", "地面阻挡"],
+            "location": [9, 5],
+            "direction": "left"
+        },
+        {
+            "groups": ["补给站"],
+            "location": [9, 2],
+            "direction": "down"
+        }
+    ]
+}

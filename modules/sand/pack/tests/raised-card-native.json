@@ -1,0 +1,117 @@
+{
+    "schema_version": 1,
+    "passed": true,
+    "mode": "battle_deployment",
+    "image": "I:/MAA-data/sand-player/live-control-v14-20261101/runtime/00413-supervised-error-paused-025-deploy-yato-center.png",
+    "native_version": "v6.0.0-local.78ca631.43cfb749",
+    "before": {
+        "dp": 99,
+        "hit": true,
+        "image": "I:/MAA-data/sand-player/live-control-v14-20261101/runtime/00413-supervised-error-paused-025-deploy-yato-center.png",
+        "mode": "battle_deployment",
+        "operators": [
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 18,
+                "index": 0,
+                "rect": [632, 598, 75, 120],
+                "role": 2
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 24,
+                "index": 1,
+                "rect": [750, 598, 75, 120],
+                "role": 3
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 22,
+                "index": 2,
+                "rect": [869, 598, 75, 120],
+                "role": 3
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 24,
+                "index": 3,
+                "rect": [988, 598, 75, 120],
+                "role": 3
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 24,
+                "index": 4,
+                "rect": [1106, 598, 75, 120],
+                "role": 3
+            }
+        ]
+    },
+    "after": {
+        "dp": 99,
+        "hit": true,
+        "image": "I:/MAA-data/sand-player/live-control-v14-20261101/runtime/00413-supervised-error-paused-025-deploy-yato-center.png",
+        "mode": "battle_deployment",
+        "operators": [
+            {
+                "available": true,
+                "cooling": false,
+                "cost": 5,
+                "index": 0,
+                "rect": [513, 585, 75, 120],
+                "role": 1
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 18,
+                "index": 1,
+                "rect": [632, 598, 75, 120],
+                "role": 2
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 24,
+                "index": 2,
+                "rect": [750, 598, 75, 120],
+                "role": 3
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 22,
+                "index": 3,
+                "rect": [869, 598, 75, 120],
+                "role": 3
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 24,
+                "index": 4,
+                "rect": [988, 598, 75, 120],
+                "role": 3
+            },
+            {
+                "available": false,
+                "cooling": true,
+                "cost": 24,
+                "index": 5,
+                "rect": [1106, 598, 75, 120],
+                "role": 3
+            }
+        ]
+    },
+    "correction": {
+        "BattleOpersFlag": {
+            "roi": [35, 575, 1245, 31]
+        }
+    },
+    "scope": "Sand module only; stock WPF/IS resources unchanged"
+}

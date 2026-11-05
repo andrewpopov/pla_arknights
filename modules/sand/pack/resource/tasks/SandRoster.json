@@ -1,0 +1,110 @@
+{
+    "SandRoster@BattleQuickFormation-OperNameFlag0": {
+        "baseTask": "BattleQuickFormation-OperNameFlag0",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag0.png"
+    },
+    "SandRoster@BattleQuickFormation-OperNameFlag1": {
+        "baseTask": "BattleQuickFormation-OperNameFlag1",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag1.png"
+    },
+    "SandRoster@BattleQuickFormation-OperNameFlag2": {
+        "baseTask": "BattleQuickFormation-OperNameFlag2",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag2.png"
+    },
+    "SandRoster@BattleQuickFormation-OperNameFlag3": {
+        "baseTask": "BattleQuickFormation-OperNameFlag3",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag3.png"
+    },
+    "SandRoster@BattleQuickFormation-OperNameFlag4": {
+        "baseTask": "BattleQuickFormation-OperNameFlag4",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag4.png"
+    },
+    "SandRoster@BattleQuickFormation-OperNameFlag5": {
+        "baseTask": "BattleQuickFormation-OperNameFlag5",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag5.png"
+    },
+    "SandRoster@BattleQuickFormation-OperNameFlag6": {
+        "baseTask": "BattleQuickFormation-OperNameFlag6",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag6.png"
+    },
+    "SandRoster@BattleQuickFormation-OperNameFlag7": {
+        "baseTask": "BattleQuickFormation-OperNameFlag7",
+        "roi": [380, 70, 770, 570],
+        "template": "BattleQuickFormation-OperNameFlag7.png"
+    },
+    "SandRoster@BattleQuickFormationOCR": {
+        "baseTask": "BattleQuickFormationOCR",
+        "rectMove": [145, -5, 157, 32],
+        "specialParams": [0, 2, 7, 0, 3, 10, 150],
+        "specialParams_Doc": "Existing native OperNameAnalyzer; optional seventh value is upper grayscale threshold for dark names on RA light cards."
+    },
+    "SandRoster@BattleQuickFormation-Level": {
+        "baseTask": "BattleQuickFormation-Level",
+        "rectMove": [123, 70, 40, 30]
+    },
+    "SandRoster@BattleQuickFormation-Elite": {
+        "baseTask": "BattleQuickFormation-Elite",
+        "rectMove": [107, 43, 47, 37],
+        "template": ["BattleQuickFormation-Elite2.png", "BattleQuickFormation-Elite1.png"]
+    },
+    "SandRoster@BattleQuickFormationSelected": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterSelectedStrip.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [205, 200, 150],
+                [255, 255, 205]
+            ]
+        ],
+        "templThreshold": 0.9,
+        "rectMove": [205, 23, 25, 10],
+        "roi": [0, 0, 1280, 720],
+        "action": "DoNothing",
+        "next": [],
+        "rectMove_Doc": "Selected yellow-tinted card background relative to native class icon; source saved English RA roster."
+    },
+    "SandRoster@PageClear": {
+        "algorithm": "OcrDetect",
+        "text": ["Clear"],
+        "fullMatch": true,
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [390, 640, 180, 75],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandRoster@PageConfirm": {
+        "algorithm": "OcrDetect",
+        "text": ["AddedtoSquad"],
+        "fullMatch": true,
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [990, 640, 280, 75],
+        "action": "DoNothing",
+        "next": []
+    },
+    "SandRoster@Unselected": {
+        "algorithm": "MatchTemplate",
+        "template": "SandRosterUnselectedStrip.png",
+        "method": "RGBCount",
+        "pureColor": true,
+        "colorScales": [
+            [
+                [230, 230, 230],
+                [255, 255, 255]
+            ]
+        ],
+        "templThreshold": 0.95,
+        "roi": [0, 0, 1280, 720],
+        "action": "DoNothing",
+        "next": [],
+        "roi_Doc": "Native templ replay overrides ROI with the same identified card background; positive white-card proof is required before a toggle."
+    }
+}

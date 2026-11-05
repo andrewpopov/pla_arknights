@@ -1,0 +1,24 @@
+[
+    {
+        "image": "I:\\MAA-data\\sand-player\\day1-resume-20261031T160000Z\\live-connected\\00136-operator-panel.png",
+        "mode": "ocr",
+        "results": [
+            {
+                "rect": [75, 280, 83, 45],
+                "score": 0.865213,
+                "text": "0/1"
+            }
+        ]
+    },
+    {
+        "image": "I:\\MAA-data\\sand-player\\day1-resume-20261031T160000Z\\live-connected\\00279-selected-hand.png",
+        "mode": "ocr",
+        "results": [
+            {
+                "rect": [75, 280, 83, 45],
+                "score": 0.866683,
+                "text": "O/4"
+            }
+        ]
+    }
+]

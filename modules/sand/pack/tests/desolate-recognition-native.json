@@ -1,0 +1,165 @@
+{
+    "native_configuration": "Debug",
+    "passed": true,
+    "checks": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\daily-sand-test-20261031T033300Z\\live\\00034-actual-raid-information.png",
+            "expected": {
+                "SandAuto@DetailsDesolateInterceptionPoint": true,
+                "SandAuto@StageDesolateInterceptionPoint": true
+            },
+            "sha256": "4fc210251f0a44d8eae6703dd9a4a636aaea3d346a4014c79b2e0632cb5a78e9",
+            "results": [
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [524, 425, 231, 18],
+                    "score": 0.98954,
+                    "task": "SandAuto@DetailsDesolateInterceptionPoint",
+                    "text": "DesolateInterceptionPoint"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [524, 425, 231, 18],
+                    "score": 0.98954,
+                    "task": "SandAuto@StageDesolateInterceptionPoint",
+                    "text": "DesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@NodeDesolateInterceptionPoint"
+                }
+            ],
+            "passed": true
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\raid-hud-outpost-fix-20261031\\live-guard\\00001-guard-before-world.png",
+            "expected": {
+                "SandAuto@DetailsDesolateInterceptionPoint": false,
+                "SandAuto@StageDesolateInterceptionPoint": false,
+                "SandPilot@NodeDesolateInterceptionPoint": true
+            },
+            "sha256": "cc05fee1f138b8808b9897d7aa771945ba4fd7738137da4ed5a5732663cfa2ad",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsDesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageDesolateInterceptionPoint"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [614, 233, 54, 52],
+                    "score": 0.982021,
+                    "task": "SandPilot@NodeDesolateInterceptionPoint",
+                    "templ": "SandRaidWorldMarker.png"
+                }
+            ],
+            "passed": true
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\daily-sand-test-20261031T033300Z\\live\\00032-funded-return-world.png",
+            "expected": {
+                "SandAuto@DetailsDesolateInterceptionPoint": false,
+                "SandAuto@StageDesolateInterceptionPoint": false
+            },
+            "sha256": "69460c5d43c17f46d185c1a3e9628065e4678b095807e3e097d0574da9bbcc94",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsDesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageDesolateInterceptionPoint"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [749, 193, 54, 52],
+                    "score": 0.965115,
+                    "task": "SandPilot@NodeDesolateInterceptionPoint",
+                    "templ": "SandRaidWorldMarker.png"
+                }
+            ],
+            "passed": true
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\raid-hud-outpost-fix-20261031\\live-guard-retry\\00016-guard-camp-paused-verified.png",
+            "expected": {
+                "SandAuto@DetailsDesolateInterceptionPoint": false,
+                "SandAuto@StageDesolateInterceptionPoint": false,
+                "SandPilot@NodeDesolateInterceptionPoint": false
+            },
+            "sha256": "d10cf88e906bcb4cb16f25ef56baee6b13180829f18d720a9b84fa57c1c98d5b",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsDesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageDesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@NodeDesolateInterceptionPoint"
+                }
+            ],
+            "passed": true
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\daily-sand-test-20261031T033300Z\\live\\00018-recovery-production-ready.png",
+            "expected": {
+                "SandPilot@NodeDesolateInterceptionPoint": false
+            },
+            "sha256": "7315fbd2ae093768530d977a1f35fa77875610f69937b0ffcdfef9f863873ce3",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsDesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageDesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandPilot@NodeDesolateInterceptionPoint"
+                }
+            ],
+            "passed": true
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\raid-hud-outpost-fix-20261031\\live-guard-retry\\00024-guard-after-world.png",
+            "expected": {
+                "SandPilot@NodeDesolateInterceptionPoint": true
+            },
+            "sha256": "377ac1473c5a051eefab6875a2807b4a47b156b305a88c2ed1d80e596d7d56dc",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DetailsDesolateInterceptionPoint"
+                },
+                {
+                    "hit": false,
+                    "task": "SandAuto@StageDesolateInterceptionPoint"
+                },
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [285, 116, 54, 52],
+                    "score": 0.897903,
+                    "task": "SandPilot@NodeDesolateInterceptionPoint",
+                    "templ": "SandRaidWorldMarker.png"
+                }
+            ],
+            "passed": true
+        }
+    ],
+    "scope": "Saved English outpost/world identity, not a combat strategy or live deployment calibration."
+}

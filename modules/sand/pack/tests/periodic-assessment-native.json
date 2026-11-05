@@ -1,0 +1,74 @@
+{
+    "schema_version": 1,
+    "native_version": "v6.0.0-local.78ca631.43cfb749",
+    "passed": true,
+    "image": "I:/MAA-data/sand-player/live-control-v18-20261102/runtime/00266-supervised-error-046-advance-exhausted-day3.png",
+    "reads": [
+        {
+            "rect": [606, 144, 65, 18],
+            "score": 0.997165,
+            "text": "Survived"
+        },
+        {
+            "rect": [615, 192, 47, 28],
+            "score": 0.997279,
+            "text": "Days"
+        },
+        {
+            "rect": [612, 224, 57, 30],
+            "score": 0.992867,
+            "text": "1-3"
+        },
+        {
+            "rect": [628, 339, 43, 18],
+            "score": 0.99807,
+            "text": "Score"
+        },
+        {
+            "rect": [586, 367, 107, 54],
+            "score": 0.998769,
+            "text": "913"
+        },
+        {
+            "rect": [387, 519, 128, 15],
+            "score": 0.976697,
+            "text": "Transform Tech Tree"
+        },
+        {
+            "rect": [660, 520, 130, 14],
+            "score": 0.954711,
+            "text": "Transform Prosperity"
+        },
+        {
+            "rect": [797, 512, 97, 41],
+            "score": 0.99635,
+            "text": "X 913"
+        },
+        {
+            "rect": [541, 528, 19, 19],
+            "score": 0.211165,
+            "text": "a"
+        },
+        {
+            "rect": [593, 528, 34, 15],
+            "score": 0.998162,
+            "text": "MAX"
+        },
+        {
+            "rect": [431, 538, 43, 14],
+            "score": 0.998346,
+            "text": "Points"
+        },
+        {
+            "rect": [705, 537, 41, 15],
+            "score": 0.99853,
+            "text": "Points"
+        }
+    ],
+    "verified_after": {
+        "day": 4,
+        "acts_remaining": 2,
+        "image": "I:/MAA-data/sand-player/live-control-v18-20261102/runtime/00270-day-end-arrival.png"
+    },
+    "guide_source": "https://note.com/kuniya_ark/n/n19803f0f953f"
+}

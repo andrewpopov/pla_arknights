@@ -492,14 +492,15 @@ bool asst::BattleFormationTask::has_oper_unchecked(const std::vector<asst::battl
 }
 
 std::vector<asst::BattleFormationTask::QuickFormationOper>
-    asst::BattleFormationTask::analyzer_opers(const cv::Mat& image)
+    asst::BattleFormationTask::analyzer_opers(const cv::Mat& image, std::string_view task_prefix)
 {
+    const std::string prefix(task_prefix);
     const auto& ocr_replace = Task.get<OcrTaskInfo>("CharsNameOcrReplace");
     std::vector<asst::BattleFormationTask::QuickFormationOper> opers_result;
     for (int i = 0; i < 8; ++i) {
-        std::string task_name = "BattleQuickFormation-OperNameFlag" + std::to_string(i);
+        std::string task_name = prefix + "BattleQuickFormation-OperNameFlag" + std::to_string(i);
 
-        const auto& ocr_task = Task.get("BattleQuickFormationOCR");
+        const auto& ocr_task = Task.get(prefix + "BattleQuickFormationOCR");
         MultiMatcher multi(image);
         multi.set_task_info(task_name);
         if (!multi.analyze()) [[unlikely]] {
@@ -510,7 +511,9 @@ std::vector<asst::BattleFormationTask::QuickFormationOper>
             OperNameAnalyzer region(image);
             region.set_task_info(ocr_task);
             region.set_roi(flag.rect.move(ocr_task->rect_move));
-            region.set_bin_threshold(ocr_task->special_params[0]);
+            region.set_bin_threshold(
+                ocr_task->special_params[0],
+                ocr_task->special_params.size() > 6 ? ocr_task->special_params[6] : 255);
             region.set_bin_expansion(ocr_task->special_params[1]);
             region.set_bin_trim_threshold(ocr_task->special_params[2], ocr_task->special_params[3]);
             region.set_bottom_line_height(ocr_task->special_params[4]);
@@ -541,9 +544,18 @@ std::vector<asst::BattleFormationTask::QuickFormationOper>
             }
 
             // 判断是否已被选中
-            cv::Mat selected_image = make_roi(image, res.flag_rect.move({ 0, -10, 5, 4 }));
-            cv::inRange(selected_image, cv::Scalar(170, 115, 0), cv::Scalar(255, 180, 100), selected_image);
-            res.is_selected = cv::hasNonZero(selected_image);
+            if (prefix.empty()) {
+                cv::Mat selected_image = make_roi(image, res.flag_rect.move({ 0, -10, 5, 4 }));
+                cv::inRange(selected_image, cv::Scalar(170, 115, 0), cv::Scalar(255, 180, 100), selected_image);
+                res.is_selected = cv::hasNonZero(selected_image);
+            }
+            else {
+                const auto& selected_task = Task.get<MatchTaskInfo>(prefix + "BattleQuickFormationSelected");
+                Matcher selected(image);
+                selected.set_task_info(selected_task);
+                selected.set_roi(res.flag_rect.move(selected_task->rect_move));
+                res.is_selected = selected.analyze().has_value();
+            }
 
             opers_result.emplace_back(std::move(res));
         }

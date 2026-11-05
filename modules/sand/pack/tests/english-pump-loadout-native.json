@@ -1,0 +1,73 @@
+{
+    "status": "selected_tool_cards_observed",
+    "image": "I:\\MAA-data\\sand-player\\takeover-20261031T022729Z\\live\\00009-english-tool-fixed-proof.png",
+    "counts": {
+        "Crabbie Pumpie": 1
+    },
+    "next_empty_slot": 2,
+    "evidence": [
+        {
+            "slot": 1,
+            "name": "Crabbie Pumpie",
+            "icon": {
+                "algorithm": "MatchTemplate",
+                "hit": true,
+                "rect": [951, 128, 58, 56],
+                "score": 0.98112,
+                "task": "SandAuto@EquippedPump1",
+                "templ": "SandEquippedPump.png"
+            },
+            "quantity_roi": [1013, 167, 42, 29],
+            "quantity_reads": [
+                {
+                    "rect": [1013, 167, 42, 29],
+                    "score": 0.973305,
+                    "text": "1"
+                }
+            ],
+            "prepared_image": null
+        },
+        {
+            "slot": 2,
+            "empty": {
+                "algorithm": "MatchTemplate",
+                "hit": true,
+                "rect": [1023, 255, 57, 57],
+                "score": 0.993666,
+                "task": "SandAuto@EquippedEmpty2",
+                "templ": "SandEquipmentEmptyPlus.png"
+            },
+            "ordinal_reads": [
+                {
+                    "rect": [953, 240, 58, 75],
+                    "score": 0.999703,
+                    "text": "2"
+                }
+            ],
+            "capacity_reads": [
+                {
+                    "rect": [959, 317, 38, 20],
+                    "score": 0.994247,
+                    "text": "/12"
+                }
+            ]
+        }
+    ],
+    "formation_verified": true,
+    "inventory_updated": false,
+    "inputs_issued": false,
+    "verified": true,
+    "required": {
+        "Crabbie Pumpie": 1
+    },
+    "formation_evidence": {
+        "SandAuto@Squad": {
+            "algorithm": "OcrDetect",
+            "hit": true,
+            "rect": [823, 28, 82, 17],
+            "score": 0.973378,
+            "task": "SandAuto@Squad",
+            "text": "QuickSelect"
+        }
+    }
+}

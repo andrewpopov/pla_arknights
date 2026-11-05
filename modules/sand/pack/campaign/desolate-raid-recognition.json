@@ -1,0 +1,18 @@
+{
+    "schema_version": 1,
+    "stage_id": "sandbox_1_26",
+    "native_cases_passed": 6,
+    "native_fixture": "tests/desolate-recognition-native.json",
+    "native_geometry": "tests/desolate-native-tiles.json",
+    "node_selection": "Existing raid marker; bounded two-pan world search for a clipped/absent marker, followed by exact selected-title verification.",
+    "combat_calibrated": false,
+    "actual_selected_camera_available": false,
+    "live_paid_launch_enabled": false,
+    "opener_roles": {
+        "Mountain": "Early lane holder; Sweeping Stance once per deployment, rank7 cost8; do not activate while chopping adjacent trees.",
+        "Blaze": "Automatic Chainsaw Extension Module; allow its actual charge time.",
+        "Saria": "Automatic Medicine Dispensing; position to cover the lane holders."
+    },
+    "mode": "Guide calibration uses observed Standard Mode; old run was observed in Challenge Mode.",
+    "mode_proof": "I:\\MAA-data\\sand-player\\stance-outpost-20261031T043000Z\\standard-mode-confirm.png"
+}

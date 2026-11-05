@@ -1,0 +1,53 @@
+{
+    "schema_version": 1,
+    "autoplay_enabled": false,
+    "entry_scene_id": "scene_gold_1_enter",
+    "result_scene_id": "scene_gold_1_1",
+    "title": "Exchange Troubles",
+    "title_observer": "SandAuto@EventExchangeTroubles",
+    "entry_digest": "4f2ace1de90008acc4276915a478e4ea95f65d51e5e966e2dfe79edd6f9257ca",
+    "result_digest": "34f1eb7308b60ebee0254dcb21dbb480dafaeb3e5059b8e849892d4183db3a36",
+    "choices": [
+        {
+            "choiceId": "choice_gold_1_1",
+            "title": "Go and see what's happening",
+            "costAction": 1,
+            "type": "NEXT",
+            "observer": "SandAuto@EventSeeHappening"
+        },
+        {
+            "choiceId": "choice_gold_1_leave_1",
+            "title": "Seems like an everyday occurrence here",
+            "costAction": 0,
+            "type": "LEAVE",
+            "observer": "SandAuto@EventEverydayOccurrence"
+        }
+    ],
+    "selected_choice": "choice_gold_1_1",
+    "act_cost": 1,
+    "food_cost": {},
+    "expected_gold_range": [55, 65],
+    "leave": {
+        "choice_id": "choice_gold_1_leave_2",
+        "title": "Alright",
+        "act_cost": 0,
+        "observer": "SandAuto@EventAlright"
+    },
+    "source": {
+        "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+        "sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313"
+    },
+    "guide": {
+        "url": "https://note.com/kuniya_ark/n/n19803f0f953f",
+        "images": [24, 25, 26, 27],
+        "day": 5,
+        "act": 1,
+        "gold_before": 106,
+        "gold_after": 161
+    },
+    "limits": [
+        "No actual English positive or live transition has been verified.",
+        "Opening an event may reveal a raid path, but this handler cannot assert unlock/reachability.",
+        "Expected gold is not inventory credit."
+    ]
+}

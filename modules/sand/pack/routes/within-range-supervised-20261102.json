@@ -1,0 +1,98 @@
+{
+    "schema_version": 1,
+    "id": "within-range-supervised-20261102",
+    "theme": "Tales",
+    "stage": "Within Range",
+    "stage_id": "sandbox_1_40",
+    "autoplay_enabled": false,
+    "validation_status": "Supervised harvest-phase takeover only: Mlynar north facing Down, west and east adjacent collectors each banked3. Full30wood rotation and unattended opening remain unvalidated.",
+    "coordinate_system": "registered-1280x720",
+    "anchor_manifest": "calibration/within-range-supervised-20261102-anchors.json",
+    "anchors": {
+        "idle": "idle.png",
+        "side": "side.png"
+    },
+    "normal_points": {
+        "dps": [602, 238],
+        "west_pile": [516, 315]
+    },
+    "side_points": {
+        "dps": [697, 278],
+        "west_pile": [606, 333]
+    },
+    "required_squad": ["Młynar", "Beagle", "Spot", "Cardigan", "Noir Corne", "Yato"],
+    "required_formation_skills": {
+        "Młynar": 3
+    },
+    "required_formation_levels": {
+        "Młynar": 90
+    },
+    "required_formation_elites": {
+        "Młynar": 2
+    },
+    "zero_capacity_actors": ["Młynar"],
+    "background_skills": [],
+    "background_skill_remaining_floor": 25,
+    "source_wood_target": 30,
+    "unvalidated_slots": ["west_pile"],
+    "steps": [
+        {
+            "action": "wait_dp",
+            "minimum": 12,
+            "remaining_floor": 200
+        },
+        {
+            "action": "deploy",
+            "name": "Młynar",
+            "slot": "dps",
+            "direction": "Right"
+        },
+        {
+            "action": "finish"
+        }
+    ],
+    "collection_observations": [
+        {
+            "slot": "west_upper",
+            "actor": "Noir Corne",
+            "banked": 6,
+            "native_cooling_verified": true,
+            "deployments": 2
+        },
+        {
+            "slot": "east_upper",
+            "actor": "Beagle",
+            "banked": 3,
+            "native_cooling_verified": true,
+            "dynamic_retreat_control_required": true
+        }
+    ],
+    "placement_evidence": {},
+    "camera_recovery_pan": [
+        [930, 180],
+        [1070, 168]
+    ],
+    "calibration_phase": "Inward harvesting after west pile emptied; source outer phase retained in phase_history",
+    "phase_history": [
+        {
+            "phase": "outer_collectors",
+            "normal_points": {
+                "dps": [602, 238],
+                "west_upper": [433, 310],
+                "east_upper": [856, 326],
+                "west_pile": [516, 315]
+            },
+            "side_points": {
+                "dps": [705, 252],
+                "west_upper": [551, 320],
+                "east_upper": [963, 274],
+                "west_pile": [634, 320]
+            },
+            "anchor_provenance": {
+                "idle": "I:/MAA-data/sand-player/live-control-v20-20261102/runtime/00123-supervised-error-paused-008-bank-full-east-collector.png",
+                "side": "I:/MAA-data/sand-player/live-control-v21-20261102/runtime/00117-selected-hand.png"
+            },
+            "banked_at_transition": 9
+        }
+    ]
+}

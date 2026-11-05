@@ -1,0 +1,111 @@
+{
+    "game_connected": false,
+    "native": [
+        {
+            "name": "Młynar",
+            "slot": 1,
+            "roi": [258, 167, 41, 28],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [260, 172, 33, 19],
+                        "score": 0.994717,
+                        "text": "90"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Beagle",
+            "slot": 2,
+            "roi": [258, 307, 41, 28],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [261, 311, 34, 20],
+                        "score": 0.999433,
+                        "text": "55"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Spot",
+            "slot": 3,
+            "roi": [258, 447, 41, 28],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [263, 451, 32, 20],
+                        "score": 0.999721,
+                        "text": "55"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Cardigan",
+            "slot": 4,
+            "roi": [258, 587, 41, 28],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [263, 592, 32, 19],
+                        "score": 0.999684,
+                        "text": "55"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Noir Corne",
+            "slot": 5,
+            "roi": [768, 167, 41, 28],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [770, 170, 32, 21],
+                        "score": 0.998933,
+                        "text": "30"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Yato",
+            "slot": 6,
+            "roi": [768, 307, 41, 28],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "ocr",
+                "results": [
+                    {
+                        "rect": [768, 310, 35, 23],
+                        "score": 0.997784,
+                        "text": "30"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "empty",
+            "slot": 7,
+            "roi": [768, 447, 41, 28],
+            "native": {
+                "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+                "mode": "ocr",
+                "results": []
+            }
+        }
+    ]
+}

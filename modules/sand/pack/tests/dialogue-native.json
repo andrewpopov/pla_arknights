@@ -1,0 +1,88 @@
+{
+    "source_report": "I:\\MAA-data\\sand-player\\dialogue-offline-20261028\\report.json",
+    "source_sha256": "f2c86e33d69ae66abf80162292e5dfd1d791c56ded5a94a741009f49c53b0461",
+    "actual_liaison_positive": false,
+    "matches": [
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\after-dialogue1.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [37, 24, 44, 31],
+                    "score": 0.945935,
+                    "task": "SandAuto@DialogueLog",
+                    "templ": "DialogueLog.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\busy-done.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [37, 24, 44, 31],
+                    "score": 0.956241,
+                    "task": "SandAuto@DialogueLog",
+                    "templ": "DialogueLog.png"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DialogueLog"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-details.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@DialogueLog"
+                }
+            ]
+        }
+    ],
+    "ocr": {
+        "body": {
+            "digest": "7c4ff00efcd3285b43a7c7b2e621b3d758f5addbcd89f7ac4d528d6db3b45ad5",
+            "boxes": [
+                {
+                    "rect": [195, 565, 624, 24],
+                    "score": 0.984953
+                },
+                {
+                    "rect": [196, 595, 419, 22],
+                    "score": 0.960394
+                }
+            ]
+        },
+        "speaker": {
+            "digest": "d50065c398de87b819b69b4cdfda09eb192b64efb6f72bdf69473ca68d80247e",
+            "boxes": [
+                {
+                    "rect": [261, 523, 42, 23],
+                    "score": 0.992036
+                }
+            ]
+        },
+        "choice": {
+            "digest": "635937b76967954a93b4aebcb5dbffb7dd71db9e96f8cad851f46137c8352ffd",
+            "boxes": [
+                {
+                    "rect": [1054, 437, 179, 21],
+                    "score": 0.95746
+                }
+            ]
+        }
+    }
+}

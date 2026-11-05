@@ -1,5 +1,7 @@
 #include "RoguelikeRecruitTaskPlugin.h"
+#include "JieGarden/JieGardenStrategy.h"
 
+#include "Config/Miscellaneous/BattleDataConfig.h"
 #include "Config/TaskData.h"
 #include "Controller/Controller.h"
 #include "Task/ProcessTask.h"
@@ -26,6 +28,16 @@ bool asst::RoguelikeRecruitTaskPlugin::verify(AsstMsg msg, const json::value& de
     std::string_view task_view = task;
     if (task_view.starts_with(roguelike_name)) {
         task_view.remove_prefix(roguelike_name.length());
+    }
+    if (m_config->get_theme() == RoguelikeTheme::JieGarden) {
+        if (task_view == "Roguelike@StageGuidanceEnter") {
+            m_pathfinder_recruit = true;
+        }
+        else if (
+            task_view == "Roguelike@Stages" || task_view == "Roguelike@GetDropRecruit" ||
+            task_view == "Roguelike@StartExplore" || task_view == "Roguelike@EnterAfterRecruit") {
+            m_pathfinder_recruit = false;
+        }
     }
     if (task_view.ends_with("Roguelike@StartExplore")) {
         m_initail_recruit = true;
@@ -267,6 +279,7 @@ bool asst::RoguelikeRecruitTaskPlugin::_run()
             // 查询招募配置
             const auto& recruit_info = RoguelikeRecruit.get_oper_info(m_config->get_theme(), oper_info.name);
             int priority = 0;
+            bool temporary_candidate = false;
 
             // 查询编队是否已持有该干员
             if (const auto& char_opt = chars_map.find(oper_info.name); char_opt != chars_map.end()) {
@@ -281,6 +294,7 @@ bool asst::RoguelikeRecruitTaskPlugin::_run()
                                                         : recruit_info.promote_priority;
                     if (temp_recruit_exist) { // 临时招募干员的进阶优先级略微提高
                         priority += 150;
+                        temporary_candidate = true;
                         temp_recruit_exist = false;
                     }
                     if (oper_info.elite < 2) { // 若未精二，则晋升无意义
@@ -319,6 +333,7 @@ bool asst::RoguelikeRecruitTaskPlugin::_run()
                 if (temp_recruit_exist && !oper_info.name.starts_with("预备干员")) {
                     // 临时招募干员具有极高抓取优先级，但是在编队时会占用前面的位置
                     priority += 600;
+                    temporary_candidate = true;
                     temp_recruit_exist = false;
                 }
 
@@ -355,6 +370,63 @@ bool asst::RoguelikeRecruitTaskPlugin::_run()
                         }
                     }
                 }
+            }
+
+            if (theme == RoguelikeTheme::JieGarden && m_config->jiegarden_strategy().conserve_vouchers &&
+                !m_pathfinder_recruit && oper_info.name != "电弧" &&
+                conserve_jiegarden_candidate(
+                    jiegarden_team(*m_config),
+                    jiegarden_recruit_role(oper_info.name),
+                    m_initail_recruit,
+                    chars_map.contains(oper_info.name),
+                    temporary_candidate || oper_info.elite == 2)) {
+                LogInfo << "Conserving voucher instead of redundant recruit " << oper_info.name;
+                priority = 0;
+            }
+
+            if (theme == RoguelikeTheme::JieGarden && m_config->jiegarden_strategy().conserve_vouchers) {
+                const auto team = jiegarden_team(*m_config);
+                if (!m_pathfinder_recruit && oper_info.name != "电弧" &&
+                    jiegarden_save_for_first_promotion(
+                        team,
+                        jiegarden_recruit_role(oper_info.name),
+                        m_config->get_difficulty(),
+                        m_initail_recruit,
+                        chars_map.contains(oper_info.name),
+                        temporary_candidate || oper_info.elite == 2)) {
+                    LogInfo << "Conserving voucher and Hope for first E2 carry: " << oper_info.name;
+                    priority = 0;
+                }
+                const bool guard = BattleData.get_roles(oper_info.name, true).contains(battle::Role::Warrior);
+                if (!m_pathfinder_recruit && guard &&
+                    conserve_jiegarden_guard(
+                        jiegarden_guard_team(*m_config),
+                        m_initail_recruit,
+                        chars_map.contains(oper_info.name),
+                        temporary_candidate)) {
+                    LogInfo << "Conserving Guard voucher for Pathfinder: lane holder and damage already recruited; "
+                            << oper_info.name;
+                    priority = 0;
+                }
+                if (m_pathfinder_recruit && guard &&
+                    (oper_info.elite == 2 || (oper_info.elite == 1 && oper_info.level >= 55))) {
+                    priority = std::max(priority, recruit_info.recruit_priority);
+                }
+                if (priority > 0) {
+                    priority += jiegarden_promotion_bonus(
+                        oper_info.name,
+                        chars_map.contains(oper_info.name),
+                        oper_info.elite,
+                        m_config->get_difficulty());
+                }
+            }
+
+            if (theme == RoguelikeTheme::JieGarden && m_config->jiegarden_strategy().conserve_vouchers &&
+                jiegarden_recruit_role(oper_info.name) == JieGardenRecruitRole::Utility &&
+                jiegarden_team(*m_config).utility == 0 &&
+                (oper_info.elite == 2 || (oper_info.elite == 1 && oper_info.level >= 55))) {
+                priority = std::max(priority, recruit_info.recruit_priority);
+                LogInfo << "Preserving first hit-count utility recruit: " << oper_info.name;
             }
 
             // 优先级为0，可能练度不够被忽略
@@ -487,6 +559,7 @@ bool asst::RoguelikeRecruitTaskPlugin::_run()
 
 void asst::RoguelikeRecruitTaskPlugin::reset_in_run_variables()
 {
+    m_pathfinder_recruit = false;
     m_recruit_count = 0;
     m_starts_complete = false;
     m_team_complete = false;

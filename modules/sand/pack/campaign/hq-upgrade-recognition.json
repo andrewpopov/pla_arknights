@@ -1,0 +1,76 @@
+{
+    "schema_version": 1,
+    "workflow": "tools/maa_sand_construction.py",
+    "cli_mode": "--upgrade-hq2",
+    "costs": {
+        "wood": 60,
+        "water": 5
+    },
+    "sources": {
+        "english_unfunded_price": {
+            "file": "I:\\MAA-data\\sand-player\\guide-check\\00018-hq-upgrade-cost.png",
+            "sha256": "b7c642507e929f1f0bea7d12e5c8e8e2fd39d9da5bc48cf8905a4f98dfce04d1"
+        },
+        "english_details": {
+            "file": "I:\\MAA-data\\sand-player\\guide-check\\00017-hq-upgrade-before.png",
+            "sha256": "0dffb48b4ab189c766c5ad46949460218fae9e0dee771f6e2aff08ee7583624e"
+        },
+        "funded_materials": "kuniya-days2-3/image-32.png",
+        "success_check": "kuniya-days2-3/image-33.png"
+    },
+    "guide_preparation": "Remove90px pillars, normalize height720 preserving aspect; funded panel uses rightmost1280, success modal uses centered1280. UI evidence only.",
+    "templates": {
+        "SandHQUpgradeWood.png": {
+            "sha256": "2df0b48626dd48af9087dd3322154dcdeda1c88adc4c22fdcc06d1cc5250eab3",
+            "prepared_panel": "english-price.png",
+            "crop": [834, 530, 40, 36]
+        },
+        "SandHQUpgradeWater.png": {
+            "sha256": "96e01447082fd7ee217e5cbcf63f605f4a0ae3e3d1fe09fcdc876750bcd29b70",
+            "prepared_panel": "english-price.png",
+            "crop": [914, 530, 40, 36]
+        },
+        "SandHQUpgradeWoodFunded.png": {
+            "sha256": "fdc78bf538cad8d043f9859f24199fab28e12175a4e7c9731d31c1a6a3a002e9",
+            "prepared_panel": "source-funded-price.png",
+            "crop": [795, 530, 40, 36]
+        },
+        "SandHQUpgradeWaterFunded.png": {
+            "sha256": "6b9b03e01eaafbd46b486ca546a1a40f0370a6eb4ac6099b2268ed1159d0a2ff",
+            "prepared_panel": "source-funded-price.png",
+            "crop": [873, 530, 40, 36]
+        },
+        "SandHQSuccessCheck.png": {
+            "sha256": "4a53e50de00ef0b3f89071f9b2f2ff92dfffb07441657dba520be4fc3bd3212a",
+            "prepared_panel": "source-success.png",
+            "crop": [609, 612, 63, 65]
+        }
+    },
+    "native_report": "I:\\MAA-data\\sand-player\\hq-upgrade-20261030\\native-verified-report.json",
+    "english_unfunded_price_positive": true,
+    "english_calendar_positive": true,
+    "english_funded_panel_positive": false,
+    "english_success_modal_positive": false,
+    "live_upgrade_validated": false,
+    "native_observations": {
+        "english_owned": {
+            "wood": 3,
+            "water": 1
+        },
+        "english_funded": false,
+        "calendar_day": 3,
+        "calendar_confidence": 0.999796,
+        "funded_source_owned": {
+            "wood": 77,
+            "water": 10
+        },
+        "funded_source_authorizes_upgrade": false
+    },
+    "quantity_rule": "Exact owned/cost with fixed60/5 denominators; variant-bound crop; one existing native magnification retry; no digit repair",
+    "level_rule": "Existing world-HUD HQ level before and after; calendar read independently in English HQ details on both sides, including zero-Act day end",
+    "journal_rule": "Persist before navigation and paid submission; never repeat an uncertain Upgrade or success acknowledgement",
+    "act_rule": "Same day, unchanged Acts, exact observed debit and unrelated observed resources unchanged",
+    "autoplay_enabled": false,
+    "game_connected": false,
+    "inventory_updated": false
+}

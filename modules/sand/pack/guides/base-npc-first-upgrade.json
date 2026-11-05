@@ -1,0 +1,55 @@
+{
+    "schema_version": 1,
+    "dialogue_id": "dialog_sandbox_1_guide_trmedic1",
+    "npc_id": "npc_guide_trmedic1",
+    "autoplay_enabled": false,
+    "source": {
+        "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\dialogue\\en_US-dialog_sandbox_1_guide_trmedic1.txt",
+        "sha256": "3025d5da10211bc493fc8a57241e5f4d63ea675830a5e03d8c6941f3ffc3e344",
+        "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData_YoStar/main/en_US/gamedata/story/obt/sandboxperm/sandbox_1/battleavg/dialog_sandbox_1_guide_trmedic1.txt"
+    },
+    "guide_match": "Day3 guide image36 shows the Japanese final line and stone5. Variant2 shares the final line but grants three tactical items, so is not interchangeable.",
+    "japanese_source": {
+        "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\dialogue\\ja_JP-dialog_sandbox_1_guide_trmedic1.txt",
+        "sha256": "08e3595533a1efd0f47179330bd66de57863d0c510b2dce4f81d315dcbdc43c4"
+    },
+    "steps": [
+        {
+            "kind": "line",
+            "speaker": "Rhodes Island Operator",
+            "digest": "491c04389a00f40fbf19434d2f9a952b3fdde96634ae5a886290c0f7ce52a94c"
+        },
+        {
+            "kind": "line",
+            "speaker": "Rhodes Island Operator",
+            "digest": "b62573c67d944da78bf75e4b4e850696ea81e7f4b6e76a1c9faab6162b73832b"
+        },
+        {
+            "kind": "line",
+            "speaker": "Rhodes Island Operator",
+            "digest": "d5139b7f5623ef85f508b08421a4c9d13a22e9bd0a3c2c24b1bcb0b8951ff52a"
+        },
+        {
+            "kind": "choice",
+            "digest": "22f8a75e754c6922f301b408f56474c9498979db26d78030f72433cf8bd91d58"
+        },
+        {
+            "kind": "line",
+            "speaker": "Rhodes Island Operator",
+            "digest": "c12ebd73077862749fcc00e42019090702695abf5d18a343c4cd803f76b1f93c"
+        }
+    ],
+    "reward": {
+        "item_id": "sandbox_1_stone",
+        "resource": "stone",
+        "quantity": 5,
+        "before_step": 4,
+        "final_line_digest": "c12ebd73077862749fcc00e42019090702695abf5d18a343c4cd803f76b1f93c"
+    },
+    "script_withdraws_npc": true,
+    "script_has_save": true,
+    "quest_save_verified": false,
+    "native_english_positive": false,
+    "live_validation": false,
+    "npc_initiation_calibrated": false
+}

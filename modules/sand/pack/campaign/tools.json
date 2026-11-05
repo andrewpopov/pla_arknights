@@ -1,0 +1,47 @@
+{
+    "schema_version": 1,
+    "source": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\en_US-sandbox_perm_table.json",
+    "source_sha256": "a8e381d6a0d5320d2092d9b8785b811ead52fd3a0412ca39b7c46bc9594f9313",
+    "items": {
+        "sandbox_1_tactical_15": {
+            "id": "sandbox_1_tactical_15",
+            "name": "Crabbie Pumpie",
+            "min_hq": 1,
+            "materials": {
+                "wood": 10
+            },
+            "output_ratio": 1,
+            "unlock_description": "Unlocked by default",
+            "battle_identity": {
+                "trap_id": "trap_403_wfactory",
+                "english_name": "Crabbie Pumpie",
+                "profession": "TRAP",
+                "position": "NONE",
+                "range_ids": ["0-1", "0-1", "0-1"],
+                "placement_and_facing_verified": false
+            }
+        },
+        "sandbox_1_tactical_16": {
+            "id": "sandbox_1_tactical_16",
+            "name": "Sawing Harvester Hub",
+            "min_hq": 2,
+            "materials": {
+                "wood": 7,
+                "stone": 1
+            },
+            "output_ratio": 1,
+            "unlock_description": "Unlocked when Headquarters reaches Lv.2",
+            "battle_identity": {
+                "trap_id": "trap_401_xbfato",
+                "english_name": "Sawing Harvester Hub",
+                "profession": "TRAP",
+                "position": "NONE",
+                "range_ids": ["3-15", "3-15", "3-15"],
+                "placement_and_facing_verified": false
+            }
+        }
+    },
+    "live_recipe_confirmation_required": true,
+    "battle_data_source": "upstream/MAA/resource/battle_data.json",
+    "battle_data_sha256": "586a11866fcee583b53ee2d3f68aca9a70b07fd25dc5297fc1057c3257a6c72e"
+}

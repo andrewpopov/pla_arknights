@@ -1,0 +1,38 @@
+{
+    "schema_version": 1,
+    "live_graph_verified": false,
+    "cases": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\live-control-v24-20261102\\runtime\\00014-supervised-error-011-resume-owned-sand-graph.png",
+            "sha256": "5c8d6c03cf571d383c32823abb2e238d75772336b9b0799bc010fcc549d308ef",
+            "native": {
+                "image": "I:/MAA-data/sand-player/live-control-v24-20261102/runtime/00014-supervised-error-011-resume-owned-sand-graph.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "algorithm": "MatchTemplate",
+                        "hit": true,
+                        "rect": [65, 345, 255, 45],
+                        "score": 1.0,
+                        "task": "SandPilot@SelectTalesTitle",
+                        "templ": "SandTalesThemeTitle.png"
+                    }
+                ]
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\live-control-v24-20261102\\runtime\\00021-supervised-018-verify-resumed-world.png",
+            "sha256": "6dd8123f87e4f89e9ce12fc71c168e8fff366085d969d22f54834c7597a8c89a",
+            "native": {
+                "image": "I:/MAA-data/sand-player/live-control-v24-20261102/runtime/00021-supervised-018-verify-resumed-world.png",
+                "mode": "report",
+                "results": [
+                    {
+                        "hit": false,
+                        "task": "SandPilot@SelectTalesTitle"
+                    }
+                ]
+            }
+        }
+    ]
+}

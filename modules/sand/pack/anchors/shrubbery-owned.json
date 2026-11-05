@@ -1,0 +1,9 @@
+{
+    "location": "I:\\MAA-data\\sand-player\\anchors",
+    "sha256": {
+        "idle.png": "bed44edf1c2f4cfa3a01cf3079b4b8d7c978b0005594778d02f0616fc3e5739b",
+        "side.png": "52bc8a7a14353118ee78d36b031c75ce1c3377de4045a0bf8ebd82391f115ca2"
+    },
+    "schema_version": 1,
+    "stage_id": "sandbox_1_01"
+}

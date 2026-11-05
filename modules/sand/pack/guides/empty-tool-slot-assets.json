@@ -1,0 +1,9 @@
+{
+    "source": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\wood-formation.png",
+    "source_sha256": "fbe811360a0aef81465e641b90b91c5b7c059519f83ed2b248145b2dd45e01a4",
+    "template": "SandEmptyFirstToolSlot.png",
+    "rect": [1190, 100, 67, 102],
+    "template_sha256": "0271bae1d2ff5f803da39f6ad0d9d36b39279fda71a339fe19c292f2a798436d",
+    "semantics": "Empty first tool-card placeholder marked1/12, not the count of owned tools. Only the reviewed visible formation layout is recognized.",
+    "live_clear_and_tool_tray_transition_verified": false
+}

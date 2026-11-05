@@ -28,7 +28,8 @@ namespace MaaWpfGui.Configuration.Converter.Specific;
 //    target section does not already carry the same key, and the flat key is removed either
 //    way.
 // 2. Move the queue-held Reclamation task entries into Toolbox.MiniGame.Reclamation, as
-//    Reclamation is no longer a queue task type. The first entry supplies the settings;
+//    legacy Reclamation entries are Toolbox-only. Versioned local queue entries are kept.
+//    The first legacy entry supplies the settings;
 //    duplicates are dropped. Applies to every profile so inactive profiles and backup
 //    restoration keep their values.
 // All passes are no-ops when the legacy nodes are absent, hence idempotent.
@@ -94,6 +95,13 @@ internal sealed class ToolboxSectionMigrationConverter : JsonConverter<Root>
         for (var i = taskQueue.Count - 1; i >= 0; i--)
         {
             if (taskQueue[i] is not JsonObject entry || entry["$type"]?.GetValue<string>() != "ReclamationTask")
+            {
+                continue;
+            }
+
+            // Versioned local queue tasks remain queued; migrate only legacy entries.
+            if (entry["QueueVersion"] is JsonValue queueVersion &&
+                queueVersion.TryGetValue<int>(out var version) && version >= 2)
             {
                 continue;
             }

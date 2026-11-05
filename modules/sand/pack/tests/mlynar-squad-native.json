@@ -1,0 +1,45 @@
+{
+    "schema_version": 1,
+    "rows": [
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00069-six-guide-formation.png",
+            "mode": "report",
+            "results": [
+                {
+                    "algorithm": "MatchTemplate",
+                    "hit": true,
+                    "rect": [493, 132, 65, 65],
+                    "score": 1.0,
+                    "task": "SandAuto@SquadMlynarSelectedS3",
+                    "templ": "SandMlynarSelectedS3.png"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 96, 150, 21],
+                    "score": 0.858911,
+                    "task": "SandAuto@SquadName1",
+                    "text": "Mtynar"
+                }
+            ]
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\settlement-recovery-20261031T173000Z\\live\\00032-resume-roster-current.png",
+            "mode": "report",
+            "results": [
+                {
+                    "hit": false,
+                    "task": "SandAuto@SquadMlynarSelectedS3"
+                },
+                {
+                    "algorithm": "OcrDetect",
+                    "hit": true,
+                    "rect": [300, 96, 150, 21],
+                    "score": 0.459307,
+                    "task": "SandAuto@SquadName1",
+                    "text": "...M"
+                }
+            ]
+        }
+    ]
+}

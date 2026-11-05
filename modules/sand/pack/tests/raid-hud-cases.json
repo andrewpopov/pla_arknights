@@ -1,0 +1,77 @@
+{
+    "schema_version": 1,
+    "tasks": ["SandAuto@RaidKills", "SandAuto@RaidLives"],
+    "native_configuration": "Debug",
+    "cases": [
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-31.png",
+            "sha256": "c31fa06e405b19c9b335b63c397a96ddc2542ccadfbae944f1a5f232a9c2dea8",
+            "expected_raid": true,
+            "expected_progress": {
+                "kills": 0,
+                "total": 42,
+                "lives": 3
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-35.png",
+            "sha256": "1d9cba0646dc331a4486b1347f2039e8e513cf5d875f66f9a438d62f4000ed2e",
+            "expected_raid": true,
+            "expected_progress": {
+                "kills": 5,
+                "total": 42,
+                "lives": 3
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-38.png",
+            "sha256": "d1d0a1481fcd8d97866a376b7dbcbad51a790c375fc134fb21d53d89d4edb27f",
+            "expected_raid": true,
+            "expected_progress": {
+                "kills": 41,
+                "total": 42,
+                "lives": 3
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days2-3\\image-19.png",
+            "sha256": "dad73880879d31d38026f663d78d7c355c9c96559a18c7d77b4ee58411a7d36b",
+            "expected_raid": true,
+            "expected_progress": {
+                "kills": 6,
+                "total": 44,
+                "lives": 3
+            }
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-45.png",
+            "sha256": "2935f84cba6ee52f32d127d589297207a0edd5cf6f8ed01389d74692912faa94",
+            "expected_raid": false,
+            "expected_progress": null
+        },
+        {
+            "image": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-39.png",
+            "sha256": "ee6d574edfaa47a7ab0812d3bb9ce5eea4ed67b0baf7534018cc0942da4778c7",
+            "expected_raid": false,
+            "expected_progress": null
+        },
+        {
+            "image": "I:\\MAA-data\\native-tests\\ra-takeover-20261028\\second-paused.png",
+            "sha256": "bed44edf1c2f4cfa3a01cf3079b4b8d7c978b0005594778d02f0616fc3e5739b",
+            "expected_raid": false,
+            "expected_progress": null
+        },
+        {
+            "image": "I:\\MAA-data\\sand-player\\daily-sand-test-20261031T033300Z\\live\\00060-desolate-loading.png",
+            "sha256": "07a52240409182fe22623bb6c3b0927043907de4c1ebf619391ed814edcb2e5f",
+            "expected_raid": true,
+            "expected_progress": {
+                "kills": 0,
+                "total": 44,
+                "lives": 3
+            },
+            "source": "Actual English Desolate Interception Point HUD; old crop clipped the leading zero."
+        }
+    ],
+    "scope": "Saved numeric HUD observations; not English raid route or live pause validation."
+}

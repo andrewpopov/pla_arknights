@@ -1,0 +1,82 @@
+{
+    "stage_name": "暗箭难防_raidian_s2",
+    "replacement_home": [
+        {
+            "location": [9, 1],
+            "direction": "down"
+        },
+        {
+            "location": [1, 1],
+            "direction": "right"
+        }
+    ],
+    "blacklist_location": [],
+    "deploy_plan": [
+        {
+            "groups": ["电弧", "高台输出"],
+            "location": [7, 3],
+            "direction": "right"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [1, 2],
+            "direction": "up"
+        },
+        {
+            "groups": ["益达", "提丰", "焰苇", "水陈", "高台输出"],
+            "location": [3, 2],
+            "direction": "down"
+        },
+        {
+            "groups": ["三格治疗"],
+            "location": [3, 5],
+            "direction": "up"
+        },
+        {
+            "groups": ["稳定治疗"],
+            "location": [7, 2],
+            "direction": "right"
+        },
+        {
+            "groups": ["鱼"],
+            "location": [9, 2],
+            "direction": "up"
+        },
+        {
+            "groups": ["奶盾", "重装", "挡人先锋"],
+            "location": [9, 1],
+            "direction": "down"
+        },
+        {
+            "groups": ["高台输出", "单奶", "群奶"],
+            "location": [7, 5],
+            "direction": "left"
+        },
+        {
+            "groups": ["玛恩纳", "地面远程", "重装", "地面阻挡", "回费", "处决者", "其他地面"],
+            "location": [6, 6],
+            "direction": "right"
+        },
+        {
+            "groups": ["补给站"],
+            "location": [3, 1],
+            "direction": "down"
+        },
+        {
+            "groups": ["处决者"],
+            "location": [5, 4],
+            "direction": "right"
+        },
+        {
+            "groups": ["处决者"],
+            "location": [5, 2],
+            "direction": "right"
+        },
+        {
+            "groups": ["处决者"],
+            "location": [2, 1],
+            "direction": "up"
+        }
+    ],
+    "Doc": "For verified current-run E2 Raidian with selected S2 only. Open Raidian, support the left lane with Cycle, then save for Wisadel. Right medic covers Raidian and the right goal blocker."
+}

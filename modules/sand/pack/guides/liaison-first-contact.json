@@ -1,0 +1,137 @@
+{
+    "schema_version": 1,
+    "dialogue_id": "dialog_sandbox_1_main1_2_op",
+    "autoplay_enabled": false,
+    "stage_ids": ["sandbox_1_55", "sandbox_1_56"],
+    "source": {
+        "file": "I:\\MAA-data\\sand-guides\\20261028\\game-data\\dialogue\\en_US-dialog_sandbox_1_main1_2_op.txt",
+        "sha256": "88d54e3f692a18f4f1908eaffe43bab997266321494467a31650b301a3f0b4c9",
+        "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData_YoStar/main/en_US/gamedata/story/obt/sandboxperm/sandbox_1/battleavg/dialog_sandbox_1_main1_2_op.txt"
+    },
+    "source_match": "Japanese first line matches Day4 guide image20; paired exported NPC BEFORE dialog ID matches the English script.",
+    "guide_images": [
+        {
+            "image": 18,
+            "url": "https://assets.st-note.com/img/1730462436-X9WBTEq1i2fdxIP7vekUzVcD.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-18.png",
+            "sha256": "c311619da364bce18ec2cf3788b107f23eaa67d72d31ec72f49ed4f2537dfdf0",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 19,
+            "url": "https://assets.st-note.com/img/1730462436-CBZMx8Wu0lnTsek9QjmAJIt3.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-19.png",
+            "sha256": "d92fb0fbbd179768dd481da74840fc2cf58af12c32d5b023dee6a20674613297",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 20,
+            "url": "https://assets.st-note.com/img/1730462543-yPwXgV0S2ImnzCDAUZ1LF85M.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-20.png",
+            "sha256": "47c07f3341956a6b19561ff93af2752204cff38eaf2c98efb47ada138c84bed4",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 21,
+            "url": "https://assets.st-note.com/img/1730462544-ZpDG7kbhAQ1duYx6UJlE9WOH.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-21.png",
+            "sha256": "2eba233bda1e7c3cd6ce8f4413a6ba7c9ee56bab4a260246a594cb16e8d9327a",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 22,
+            "url": "https://assets.st-note.com/img/1730462544-3sxBEVzJkDe7hmCyqwnfKI1i.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-22.png",
+            "sha256": "5f1bcfc2263f0d4ff6b12f2b9319673b02148c0d2324a81faa420368ab0a0e34",
+            "size": [2532, 1170]
+        },
+        {
+            "image": 23,
+            "url": "https://assets.st-note.com/img/1730462544-OMoP4ZXycCHYNfwTeEdDSmst.png",
+            "file": "I:\\MAA-data\\sand-guides\\20261028\\kuniya-days4-6\\image-23.png",
+            "sha256": "f8358425a05691332f381536cd4c46f74391df5e361985a9e485c9f5f562dd5f",
+            "size": [2532, 1170]
+        }
+    ],
+    "source_squad": [],
+    "source_tools": [],
+    "drinks_required": 2,
+    "act_cost": 1,
+    "steps": [
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "0b5007666f133bbb4e305c6e496b8ff49fba477758863f659f714a714e75cc07"
+        },
+        {
+            "kind": "line",
+            "speaker": "Tuye",
+            "digest": "554d5a86b5e5c9a3a765135973e741ff261969c0ccd755959db767f72d838c6c"
+        },
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "e243487009f8daa16c9c08db2b2d7794e50537343591726a77131771415f6d97"
+        },
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "6fe5c77a7b912dad8d8eef78fa50db3e1355bd15c39531cdf793c69f968ad270"
+        },
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "3349ca36d7b292649b441221721cbd212a287108b0b877c6ca69cf85e6667a42"
+        },
+        {
+            "kind": "choice",
+            "digest": "52b9572c34133e4cb18da0b29ec72fff8548b6620b39b34012dab4613b89597f"
+        },
+        {
+            "kind": "choice",
+            "digest": "eb3c7bfbd6242c785fc8af5555d41aa0641af4c972c89259a476ff2bf8882801"
+        },
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "d1fc9a8eaff0b047d3ddfe049efe2f9247a9052deb278a73cefcf0dc4ab5ed5a"
+        },
+        {
+            "kind": "choice",
+            "digest": "5e32a2ca6eb6844f2fcd51890efdd526075f3e262dda784ce0a24faea0b305d9"
+        },
+        {
+            "kind": "choice",
+            "digest": "967abd6abd5a7d9b6d0238f37f2e5b7f6041044fd4acfbaee9a6dc7b6df7abc0"
+        },
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "5a400fbf3361c1841524f4660107b35cd43ff503489b2330076ef135758bfb78"
+        },
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "6d66871ea39d23ebcf992b9f15543650cd211300f06bae0652dbf1f0ffb70ff9"
+        },
+        {
+            "kind": "choice",
+            "digest": "5781eca80ee166a0ff8c1fc112f61b281de5d2ec624ff75af52ff300a6e37d08"
+        },
+        {
+            "kind": "choice",
+            "digest": "e953077e1ae270d8740839df82e2e59c9aec6314353cbc62286268c15d4bc0c2"
+        },
+        {
+            "kind": "line",
+            "speaker": "Liaison",
+            "digest": "b145d0e866c1d899444fa81faba65846e25b19360bb7e90d87c84e86794d09d9"
+        }
+    ],
+    "script_has_save_and_end": true,
+    "limits": [
+        "Only full-confidence exact line/choice digests in source order; no bulk skipping.",
+        "No route launch, day advance, resource farming, or automatic unlock claim.",
+        "English Liaison positive screenshots, actual choices and final pause transition require live validation."
+    ]
+}

@@ -25,32 +25,32 @@
             "desc": "投出时，精英及领袖敌人的生命值、攻击力+10%，在险路恶敌及岁兽残识中攻击力、生命值额外+20％",
             "rarity": "NORMAL",
             "pickup_priority": 0,
-            "discard_priority": 1998,
-            "cast_discard_priority": 2098
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-北刺面",
             "desc": "投出时，精英及领袖敌人的移动速度+10%，在险路恶敌及岁兽残识中移动速度额外+20％",
             "rarity": "NORMAL",
             "pickup_priority": 0,
-            "discard_priority": 1999,
-            "cast_discard_priority": 2099
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-南见山",
             "desc": "投出时，精英及领袖敌人的防御力+15%，在险路恶敌及岁兽残识中防御力额外+35％",
             "rarity": "NORMAL",
             "pickup_priority": 0,
-            "discard_priority": 2000,
-            "cast_discard_priority": 2100
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-东缺角",
             "desc": "投出时，精英及领袖敌人的法术抗性+10，在险路恶敌及岁兽残识中法术抗性额外+20",
             "rarity": "NORMAL",
             "pickup_priority": 0,
-            "discard_priority": 1997,
-            "cast_discard_priority": 2097
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "衡-奇土生金",
@@ -200,15 +200,17 @@
             "name": "厉-遇良弈",
             "desc": "投出时，所有敌方单位的攻击力+25%，我方单位的攻击力+60%",
             "rarity": "RARE",
-            "pickup_priority": 1500,
-            "discard_priority": 50
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-隐市忧",
             "desc": "投出时，所有我方单位获得55%的物理法术闪避，所有敌人攻击速度+25",
             "rarity": "RARE",
-            "pickup_priority": 1500,
-            "discard_priority": 50
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-法与律",
@@ -221,15 +223,17 @@
             "name": "厉-两江春",
             "desc": "投出时，所有敌人的最大生命值+50%，但受到阻挡时每秒受到5%当前生命值的法术伤害",
             "rarity": "RARE",
-            "pickup_priority": 200,
-            "discard_priority": 1200
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-凡物变",
             "desc": "投出时，每5秒，所有敌人的移动速度+35％或-70％",
             "rarity": "RARE",
             "pickup_priority": 0,
-            "discard_priority": 1500
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-人间长存",
@@ -361,8 +365,9 @@
             "name": "厉-安硕鼷",
             "desc": "投出时，击败雕伥后，额外获得票券。但雕伥最大生命值大幅提升",
             "rarity": "RARE",
-            "pickup_priority": 400,
-            "discard_priority": 600
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "衡-诡意代币",
@@ -390,8 +395,8 @@
             "desc": "位于钱盒内时，战斗后获得的指挥经验+30%；投出时，所有敌人的移动速度+30%，攻击力+30%。（下次投钱前变化为-大炎通宝）",
             "rarity": "RARE",
             "pickup_priority": 0,
-            "discard_priority": 2000,
-            "cast_discard_priority": 1100
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "花-平沙之盾",
@@ -439,15 +444,17 @@
             "name": "厉-移山难",
             "desc": "投出时，所有敌方单位防御力+2000，但每次受到伤害时防御力-100（最多叠加25次），可在筹谋中升级",
             "rarity": "RARE",
-            "pickup_priority": 100,
-            "discard_priority": 1200
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "衡-移山繁",
             "desc": "投出时，所有敌方单位防御力+2000，但每次受到伤害时防御力-150（最多叠加25次）",
             "rarity": "RARE",
-            "pickup_priority": 150,
-            "discard_priority": 800
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "厉-朝闻道",
@@ -502,9 +509,9 @@
             "name": "花-鸭爵金币",
             "desc": "投出时，使非险路恶敌战斗中必定出现一名属性大幅度提升的鸭爵、高普尼克、流泪小子或圆仔。（下次投钱前变化为-大炎通宝）",
             "rarity": "SUPER_RARE",
-            "pickup_priority": 800,
-            "discard_priority": 400,
-            "cast_discard_priority": 999
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "衡-鸿蒙开荒",
@@ -606,8 +613,9 @@
             "name": "厉-南武盛景",
             "desc": "投出时，敌方单位攻击力+20％。携带期间每经过一个战斗节点，失去时可获得一个收藏品（最多获得5个）",
             "rarity": "SUPER_RARE",
-            "pickup_priority": 100,
-            "discard_priority": 1100
+            "pickup_priority": 0,
+            "discard_priority": 4000,
+            "cast_discard_priority": 5000
         },
         {
             "name": "花-百灶盛景",

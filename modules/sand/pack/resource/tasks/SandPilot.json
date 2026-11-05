@@ -1,0 +1,648 @@
+{
+    "SandPilot@EnterSelectedSand": {
+        "algorithm": "OcrDetect",
+        "text": ["FoehnHotlands"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [35, 550, 650, 150],
+        "action": "DoNothing",
+        "next": ["SandPilot@EnterTheme"]
+    },
+    "SandPilot@EnterTheme": {
+        "algorithm": "OcrDetect",
+        "text": ["Enter", "EnterTheme"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [1040, 600, 225, 80],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "next": ["Stop"]
+    },
+    "SandPilot@Commence": {
+        "algorithm": "OcrDetect",
+        "text": ["Resume", "Commence"],
+        "fullMatch": true,
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [1030, 605, 240, 100],
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "next": ["Stop"],
+        "postDelay": 2000
+    },
+    "SandPilot@GoBase": {
+        "algorithm": "OcrDetect",
+        "text": ["Gathering Grounds"],
+        "roi": [0, 70, 1280, 560],
+        "action": "ClickSelf",
+        "postDelay": 1000,
+        "next": ["Stop"]
+    },
+    "SandPilot@Start": {
+        "algorithm": "OcrDetect",
+        "text": ["Start"],
+        "fullMatch": true,
+        "roi": [900, 520, 370, 110],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "next": ["Stop"]
+    },
+    "SandPilot@Dialogue": {
+        "algorithm": "OcrDetect",
+        "text": ["Eunectes", "Tuye"],
+        "fullMatch": true,
+        "roi": [150, 495, 850, 65],
+        "action": "ClickRect",
+        "specificRect": [630, 665, 30, 20],
+        "postDelay": 600,
+        "maxTimes": 30,
+        "next": ["SandPilot@SoSoon", "SandPilot@ThankYou", "SandPilot@ChoiceBoundary", "SandPilot@Dialogue"],
+        "exceededNext": ["Stop"],
+        "onErrorNext": ["Stop"]
+    },
+    "SandPilot@SoSoon": {
+        "algorithm": "OcrDetect",
+        "text": ["Sosoon"],
+        "ocrReplace": [["[\\s?？]+", ""]],
+        "fullMatch": true,
+        "roi": [890, 410, 375, 70],
+        "action": "ClickSelf",
+        "postDelay": 700,
+        "maxTimes": 2,
+        "next": ["SandPilot@Dialogue"],
+        "exceededNext": ["Stop"]
+    },
+    "SandPilot@ThankYou": {
+        "algorithm": "OcrDetect",
+        "text": ["Thankyou"],
+        "ocrReplace": [["[\\s.]+", ""]],
+        "fullMatch": true,
+        "roi": [890, 410, 375, 70],
+        "action": "ClickSelf",
+        "postDelay": 700,
+        "maxTimes": 2,
+        "next": ["SandPilot@Dialogue"],
+        "exceededNext": ["Stop"]
+    },
+    "SandPilot@ChoiceBoundary": {
+        "algorithm": "OcrDetect",
+        "text": [],
+        "roi": [895, 410, 370, 70],
+        "action": "Stop"
+    },
+    "SandPilot@Resource": {
+        "baseTask": "Tales@RA@ResourceGained",
+        "next": ["SandPilot@Dialogue", "Stop"],
+        "postDelay": 700
+    },
+    "SandPilot@WoodUnlocked": {
+        "algorithm": "OcrDetect",
+        "text": ["Youcannowgatherwood"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [250, 550, 800, 80],
+        "action": "ClickRect",
+        "specificRect": [1030, 675, 25, 20],
+        "postDelay": 700,
+        "next": ["SandPilot@Dialogue", "Stop"]
+    },
+    "SandPilot@RestChoice": {
+        "algorithm": "OcrDetect",
+        "text": ["Getsomeresttonight"],
+        "fullMatch": true,
+        "roi": [890, 410, 375, 70],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "next": ["Stop"],
+        "ocrReplace": [["[\\s.]+", ""]]
+    },
+    "SandPilot@BusyChoice": {
+        "algorithm": "OcrDetect",
+        "text": ["busytomorrow"],
+        "fullMatch": false,
+        "roi": [890, 410, 375, 70],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "next": ["Stop"],
+        "ocrReplace": [["[\\s.]+", ""]]
+    },
+    "SandPilot@LeaveCamp": {
+        "baseTask": "Tales@RA@PNS-LeaveBaseCamp",
+        "next": ["SandPilot@ConfirmLeaveCamp"],
+        "template": "Tales@RA@LeaveCurrentZone.png"
+    },
+    "SandPilot@ConfirmLeaveCamp": {
+        "baseTask": "Tales@RA@PNS-ConfirmToLeaveBaseCamp",
+        "next": ["Stop"],
+        "postDelay": 2500,
+        "template": "Tales@RA@DialogConfirmYellow.png"
+    },
+    "SandPilot@WoodNode": {
+        "algorithm": "OcrDetect",
+        "text": ["ShrubberyGalore"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [0, 210, 250, 100],
+        "action": "ClickRect",
+        "postDelay": 1000,
+        "next": ["Stop"],
+        "specificRect": [5, 275, 20, 20]
+    },
+    "SandPilot@ReadNote": {
+        "algorithm": "OcrDetect",
+        "text": ["A Note"],
+        "roi": [240, 295, 170, 65],
+        "action": "ClickRect",
+        "specificRect": [630, 500, 30, 20],
+        "postDelay": 1500,
+        "next": ["Stop"]
+    },
+    "SandPilot@Thanks": {
+        "algorithm": "OcrDetect",
+        "text": ["Thanks"],
+        "roi": [830, 375, 240, 75],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "next": ["Stop"]
+    },
+    "SandPilot@ConfirmThanks": {
+        "algorithm": "OcrDetect",
+        "text": ["Thanks"],
+        "roi": [830, 375, 240, 75],
+        "action": "ClickRect",
+        "postDelay": 1500,
+        "next": ["Stop"],
+        "specificRect": [1150, 400, 25, 25]
+    },
+    "SandPilot@Headquarters": {
+        "baseTask": "Tales@RA@ClickHeadquartersButton",
+        "template": "Tales@RA@HeadquartersButton.png",
+        "postDelay": 1000,
+        "next": ["Stop"]
+    },
+    "SandPilot@Back": {
+        "algorithm": "OcrDetect",
+        "text": ["Back"],
+        "fullMatch": true,
+        "roi": [35, 10, 110, 55],
+        "action": "ClickSelf",
+        "postDelay": 700,
+        "next": ["Stop"]
+    },
+    "SandPilot@CenteredWood": {
+        "algorithm": "OcrDetect",
+        "text": ["ShrubberyGalore"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [220, 135, 150, 45],
+        "action": "ClickSelf",
+        "postDelay": 1000,
+        "next": ["Stop"]
+    },
+    "SandPilot@SquadStart": {
+        "algorithm": "OcrDetect",
+        "text": ["Start"],
+        "fullMatch": true,
+        "roi": [1130, 645, 130, 65],
+        "action": "ClickSelf",
+        "postDelay": 500,
+        "next": ["Stop"]
+    },
+    "SandPilot@GatherResult": {
+        "algorithm": "OcrDetect",
+        "text": ["Itemsreceived"],
+        "ocrReplace": [["[\\s!]+", ""]],
+        "roi": [115, 465, 240, 60],
+        "action": "ClickSelf",
+        "postDelay": 2500,
+        "next": ["Stop"]
+    },
+    "SandPilot@SelectWoodAgain": {
+        "algorithm": "OcrDetect",
+        "text": ["ShrubberyGalore"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [0, 100, 1150, 500],
+        "action": "ClickSelf",
+        "postDelay": 1000,
+        "next": ["SandPilot@PrepareWoodAgain"]
+    },
+    "SandPilot@PrepareWoodAgain": {
+        "algorithm": "OcrDetect",
+        "text": ["Start"],
+        "fullMatch": true,
+        "roi": [900, 520, 370, 110],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "next": ["SandPilot@QuickSelect"]
+    },
+    "SandPilot@QuickSelect": {
+        "algorithm": "OcrDetect",
+        "text": ["QuickSelect"],
+        "ocrReplace": [["\\s+", ""]],
+        "roi": [790, 10, 140, 60],
+        "action": "ClickSelf",
+        "postDelay": 1000,
+        "next": ["Stop"]
+    },
+    "SandPilot@GatherStart": {
+        "algorithm": "OcrDetect",
+        "text": ["Start"],
+        "fullMatch": true,
+        "roi": [1130, 645, 130, 65],
+        "action": "ClickSelf",
+        "postDelay": 500,
+        "next": ["SandPilot@InitialPause"]
+    },
+    "SandPilot@InitialPause": {
+        "algorithm": "OcrDetect",
+        "text": ["##:##"],
+        "roi": [560, 10, 170, 45],
+        "action": "ClickRect",
+        "specificRect": [1208, 52, 1, 1],
+        "preDelay": 0,
+        "postDelay": 500,
+        "next": ["Stop"],
+        "ocrReplace": [
+            ["\\s+", ""],
+            ["\\d", "#"]
+        ],
+        "fullMatch": true,
+        "onErrorNext": ["SandPilot@InitialPause"]
+    },
+    "SandPilot@Workbench": {
+        "baseTask": "Tales@RA@Workbench",
+        "template": "Tales@RA@WorkbenchButton.png",
+        "postDelay": 1000,
+        "next": ["Stop"]
+    },
+    "SandPilot@PumpRecipe": {
+        "algorithm": "OcrDetect",
+        "text": ["CrabbiePumpie"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [410, 115, 240, 55],
+        "action": "ClickSelf",
+        "postDelay": 700,
+        "next": ["Stop"]
+    },
+    "SandPilot@CraftOnePump": {
+        "algorithm": "OcrDetect",
+        "text": ["Craft"],
+        "fullMatch": true,
+        "roi": [1020, 500, 120, 55],
+        "action": "ClickSelf",
+        "postDelay": 1000,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@NextDay": {
+        "baseTask": "Tales@RA@NextDay",
+        "template": "Tales@RA@NextDay.png",
+        "postDelay": 2000,
+        "next": ["Stop"]
+    },
+    "SandPilot@StartToday": {
+        "algorithm": "OcrDetect",
+        "text": ["StartToday"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [495, 570, 295, 70],
+        "action": "ClickSelf",
+        "postDelay": 1000,
+        "next": ["Stop"]
+    },
+    "SandPilot@KnownDialogueAdvance": {
+        "baseTask": "Tales@RA@PNS-OpeningDialogueClick",
+        "postDelay": 250,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@HubRecipe": {
+        "algorithm": "OcrDetect",
+        "text": ["SawingHarvesterHub"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [410, 100, 750, 510],
+        "action": "ClickSelf",
+        "postDelay": 700,
+        "next": ["Stop"]
+    },
+    "SandPilot@CraftOneHub": {
+        "baseTask": "SandPilot@CraftOnePump",
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@CloseToolRecipe": {
+        "baseTask": "Tales@RA@CancelCraft",
+        "templThreshold": 0.85,
+        "postDelay": 500,
+        "maxTimes": 1,
+        "next": ["Stop"],
+        "template": "Tales@RA@Craft.png"
+    },
+    "SandPilot@NodeShrubberyGalore": {
+        "algorithm": "OcrDetect",
+        "text": ["ShrubberyGalore"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [0, 100, 860, 525],
+        "action": "ClickSelf",
+        "next": ["Stop"],
+        "maxTimes": 1
+    },
+    "SandPilot@FormationShrubberyGalore": {
+        "baseTask": "SandAuto@DetailsShrubberyGalore",
+        "maxTimes": 1,
+        "next": ["SandPilot@Start"]
+    },
+    "SandPilot@NodeJaggedJungle": {
+        "algorithm": "OcrDetect",
+        "text": ["JaggedJungle"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 825, 525],
+        "action": "ClickSelf",
+        "next": ["Stop"],
+        "maxTimes": 1
+    },
+    "SandPilot@FormationJaggedJungle": {
+        "baseTask": "SandAuto@DetailsJaggedJungle",
+        "maxTimes": 1,
+        "next": ["SandPilot@Start"]
+    },
+    "SandPilot@NodeWithinRange": {
+        "algorithm": "OcrDetect",
+        "text": ["WithinRange"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 825, 525],
+        "action": "ClickSelf",
+        "next": ["Stop"],
+        "maxTimes": 1
+    },
+    "SandPilot@FormationWithinRange": {
+        "baseTask": "SandAuto@DetailsWithinRange",
+        "maxTimes": 1,
+        "next": ["SandPilot@Start"]
+    },
+    "SandPilot@NodeDrinkwaterasBait": {
+        "algorithm": "OcrDetect",
+        "text": ["DrinkwaterasBait"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 825, 525],
+        "action": "ClickSelf",
+        "next": ["Stop"],
+        "maxTimes": 1
+    },
+    "SandPilot@FormationDrinkwaterasBait": {
+        "baseTask": "SandAuto@DetailsDrinkwaterasBait",
+        "maxTimes": 1,
+        "next": ["SandPilot@Start"]
+    },
+    "SandPilot@NodeStraightIntotheAbyss": {
+        "algorithm": "OcrDetect",
+        "text": ["StraightIntotheAbyss"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 825, 525],
+        "action": "ClickSelf",
+        "next": ["Stop"],
+        "maxTimes": 1
+    },
+    "SandPilot@FormationStraightIntotheAbyss": {
+        "baseTask": "SandAuto@DetailsStraightIntotheAbyss",
+        "maxTimes": 1,
+        "next": ["SandPilot@Start"]
+    },
+    "SandPilot@FormationToolsTab": {
+        "algorithm": "OcrDetect",
+        "text": ["Tools"],
+        "fullMatch": true,
+        "roi": [220, 650, 200, 50],
+        "action": "ClickSelf",
+        "postDelay": 500,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@PauseNavigationBattle": {
+        "baseTask": "BattlePause",
+        "maxTimes": 1,
+        "next": ["Stop"],
+        "specificRect": [1208, 52, 1, 1]
+    },
+    "SandPilot@ClearSquad": {
+        "baseTask": "SandAuto@ClearSquad",
+        "template": "Tales@RA@ClearSquad.png",
+        "action": "ClickSelf",
+        "next": [],
+        "postDelay": 500
+    },
+    "SandPilot@ClearSquadConfirm": {
+        "baseTask": "SandAuto@ClearSquadConfirm",
+        "template": "Tales@RA@DialogConfirmRed.png",
+        "action": "ClickSelf",
+        "next": [],
+        "postDelay": 500
+    },
+    "SandPilot@ToggleBattleBag": {
+        "baseTask": "SandAuto@BagButton",
+        "template": "SandBagButton.png",
+        "action": "ClickSelf",
+        "next": [],
+        "postDelay": 300
+    },
+    "SandPilot@VisitStartConfirm": {
+        "baseTask": "SandAuto@VisitStartConfirm",
+        "template": "Tales@RA@DialogConfirmRed.png",
+        "action": "ClickSelf",
+        "next": [],
+        "postDelay": 300
+    },
+    "SandPilot@HQOpenUpgrade": {
+        "baseTask": "SandAuto@HQOpenUpgrade",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["Stop"]
+    },
+    "SandPilot@HQConfirmUpgrade": {
+        "baseTask": "SandAuto@HQConfirmUpgrade",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["Stop"]
+    },
+    "SandPilot@HQUpgradeReturn": {
+        "baseTask": "SandAuto@HQUpgradeReturn",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["Stop"]
+    },
+    "SandPilot@HQSuccessCheck": {
+        "baseTask": "SandAuto@HQSuccessCheck",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["Stop"],
+        "template": "SandHQSuccessCheck.png"
+    },
+    "SandPilot@HeadquartersConstructs": {
+        "algorithm": "OcrDetect",
+        "text": ["Headquarters"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [10, 85, 240, 330],
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["Stop"]
+    },
+    "SandPilot@PlanterRecipe": {
+        "algorithm": "OcrDetect",
+        "text": ["PlantingBoxGroup"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [280, 95, 950, 520],
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["Stop"]
+    },
+    "SandPilot@CraftOnePlanter": {
+        "baseTask": "SandPilot@CraftOnePump",
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@WorkbenchBack": {
+        "baseTask": "Tales@RA@BackDark",
+        "template": "Tales@RA@BackDark.png",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["Stop"]
+    },
+    "SandPilot@HQBuildSave": {
+        "baseTask": "SandAuto@HQBuildSave",
+        "template": "SandHQBuildSave.png",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 750,
+        "next": ["Stop"]
+    },
+    "SandPilot@HQBuildBack": {
+        "baseTask": "SandAuto@HQBuildBack",
+        "template": "SandHQBuildBack.png",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 750,
+        "next": ["Stop"]
+    },
+    "SandPilot@NpcLeaveCamp": {
+        "baseTask": "SandAuto@CampExit",
+        "template": "SandCampExit.png",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "postDelay": 500,
+        "next": ["SandPilot@NpcConfirmLeaveCamp"]
+    },
+    "SandPilot@NpcConfirmLeaveCamp": {
+        "baseTask": "SandPilot@ConfirmLeaveCamp",
+        "template": "Tales@RA@DialogConfirmYellow.png",
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@NodeDesolateInterceptionPoint": {
+        "baseTask": "SandAuto@RaidWorldMarker",
+        "action": "ClickSelf",
+        "maxTimes": 1,
+        "next": ["Stop"],
+        "template": "SandRaidWorldMarker.png",
+        "templThreshold": 0.85
+    },
+    "SandPilot@FormationDesolateInterceptionPoint": {
+        "baseTask": "SandAuto@DetailsDesolateInterceptionPoint",
+        "maxTimes": 1,
+        "next": ["SandPilot@Start"]
+    },
+    "SandPilot@DismissCraftReceipt": {
+        "baseTask": "SandAuto@CraftReceiptContinue",
+        "action": "ClickSelf",
+        "postDelay": 500,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@NodeGatheringOfFeathers": {
+        "algorithm": "OcrDetect",
+        "text": ["GatheringofFeathers"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [35, 100, 825, 525],
+        "action": "ClickSelf",
+        "next": ["Stop"],
+        "maxTimes": 1
+    },
+    "SandPilot@FormationGatheringOfFeathers": {
+        "baseTask": "SandAuto@DetailsGatheringOfFeathers",
+        "maxTimes": 1,
+        "next": ["SandPilot@Start"]
+    },
+    "SandPilot@LongTermOnce": {
+        "baseTask": "RA@Navigation-LongTermExploration",
+        "postDelay": 2000,
+        "maxTimes": 1,
+        "next": ["Stop"],
+        "template": "Roguelike@IntegratedStrategies.png",
+        "algorithm": "MatchTemplate",
+        "action": "ClickSelf",
+        "roi": [884, 606, 146, 114]
+    },
+    "SandPilot@RAThemes": {
+        "algorithm": "OcrDetect",
+        "text": ["ViewallThemes"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [1040, 455, 220, 85],
+        "action": "ClickSelf",
+        "postDelay": 2000,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@SelectTales": {
+        "algorithm": "OcrDetect",
+        "text": ["TALESWITHIN"],
+        "ocrReplace": [["\\s+", ""]],
+        "fullMatch": true,
+        "roi": [30, 290, 330, 100],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@ResumeExisting": {
+        "algorithm": "OcrDetect",
+        "text": ["Resume"],
+        "fullMatch": true,
+        "roi": [1030, 605, 240, 100],
+        "action": "ClickSelf",
+        "postDelay": 2000,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    },
+    "SandPilot@OwnedSandFromTerminal": {
+        "algorithm": "JustReturn",
+        "sub": [
+            "SandPilot@LongTermOnce",
+            "SandPilot@RAThemes",
+            "SandPilot@SelectTalesTitle",
+            "SandPilot@EnterSelectedSand"
+        ],
+        "next": ["SandPilot@ResumeExisting"],
+        "maxTimes": 1
+    },
+    "SandPilot@SelectTalesTitle": {
+        "algorithm": "MatchTemplate",
+        "template": "SandTalesThemeTitle.png",
+        "templThreshold": 0.92,
+        "roi": [40, 320, 310, 90],
+        "action": "ClickSelf",
+        "postDelay": 1500,
+        "maxTimes": 1,
+        "next": ["Stop"]
+    }
+}
