@@ -15,6 +15,7 @@ from package_windows import (
     SOURCE,
     REQUIRED,
     archive,
+    collect_notices,
     assemble,
     copy_tree,
     digest,
@@ -116,6 +117,22 @@ class PackageTests(unittest.TestCase):
         (self.app / "foreign.dll").write_bytes(b"fixture")
         with self.assertRaisesRegex(ValueError, "Unexpected root DLLs"):
             validate(self.app)
+
+    def test_dependency_notices_are_preserved_without_personal_paths(self):
+        notice = (
+            self.source
+            / "src/MaaUtils/MaaDeps/vcpkg/installed/maa-x64-windows/share/opencv/copyright"
+        )
+        notice.parent.mkdir(parents=True, exist_ok=True)
+        notice.write_text("Upstream notice")
+        index = collect_notices(self.app, self.source)
+        self.assertEqual(len(index), 1)
+        self.assertEqual(
+            (self.app / "licenses" / index[0]).read_text(), "Upstream notice"
+        )
+        self.assertNotIn(
+            str(self.source), (self.app / "licenses/INDEX.json").read_text()
+        )
 
     def test_personal_config_is_rejected(self):
         (self.app / "config").mkdir()

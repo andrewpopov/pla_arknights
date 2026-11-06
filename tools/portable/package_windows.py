@@ -73,6 +73,56 @@ def validate(root):
             raise ValueError(f"Personal state or local launcher in bundle: {name}")
 
 
+def collect_notices(app, dependency_source):
+    """Preserve notices supplied by the actual native and NuGet build inputs."""
+    app, dependency_source = Path(app), Path(dependency_source)
+    index = []
+
+    def include(file, relative):
+        target = app / "licenses" / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(file, target)
+        index.append(relative.as_posix())
+
+    native = dependency_source / "src/MaaUtils/MaaDeps/vcpkg/installed"
+    for file in sorted(native.glob("*/share/*/copyright")):
+        include(file, Path("native") / file.relative_to(native))
+    assets = dependency_source / "src/MaaWpfGui/obj/project.assets.json"
+    if assets.is_file():
+        data = json.loads(assets.read_text(encoding="utf-8-sig"))
+        folders = [Path(p) for p in data.get("packageFolders", {})]
+        candidates = []
+        for entry in data.get("libraries", {}).values():
+            if entry.get("type") == "package":
+                candidates.extend(
+                    (folder, folder / entry["path"]) for folder in folders
+                )
+        for folder in folders:
+            for name in (
+                "microsoft.netcore.app.runtime.win-*",
+                "microsoft.windowsdesktop.app.runtime.win-*",
+            ):
+                candidates.extend(
+                    (folder, p) for p in folder.glob(name + "/*") if p.is_dir()
+                )
+        seen = set()
+        for folder, package in candidates:
+            if not package.is_dir() or package in seen:
+                continue
+            seen.add(package)
+            for file in sorted(package.iterdir()):
+                if file.is_file() and any(
+                    word in file.name.casefold()
+                    for word in ("license", "notice", "copying")
+                ):
+                    include(file, Path("nuget") / file.relative_to(folder))
+    if index:
+        (app / "licenses/INDEX.json").write_text(
+            json.dumps(sorted(index), indent=2) + "\n", encoding="utf-8"
+        )
+    return index
+
+
 def matched_versions(app):
     """Check the actual x64 core export against GUI file metadata on Windows."""
     import os
@@ -119,7 +169,14 @@ def matched_versions(app):
     return {"status": "passed", "gui": gui, "core": native}
 
 
-def prepare(app, source=SOURCE, version=None, revision=None, check_versions=True):
+def prepare(
+    app,
+    source=SOURCE,
+    version=None,
+    revision=None,
+    check_versions=True,
+    dependency_source=None,
+):
     """The shared packaging step for local, release and nightly builds."""
     app, source = Path(app), Path(source)
     for name in ("Install.ps1", "Install.cmd", "Verify.ps1"):
@@ -137,6 +194,7 @@ def prepare(app, source=SOURCE, version=None, revision=None, check_versions=True
         revision = subprocess.check_output(
             ["git", "-C", str(source), "rev-parse", "HEAD"], text=True
         ).strip()
+    collect_notices(app, dependency_source or source)
     validate(app)
     manifest = {
         "schema_version": 1,
@@ -202,7 +260,9 @@ def assemble(
     copy_tree(source / "src/Python", destination / "Python")
     dep = source / "tools/DependencySetup_依赖库安装.bat"
     shutil.copy2(dep, destination / dep.name)
-    return prepare(destination, source, version, revision, check_versions)
+    return prepare(
+        destination, source, version, revision, check_versions, resources.parent
+    )
 
 
 def archive(app, output):
@@ -226,10 +286,16 @@ def main():
         parser.add_argument("--" + name, type=Path)
     parser.add_argument("--version")
     parser.add_argument("--revision")
+    parser.add_argument("--dependency-source", type=Path)
     args = parser.parse_args()
     if args.app:
         app = args.app
-        prepare(app, version=args.version, revision=args.revision)
+        prepare(
+            app,
+            version=args.version,
+            revision=args.revision,
+            dependency_source=args.dependency_source,
+        )
     else:
         if not all((args.gui, args.native, args.resources, args.destination)):
             parser.error(

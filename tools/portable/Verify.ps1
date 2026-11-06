@@ -14,4 +14,4 @@ foreach ($entry in $manifest.files.PSObject.Properties) {
     finally { $stream.Dispose(); $hasher.Dispose() }
     if ($hash -ne $entry.Value) { throw "Checksum mismatch: $($entry.Name)" }
 }
-Write-Host "Verified $($manifest.files.PSObject.Properties.Count) bundle files."
+Write-Host "Verified $(@($manifest.files.PSObject.Properties).Count) bundle files."

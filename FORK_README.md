@@ -4,7 +4,7 @@ A custom [MaaAssistantArknights](https://github.com/MaaAssistantArknights/MaaAss
 
 ## Install on another Windows PC
 
-Use a full Windows ZIP built from this fork, rather than the GitHub source-code ZIP or an upstream MAA binary. Extract the entire archive, run `Install.cmd`, then start the normal-user `pla_arknights` desktop shortcut. Alternatively run `MAA.exe` directly from the extracted folder. Keep its DLLs, `externals`, `resource` and `modules` together.
+Download a full Windows ZIP from [this fork’s releases](https://github.com/andrewpopov/pla_arknights/releases), rather than the GitHub source-code ZIP or an upstream MAA binary. Extract the entire archive, run `Install.cmd`, then start the normal-user `pla_arknights` desktop shortcut. Alternatively run `MAA.exe` directly from the extracted folder. Keep its DLLs, `externals`, `resource` and `modules` together.
 
 The full bundle includes the self-contained .NET runtime, matching GUI/core, game recognition resources, Sand task module, checksum verifier, installer and these guides. An emulator and Arknights are separate installations. No account, local settings, emulator installation, screenshot archive or research journal is shipped.
 
