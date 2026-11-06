@@ -1,5 +1,7 @@
 """Bounded HQ1-to-HQ2 progression using existing native controls and durable journals."""
 
+from maa_runtime import data_path
+
 import copy
 import json
 import re
@@ -462,14 +464,9 @@ def run_construction_cli(
             )
         if review["blockers"]:
             raise CheckpointError("; ".join(review["blockers"]))
-        output = args.output or Path(
-            r"I:\MAA-data\sand-player"
-        ) / folder / datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
-        if (
-            output.resolve().drive.upper() == "C:"
-            or PureWindowsPath(str(output)).drive.upper() == "C:"
-        ):
-            raise CheckpointError("Construction images and logs must remain off C:")
+        output = args.output or data_path("sand-player") / folder / datetime.now(
+            UTC
+        ).strftime("%Y%m%dT%H%M%SZ")
     except (CheckpointError, OSError, ValueError, KeyError) as exc:
         parser.error(str(exc))
     with runtime_factory(args.runtime, output, args.pack) as runtime:

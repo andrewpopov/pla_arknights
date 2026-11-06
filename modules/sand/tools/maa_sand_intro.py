@@ -1,5 +1,7 @@
 """Fresh camp introduction through the existing exact-script dialogue engine."""
 
+from maa_runtime import data_path
+
 import json
 import re
 import time
@@ -191,11 +193,9 @@ def run_intro_cli(args, parser, runtime_factory):
         parser.error(
             "Camp introduction execution needs --allow-experimental, --journal and --intro-run-id"
         )
-    output = args.output or Path("I:/MAA-data/sand-player/runs") / (
+    output = args.output or data_path("sand-player", "runs") / (
         "intro-" + datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     )
-    if output.drive.upper() == "C:" or args.journal.drive.upper() == "C:":
-        parser.error("Introduction logs and journal must stay off C:")
     with runtime_factory(args.runtime, output, args.pack) as runtime:
         result = run_journaled_intro(
             runtime, args.journal, args.intro_run_id, args.pack

@@ -4,6 +4,8 @@
 Only --execute connects; it runs non-spending navigation and checks both ends.
 """
 
+from maa_runtime import data_path
+
 import argparse
 import hashlib
 import json
@@ -150,8 +152,6 @@ def evaluate_cases(spec, reports):
 def replay(pack, runtime, output, *, evaluator_factory=None):
     spec, _tasks = load_bundle(pack)
     output = Path(output)
-    if output.drive.upper() == "C:":
-        raise CheckpointError("Native replay logs and images must remain off C:")
     output.mkdir(parents=True, exist_ok=False)
     if evaluator_factory is None:
         sys.path.insert(
@@ -234,8 +234,6 @@ def execute_flow(pack, runtime, output, name, report, *, runtime_factory=None):
     if name not in spec["flows"]:
         raise CheckpointError("Unknown non-spending screenflow")
     verify_report(pack, runtime, report)
-    if Path(output).drive.upper() == "C:":
-        raise CheckpointError("Live logs and images must remain off C:")
     if runtime_factory is None:
         from maa_sand_player import MaaRuntime
 
@@ -304,9 +302,9 @@ def main():
             raise CheckpointError(
                 "--runtime is required for native replay or execution"
             )
-        output = args.output or Path(
-            "I:/MAA-data/sand-player/screenflows"
-        ) / datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+        output = args.output or data_path("sand-player", "screenflows") / datetime.now(
+            UTC
+        ).strftime("%Y%m%dT%H%M%SZ")
         if args.replay:
             result = replay(args.pack, args.runtime, output)
             print(

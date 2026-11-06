@@ -291,11 +291,11 @@ jobs:
 
           cp tools/DependencySetup_依赖库安装.bat install
 
-      - name: Bundle Sand task resources
+      - name: Bundle fork modules, installer and guides
         shell: pwsh
         run: |
-          New-Item -ItemType Directory -Path install/modules -Force | Out-Null
-          Copy-Item -Path modules/sand -Destination install/modules -Recurse -Force
+          python tools/portable/package_windows.py --app install --version '${{ needs.meta.outputs.tag }}'
+          ./install/Verify.ps1
 
       - name: Generate file list
         run: pwsh tools/GenerateFileList.ps1 -InstallDir install

@@ -58,8 +58,6 @@ def main():
     parser.add_argument("--image", type=Path, action="append", required=True)
     parser.add_argument("--stage", required=True)
     args = parser.parse_args()
-    if args.output.drive.upper() == "C:":
-        parser.error("Replay images and logs must remain off C:")
     args.output.mkdir(parents=True, exist_ok=False)
     if importlib.util.find_spec("maa_core_eval") is None:
         sys.path.insert(

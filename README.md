@@ -1,3 +1,5 @@
+> **Custom fork: pla_arknights.** For installation, features and Windows builds, start with [the fork README](FORK_README.md). The upstream project README follows below.
+
 <!-- markdownlint-disable -->
 
 <div align="center">

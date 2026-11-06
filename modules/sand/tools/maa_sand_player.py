@@ -1,10 +1,12 @@
 """Headless RA2 campaign player using MaaCore OCR, hand detection and Custom inputs.
 
 The first supported route is Shrubbery Galore. Unknown stages and unverified
-transitions stop at a screenshot checkpoint. Runtime logs/images stay on I:.
+transitions stop at a screenshot checkpoint. Runtime logs/images use MAA_DATA_DIR.
 """
 
 from __future__ import annotations
+
+from maa_runtime import adb_path, data_path
 
 import argparse
 import json
@@ -37,7 +39,6 @@ from maa_sand_tools import ToolCrafter, load_tool_catalog
 from maa_sand_world import read_world
 from maa_session import NativeSession
 
-sys.path.insert(0, str(Path(r"I:\MAA-data\build-tools\sand-python")))
 
 PACK = default_pack()
 
@@ -520,7 +521,7 @@ class MaaRuntime:
             try:
                 result = subprocess.run(
                     [
-                        r"I:\MuMuPlayerGlobal\nx_main\adb.exe",
+                        adb_path(),
                         "-s",
                         self.session.address,
                         "exec-out",
@@ -649,7 +650,7 @@ class MaaRuntime:
         try:
             subprocess.run(
                 [
-                    r"I:\MuMuPlayerGlobal\nx_main\adb.exe",
+                    adb_path(),
                     "-s",
                     self.session.address,
                     "shell",
@@ -3143,9 +3144,7 @@ def main():
     except (CheckpointError, OSError, ValueError, KeyError) as exc:
         parser.error(str(exc))
     stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
-    output = args.output or Path(r"I:\MAA-data\sand-player\runs") / stamp
-    if output.drive.upper() == "C:":
-        parser.error("Player logs and images must remain off C:")
+    output = args.output or data_path("sand-player", "runs") / stamp
     with MaaRuntime(
         args.runtime, output, args.pack, capture_backend=args.capture_backend
     ) as runtime:

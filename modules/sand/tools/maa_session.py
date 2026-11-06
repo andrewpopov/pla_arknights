@@ -7,6 +7,8 @@ import os
 import shutil
 import subprocess
 import sys
+
+from maa_runtime import adb_path, data_path
 from contextlib import AbstractContextManager
 from pathlib import Path
 
@@ -14,8 +16,10 @@ from pathlib import Path
 class ControllerLease(AbstractContextManager):
     """OS-held byte lock: shared by our tools and released automatically on process exit."""
 
-    def __init__(self, address, directory=Path(r"I:\MAA-data\controller-locks")):
-        self.directory = Path(directory)
+    def __init__(self, address, directory=None):
+        self.directory = (
+            Path(directory) if directory is not None else data_path("controller-locks")
+        )
         self.path = self.directory / (
             hashlib.sha256(address.encode()).hexdigest()[:20] + ".lock"
         )
@@ -70,8 +74,6 @@ def resource_layers(install, client="YoStarEN", overlays=()):
 
 def load_runtime(install, output, client="YoStarEN", overlays=()):
     install, output = Path(install), Path(output)
-    if output.drive.upper() == "C:":
-        raise ValueError("Diagnostic logs and images must be stored off C:")
     if not (install / "resource/global" / client / "resource").is_dir():
         raise RuntimeError(f"Missing client resource layer: {client}")
     sys.path.insert(0, str(install / "Python"))
@@ -131,9 +133,9 @@ class NativeSession(AbstractContextManager):
             raise ValueError("Unsupported native touch mode")
         self.touch_mode = touch_mode
         self.install, self.output = Path(install), Path(output)
-        self.callback, self.address = callback, address
+        self.callback, self.address = callback, os.environ.get("MAA_ADDRESS", address)
         self.overlays, self.deployment_with_pause = overlays, deployment_with_pause
-        self.lease = ControllerLease(address)
+        self.lease = ControllerLease(self.address)
         self.bot = None
 
     def __enter__(self):
@@ -143,14 +145,13 @@ class NativeSession(AbstractContextManager):
             Asst = load_runtime(self.install, self.output, overlays=self.overlays)
             from asst.utils import InstanceOptionType
 
-            Asst.set_connection_extras(
-                "MuMuEmulator12",
-                {
-                    "path": r"I:\MuMuPlayerGlobal",
-                    "touch": False,
-                    "client_type": "YoStarEN",
-                },
-            )
+            connection = os.environ.get("MAA_CONNECTION_CONFIG", "General")
+            emulator = os.environ.get("MAA_EMULATOR_PATH")
+            if emulator:
+                Asst.set_connection_extras(
+                    connection,
+                    {"path": emulator, "touch": False, "client_type": "YoStarEN"},
+                )
             self.bot = Asst(callback=self.callback)
             options = [
                 (InstanceOptionType.touch_type, self.touch_mode),
@@ -164,9 +165,7 @@ class NativeSession(AbstractContextManager):
                 if not self.bot.set_instance_option(key, value):
                     raise RuntimeError(f"MAA rejected connection option {key}")
             require_gui_stopped()
-            if not self.bot.connect(
-                r"I:\MuMuPlayerGlobal\nx_main\adb.exe", self.address, "MuMuEmulator12"
-            ):
+            if not self.bot.connect(adb_path(), self.address, connection):
                 raise RuntimeError("Arknights emulator connection failed")
             return self.bot
         except BaseException:

@@ -1,5 +1,7 @@
 """Compose existing Sand formation helpers into a durable, non-launching preparation flow."""
 
+from maa_runtime import data_path
+
 import copy
 import json
 import re
@@ -359,11 +361,9 @@ def run_team_cli(args, parser, runtime_factory):
         summary["status"] = "offline_team_preparation_checked"
         print(json.dumps(summary, indent=2, ensure_ascii=False))
         return summary
-    output = args.output or Path(
-        "I:/MAA-data/sand-player/team-preparation"
-    ) / datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
-    if output.drive.upper() == "C:" or args.journal.drive.upper() == "C:":
-        parser.error("Team journals, logs and images must remain off C:")
+    output = args.output or data_path("sand-player", "team-preparation") / datetime.now(
+        UTC
+    ).strftime("%Y%m%dT%H%M%SZ")
     report = {
         **summary,
         "status": "started",

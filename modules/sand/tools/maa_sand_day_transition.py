@@ -1,5 +1,7 @@
 """One journaled exhausted-day transition; never spends an Act or certifies a guide day."""
 
+from maa_runtime import data_path
+
 import copy
 import json
 import re
@@ -219,11 +221,9 @@ def run_day_transition_cli(args, parser, runtime_type):
         )
     from maa_sand_player import SandPlayer
 
-    output = args.output or Path(
-        "I:/MAA-data/sand-player/day-transitions"
-    ) / datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
-    if output.drive.upper() == "C:":
-        parser.error("Day-transition logs and images must remain off C:")
+    output = args.output or data_path("sand-player", "day-transitions") / datetime.now(
+        UTC
+    ).strftime("%Y%m%dT%H%M%SZ")
     with runtime_type(args.runtime, output, args.pack) as runtime:
         player = SandPlayer(runtime, assets, profile)
         journal = ActJournal(args.journal, state["campaign_id"])

@@ -494,3 +494,6 @@ CMakeUserPresets.json
 
 # mimosa security scan plugin
 /.mimosa
+
+# Portable fork distributions
+/dist/

@@ -192,8 +192,6 @@ def run_test(module, output, execute=False, prepare=False, restore_energy=False)
 def run_saved_formation(module, image, output, route, expected_drinks):
     """Replay the real campaign launch checks using a runtime with no input methods."""
     module, image, output = map(Path, (module, image, output))
-    if output.drive.upper() == "C:":
-        raise ValueError("Saved-frame images and logs must remain off C:")
     if type(expected_drinks) is not int or expected_drinks < 0:
         raise ValueError("Provide the independent expected drink stock")
     sys.path.insert(0, str(module / "tools"))
