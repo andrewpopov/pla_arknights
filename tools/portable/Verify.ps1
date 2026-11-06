@@ -1,5 +1,6 @@
 [CmdletBinding()]
-param([string]$Root = $PSScriptRoot)
+param([string]$Root)
+if ([string]::IsNullOrWhiteSpace($Root)) { $Root = $PSScriptRoot }
 $ErrorActionPreference = 'Stop'
 $Root = [IO.Path]::GetFullPath($Root)
 $manifest = Get-Content -LiteralPath (Join-Path $Root 'bundle-manifest.json') -Raw | ConvertFrom-Json

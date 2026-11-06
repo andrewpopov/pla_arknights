@@ -216,6 +216,24 @@ class PackageTests(unittest.TestCase):
         self.assertFalse((target / "debug").exists())
         self.assertFalse((target / "Build-Local-MAA.cmd").exists())
 
+    @unittest.skipUnless(os.name == "nt", "Windows verifier integration")
+    def test_windows_verifier_default_root_and_readable_count(self):
+        manifest = self.prepare()
+        result = subprocess.run(
+            [
+                "powershell.exe",
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                str(self.app / "Verify.ps1"),
+            ],
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn(f"Verified {len(manifest['files'])} bundle files.", result.stdout)
+
     @unittest.skipUnless(os.name == "nt", "Windows installer integration")
     def test_windows_installer_relocates_rejects_tamper_and_existing_destination(self):
         self.prepare()
