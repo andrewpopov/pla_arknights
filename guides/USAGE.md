@@ -8,6 +8,20 @@ Use the WPF task queue for normal operation. Stop it before running optional nat
 
 Configure Base, Recruitment, Credit Store and Rewards individually before running the whole queue. A loading-screen wait is different from a task being completed: inspect the task result and the game's final screen. The fork adds bounded loading recovery for recruitment/friend visits and recognition adjustments; a timeout still needs a fresh log and screenshot review.
 
+## Named Dailies configuration
+
+The shared preset `modules/configurations/dailies.json` enables game startup, Combat, Base, Recruitment, Credit Store and Rewards. Combat uses CE-6 then LS-6 with natural sanity only. IS, Sand and unrelated tasks are disabled in this profile. Existing configured Depot Maintenance plans are retained without medicine or premium currency spending.
+
+After first-use emulator setup, fully exit MAA and use the optional Python helper to clone your current profile while retaining this machine's connection and operator choices:
+
+```powershell
+python tools\maintenance\configure_dailies.py --install D:\Apps\pla_arknights
+python tools\maintenance\configure_dailies.py --install D:\Apps\pla_arknights --apply
+.\MAA.exe --config Dailies --run-once
+```
+
+The first command previews; `--apply` backs up settings and creates/selects Dailies. Run the executable command from the installation folder. Replace the example installation path. The one-time launch uses MAA's normal cancel countdown; it does not enable automatic queue runs on every future launch. Existing profiles are preserved. If Dailies already exists, use `--source Dailies` deliberately to refresh it, or choose another `--name`.
+
 ## Combat resource stocks
 
 Add the native Depot Maintenance task before Combat, with Tier 3 material plan targets of 10 each. Then configure Combat with CE-6 (LMD) and LS-6 (EXP) as optional fallback stages. Verify selected stages and stage availability. The maintenance task scans inventory and farms shortages before the fallback Combat task. Review any sanity potion or premium currency settings before starting; install does not grant a spending budget or import the old PC's inventory.

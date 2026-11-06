@@ -185,6 +185,7 @@ def prepare(
     copy_tree(source / "guides", app / "guides")
     copy_tree(source / "tools/maintenance", app / "tools/maintenance")
     copy_tree(source / "modules/sand", app / "modules/sand")
+    copy_tree(source / "modules/configurations", app / "modules/configurations")
     shutil.copy2(source / "LICENSE", app / "LICENSE")
     shutil.copy2(
         source / "modules/strategy/local-resource-overrides.json",

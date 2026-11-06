@@ -259,6 +259,69 @@ class PackageTests(unittest.TestCase):
         self.assertFalse((self.root / "must not exist").exists())
 
 
+class DailyPresetTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location(
+            "daily_config", SOURCE / "tools/maintenance/configure_dailies.py"
+        )
+        cls.helper = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.helper)
+        cls.preset = json.loads(
+            (SOURCE / "modules/configurations/dailies.json").read_text(encoding="utf-8")
+        )
+
+    def config(self):
+        types = self.preset["enabled_task_types"] + [
+            "RoguelikeTask",
+            "ReclamationTask",
+            "DepotMaintainTask",
+        ]
+        queue = [{"$type": t, "IsEnable": True} for t in types]
+        queue[-1]["PlanList"] = [{"Stage": "1-7", "UseStone": True, "StoneCount": 3}]
+        profile = {
+            "TaskQueue": queue,
+            "Gui": {
+                "ConnectSettings": {"AdbPath": "local-only"},
+                "StartUpSettings": {"RunDirectly": True},
+            },
+        }
+        return {"Current": "Original", "Configurations": {"Original": profile}}
+
+    def test_clone_preserves_original_connection_and_disables_other_modes(self):
+        original = self.config()
+        frozen = json.dumps(original, sort_keys=True)
+        updated, name = self.helper.configure(original, self.preset)
+        self.assertEqual(json.dumps(original, sort_keys=True), frozen)
+        self.assertEqual(
+            updated["Configurations"][name]["Gui"]["ConnectSettings"],
+            {"AdbPath": "local-only"},
+        )
+        tasks = {t["$type"]: t for t in updated["Configurations"][name]["TaskQueue"]}
+        self.assertFalse(tasks["RoguelikeTask"]["IsEnable"])
+        self.assertFalse(tasks["ReclamationTask"]["IsEnable"])
+        self.assertEqual(tasks["FightTask"]["StagePlan"], ["CE-6", "LS-6"])
+        self.assertFalse(tasks["FightTask"]["UseMedicine"])
+        self.assertFalse(tasks["FightTask"]["UseStone"])
+        self.assertFalse(tasks["DepotMaintainTask"]["PlanList"][0]["UseStone"])
+        self.assertFalse(
+            updated["Configurations"][name]["Gui"]["StartUpSettings"]["RunDirectly"]
+        )
+
+    def test_existing_profile_requires_explicit_source_and_refresh_is_idempotent(self):
+        updated, _ = self.helper.configure(self.config(), self.preset)
+        with self.assertRaisesRegex(ValueError, "already exists"):
+            self.helper.configure(updated, self.preset, source="Original")
+        refreshed, _ = self.helper.configure(updated, self.preset, source="Dailies")
+        self.assertEqual(refreshed, updated)
+
+    def test_missing_daily_task_is_rejected(self):
+        config = self.config()
+        config["Configurations"]["Original"]["TaskQueue"] = []
+        with self.assertRaisesRegex(ValueError, "required tasks"):
+            self.helper.configure(config, self.preset)
+
+
 class PortableDefaultsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
