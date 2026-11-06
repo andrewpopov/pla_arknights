@@ -20,6 +20,18 @@ The WPF task queue is the normal entry point. Sand's default mode resumes an exi
 
 Binary updates through the stock upstream updater are disabled in this fork to keep custom UI/core pairs together. Remote resource updates remain available, and the bundle includes field-level overrides for this fork's custom resources. Upgrade with another full fork bundle in a new directory.
 
+## Build locally
+
+On Windows with Git for Windows, Python 3.11+, Visual Studio 2026 C++ tools/Windows SDK, CMake and the .NET 10 SDK installed:
+
+```powershell
+git clone --branch dev-v2 https://github.com/andrewpopov/pla_arknights.git
+cd pla_arknights
+powershell -NoProfile -ExecutionPolicy Bypass -File tools\portable\Build.ps1
+```
+
+See [the local build guide](guides/BUILD.md) for output paths, Debug checks, packaging existing outputs, and updating upstream. No private research checkout or existing MAA installation is needed.
+
 ## Source and licensing
 
 This repository contains the app changes and the distributable Sand module; it does not require the private research repository to build or use the GUI. Build instructions use the existing CMake presets, MaaDeps downloader, .NET publisher and NetBeauty layout. See [LICENSE](LICENSE) and preserve included dependency notices when redistributing.

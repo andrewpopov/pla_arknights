@@ -17,7 +17,13 @@ try {
     $app = Join-Path $OutputRoot ('app-' + $revision.Substring(0, 12))
     $zip = Join-Path $OutputRoot ('pla_arknights-' + $revision.Substring(0, 12) + '-win-x64.zip')
     if ((Test-Path -LiteralPath $app) -or (Test-Path -LiteralPath $zip)) { throw 'Output already exists; select a fresh OutputRoot' }
-    Run-Native bash @('./.github/scripts/sync-optional-submodules.sh', '--init', '--depth', '1', 'src/MaaUtils', '3rdparty/EmulatorExtras')
+    $gitCommand = Get-Command git -ErrorAction Stop
+    $gitRoot = Split-Path (Split-Path $gitCommand.Source -Parent) -Parent
+    $bash = Join-Path $gitRoot 'bin/bash.exe'
+    if (-not (Test-Path -LiteralPath $bash)) {
+        throw 'Git Bash not found beside git.exe. Install Git for Windows and use its git.exe on PATH.'
+    }
+    Run-Native $bash @('./.github/scripts/sync-optional-submodules.sh', '--init', '--depth', '1', 'src/MaaUtils', '3rdparty/EmulatorExtras')
     Run-Native python @('tools/maadeps-download.py', 'x64-windows')
     Run-Native cmake @('--preset', 'windows-x64', "-DMAA_HASH_VERSION=$version", '-DBUILD_DEBUG_DEMO=OFF')
     Run-Native cmake @('--build', 'build', '--config', 'Debug', '--target', 'MaaCore', '--parallel', "$Jobs")
