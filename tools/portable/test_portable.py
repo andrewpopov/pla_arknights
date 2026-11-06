@@ -109,6 +109,14 @@ class PackageTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "self-contained"):
             validate(self.app)
 
+    def test_webgpu_runtime_dependencies_are_accepted_but_unknown_dlls_are_not(self):
+        for name in ("dxcompiler.dll", "dxil.dll", "webgpu_dawn_maa.dll"):
+            (self.app / name).write_bytes(b"fixture")
+        validate(self.app)
+        (self.app / "foreign.dll").write_bytes(b"fixture")
+        with self.assertRaisesRegex(ValueError, "Unexpected root DLLs"):
+            validate(self.app)
+
     def test_personal_config_is_rejected(self):
         (self.app / "config").mkdir()
         with self.assertRaisesRegex(ValueError, "Personal state"):

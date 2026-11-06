@@ -29,7 +29,7 @@ try {
     if (-not $packages) { $packages = Join-Path $HOME '.nuget/packages' }
     $beauty = Join-Path $packages 'nulastudio.netbeauty/2.1.5/tools/win-x86/nbeauty2.exe'
     Run-Native $beauty @('--usepatch', $gui, './externals')
-    Run-Native python @('tools/portable/package_windows.py', '--gui', $gui, '--native', 'build/bin/RelWithDebInfo', '--resources', 'resource', '--destination', $app, '--version', $version, '--zip', $zip)
+    Run-Native python @('tools/portable/package_windows.py', '--gui', $gui, '--native', 'build/bin/RelWithDebInfo', '--resources', 'resource', '--destination', $app, '--version', $version, '--revision', $revision, '--zip', $zip)
     & (Join-Path $app 'Verify.ps1') -Root $app
     Write-Host "Ready to transfer: $zip"
 } finally { Pop-Location }

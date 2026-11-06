@@ -53,6 +53,21 @@ def validate(root):
     )
     if not config.get("runtimeOptions", {}).get("includedFrameworks"):
         raise ValueError("GUI must be published with --self-contained true")
+    allowed = {
+        "hostfxr.dll",
+        "hostpolicy.dll",
+        "libloader.dll",
+        "directml.dll",
+        "dxcompiler.dll",
+        "dxil.dll",
+    }
+    unknown = [
+        p.name
+        for p in root.glob("*.dll")
+        if "maa" not in p.name.lower() and p.name.lower() not in allowed
+    ]
+    if unknown:
+        raise ValueError("Unexpected root DLLs: " + ", ".join(unknown))
     for name in ("config", "debug", "cache", "local-build.json", "Build-Local-MAA.cmd"):
         if (root / name).exists():
             raise ValueError(f"Personal state or local launcher in bundle: {name}")

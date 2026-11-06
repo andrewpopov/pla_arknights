@@ -99,6 +99,8 @@ public class Bootstrapper : Bootstrapper<RootViewModel>
                 "libloader.dll",
 
                 "DirectML.dll",
+                "dxcompiler.dll",
+                "dxil.dll",
                 "fastdeploy_ppocr_maa.dll",
                 "MaaCore.dll",
                 "onnxruntime_maa.dll",
