@@ -1,0 +1,21 @@
+{
+    "schema_version": 1,
+    "name": "Dailies",
+    "enabled_task_types": ["StartUpTask", "FightTask", "InfrastTask", "RecruitTask", "MallTask", "AwardTask"],
+    "optional_configured_task_types": ["DepotMaintainTask"],
+    "combat": {
+        "StagePlan": ["CE-6", "LS-6"],
+        "UseOptionalStage": true,
+        "UseMedicine": false,
+        "MedicineCount": 0,
+        "UseStone": false,
+        "StoneCount": 0,
+        "UseExpiringMedicine": false,
+        "UseExpireMedicineForActivity": false,
+        "EnableTargetDrop": false,
+        "IsInventoryTarget": false,
+        "EnableTimesLimit": false
+    },
+    "startup_autorun": false,
+    "launch_arguments": ["--config", "Dailies", "--run-once"]
+}
